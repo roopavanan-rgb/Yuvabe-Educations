@@ -95,7 +95,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         <Player
           autoplay
           keepLastFrame
-          loop
+          loop={false}
           src="/images/keerthana.json"
           className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[500px] xl:w-[600px] h-auto"
         />

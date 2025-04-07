@@ -202,6 +202,8 @@ const AboutUs = () => {
               src="https://www.youtube.com/embed/GFuLGeIJRJ0"
               title="YouTube Video"
               allowFullScreen
+              allow="autoplay; encrypted-media"
+
             ></iframe>
           </div>
         </motion.div>
@@ -339,7 +341,8 @@ const AboutUs = () => {
           >
             <Player
               autoplay
-              loop
+              loop={false}
+              keepLastFrame
               src="/images/flower.json"
               className="w-[300px] h-[300px] md:w-[500px] md:h-[500px]"
             ></Player>
@@ -900,7 +903,7 @@ const AboutUs = () => {
             className="relative w-full max-w-3xl aspect-video rounded-lg overflow-hidden"
           >
             <video
-              src="https://wp.yuvabeeducation.com/wp-content/uploads/2025/04/abilash-testimonial.mp4"
+              src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/hari-testimonial.mp4"
               controls
               autoPlay
               muted
@@ -927,7 +930,7 @@ const AboutUs = () => {
               className="relative aspect-video rounded-lg overflow-hidden"
             >
               <video
-                src="https://wp.yuvabeeducation.com/wp-content/uploads/2025/04/hari-testimonial.mp4"
+                src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/praveen-testimonial-2-draft-2.mp4"
                 controls
                 className="w-full h-full rounded-lg"
               ></video>
@@ -942,7 +945,7 @@ const AboutUs = () => {
               className="relative aspect-video rounded-lg overflow-hidden"
             >
               <video
-                src="https://wp.yuvabeeducation.com/wp-content/uploads/2025/04/poovendiran-testimonial-1.mp4"
+                src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/poovendiran-testimonial-1.mp4"
                 controls
                 className="w-full h-full rounded-lg"
               ></video>
@@ -957,7 +960,7 @@ const AboutUs = () => {
               className="relative aspect-video rounded-lg overflow-hidden"
             >
               <video
-                src="https://wp.yuvabeeducation.com/wp-content/uploads/2025/04/praveen-testimonial-2-draft-2.mp4"
+                src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/abilash-testimonial.mp4"
                 controls
                 className="w-full h-full rounded-lg"
               ></video>

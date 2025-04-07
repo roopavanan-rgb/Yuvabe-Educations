@@ -437,7 +437,7 @@ export default function Steam() {
                 {[
                   {
                     title: "Program Calendar",
-                    href: "/program-calendar",
+                    href: "/steam/program-calendar",
                     imgSrc: "/images/bridge/calendar.svg",
                     borderColor: "#9688C0",
                     bgColor: "#F4F3F9"

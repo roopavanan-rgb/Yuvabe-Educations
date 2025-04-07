@@ -137,7 +137,7 @@ const page = () => {
 
             {/* Button */}
             <motion.a
-              href="#"
+              href="/get-involved/support-us"
               className="bg-[#592AC7] text-white font-semibold py-3 px-6 rounded-lg shadow-md inline-block"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -197,14 +197,14 @@ const page = () => {
               />
 
               {/* Hover Overlay - Light White (Opacity 10%) */}
-              <div className="absolute inset-0 bg-white opacity-10 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-white opacity-10 group-hover:opacity-80 transition-opacity duration-300"></div>
 
               {/* Hover Text - Fade In */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
-                <h3 className="text-black text-xl font-bold">
+                <h3 className="text-[#592ac7] text-xl font-bold">
                   {initiative.title}
                 </h3>
-                <p className="text-black text-sm mt-2 font-semibold">
+                <p className="text-[#592ac7] text-sm mt-2 font-semibold">
                   {initiative.description}
                 </p>
               </div>

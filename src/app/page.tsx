@@ -371,7 +371,7 @@ export default function Home() {
 
             {/* Button */}
             <motion.a
-              href="#"
+              href="/get-involved/join-us"
               className="mt-6 mx-auto block sm:inline-block px-6 py-3 text-white bg-[#592AC7] rounded-lg shadow-md hover:bg-white hover:text-[#592ac7] transition w-fit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -430,7 +430,7 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
               Our Vision
             </h2>
-            <p className="text-base sm:text-lg md:text-xl leading-7">
+            <p className="text-base sm:text-lg md:text-xl leading-7 font-regular font-secondary">
               To nurture a generation of self-aware, skilled, and purpose-driven
               individuals who contribute meaningfully to the world, guided by
               inner exploration and outward impact.
@@ -439,10 +439,10 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
               Our Mission
             </h2>
-            <p className="text-base sm:text-lg md:text-xl">
+            <p className="text-base sm:text-lg md:text-xl font-regular font-secondary">
               Through Yuvabe Education, we aim to:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-base sm:text-lg md:text-xl">
+            <ul className="list-disc pl-6 space-y-2 text-base sm:text-lg md:text-xl font-regular font-secondary">
               <li>
                 Equip individuals with futuristic skills for career success.
               </li>
@@ -519,7 +519,7 @@ export default function Home() {
                   purpose-driven individuals who contribute meaningfully to the
                   world, guided by inner exploration and outward impact.
                 </p>
-                <Button href="#">Read more</Button>
+                <Button href="/about-us">Read more</Button>
               </div>
               <div className="md:w-1/2 flex justify-center">
                 <Image
@@ -549,7 +549,7 @@ export default function Home() {
                   purpose-driven individuals who contribute meaningfully to the
                   world, guided by inner exploration and outward impact.
                 </p>
-                <Button href="#">Read more</Button>
+                <Button href="/get-involved/we-serve">Read more</Button>
               </div>
               <div className="md:w-1/2 flex justify-center relative">
                 <motion.div
@@ -589,7 +589,7 @@ export default function Home() {
                   purpose-driven individuals who contribute meaningfully to the
                   world, guided by inner exploration and outward impact.
                 </p>
-                <Button href="#">Read more</Button>
+                <Button href="/get-involved/we-evolve">Read more</Button>
               </div>
               <div className="w-full md:w-1/2 flex justify-center relative">
                 

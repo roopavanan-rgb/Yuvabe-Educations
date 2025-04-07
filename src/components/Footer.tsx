@@ -36,19 +36,19 @@ const Footer = () => {
           </div>
           {/* Social Icons */}
           <div className="flex space-x-4 mt-12 text-[#592AC7]">
-            <Link href="https://instagram.com">
+            <Link href="https://www.instagram.com/yuvabe.auroville/">
               <FaInstagram size={24} className="hover:text-gray-600 transition" />
             </Link>
-            <Link href="https://facebook.com">
+            <Link href="https://www.facebook.com/yuvabe.auroville">
               <FaFacebookF size={24} className="hover:text-gray-600 transition" />
             </Link>
             <Link href="https://twitter.com">
               <FaXTwitter size={24} className="hover:text-gray-600 transition" />
             </Link>
-            <Link href="https://linkedin.com">
+            <Link href="https://www.linkedin.com/company/yuvabe/">
               <FaLinkedinIn size={24} className="hover:text-gray-600 transition" />
             </Link>
-            <Link href="https://youtube.com">
+            <Link href="https://www.youtube.com/@yuvabe.auroville">
               <FaYoutube size={24} className="hover:text-gray-600 transition" />
             </Link>
           </div>
