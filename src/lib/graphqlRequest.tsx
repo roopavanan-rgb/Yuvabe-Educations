@@ -88,7 +88,7 @@ export const GET_NEWS = `query News {
         year
         date
         heading
-        subHeading
+        subheading
       }
       featuredImage {
         node {

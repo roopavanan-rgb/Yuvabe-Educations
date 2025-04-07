@@ -98,8 +98,8 @@ const Header = () => {
       links: [
         { name: "About Steam", path: "/steam/about-steam" },
         { name: "Program Calendar", path: "/steam/program-calendar" },
-        { name: "Auroville Program", path: "/steam/auroville" },
-        { name: "Visitor Program", path: "/steam/visitor" },
+        { name: "Auroville Program", path: "/steam/auroville-program" },
+        { name: "Visitor Program", path: "/steam/visitor-program" },
       ],
     },
     {
@@ -120,7 +120,7 @@ const Header = () => {
       links: [
         { name: "Blogs", path: "/stories/blogs" },
         { name: "Newsletter", path: "/stories/newsletters" },
-        { name: "Impact Report", path: "/stories/impact-report" },
+        { name: "Impact Report", path: "https://heyzine.com/flip-book/a7ee0bc0d2.html" },
       ],
     },
     {

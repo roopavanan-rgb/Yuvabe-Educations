@@ -34,7 +34,7 @@ const JDS: React.FC = () => {
       setError(null);
       try {
         const response = await fetch(
-          "https://wp.yuvabeeducation.com/graphql",
+          "https://yuvabeeducation.com/wordpress/graphql",
           {
             method: "POST",
             headers: {

@@ -45,7 +45,7 @@ const Newsletters: React.FC = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch("https://wp.yuvabeeducation.com/graphql", {
+        const response = await fetch("https://yuvabeeducation.com/wordpress/graphql", {
           // Replace with your GraphQL endpoint
           method: "POST",
           headers: {

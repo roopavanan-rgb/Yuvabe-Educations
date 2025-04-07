@@ -60,10 +60,10 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-3">About Us</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/about" className="hover:underline">Who We Are?</Link>
+                <Link href="/about-us" className="hover:underline">Who We Are?</Link>
               </li>
               <li>
-                <Link href="/impact" className="hover:underline">Our Impact</Link>
+                <Link href="/about-us#our-impact" className="hover:underline">Our Impact</Link>
               </li>
             </ul>
           </div>
@@ -71,10 +71,10 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-3">Programs</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/steam-program" className="hover:underline">STEAM Program</Link>
+                <Link href="/steam/about-steam" className="hover:underline">STEAM Program</Link>
               </li>
               <li>
-                <Link href="/bridge-program" className="hover:underline">Bridge Program</Link>
+                <Link href="/bridge/about" className="hover:underline">Bridge Program</Link>
               </li>
             </ul>
           </div>
@@ -89,10 +89,10 @@ const Footer = () => {
                 <Link href="/blogs" className="hover:underline">Blogs</Link>
               </li>
               <li>
-                <Link href="/newsletter" className="hover:underline">Newsletter</Link>
+                <Link href="/stories/newsletters" className="hover:underline">Newsletter</Link>
               </li>
               <li>
-                <Link href="/impact-report" className="hover:underline">Impact Report</Link>
+                <Link href="https://heyzine.com/flip-book/a7ee0bc0d2.html" className="hover:underline">Impact Report</Link>
               </li>
             </ul>
           </div>
@@ -100,13 +100,13 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-3">Contact Us</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/join-us" className="hover:underline">Join Us</Link>
+                <Link href="/get-involved/join-us" className="hover:underline">Join Us</Link>
               </li>
               <li>
-                <Link href="/support-us" className="hover:underline">Support Us</Link>
+                <Link href="/get-involved/support-us" className="hover:underline">Support Us</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:underline">Talk to Us</Link>
+                <Link href="/get-involved/talk-to-us" className="hover:underline">Talk to Us</Link>
               </li>
             </ul>
           </div>

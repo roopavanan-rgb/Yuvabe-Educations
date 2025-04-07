@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion"
@@ -8,176 +9,254 @@ export default function Bridge() {
       <div className="bg-white pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
           {/* Hero */}
-          <div className="flex flex-col lg:gap-y-16 gap-y-8">
-            {/* Top */}
-            <div className="flex flex-col gap-y-4">
-              <h1 className="text-[#592AC7] text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
-                Bridge
-              </h1>
-              <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center">
-                We transform education into experience, bridging the gap between
-                academia and the professional world. Through real-world impact,
-                personal growth, and career-focused learning, we empower you to
-                step confidently into the future.
-              </p>
-            </div>
-            <div className="max-w-full">
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/xf697xkmu74?si=7gyQHmM7syAgCtiM"
-                title="YouTube video player"
-                // frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                // referrerpolicy="strict-origin-when-cross-origin"
-                // allowfullscreen
-                className="md:h-[617px] h-64"
-              ></iframe>
-            </div>
-          </div>
+          <div className="flex flex-col lg:gap-y-16 gap-y-8 w-full max-w-screen-lg mx-auto px-5 md:px-8 xl:px-0">
+  {/* Top */}
+  <motion.div
+    className="flex flex-col gap-y-4"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    <h1 className="text-[#592AC7] text-[32px] md:text-[48px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+      Bridge
+    </h1>
+    <p className="font-secondary font-medium text-black text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-center">
+      We transform education into experience, bridging the gap between
+      academia and the professional world. Through real-world impact,
+      personal growth, and career-focused learning, we empower you to
+      step confidently into the future.
+    </p>
+  </motion.div>
+
+  {/* Video */}
+  <motion.div
+    className="w-full max-w-4xl mx-auto"
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1.2, ease: "easeOut" }}
+  >
+    <div className="relative w-full pt-[56.25%]"> {/* 16:9 Aspect Ratio */}
+      <iframe
+        className="absolute top-0 left-0 w-full h-full rounded-lg"
+        src="https://www.youtube.com/embed/xf697xkmu74?si=7gyQHmM7syAgCtiM"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      ></iframe>
+    </div>
+  </motion.div>
+</div>
 
           {/* Overview */}
-          <div className="flex flex-col gap-y-8 md:gap-y-16">
-            <h2 className="text-black text-[32px]  md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary">
-              Overview
-            </h2>
+          <div className="flex flex-col gap-y-8 md:gap-y-16  ">
+          <motion.h2
+    className="text-black text-[32px] md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: true }}
+  >
+    Overview
+  </motion.h2>
             <div className="flex flex-row xl:gap-x-[106px] flex-wrap lg:flex-nowrap gap-y-8 md:gap-y-16 justify-center">
-              <div className="w-full lg:w-[52%]">
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px]">
-                  The Auroville Bio-region comprises of approximately {" "}
-                  <span className="text-[#592AC7] font-bold">
-                    13 villages with about 40,000 people.
-                  </span>
-                  &nbsp;It is situated in the Villupuram district of Tamil Nadu,
-                  a state with approximately 
-                  <span className="text-[#592AC7] font-bold">
-                    74% of its population falling in the productive age group of
-                    15–35 years.
-                  </span>
-                  (Defined as “youth” by The Tamil Nadu State Youth Policy).
-                  <br />
-                  <br />
-                  These
-                  <span className="text-[#592AC7] font-bold">
-                    &nbsp;young adults are the catalysts of social change,
-                  </span>
-                  driving the route to socioeconomic, political, environmental,
-                  and technological development in all spheres of life.
-                  <br />
-                  <br />
-                  However, the shift in the natural environment of the region
-                  has impacted the income generation from agriculture which has
-                  been the prominent source of income for the community. This is
-                  altering the cultural perspective, where families increasingly
-                  depend on young adults to generate income and support their
-                  families.
-                </p>
-              </div>
-              <div className="lg:w-[48%] items-center lg:align-middle flex flex-col relative">
-                <Image
-                  src="/images/bridge/bridge11.png"
-                  alt=""
-                  width={532.8681640625}
-                  height={532.8681640625}
-                  className="lg:w-full  z-10 lg:mt-[-50px] lg:ml-12 lg:object-contain xl:ml-24 lg:h-[632px] xl:object-cover"
-                />
+            <motion.div
+      className="w-full lg:w-[52%]"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <p className="font-secondary font-medium text-black text-[16px] md:text-[18px] leading-[28px] md:leading-[30px]">
+        The Auroville Bio-region comprises approximately&nbsp;
+        <span className="text-[#592AC7] font-bold">
+          13 villages with about 40,000 people.
+        </span>
+        &nbsp;It is situated in the Villupuram district of Tamil Nadu, a state
+        with approximately&nbsp;
+        <span className="text-[#592AC7] font-bold">
+          74% of its population falling in the productive age group of
+          15–35 years.
+        </span>
+        (Defined as “youth” by The Tamil Nadu State Youth Policy).
+        <br />
+        <br />
+        These
+        <span className="text-[#592AC7] font-bold">
+          &nbsp;young adults are the catalysts of social change,
+        </span>
+        driving the route to socioeconomic, political, environmental, and
+        technological development in all spheres of life.
+        <br />
+        <br />
+        However, the shift in the natural environment of the region has impacted
+        the income generation from agriculture which has been the prominent
+        source of income for the community. This is altering the cultural
+        perspective, where families increasingly depend on young adults to
+        generate income and support their families.
+      </p>
+    </motion.div>
+    <motion.div
+      className="lg:w-[48%] flex flex-col items-center relative"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <Image
+        src="/images/bridge/bridge11.png"
+        alt="Bridge Image"
+        width={533}
+        height={533}
+        className="w-[80%] lg:w-full max-w-[450px] md:max-w-none z-10 lg:mt-[-50px] lg:ml-12 xl:ml-24 object-contain"
+      />
 
-                {/* Rectangle Yellow Small */}
-                <svg
-                  width="157"
-                  height="158"
-                  viewBox="0 0 157 158"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="absolute z-10 md:z-11 right-[-5%] md:right-0 lg:right-[-5%] bottom-[30%] md:scale-100 scale-65"
-                >
-                  <rect
-                    x="67.1211"
-                    y="0.697266"
-                    width="111.824"
-                    height="111.824"
-                    transform="rotate(36.6092 67.1211 0.697266)"
-                    fill="#FFCA2D"
-                  />
-                </svg>
-              </div>
+      {/* Yellow Rectangle Decoration */}
+      <motion.svg
+  width="157"
+  height="158"
+  viewBox="0 0 157 158"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  className="absolute z-10 right-[-5%] md:right-0 lg:right-[-5%] bottom-[30%] md:scale-100 scale-75"
+  animate={{
+    y: [0, -10, 0], // Moves up by 10px and then back to original position
+  }}
+  transition={{
+    duration: 3, // Duration of one full cycle
+    repeat: Infinity, // Loops forever
+    ease: "easeInOut", // Smooth easing
+  }}
+>
+  <rect
+    x="67.1211"
+    y="0.697266"
+    width="111.824"
+    height="111.824"
+    transform="rotate(36.6092 67.1211 0.697266)"
+    fill="#FFCA2D"
+  />
+</motion.svg>
+    </motion.div>
             </div>
           </div>
         </div>
       </div>
+
+
       {/* Challenges */}
-      <div className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24">
-        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
-          <div className="flex flex-col gap-y-[64px] ">
-            <h2 className="text-black text-[32px]  md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary">
-              Challenges & Needs
-            </h2>
-            <div className="flex flex-row gap-x-[106px] flex-wrap lg:flex-nowrap gap-y-8 md:gap-y-16 justify-center">
-              <div className="lg:w-[40%] lg:align-middle flex flex-col relative">
-                <Image
-                  src="/images/bridge/bridge-55.png"
-                  alt=""
-                  width={473.34613037109375}
-                  height={473.34613037109375}
-                  className="w-full md:min-w-[400px] z-10"
-                />
+      <div className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24 overflow-hidden">
+      <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
+        <motion.div
+          className="flex flex-col gap-y-[64px]"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-black text-[32px] md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary">
+            Challenges & Needs
+          </h2>
 
-                {/* Triangle Blue Small */}
-                <svg
-                  width="165"
-                  height="173"
-                  viewBox="0 0 165 173"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="z-8 absolute top-[-2%] right-[-4%]"
-                >
-                  <path
-                    d="M134.794 0.234169L164.878 172.845L0.350549 112.592L134.794 0.234169Z"
-                    fill="#33BED4"
-                  />
-                </svg>
-              </div>
-              <div className="lg:w-[60%]">
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px]">
-                  Conventional education system’s emphasis on rote learning and
-                  lack of application-based curricula has led to the youth 
-                  <span className="text-[#592AC7] font-bold">
-                    lacking creative, critical thinking and other employable
-                    skills. 
-                  </span>
-                  <br />
-                  <br /> The 
-                  <span className="text-[#592AC7] font-bold">
-                    rapid technological advancement has created a skills gap
-                  </span>
-                   posing a huge challenge for the youth to secure or create
-                  employment. With little to no access to career growth
-                  opportunities, the youth are often led astray by fringe groups
-                  causing both economic and social concerns. <br />
-                  <br />
-                  This creates a{" "}
-                  <span className="text-[#592AC7] font-bold">
-                    need for platforms that can provide a basic understanding of
-                    new-age skills, personalized guidance, 
-                  </span>
-                  and access to improved tools and resources that empower the
-                  youth to become lifelong learners and pursue their
-                  aspirations.
-                </p>
-              </div>
-            </div>
+          <div className="flex flex-col lg:flex-row gap-x-12 gap-y-8 md:gap-y-16 justify-center items-center">
+            {/* Image + SVG Container */}
+            <motion.div
+              className="lg:w-[40%] flex flex-col relative items-center"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Image
+                src="/images/bridge/bridge-55.png"
+                alt=""
+                width={473}
+                height={473}
+                className="w-full max-w-[400px] md:min-w-[300px] z-10"
+              />
+
+              {/* Triangle Blue Small */}
+              <motion.svg
+                width="165"
+                height="173"
+                viewBox="0 0 165 173"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute top-[-2%] right-[-4%] z-0"
+                animate={{
+                  y: [0, -5, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <path
+                  d="M134.794 0.234169L164.878 172.845L0.350549 112.592L134.794 0.234169Z"
+                  fill="#33BED4"
+                />
+              </motion.svg>
+            </motion.div>
+
+            {/* Text Content */}
+            <motion.div
+              className="lg:w-[60%] text-center lg:text-left"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <p className="font-secondary font-medium text-black text-[18px] leading-[30px]">
+                Conventional education system’s emphasis on rote learning and
+                lack of application-based curricula has led to the youth{" "}
+                <span className="text-[#592AC7] font-bold">
+                  lacking creative, critical thinking and other employable
+                  skills.
+                </span>
+                <br />
+                <br />
+                The{" "}
+                <span className="text-[#592AC7] font-bold">
+                  rapid technological advancement has created a skills gap
+                </span>{" "}
+                posing a huge challenge for the youth to secure or create
+                employment. With little to no access to career growth
+                opportunities, the youth are often led astray by fringe groups
+                causing both economic and social concerns. <br />
+                <br />
+                This creates a{" "}
+                <span className="text-[#592AC7] font-bold">
+                  need for platforms that can provide a basic understanding of
+                  new-age skills, personalized guidance,
+                </span>{" "}
+                and access to improved tools and resources that empower the
+                youth to become lifelong learners and pursue their aspirations.
+              </p>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
+    </div>  
+
       {/* The Bridge Program */}
       <div className="bg-white py-16 lg:py-32 md:py-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
-          <div className="flex flex-col gap-y-[64px]">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-y-[64px]"
+        >
             <h2 className="text-black text-[32px]  md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary">
               The Bridge Program
             </h2>
             <div className="flex flex-row gap-x-[106px] flex-wrap lg:flex-nowrap gap-y-8 md:gap-y-16 justify-center">
-              <div className="lg:w-[55%]">
+              <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+              className="lg:w-[55%]">
                 <p className="font-secondary font-medium text-black text-[18px] leading-[30px]">
                   The 
                   <span className="text-[#592AC7] font-bold">
@@ -208,8 +287,13 @@ export default function Bridge() {
                   self-growth, thereby bolstering holistic personality
                   development. 
                 </p>
-              </div>
-              <div className="lg:w-[45%] lg:align-middle flex flex-col relative">
+              </motion.div>
+              <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+              className="lg:w-[45%] lg:align-middle flex flex-col relative">
                 <Image
                   src="/images/bridge/bridge-6.png"
                   alt=""
@@ -219,113 +303,108 @@ export default function Bridge() {
                 />
 
                 {/* Blue Circle Small */}
-                <svg
-                  width="128"
-                  height="128"
-                  viewBox="0 0 128 128"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="absolute top-[25%] md:top-[15%] lg:top-[3%] right-[5%] md:right-[12%] md:scale-100 scale-65 z-11"
-                >
-                  <circle
-                    cx="64.0088"
-                    cy="64.2842"
-                    r="63.3877"
-                    fill="#33BED4"
-                  />
-                </svg>
-              </div>
+                <motion.svg
+                width="128"
+                height="128"
+                viewBox="0 0 128 128"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute top-[25%] md:top-[15%] lg:top-[3%] right-[5%] md:right-[12%] md:scale-100 scale-75 z-10"
+                animate={{ y: [-5, 5, -5] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <circle cx="64.0088" cy="64.2842" r="63.3877" fill="#33BED4" />
+              </motion.svg>
+              </motion.div>
             </div>
-          </div>
-        </div>
+            </motion.div>
+            </div>
       </div>
+      
       {/* What we want */}
-      <div className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24">
-        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
-          <h2 className="text-black text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
-            What do we want to do?
-          </h2>
-          <div className="flex flex-row  flex-wrap gap-y-[65px] gap-x-4 lg:justify-between justify-center">
-            {/* Individual Items */}
-            <div className="flex flex-row gap-x-4 md:gap-y-[65px] gap-y-8 lg:w-[49%] items-center flex-wrap lg:flex-nowrap justify-center w-full">
-              <Image
-                src="/images/bridge/bridge-icon1.png"
-                alt=""
-                width={104}
-                height={104}
-              />
-              <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-left md:text-center lg:text-left">
-                Mentor-guided learning and career guidance with a focus on
-                skills and knowledge directly applicable to the industry.
-              </p>
-            </div>
-            <div className="flex flex-row gap-x-4 md:gap-y-[65px] gap-y-8 lg:w-[49%] items-center flex-wrap lg:flex-nowrap justify-center w-full">
-              <Image
-                src="/images/bridge/bridge-icon2.png"
-                alt=""
-                width={104}
-                height={104}
-              />
-              <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-left md:text-center lg:text-left">
-                Hands-on projects and opportunities to work on live projects for
-                practical learning
-              </p>
-            </div>
-            <div className="flex flex-row gap-x-4 md:gap-y-[65px] gap-y-8 lg:w-[49%] items-center flex-wrap lg:flex-nowrap justify-center w-full">
-              <Image
-                src="/images/bridge/bridge-icon3.png"
-                alt=""
-                width={104}
-                height={104}
-              />
-              <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-left md:text-center lg:text-left">
-                Development of soft skills through workshops on communication,
-                emotional intelligence, teamwork, and interpersonal skills
-              </p>
-            </div>
-            <div className="flex flex-row gap-x-4 md:gap-y-[65px] gap-y-8 lg:w-[49%] items-center flex-wrap lg:flex-nowrap justify-center w-full">
-              <Image
-                src="/images/bridge/bridge-icon4.png"
-                alt=""
-                width={104}
-                height={104}
-              />
-              <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-left md:text-center lg:text-left">
-                Emphasise the importance of giving back to the community through
-                service work. 
-              </p>
-            </div>
+      <div className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24 overflow-hidden">
+      <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
+        <motion.h2
+          className="text-black text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          What do we want to do?
+        </motion.h2>
 
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+        <div className="flex flex-wrap gap-y-[65px] gap-x-4 lg:justify-between justify-center">
+          {/* Card Items */}
+          {[
+            {
+              img: "/images/bridge/bridge-icon1.png",
+              text: "Mentor-guided learning and career guidance with a focus on skills and knowledge directly applicable to the industry.",
+            },
+            {
+              img: "/images/bridge/bridge-icon2.png",
+              text: "Hands-on projects and opportunities to work on live projects for practical learning.",
+            },
+            {
+              img: "/images/bridge/bridge-icon3.png",
+              text: "Development of soft skills through workshops on communication, emotional intelligence, teamwork, and interpersonal skills.",
+            },
+            {
+              img: "/images/bridge/bridge-icon4.png",
+              text: "Emphasize the importance of giving back to the community through service work.",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-row gap-x-4 items-center flex-wrap lg:flex-nowrap justify-center lg:w-[49%] w-full"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Image src={item.img} alt="" width={104} height={104} />
+              <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-center  lg:text-left mt-8 md:mt-0">
+                {item.text}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
+    </div>
+
+
       {/* Our Programs */}
       <div className="bg-white py-16 lg:py-32 md:py-24 overflow-x-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
-          <h2 className="text-black text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+          <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+          className="text-black text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
             Our Program
-          </h2>
+          </motion.h2>
           {/* Main Image */}
           <div className="flex flex-col justify-center">
             <div className="relative flex flex-col justify-center items-center">
               <Image
                 src="/images/bridge/bridge-photo.png"
-                alt=""
+                alt="Students standing on a bridge"
                 width={839}
                 height={937}
                 className="relative z-5"
+                priority
               />
               {/* Green Square */}
-              <svg
+              <motion.svg
                 width="196"
                 height="197"
                 viewBox="0 0 196 197"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute top-[21%] left-[7%] xl:z-6 scale-50 lg:scale-100"
+                animate={{ y: [-5, 5, -5] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 <rect
                   x="24.4492"
@@ -335,18 +414,22 @@ export default function Bridge() {
                   transform="rotate(8.1155 24.4492 0.84375)"
                   fill="#91C644"
                 />
-              </svg>
+              </motion.svg>
               {/* Yellow Circle */}
-              <svg
+              <motion.svg
                 width="231"
                 height="232"
                 viewBox="0 0 231 232"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute top-[15%] right-[2%] z-5 scale-50 lg:scale-100 "
+                animate={{ y: [-5, 5, -5] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 <circle cx="115.543" cy="116.246" r="115.457" fill="#FFCA2D" />
-              </svg>
+              </motion.svg>
+             
+
 
               {/* Excalmation */}
               <svg
@@ -648,6 +731,7 @@ export default function Bridge() {
           </div>
         </div>
       </div>
+      
       {/* Add Impact Report from Homepage */}
       {/* Donation */}
       <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">

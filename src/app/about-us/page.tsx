@@ -16,7 +16,6 @@ const AboutUs = () => {
     { ssr: false }
   );
 
-  
   const targetYouth = 45;
   const targetHours = 31294;
   const targetProjects = 25;
@@ -47,7 +46,7 @@ const AboutUs = () => {
     if (!isVisible) return;
 
     const startTime = performance.now();
-    let animationFrame: number; 
+    let animationFrame: number;
 
     const animateCounters = (currentTime: number) => {
       const elapsedTime = currentTime - startTime;
@@ -128,7 +127,7 @@ const AboutUs = () => {
 
           {/* Green Circle - Slides in from Right */}
           <motion.div
-            className="absolute right-12 md:right-24 lg:right-32 top-8 md:top-5 lg:top-10"
+            className="absolute right-12 md:right-24 lg:right-50 top-8 md:top-5 lg:top-10"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
@@ -452,7 +451,7 @@ const AboutUs = () => {
       </section>
 
       {/* Our Impact Section */}
-      <section
+      <section  id="our-impact" 
         ref={impactSectionRef}
         className="bg-[#592AC7] text-[#FFFFFF] py-18 text-center px-4 md:px-12"
       >
@@ -917,7 +916,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-4xl"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-3xl"
           >
             {/* Video 1 */}
             <motion.div
