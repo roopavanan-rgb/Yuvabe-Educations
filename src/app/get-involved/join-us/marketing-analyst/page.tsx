@@ -2,9 +2,9 @@ export default function Marketing_Analyst() {
   return (
     <div>
       <div className="bg-color pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24">
-        <div className="max-w-[1240px] flex flex-col m-auto gap-y-16 md:gap-y-24 lg:gap-y-24">
+        <div className="max-w-[1240px] flex flex-col m-auto gap-y-16 md:gap-y-24 lg:gap-y-24 px-5 md:px-8 xl:px-0">
           <div className="flex flex-col gap-x-4 gap-y-16 md:gap-y-24 lg:gap-y-24">
-            <h1 className="text-[#592AC7] text-[48px] leading-[120%] font-semibold text-center font-primary">
+            <h1 className="text-[#592AC7] text-[32px] md:text-[48px] leading-[120%] font-semibold text-center font-primary">
               Marketing Analyst
             </h1>
             <div className="blog">
