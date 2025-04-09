@@ -20,7 +20,10 @@
     grid-template-columns: repeat(7, minmax(30px, 1fr));
     gap: 6px;
   }
-  
+/*   Overflow Hidden */
+    html,body{
+   overflow-x: hidden;
+    }
   .calendar-day {
     width: 32px;
     height: 32px;
