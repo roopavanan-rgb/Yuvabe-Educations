@@ -227,7 +227,7 @@ const page = () => {
           </a>
         </motion.div>
       </section>
-    </>
+    </main>
   );
 };
 
