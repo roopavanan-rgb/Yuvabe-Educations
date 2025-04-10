@@ -1,1042 +1,577 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
 
-const AboutUs = () => {
-  const impactSectionRef = useRef(null);
-  const [youthCount, setYouthCount] = useState(0);
-  const [hoursCount, setHoursCount] = useState(0);
-  const [projectsCount, setProjectsCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+import Link from "next/link";
+import ImpactReport from "@/components/ImpactReport";
 
-  const Player = dynamic(
-    () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
-    { ssr: false }
-  );
-
-  const targetYouth = 45;
-  const targetHours = 31294;
-  const targetProjects = 25;
-  const duration = 2000; // 2 seconds
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (impactSectionRef.current) {
-      observer.observe(impactSectionRef.current);
-    }
-
-    return () => {
-      if (impactSectionRef.current) {
-        observer.unobserve(impactSectionRef.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    const startTime = performance.now();
-    let animationFrame: number;
-
-    const animateCounters = (currentTime: number) => {
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
-
-      setYouthCount(Math.floor(progress * targetYouth));
-      setHoursCount(Math.floor(progress * targetHours));
-      setProjectsCount(Math.floor(progress * targetProjects));
-
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animateCounters);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animateCounters);
-
-    return () => cancelAnimationFrame(animationFrame);
-  }, [isVisible]);
-
+export default function Steam() {
   return (
-    <div className="lg:min-w-[400px] bg-[#FFFFFF] text-[#000000]">
-      {/* Hero Section */}
-      <section className="py-16 text-center px-4 md:px-0">
-        <motion.h1
-          className="text-4xl md:text-6xl font-primary font-semibold text-[#592AC7]"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          Who we are ?
-        </motion.h1>
-
-        <motion.p
-          className="text-xl md:text-2xl mt-2 font-primary font-semibold"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-        >
-          A Thriving Ecosystem for Youth in Auroville
-        </motion.p>
-
-        <motion.p
-          className="mt-8 text-[#000000] font-secondary"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-        >
-          "The ignited minds of the youth are the most powerful <br />
-          resource on earth." — Dr. APJ Abdul Kalam
-        </motion.p>
-      </section>
-
-      {/* Geometric shapes */}
-      <div className="relative ">
-        {/* Geometric Shapes with Motion Effects */}
-        <div className="relative w-full h-full">
-          {/* Yellow Shape - Slides in from Left */}
-          <motion.div
-            className="absolute left-4 md:left-20 lg:left-90 -bottom-46 md:-bottom-32 lg:top-20"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            whileHover={{ scale: 1.05 }}
-          >
+    <>
+      {/* Wrapper */}
+      <div className="bg-white pb-16 xl:pb-20 md:pb-18 xl:pt-32 pt-16 md:pt-24 overflow-hidden">
+        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32 overflow-hidden">
+          {/* Hero */}
+          <div className="flex flex-col lg:gap-y-16 gap-y-8 overflow-hidden">
+            {/* Top */}
             <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="flex flex-col gap-y-4"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <Image
-                src="/assets/yellow-shape.svg"
-                alt="Yellow Shape"
-                width={224} // w-56 equivalent
-                height={224}
-                className="w-24 h-24 md:w-40 md:h-40 lg:w-56 lg:h-56"
-              />
+              <h1 className="text-[#592AC7] text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+                STEAM
+              </h1>
+              <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center">
+                Our STEAM program reintroduces the joy of tinkering and learning
+                by empowering young minds to experiment, innovate, and develop
+                essential skills for the future. We make learning exciting
+                through hands-on exploration in Science, Technology,
+                Engineering, Arts, and Mathematics.
+              </p>
             </motion.div>
-          </motion.div>
-
-          {/* Green Circle - Slides in from Right */}
-          <motion.div
-            className="absolute right-12 md:right-24 lg:right-50 top-8 md:top-5 lg:top-10"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-            whileHover={{ scale: 1.1 }}
-          >
             <motion.div
-              animate={{ y: [0, -10, 0], x: [0, 5, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="max-w-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
             >
-              <Image
-                src="/assets/green-circle.svg"
-                alt="Green Circle"
-                width={112} // w-28 equivalent
-                height={112}
-                className="w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28"
-              />
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/p4Qo589mg8U?si=SBmFHyM6WwT1H2iQ?autoplay=1&mute=1"
+                title="YouTube video player"
+                allow="autoplay; encrypted-media"
+                // frameborder="0"
+                
+                // referrerpolicy="strict-origin-when-cross-origin"
+                // allowfullscreen
+                className="md:h-[617px] h-64"
+              ></iframe>
             </motion.div>
-          </motion.div>
-
-          {/* Orange Circle - Slides in from Right */}
-          <motion.div
-            className="absolute right-4 md:right-28 lg:right-90 top-20 md:-bottom-32 lg:top-20"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.4, ease: "easeOut", delay: 0.4 }}
-            whileHover={{ scale: 1.08 }}
-          >
-            <motion.div
-              animate={{ y: [0, -20, 0] }}
-              transition={{
-                duration: 3.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              <Image
-                src="/assets/orange-circle.svg"
-                alt="Orange Circle"
-                width={192} // w-48 equivalent
-                height={192}
-                className="w-15 h-15 md:w-36 md:h-36 lg:w-48 lg:h-48"
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Hear from Our Team Section */}
-      <section className="py-20 px-4 md:px-12 text-center">
-        {/* Heading */}
-        <motion.h2
-          className="text-2xl md:text-3xl font-semibold font-primary"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          Hear from our Team!
-        </motion.h2>
-
-        {/* Video Section */}
-        <motion.div
-          className="relative w-full max-w-4xl mx-auto mt-6 md:mt-8"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-        >
-          <div className="w-full aspect-video max-h-[300px] md:max-h-[450px] rounded-xl shadow-md overflow-hidden">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/GFuLGeIJRJ0"
-              title="YouTube Video"
-              allowFullScreen
-              allow="autoplay; encrypted-media"
-
-            ></iframe>
           </div>
-        </motion.div>
 
-        {/* Description */}
-        <motion.p
-          className="mt-6 text-lg md:text-xl text-[#000000] font-secondary px-2 md:px-6 lg:px-16 xl:px-24"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-        >
-          Yuvabe is more than just an organization—it's a dynamic movement that
-          empowers youth in Auroville to grow, innovate, and create meaningful
-          impact.
-          <br />
-          <motion.span
-            className="block mt-4 font-secondary"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-          >
-            Through our <strong>Work. Serve. Evolve.</strong> approach, we
-            enable youth to:
-          </motion.span>
-        </motion.p>
-      </section>
+          {/* Overview */}
+          <div className="flex flex-col gap-y-8 md:gap-y-16 overflow-hidden">
+            {/* Heading with Slide Down Animation */}
+            <motion.h2
+              className="text-black text-[32px] md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary"
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              Overview
+            </motion.h2>
 
-      {/* Cards Section */}
-      <div className="flex flex-wrap justify-center gap-6 mt-8 px-4 md:px-8">
-        {/* Card 1 */}
-        <motion.div
-          className="bg-white shadow-md rounded-xl p-6 w-full sm:w-[280px] min-h-[250px] flex flex-col items-start text-start"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          whileHover={{ scale: 1.05 }}
-        >
-          <Image
-            src="/assets/wwp.svg"
-            alt="Work with Purpose"
-            width={60}
-            height={60}
-          />
-          <h3 className="font-primary font-semibold mt-4 text-lg">
-            Work with Purpose
-          </h3>
-          <p className="text-[#000000] font-secondary mt-2 text-sm">
-            Gain technical and career skills to build a solid foundation.
-          </p>
-        </motion.div>
+            <div className="flex flex-col lg:flex-row gap-x-8 md:gap-x-16 lg:gap-x-[106px] gap-y-8 md:gap-y-16 justify-center items-center">
+              {/* Text Content with Slide Left Animation */}
+              <motion.div
+                className="lg:w-[50%] px-4"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center md:text-left">
+                  The Auroville Bio-region comprises of approximately&nbsp;
+                  <span className="text-[#592AC7] font-bold">
+                    13 villages with about 40,000 people.
+                  </span>
+                  Situated in the Villupuram district of Tamil Nadu, the region
+                  was primarily reliant on agricultural communities for income.
+                  However, due to
+                  <span className="text-[#592AC7] font-bold">
+                    &nbsp;climate change, income from farming has been
+                    decreasing.
+                  </span>
+                  <br />
+                  <br />
+                  This shift in the natural environment is also altering the
+                  cultural perspective, where
+                  <span className="text-[#592AC7] font-bold">
+                    &nbsp;education
+                  </span>
+                  &nbsp;is now seen as a
+                  <span className="text-[#592AC7] font-bold">
+                    &nbsp;secure pathway
+                  </span>
+                  &nbsp;for employment and
+                  <span className="text-[#592AC7] font-bold">
+                    &nbsp;generating income
+                  </span>
+                  &nbsp;for families.
+                </p>
+              </motion.div>
 
-        {/* Card 2 */}
-        <motion.div
-          className="bg-white shadow-md rounded-xl p-6 w-full sm:w-[280px] min-h-[250px] flex flex-col items-start text-start"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          whileHover={{ scale: 1.05 }}
-        >
-          <Image
-            src="/assets/swi.svg"
-            alt="Serve with Impact"
-            width={60}
-            height={60}
-          />
-          <h3 className="font-primary font-semibold mt-4 text-lg">
-            Serve with Impact
-          </h3>
-          <p className="text-[#000000] font-secondary mt-2 text-sm">
-            Serve with Impact – Give back to the community through meaningful
-            initiatives.
-          </p>
-        </motion.div>
+              {/* Image with Slide Right Animation */}
+              <motion.div
+                className="lg:w-[50%] flex flex-col relative items-center"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Image
+                  src="/images/steam/steam1.png"
+                  alt="group-1"
+                  width={669}
+                  height={447}
+                  className="w-full max-w-[400px] md:max-w-[500px] lg:max-w-full object-contain z-10"
+                />
 
-        {/* Card 3 */}
-        <motion.div
-          className="bg-white shadow-md rounded-xl p-6 w-full sm:w-[280px] min-h-[250px] flex flex-col items-start text-start"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-        >
-          <Image
-            src="/assets/ec.svg"
-            alt="Evolve Continuously"
-            width={60}
-            height={60}
-          />
-          <h3 className="font-primary font-semibold mt-4 text-lg">
-            Evolve Continuously
-          </h3>
-          <p className="text-[#000000] font-secondary mt-2 text-sm">
-            Cultivate self-awareness and personal mastery.
-          </p>
-        </motion.div>
+                {/* Floating SVG Animation */}
+                <motion.svg
+                  className="absolute top-[10%] right-[10%] w-40 md:w-[100px] lg:w-[215px]"
+                  viewBox="0 0 215 216"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  animate={{ y: [0, -20, 0] }} // Floating effect
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <path
+                    d="M214.996 107.863C214.996 167.075 166.995 215.076 107.783 215.076C48.5712 215.076 0.570312 167.075 0.570312 107.863C0.570312 48.6512 48.5712 0.650391 107.783 0.650391C166.995 0.650391 214.996 48.6512 214.996 107.863Z"
+                    fill="#FFCA2D"
+                  />
+                </motion.svg>
+              </motion.div>
+            </div>
+          </div>
+        </div>
       </div>
+      {/* The Challenge */}
+      <div className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24 overflow-hidden">
+        <div className="max-w-[1240px] w-full flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
+          <div className="flex flex-col gap-y-[64px]">
+            {/* Heading Animation */}
+            <motion.h2
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-black text-[32px] md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary"
+            >
+              The Challenge
+            </motion.h2>
 
-      <section className="py-18 bg-[#FFF9EA] mt-24 px-4 md:px-24 text-center">
-        {/* Title */}
-        <motion.h2
-          className="text-4xl md:text-5xl font-semibold font-primary mb-12"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          Our Unique Evolve Program
-        </motion.h2>
+            <div className="flex flex-col-reverse lg:flex-row gap-y-10 lg:gap-y-0 lg:gap-x-16 justify-center items-center">
+              {/* Image Animation */}
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+                className="w-full lg:w-[50%] flex justify-center relative"
+              >
+                <Image
+                  src="/images/steam/steam2.png"
+                  alt=""
+                  width={447}
+                  height={447}
+                  className="w-[80%] md:w-[70%] lg:w-full max-w-[400px] z-10"
+                />
 
-        {/* Description */}
-        <motion.p
-          className="text-[#000000] text-center text-xl font-secondary max-w-full mx-auto mb-14 ml-4"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          The Evolve Program is a transformative journey that nurtures young
-          adults into confident, self-aware leaders. It goes beyond skill-
-          <br />
-          building—it's about personal mastery and growth.
-        </motion.p>
+                {/* Square SVG with Floating Animation */}
+                <motion.svg
+                  initial={{ y: 0 }}
+                  whileInView={{ y: [0, -10, 0] }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 2,
+                    ease: "easeInOut"
+                  }}
+                  viewport={{ once: true }}
+                  width="148"
+                  height="148"
+                  viewBox="0 0 148 148"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="absolute bottom-[-5%] right-[10%] md:right-[5%] lg:right-[0] lg:z-11"
+                >
+                  <rect
+                    x="117.871"
+                    y="0.873047"
+                    width="120.879"
+                    height="120.879"
+                    transform="rotate(75.8814 117.871 0.873047)"
+                    fill="#91C644"
+                  />
+                </motion.svg>
+              </motion.div>
 
-        {/* Content Section */}
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* Animated GIF */}
-          <motion.div
-            className="grid grid-cols-1 gap-4 w-full max-w-xl md:max-w-2xl"
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <Player
-              autoplay
-              loop={false}
-              keepLastFrame
-              src="/images/flower.json"
-              className="w-[300px] h-[300px] md:w-[500px] md:h-[500px]"
-            ></Player>
-          </motion.div>
-
-          {/* Text Content */}
-          <motion.div
-            className="w-full md:w-1/2 text-left"
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="mb-6">
-              <p className="text-base font-secondary">
-                <span className="font-bold">
-                  Self-Awareness & Emotional Resilience
-                </span>{" "}
-                – Understand yourself, build emotional intelligence, and
-                navigate challenges with clarity.
-              </p>
+              {/* Text Animation */}
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full lg:w-[50%] flex flex-col gap-6 px-5 md:px-0"
+              >
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center lg:text-left">
+                  The conventional education system’s emphasis on
+                  <span className="text-[#592AC7] font-bold">
+                    &nbsp;rote learning
+                  </span>
+                  &nbsp;and lack of application-based curricula in subjects like
+                  science and mathematics has been known to&nbsp;
+                  <span className="text-[#592AC7] font-bold">
+                    stifle creativity
+                  </span>
+                  and confidence in students.
+                </p>
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center lg:text-left">
+                  This has further led to a lack of inspiration and&nbsp;
+                  <span className="text-[#592AC7] font-bold">
+                    lack of skills in the youth
+                  </span>
+                  to think out of the box and turn their ideas into
+                  reality.&nbsp;
+                  <span className="text-[#592AC7] font-bold">
+                    Growing underemployment
+                  </span>
+                  &nbsp;with little to no access to career growth opportunities
+                  aggravates this situation for the youth.
+                </p>
+              </motion.div>
             </div>
-            <div className="mb-6">
-              <p className="text-base font-secondary">
-                <span className="font-bold">
-                  Self-Expression through Theater & Creativity
-                </span>{" "}
-                – Find your voice, explore storytelling, and enhance
-                communication through performance and creative arts.
-              </p>
-            </div>
-
-            <div className="mb-6">
-              <p className="text-base font-secondary">
-                <span className="font-bold">
-                  Self-Confidence & Leadership Development
-                </span>{" "}
-                – Set goals, develop a growth mindset, and cultivate the
-                leadership skills to inspire change.
-              </p>
-            </div>
-
-            {/* Know More Button */}
-            <button className="bg-[#592AC7] text-white px-6 py-3 rounded-2xl shadow-md hover:bg-[#4a1fa7]">
-              Know More
-            </button>
-          </motion.div>
+          </div>
         </div>
-
-        {/* Final Description */}
-        <motion.p
-          className="text-[#000000] text-left text-xl font-secondary mt-12 max-w-full mx-auto  text-wrap "
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          Through interactive workshops, mentorship, and real-world challenges,
-          participants discover their strengths, express themselves
-          authentically, and step into leadership with confidence.
-        </motion.p>
-        <div className="mt-6 text-[18px] text-left">
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
-            viewport={{ once: true }}
-          >
-            Join us and embark on your personal growth journey!{" "}
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Our Values Section */}
-      <section className="py-20 text-center px-4 md:px-12 overflow-hidden">
-        <motion.h2
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-primary font-semibold mb-12"
-        >
-          Our Values
-        </motion.h2>
-
-        <div className="relative flex flex-wrap justify-center items-center gap-8">
-          {/* GIF with Bounce Animation */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.8,
-              type: "spring",
-              stiffness: 200,
-              damping: 10
-            }}
-            viewport={{ once: true }}
-          >
-            <Image
-              src="/assets/creativityf.gif"
-              alt="Our Values"
-              width={800}
-              height={800}
-              unoptimized
-              className="w-full max-w-3xl"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Our Impact Section */}
-      <section  id="our-impact" 
-        ref={impactSectionRef}
-        className="bg-[#592AC7] text-[#FFFFFF] py-18 text-center px-4 md:px-12"
-      >
-        <motion.h2
-          className="text-4xl md:text-5xl font-primary font-semibold mb-8"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Our Impact
-        </motion.h2>
-
-        <motion.p
-          className="mb-12 font-secondary text-[#FFFFFF]"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          Committed to serving the community, we enable the educational
-          empowerment in schools in and around
-          <br /> Auroville along with supporting digital transformation of
-          fellow community organisations.
-        </motion.p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-5xl md:text-7xl font-primary font-semibold">
-          {[
-            { count: youthCount, color: "#8CD1DC", label: "Youth Engaged" },
-            {
-              count: hoursCount,
-              color: "#F2D789",
-              label: "Hours of community service"
-            },
-            {
-              count: projectsCount,
-              color: "#BBD594",
-              label: "Projects Completed"
-            }
-          ].map((item, index) => (
-            <motion.div
-              key={index}
+      </div>
+      {/* Challenges */}({/* The STEAM Lab */}
+      <div className="bg-white py-16 lg:py-48 md:py-24">
+        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
+          <div className="flex flex-col gap-y-24 md:gap-y-32 lg:gap-y-40">
+            {/* Animated Title */}
+            <motion.h2
+              className="text-black text-[32px] md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
             >
-              <span
-                className="font-primary font-semibold"
-                style={{ color: item.color }}
+              The STE(A)M Lab
+            </motion.h2>
+
+            <div className="flex flex-row gap-x-[106px] flex-wrap lg:flex-nowrap gap-y-8 md:gap-y-16 justify-center">
+              {/* Animated Text */}
+              <motion.div
+                className="w-full lg:w-[50%]"
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
               >
-                {item.count}
-              </span>
-              <p className="text-2xl pt-4">{item.label}</p>
-            </motion.div>
-          ))}
-        </div>
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px]">
+                  Through our STEAM program, we want to re-introduce the
+                  <span className="text-[#592AC7] font-bold">
+                    {" "}
+                    joy of tinkering
+                  </span>
+                  and learning by doing, especially in the fields of Science,
+                  Technology, Engineering, and Mathematics.
+                  <br />
+                  <br />A dedicated STEAM Lab would give a platform and space
+                  for the students to explore, innovate, and
+                  <span className="text-[#592AC7] font-bold">
+                    {" "}
+                    develop essential skills
+                  </span>
+                  needed to fuel innovation and entrepreneurship.
+                </p>
+              </motion.div>
 
-        <motion.button
-          className="mt-12 px-8 py-3 bg-[#FFFFFF] text-[#592AC7] font-primary font-semibold rounded-xl"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          Impact Report
-        </motion.button>
-      </section>
+              {/* Animated Image */}
+              <motion.div
+                className="lg:w-[50%] lg:align-middle flex flex-col relative justify-center"
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Image
+                  src="/images/steam/steam4.png"
+                  alt=""
+                  width={651}
+                  height={373}
+                  className="w-full md:min-w-[400px] z-10"
+                />
 
-      {/* SDGs Cards Section */}
-      <section className="py-20 bg-[#FEF8EE] text-center px-4 md:px-12">
-        <motion.p
-          className="text-[#000000] font-secondary mb-8"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Yuvabe's efforts to educate and re-imagine the future of work is
-          closely aligned with the UN Sustainable
-          <br /> Development Agenda 2030. Below are the priority SDGs that align
-          with our mission.
-        </motion.p>
-
-        <div className="flex flex-wrap justify-center gap-6">
-          {["4", "8", "10"].map((num, index) => (
-            <motion.div
-              key={num}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-            >
-              <Image
-                src={`/assets/${num}.png`}
-                alt={`SDG ${num}`}
-                width={200}
-                height={200}
-                className="relative"
-              />
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 text-center px-4 md:px-12">
-        <h2 className="text-4xl md:text-5xl font-primary font-semibold mb-12">
-          Testimonials
-        </h2>
-        <div className="flex flex-col items-center gap-8">
-          <iframe
-            className="w-full max-w-4xl aspect-video rounded-lg"
-            src="https://www.youtube.com/embed/LAYxYUrJh2A"
-            title="Main Testimonial"
-            allowFullScreen
-          ></iframe>
-
-          <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 w-full max-w-4xl">
-            <iframe
-              className="w-full max-w-[300px] md:max-w-[400px] rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/i98KcQx5ct4"
-              title="Testimonial 1"
-              allowFullScreen
-            ></iframe>
-
-            <iframe
-              className="w-full max-w-[300px] md:max-w-[400px] rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/INNP_w6fJF4"
-              title="Testimonial 2"
-              allowFullScreen
-            ></iframe>
-
-            <iframe
-              className="w-full max-w-[300px] md:max-w-[400px] rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/xZWMWYAzqaY"
-              title="Testimonial 3"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      {/* Support Cards Section */}
-      <section className="py-20 bg-[#FFF9EA] text-center px-4 md:px-12">
-        <h2 className="text-4xl font-primary font-semibold mb-18">
-          There are many ways in which you too can <br /> support the cause of
-          youth empowerment.
-        </h2>
-
-        <div className="flex flex-wrap justify-center gap-10">
-          {/* Card 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="w-70 p-8 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-110 cursor-pointer"
-          >
-            <Image
-              src="/assets/collaborate.svg"
-              alt="Collaborate"
-              width={60}
-              height={60}
-              className="mb-4"
-            />
-            <h3 className="text-lg font-primary font-semibold pr-26 mb-1">
-              Collaborate
-            </h3>
-            <p className="text-sm text-[#000000] font-secondary text-left">
-              Be it AI-driven market research, ERP solution for your enterprise,
-              support in digital marketing or design consultancy, our team is
-              here to help.
-            </p>
-          </motion.div>
-
-          {/* Card 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="w-70 p-8 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-110 cursor-pointer"
-          >
-            <Image
-              src="/assets/support.svg"
-              alt="Support"
-              width={60}
-              height={60}
-              className="mb-4"
-            />
-            <h3 className="text-lg font-primary font-semibold pr-36 mb-1">
-              Support
-            </h3>
-            <p className="text-sm text-[#000000] font-secondary text-left">
-              Contribute time, skills, or resources by becoming a sponsor,
-              donor, or mentor for our youth.
-            </p>
-          </motion.div>
-
-          {/* Card 3 */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="w-70 p-8 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-110 cursor-pointer"
-          >
-            <Image
-              src="/assets/join.svg"
-              alt="Join"
-              width={60}
-              height={60}
-              className="mb-4"
-            />
-            <h3 className="text-lg font-primary font-semibold pr-46 mb-1">
-              Join
-            </h3>
-            <p className="text-sm text-[#000000] font-secondary text-left">
-              Want to be part of a young company, where you can learn, work,
-              serve, and evolve? Get in touch with us!
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Founding Partners Section */}
-      <section className="py-20 bg-[#592AC7] text-[#FFFFFF] flex flex-col md:flex-row items-center justify-center px-4 md:px-20 gap-12 md:gap-20">
-        {/* Text Content */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="max-w-2xl text-center md:text-left"
-        >
-          <h2 className="text-lg md:text-5xl lg:text-[64px] font-primary font-semibold mb-6">
-            Founding Partners
-          </h2>
-          <p className="font-secondary text-[#FFFFFF] leading-[30px]">
-            Our unique partnership model with{" "}
-            <strong>our founding partner Quilt.AI</strong> demonstrates how a
-            global entity can support and empower a rural organisation,
-            fostering a mutually beneficial ecosystem.
-          </p>
-        </motion.div>
-
-        {/* Co-Founders Animation */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl flex justify-center"
-        >
-          <Player
-            autoplay
-            loop
-            src="/images/cofounders.json"
-            className="w-full h-auto max-h-[500px] sm:max-h-[550px] md:max-h-[600px]"
-          />
-        </motion.div>
-      </section>
-
-      {/* Image Section */}
-
-      {/* What Is Quilt.AI Section */}
-      <section className="py-20 px-4 md:px-20 text-center bg-white">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
-          {/* Text Content */}
-          <div className="max-w-xl text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-primary font-semibold mb-4">
-              What Is Quilt.AI?
-            </h2>
-            <p className="text-[#000000] font-secondary mb-6">
-              Based in Singapore and Boston, USA, <strong>Quilt.AI</strong> is
-              an AI-powered insights company whose aim is to provide a more
-              holistic, nuanced view of humanity using internet data.
-            </p>
-            <p className="text-[#000000] font-secondary mb-4">
-              By merging machine learning with human, cultural intelligence,
-              Quilt.AI's team of anthropologists, engineers, and designers
-              develop dynamic models and maps from the billions of data points
-              generated from digital behavior; ultimately building a
-              quantitatively validated understanding of the consumers,
-              categories, and culture.
-            </p>
-            <p className="text-[#000000] font-secondary mb-4">
-              As a socially driven technology company, Quilt.AI supports
-              nonprofits and foundations, giving their time to causes they care
-              about; like gender equity, gender-based violence, climate, and
-              public health.
-            </p>
-          </div>
-
-          {/* Image */}
-          <div className="flex justify-center">
-            <Image
-              src="/assets/qulit.webp"
-              alt="Quilt.AI Logo"
-              width={400}
-              height={400}
-              className="w-auto h-auto max-w-xs sm:max-w-sm md:max-w-md"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Quilt Section */}
-      <section className="py-20 bg-[#FFF9EA] flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-6">
-        {/* Image Container */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="relative flex flex-wrap justify-center  gap-14 w-full md:w-auto"
-        >
-          <Image
-            src="/assets/qimg.webp"
-            alt="Founding Partners"
-            width={600}
-            height={600}
-            className="relative z-5 w-auto h-auto max-w-xs sm:max-w-sm md:max-w-xl"
-          />
-
-          <Image
-            src="/assets/gc.svg"
-            alt="Quilt.AI Logo"
-            width={140}
-            height={180}
-            className="absolute -top-6 left-10 md:left-20 w-auto h-auto max-w-[100px] md:max-w-[140px]"
-          />
-        </motion.div>
-
-        {/* Text Content */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true }}
-          className="w-full max-w-lg text-[#000000] space-y-4 text-base md:text-lg text-center md:text-left leading-[30px]"
-        >
-          <p className="font-secondary font-normal">
-            Aligned sensibilities and a mutual drive to support communities led
-            Yuvabe co-founders and
-          </p>
-
-          <p className="font-secondary">
-            Quilt.AI co-founder, Anurag Banerjee, to try out a partnership model
-            with the newly founded Quilt.AI in 2019.
-          </p>
-
-          <p className="font-secondary">
-            As Quilt.AI's Singapore team expanded steadily, more and more youth
-            from Auroville and Bioregion were onboarded in Yuvabe to slowly
-            learn the ropes of market research, data analysis, communication,
-            and support their global team.
-          </p>
-
-          <p className="font-secondary">
-            <strong>
-              As our primary partner and sponsor, Anurag Banerjee and his team
-              have supported Yuvabe youth's multi-faceted growth and our mission
-              of holistic empowerment.
-            </strong>
-            Their faith and support of our many initiatives, from STEAM
-            Education to youth workshops, has served as the cornerstone of our
-            progress!
-          </p>
-        </motion.div>
-      </section>
-
-      {/* Quilt.AI Info Section */}
-      <section className="bg-[#592AC7] text-[#FFFFFF] py-12 px-4 md:px-20">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-          {/* Left Side - Text Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <p className="text-base font-primary font-semibold">
-              Today Yuvabe's market research and programming team has evolved
-              into an integral part of Quilt.AI's global team, working on
-              projects across geographies.
-            </p>
-
-            <p className="text-base font-primary font-semibold">
-              The skills and training received at Quilt.AI have enabled many
-              Yuvabe alumni to take up new roles in leading organisations in
-              India and abroad!
-            </p>
-          </motion.div>
-
-          {/* Right Side - Stats Section */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center md:justify-end gap-8"
-          >
-            {/* Stat 1 */}
-            <div className="flex flex-col items-center">
-              <h2 className="text-7xl font-primary font-semibold text-[#F8A91E]">
-                30+
-              </h2>
-              <div className="bg-[#FFFFFF] text-[#000000] px-4 py-2 mt-4 rounded-full text-sm font-primary font-semibold text-center">
-                Yuvabe youth engaged by Quilt.AI
-              </div>
+                {/* Blue Triangle */}
+                <motion.svg
+                  width="550"
+                  height="550"
+                  viewBox="0 0 537 563"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="absolute -left-30 md:left-0 lg:top-[-35%] xl:top-[-25%] right-0 md:right-[0%] scale-50 md:scale-65 lg:scale-75 xl:scale-100"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <path
+                    d="M438.396 0.794658L536.283 562.454L0.928781 366.397L438.396 0.794658Z"
+                    fill="#33BED4"
+                  />
+                </motion.svg>
+              </motion.div>
             </div>
-
-            {/* Stat 2 */}
-            <div className="flex flex-col items-center">
-              <h2 className="text-7xl font-primary font-semibold text-[#91C644]">
-                80+
-              </h2>
-              <div className="bg-[#FFFFFF] text-[#000000] px-4 py-2 mt-4 rounded-full text-sm font-primary font-semibold text-center">
-                Projects completed
-              </div>
-            </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
-
-      {/*Testimonials last*/}
-      <section className="py-12 px-4 md:px-6">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-center text-xl md:text-2xl font-primary font-semibold mb-8"
-        >
-          Hear from our Quilt.AI market research team about their learnings,
-          <br />
-          challenges and experience of being part of a global organisation!
-        </motion.h2>
-
-        {/* Videos Section */}
-        <div className="flex flex-col items-center gap-8">
-          {/* Main Video */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="relative w-full max-w-3xl aspect-video rounded-lg overflow-hidden"
-          >
-            <video
-              src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/hari-testimonial.mp4"
-              controls
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full rounded-lg"
-            ></video>
-          </motion.div>
-
-          {/* Two Smaller Videos */}
-          <motion.div
+      </div>
+      {/* What we want */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24"
+      >
+        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
+          {/* Heading */}
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-3xl"
+            className="text-black text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
           >
-            {/* Video 1 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              viewport={{ once: true }}
-              className="relative aspect-video rounded-lg overflow-hidden"
-            >
-              <video
-                src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/praveen-testimonial-2-draft-2.mp4"
-                controls
-                className="w-full h-full rounded-lg"
-              ></video>
-            </motion.div>
+            What do we want to do?
+          </motion.h2>
 
-            {/* Video 2 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-              viewport={{ once: true }}
-              className="relative aspect-video rounded-lg overflow-hidden"
-            >
-              <video
-                src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/poovendiran-testimonial-1.mp4"
-                controls
-                className="w-full h-full rounded-lg"
-              ></video>
-            </motion.div>
-
-            {/* Video 3 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-              viewport={{ once: true }}
-              className="relative aspect-video rounded-lg overflow-hidden"
-            >
-              <video
-                src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/abilash-testimonial.mp4"
-                controls
-                className="w-full h-full rounded-lg"
-              ></video>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Together we worked with */}
-      <section className="bg-[#FFF9EA] py-10 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Left Side - Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-primary font-semibold text-[#592AC7]">
-              Together <br /> we worked <br /> with
-            </h2>
-          </motion.div>
-
-          {/* Right Side - Partner Logos */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-2 gap-8 items-center"
-          >
+          {/* Items Container */}
+          <div className="flex flex-row flex-wrap gap-y-[65px] gap-x-4 lg:justify-between justify-center">
+            {/* Individual Items */}
             {[
               {
-                src: "/assets/unwomen.svg",
-                alt: "UN Women",
-                width: 200,
-                height: 200
+                img: "/images/bridge/bridge-icon1.png",
+                text: "Drive engagement in Auroville, the bioregion and in underserved communities through an accessible centralised STEAM Lab."
               },
               {
-                src: "/assets/billgates.svg",
-                alt: "Bill & Melinda Gates Foundation",
-                width: 300,
-                height: 300
+                img: "/images/bridge/bridge-icon2.png",
+                text: "Out of school and school break programs for Aurovillians and bioregion kids."
               },
               {
-                src: "/assets/coke.svg",
-                alt: "Coca-Cola",
-                width: 200,
-                height: 200
+                img: "/images/bridge/bridge-icon3.png",
+                text: "A more personalised learning with low mentor-student ratio with about 4 Yuvabe youth assigned to each class."
               },
-              { src: "/assets/visa.svg", alt: "Visa", width: 100, height: 100 }
-            ].map((logo, index) => (
+              {
+                img: "/images/bridge/bridge-icon4.png",
+                text: "Partnership with various STEAM and Experiential learning organisations like Agastya Foundation, ThinkTac etc."
+              }
+            ].map((item, index) => (
               <motion.div
-                key={logo.alt}
+                key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{
-                  duration: 0.6,
+                  duration: 0.5,
                   ease: "easeOut",
                   delay: index * 0.2
                 }}
                 viewport={{ once: true }}
+                className="flex flex-row gap-x-4 md:gap-y-[65px] gap-y-8 lg:w-[49%] items-center flex-wrap lg:flex-nowrap justify-center w-full"
               >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                />
+                <Image src={item.img} alt="" width={104} height={104} />
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-left md:text-center lg:text-left">
+                  {item.text}
+                </p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </motion.div>
+      {/* Our Programs */}
+      <motion.div
+        className="bg-white py-16 lg:py-32 md:py-24"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
+          <motion.h2
+            className="text-black text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            Our Program
+          </motion.h2>
+
+          {/* Main Image */}
+          <motion.div
+            className="flex flex-col justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <div className="relative flex flex-col justify-center items-center">
+              <Image
+                src="/images/steam/steam3-hires.png"
+                alt=""
+                width={841}
+                height={672}
+                className="relative z-5"
+              />
+
+              {/* Programs */}
+              <motion.div
+                className="flex flex-row gap-x-16 gap-y-8 mt-8 md:mt-[-100px] z-10 xl:min-w-[1220px] lg:flex-nowrap flex-wrap justify-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: { staggerChildren: 0.3 }
+                  }
+                }}
+              >
+                {[
+                  {
+                    title: "Program Calendar",
+                    href: "/steam/program-calendar",
+                    imgSrc: "/images/bridge/calendar.svg",
+                    borderColor: "#9688C0",
+                    bgColor: "#F4F3F9"
+                  },
+                  {
+                    title: "Auroville Program",
+                    href: "/auroville-program",
+                    imgSrc: "/images/bridge/matrimandir-oultine.svg",
+                    borderColor: "#F8A91E",
+                    bgColor: "#FEF6E8"
+                  },
+                  {
+                    title: "Visitor Program",
+                    href: "/visitor-program",
+                    imgSrc: "/images/bridge/laptop.svg",
+                    borderColor: "#91C644",
+                    bgColor: "#F4F9EC"
+                  }
+                ].map((program, index) => (
+                  <Link
+                    key={index}
+                    href={program.href}
+                    className="w-full md:w-1/4 lg:w-1/5"
+                  >
+                    <motion.div
+                      className="flex flex-col border-[1.5px] rounded-[15px] gap-y-[13px] justify-center items-center pt-8 pb-[22px] px-[28px] box-shadow-card cursor-pointer hover:scale-105 transition-transform duration-300"
+                      style={{
+                        borderColor: program.borderColor,
+                        backgroundColor: program.bgColor
+                      }}
+                      variants={{
+                        hidden: { opacity: 0, y: 40, scale: 0.9 },
+                        visible: { opacity: 1, y: 0, scale: 1 }
+                      }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                      <Image
+                        src={program.imgSrc}
+                        alt=""
+                        width={90}
+                        height={90}
+                      />
+                      <h3 className="font-primary text-[16px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
+                        {program.title}
+                      </h3>
+                    </motion.div>
+                  </Link>
+                ))}
+              </motion.div>
+            </div>
           </motion.div>
         </div>
-      </section>
-    </div>
-  );
-};
+      </motion.div>
+      {/* Add Impact Report from Homepage */}
+      <ImpactReport />
+      {/* Donation */}
+      <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
+        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16">
+          <h2 className="text-white text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+            Your Support Matters!
+          </h2>
+          {/* Donate From.... */}
+          <div className="flex flex-row gap-x-[72px] flex-wrap md:flex-nowrap  py-16 lg:py-32 md:py-24">
+            {/* Donate from India */}
+            <div className="flex flex-col gap-y-16  w-full md:w-1/2">
+              {/* Text */}
+              <div className="flex flex-col gap-y-6">
+                <p className="font-secondary font-bold text-[18px] leading-[30px] text-white">
+                  The success of our STEAM Lab is made possible by the
+                  generosity of donors like you. Your support can help us reach
+                  more children, create lasting change, and bring dreams to
+                  life.
+                  <br />
+                  <br />​ Join hands with Yuvabe to empower our future
+                  innovators and leaders to uncover the potential of every
+                  child. Your donation can light up a child's future, one life
+                  at a time.
+                </p>
+                <p className="font-secondary font-bold text-2xl md:text-4xl leading-[40px] text-[#FFCA2D]">
+                  Donate Today and <br className="hidden lg:block" /> Be
+                  a Changemaker!
+                </p>
+              </div>
+              {/* Donate Button */}
+              <div className="flex flex-col gap-y-8 py-12 px-8 md:py-24 md:px-16 bg-white rounded-[50px] justify-center items-center">
+                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black">
+                  To donate from India, kindly use this link:
+                </p>
+                <Link href={"https://donate.auroville.org/"}>
+                  <div className="py-[18px] px-8 md:px-[61px] rounded-[15px] bg-[#592AC7] justify-center items-center">
+                    <p className="font-secondary font-semibold text-[18px] leading-[150%] text-white">
+                      Donate from India
+                    </p>
+                  </div>
+                </Link>
+                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black">
+                  Please follow these steps on the donation page:
+                  <br />
+                  <br />
+                  <ul>
+                    <li>
+                      Select <strong>'Others'</strong> under Projects to donate,
+                    </li>
+                    <li>
+                      Mention Project name as
+                      <strong>'Yuvabe STEAM Lab'</strong>
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            {/* Donate from Abroad */}
 
-export default AboutUs;
+            <div className="w-full md:w-1/2">
+              {/* Import Component  */}
+              <motion.div
+                className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[850px]"
+                initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center">
+                  Donate from Anywhere
+                </h2>
+
+                {/* FundraiseUp Widget */}
+                <a href="#XJLHERLT" className=""></a>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

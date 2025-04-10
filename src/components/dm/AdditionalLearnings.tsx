@@ -39,7 +39,7 @@ export function AdditionalLearnings() {
       </h2>
       <div className="h-[3px] w-275 bg-[#FFCA2D] mx-auto mb-6"></div>
 
-      {/* Subheading */}
+      {/* subheading */}
       <p className="text-center text-[#FFFFFF] text-3xl font-semibold w-full mx-auto mb-12">
         Alongside your primary subject, the program offers comprehensive support<br />
         <span className="block pr-30">training to equip you with essential career-related skills, including:</span>

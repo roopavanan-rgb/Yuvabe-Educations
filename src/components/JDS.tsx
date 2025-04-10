@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { GET_JDS } from "@/lib/graphqlRequest";
-
+import { motion } from "framer-motion";
 interface JobDescriptionNode {
   content: string;
   excerpt: string;
@@ -38,11 +38,11 @@ const JDS: React.FC = () => {
           {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
+              "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              query: GET_JDS,
-            }),
+              query: GET_JDS
+            })
           }
         );
 
@@ -77,17 +77,27 @@ const JDS: React.FC = () => {
           <div className="bg-[#FFF9EA] py-32 relative">
             <div className="max-w-[1028px] flex flex-col m-auto ">
               <div className="flex flex-col gap-y-32 justify-between p-5 md:p-8 flex-wrap xl:p-0">
-                <h2 className="text-black text-2xl md:text-[64px] leading-[120%] font-semibold text-center font-primary z-10">
-                  Current Openings
-                </h2>
+              <motion.h2
+    className="text-black text-2xl md:text-[64px] leading-[120%] font-semibold text-center font-primary z-10"
+    initial={{ y: -50, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: true }}
+  >
+    Current Openings
+  </motion.h2>
                 {/* Job Listings */}
                 <div className="flex flex-col gap-y-32">
                   {/* Individual Listings */}
                   {jobListings.map((job) => (
-                    <div
-                      key={job.slug}
-                      className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
-                    >
+                    <motion.div
+                    key={job.slug}
+                    className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut", }}
+                    viewport={{ once: true }}
+                  >
                       <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
                         {job.title} |
                         <span>
@@ -106,34 +116,42 @@ const JDS: React.FC = () => {
                           </p>
                         </div>
                       </Link>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
             </div>
             <div className="svgs">
               {/* Yellow Crescent */}
-              <svg
+              <motion.svg
                 width="343"
                 height="253"
                 viewBox="0 0 343 253"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute left-[0.2%] top-[2%] scale-50 xl:scale-100"
+                initial={{ x: -100, opacity: 0 }} // Start hidden
+                whileInView={{ x: 0, opacity: 1 }} // Animate when in view
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <path
                   d="M0.783421 147.486C41.51 237.333 147.361 277.152 237.208 236.425C327.055 195.698 366.876 89.8477 326.149 0.00106972C116.625 94.9742 253.313 33.0157 163.466 73.7426C73.6185 114.469 172.533 69.6367 0.783421 147.486Z"
                   fill="#FFCA2D"
                 />
-              </svg>
+              </motion.svg>
               {/* Green Square */}
-              <svg
+              <motion.svg
                 width="260"
                 height="259"
                 viewBox="0 0 260 259"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute right-[0.2%] top-[14%] scale-50 xl:scale-100"
+                initial={{ x: 100, opacity: 0 }} // Start hidden
+                whileInView={{ x: 0, opacity: 1 }} // Animate when in view
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <rect
                   x="100.289"
@@ -142,32 +160,40 @@ const JDS: React.FC = () => {
                   transform="rotate(32.0259 100.289 0)"
                   fill="#91C644"
                 />
-              </svg>
+              </motion.svg>
               {/* Yellow Circle Large */}
-              <svg
+              <motion.svg
                 width="404"
                 height="403"
                 viewBox="0 0 404 403"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute left-[12%] top-[45%] scale-50 xl:scale-100"
+                initial={{ x: -100, opacity: 0 }} // Start hidden
+                whileInView={{ x: 0, opacity: 1 }} // Animate when in view
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <circle cx="202.281" cy="201.5" r="201.5" fill="#FFCA2D" />
-              </svg>
+              </motion.svg>
               {/* Triangle Blue */}
-              <svg
+              <motion.svg
                 width="251"
                 height="256"
                 viewBox="0 0 251 256"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute bottom-[5%] right-[15%] scale-50 xl:scale-100"
+                initial={{ x: 100, opacity: 0 }} // Start hidden
+                whileInView={{ x: 0, opacity: 1 }} // Animate when in view
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <path
                   d="M250.547 0.865651L192.006 255.82L0.479068 77.6452L250.547 0.865651Z"
                   fill="#33BED4"
                 />
-              </svg>
+              </motion.svg>
             </div>
           </div>
         </div>

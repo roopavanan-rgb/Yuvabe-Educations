@@ -2,6 +2,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion"
+
+const bounceIn = {
+  hidden: { scale: 0.5, opacity: 0 },
+  visible: { scale: 1, opacity: 1, transition: { type: "spring", stiffness: 120, damping: 10 } },
+};
+
 export default function Bridge() {
   return (
     <>
@@ -38,7 +44,7 @@ export default function Bridge() {
     <div className="relative w-full pt-[56.25%]"> {/* 16:9 Aspect Ratio */}
       <iframe
         className="absolute top-0 left-0 w-full h-full rounded-lg"
-        src="https://www.youtube.com/embed/xf697xkmu74?si=7gyQHmM7syAgCtiM"
+        src="https://www.youtube.com/embed/xf697xkmu74?si=7gyQHmM7syAgCtiM?autoplay=1&mute=1"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>
@@ -550,182 +556,73 @@ export default function Bridge() {
 
               {/* Programs */}
               <div className="flex flex-row gap-x-[14px] gap-y-8 lg:absolute lg:bottom-0 z-10 xl:min-w-[1220px] lg:flex-nowrap flex-wrap mt-[-100px] md:mt-[-200px] lg:mt-0">
-                <div className="flex flex-col border-[1.5px] rounded-[15px] border-[#9688C0] bg-[#F4F3F9] gap-y-[13px] w-full md:w-1/4 md:grow-1 lg:w-1/5 justify-center items-center pt-8 pb-[22px] px-[28px] box-shadow-card">
-                  <Image
-                    src="/images/bridge/calendar.svg"
-                    alt=""
-                    width={90}
-                    height={90}
-                  />
-                  <h3 className="font-primary text-[16px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
-                    Program Calendar
-                  </h3>
-                  <div className="bg-[#9688C0] rounded-full p-[6px] w-[31.5px] self-end">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.25 5.36523L14.7959 5.36523L14.7959 14.9112"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M14.7959 5.36617L5.25 14.9121"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex flex-col border-[1.5px] rounded-[15px] border-[#FFCA2D] bg-[#FFFAEA] gap-y-[13px] w-full md:w-1/4 md:grow-1 lg:w-1/5 justify-center items-center pt-8 pb-[22px] px-[28px] box-shadow-card">
-                  <Image
-                    src="/images/bridge/megaphone.svg"
-                    alt=""
-                    width={96}
-                    height={96}
-                  />
-                  <h3 className="font-primary text-[16px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
-                    Digital marketing
-                  </h3>
-                  <div className="bg-[#FFCA2D] rounded-full p-[6px] w-[31.5px] self-end">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.25 5.36523L14.7959 5.36523L14.7959 14.9112"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M14.7959 5.36617L5.25 14.9121"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex flex-col border-[1.5px] rounded-[15px] border-[#9688C0] bg-[#EBF8FB] gap-y-[13px] w-full md:w-1/4 md:grow-1 lg:w-1/5 justify-center items-center pt-8 pb-[22px] px-[28px] box-shadow-card">
-                  <Image
-                    src="/images/bridge/ai.svg"
-                    alt=""
-                    width={90}
-                    height={90}
-                  />
-                  <h3 className="font-primary text-[16px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
-                    AI Full Stack
-                  </h3>
-                  <div className="bg-[#33BED4] rounded-full p-[6px] w-[31.5px] self-end">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.25 5.36523L14.7959 5.36523L14.7959 14.9112"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M14.7959 5.36617L5.25 14.9121"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex flex-col border-[1.5px] rounded-[15px] border-[#91C644] bg-[#F4F9EC] gap-y-[13px] w-full md:w-1/4 md:grow-1 lg:w-1/5 justify-center items-center pt-8 pb-[22px] px-[28px] box-shadow-card">
-                  <Image
-                    src="/images/bridge/leaf.svg"
-                    alt=""
-                    width={90}
-                    height={90}
-                  />
-                  <h3 className="font-primary text-[16px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
-                    Corporate Sustainability
-                  </h3>
-                  <div className="bg-[#91C644] rounded-full p-[6px] w-[31.5px] self-end">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.25 5.36523L14.7959 5.36523L14.7959 14.9112"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M14.7959 5.36617L5.25 14.9121"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex flex-col border-[1.5px] rounded-[15px] border-[#F8A91E] bg-[#FEF6E8] gap-y-[13px] w-full md:w-1/4 md:grow-1 lg:w-1/5 justify-center items-center pt-8 pb-[22px] px-[28px] box-shadow-card">
-                  <Image
-                    src="/images/bridge/pen.svg"
-                    alt=""
-                    width={90}
-                    height={90}
-                  />
-                  <h3 className="font-primary text-[16px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
-                    UI/UX Design
-                  </h3>
-                  <div className="bg-[#F8A91E] rounded-full p-[6px] w-[31.5px] self-end">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.25 5.36523L14.7959 5.36523L14.7959 14.9112"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M14.7959 5.36617L5.25 14.9121"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
+      {[
+        {
+          href: "/bridge/program-calendar",
+          border: "border-[#9688C0]",
+          bg: "bg-[#F4F3F9]",
+          imgSrc: "/images/bridge/calendar.svg",
+          title: "Program Calendar",
+          iconBg: "bg-[#9688C0]",
+        },
+        {
+          href: "/bridge/digital-marketing",
+          border: "border-[#FFCA2D]",
+          bg: "bg-[#FFFAEA]",
+          imgSrc: "/images/bridge/megaphone.svg",
+          title: "Digital Marketing",
+          iconBg: "bg-[#FFCA2D]",
+        },
+        {
+          href: "/bridge/ai",
+          border: "border-[#9688C0]",
+          bg: "bg-[#EBF8FB]",
+          imgSrc: "/images/bridge/ai.svg",
+          title: "AI Full Stack",
+          iconBg: "bg-[#33BED4]",
+        },
+        {
+          href: "/bridge/sustainability",
+          border: "border-[#91C644]",
+          bg: "bg-[#F4F9EC]",
+          imgSrc: "/images/bridge/leaf.svg",
+          title: "Corporate Sustainability",
+          iconBg: "bg-[#91C644]",
+        },
+        {
+          href: "/bridge/ui-ux",
+          border: "border-[#F8A91E]",
+          bg: "bg-[#FEF6E8]",
+          imgSrc: "/images/bridge/pen.svg",
+          title: "UI/UX Design",
+          iconBg: "bg-[#F8A91E]",
+        },
+      ].map(({ href, border, bg, imgSrc, title, iconBg }, index) => (
+        <motion.div
+          key={index}
+          variants={bounceIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="w-full md:w-1/4 md:grow-1 lg:w-1/5"
+        >
+          <Link href={href}>
+            <div className={`flex flex-col ${border} ${bg} rounded-[15px] border-[1.5px] gap-y-[13px] justify-center items-center pt-8 pb-[22px] px-[28px] box-shadow-card min-h-[250px] h-full`}>
+              <Image src={imgSrc} alt={title} width={90} height={90} />
+              <h3 className="font-primary text-[16px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
+                {title}
+              </h3>
+              <div className={`${iconBg} rounded-full p-[6px] w-[31.5px] self-end`}>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.25 5.36523L14.7959 5.36523L14.7959 14.9112" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M14.7959 5.36617L5.25 14.9121" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </div>
+            </div>
+          </Link>
+        </motion.div>
+      ))}
+    </div>
             </div>
             <div></div>
           </div>
@@ -809,7 +706,7 @@ export default function Bridge() {
         </h2>
 
         {/* FundraiseUp Widget */}
-        <a href="#XJLHERLT" className=" justify-center items-center px-10"></a>
+        <a href="#XXVLPPSW" className=" justify-center items-center px-10"></a>
       </div>
       {/* Import Component  */}</div>
           </div>

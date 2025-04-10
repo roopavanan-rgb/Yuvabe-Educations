@@ -55,7 +55,8 @@ const courses = [
     description:
       "Our AI First Full Stack Program is designed to provide hands-on experience. You won’t just learn the theory—you’ll apply it to real-world problems, gaining the kind of practical skills that make you stand out to employers.",
     tagColor: "bg-[#592ac7]",
-    arrowColor: "bg-[#33BED4]"
+    arrowColor: "bg-[#33BED4]",
+    link: "/bridge/ai"
   },
   {
     title: "Sustainability",
@@ -64,7 +65,9 @@ const courses = [
     description:
       "Unlock a comprehensive understanding of sustainability with our 3- month, in-person ‘Corporate Sustainability’ course at Auroville, Tamil Nadu.",
     tagColor: "bg-[#33BED4]",
-    arrowColor: "bg-[#91C644]"
+    arrowColor: "bg-[#91C644]",
+    link: "/bridge/sustainability"
+
   },
   {
     title: "Digital Marketing",
@@ -73,7 +76,9 @@ const courses = [
     description:
       "Yuvabe Education’s Digital Marketing Bridge Program is designed to provide an in-depth understanding of the digital marketing landscape. This 12-week, in-person classroom experience will help you build essential skills through practical training, real-world case studies, and industry mentorship.",
     tagColor: "bg-purple-600",
-    arrowColor: "bg-[#FFCA2D]"
+    arrowColor: "bg-[#FFCA2D]",
+    link: "/bridge/digital-marketing"
+
   },
   {
     title: "UI/UX Design",
@@ -82,7 +87,8 @@ const courses = [
     description:
       "Yuvabe Education’s Digital Marketing Bridge Program is designed to provide an in-depth understanding of the digital marketing landscape. This 12-week, in-person classroom experience will help you build essential skills through practical training, real-world case studies, and industry mentorship.",
     tagColor: "bg-purple-600",
-    arrowColor: "bg-[#33BED4]"
+    arrowColor: "bg-[#33BED4]",
+    link: "/bridge/ui-ux"
   }
 ];
 
@@ -698,9 +704,7 @@ export default function Home() {
                     {/* Navigation Icon */}
                     <div className="flex justify-end mt-4">
                       <Link
-                        href={`/courses/${course.title
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
+                       href={course.link}
                         className="mt-4"
                       >
                         <div
