@@ -52,7 +52,7 @@ const blogPosts = [
 
 const page = () => {
   return (
-    <>
+    <main className="overflow-x-hidden">
       <section className="relative bg-[#592AC7] text-white md:min-h-[720px] min-h-[600px] flex items-start md:items-start lg:items-center justify-center px-6 md:px-12 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 w-full relative">
           {/* Left Side - Text Content */}
@@ -286,7 +286,7 @@ const page = () => {
           </a>
         </motion.div>
       </section>
-    </>
+    </main>
   );
 };
 

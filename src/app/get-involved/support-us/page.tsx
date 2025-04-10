@@ -43,7 +43,7 @@ export default function SupportUs() {
   
 
   return (
-    <>
+    <main className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
   {/* Left Side - Centered Text */}
@@ -163,6 +163,6 @@ export default function SupportUs() {
           generously supporting us in our journey.
         </motion.p>
       </section>
-    </>
+    </main>
   );
 }

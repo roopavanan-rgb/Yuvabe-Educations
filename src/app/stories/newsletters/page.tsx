@@ -14,7 +14,7 @@ interface NewsletterData {
     year: string;
     date: string;
     heading: string;
-    subHeading: string;
+    subheading: string;
   };
   featuredImage?: {
     node: {
@@ -132,7 +132,7 @@ const Newsletters: React.FC = () => {
                           {newsletter.groupforNews.heading}
                         </h2>
                         <p className="font-secondary font-medium text-black text-[14px] leading-[25.98px] pb-6 xl:text-center">
-                          {newsletter.groupforNews.subHeading}
+                          {newsletter.groupforNews.subheading}
                         </p>
                       </div>
                     </motion.div>

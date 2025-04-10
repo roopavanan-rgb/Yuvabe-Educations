@@ -136,7 +136,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             <h2 className="text-2xl font-bold text-[#592AC7] mb-4">Get in Touch</h2>
             <p className="text-gray-600 mb-6">We'd love to hear from you! Fill out the form below:</p>
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form action="https://api.web3forms.com/submit" className="flex flex-col gap-4">
               <motion.input
                 type="text"
                 name="name"

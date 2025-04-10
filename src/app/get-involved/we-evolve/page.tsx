@@ -32,7 +32,7 @@ const blogPosts = [
 
 const page = () => {
   return (
-    <>
+    <main className="overflow-x-hidden">
       <section className="relative bg-[#592AC7] text-white   flex items-center justify-center px-6 md:px-12 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-0 md:gap-12 w-full relative">
           {/* Left Side - Text Content */}

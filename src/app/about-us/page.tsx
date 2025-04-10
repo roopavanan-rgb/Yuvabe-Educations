@@ -7,7 +7,8 @@ import ImpactReport from "@/components/ImpactReport";
 
 export default function Steam() {
   return (
-    <>
+
+    <main className="overflow-x-hidden">
       {/* Wrapper */}
       <div className="bg-white pb-16 xl:pb-20 md:pb-18 xl:pt-32 pt-16 md:pt-24 overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32 overflow-hidden">
@@ -572,6 +573,6 @@ export default function Steam() {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }

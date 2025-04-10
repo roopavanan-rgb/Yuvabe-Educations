@@ -10,7 +10,7 @@ const bounceIn = {
 
 export default function Bridge() {
   return (
-    <>
+    <main className="overflow-x-hidden">
       {/* Wrapper */}
       <div className="bg-white pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
@@ -712,6 +712,6 @@ export default function Bridge() {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }
