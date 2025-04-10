@@ -94,9 +94,9 @@ const courses = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-12 bg-[#FDF8EE] min-h-[800px] overflow-hidden">
+      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-12 bg-[#FDF8EE] min-h-[800px] overflow-x-hidden">
         {/* Right Side - Text */}
         <motion.div
           className="w-full md:w-4/5 lg:w-1/2 text-center md:text-left order-1 md:order-1 lg:order-2"
@@ -164,7 +164,8 @@ export default function Home() {
       <section className="bg-white py-10 shadow-lg backdrop-blur-lg flex justify-center items-center overflow-hidden">
         <div className="w-full max-w-screen-xl px-6 sm:px-8 md:px-10">
           <motion.div
-            className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center items-center gap-4 sm:gap-12"
+            className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:gap-12
+ justify-center items-center "
             initial="hidden"
             animate="visible"
             variants={{
@@ -296,7 +297,7 @@ export default function Home() {
             className="relative lg:w-1/2 flex justify-center items-center mb-10 lg:mb-0"
           >
             <motion.div
-              className="absolute top-15 right-30 transform -translate-x-1/2 w-10 h-10 md:w-20 md:h-20 sm:h-12 sm:w-12 bg-[#91C644] rounded-full"
+              className="absolute top-15 right-10 transform -translate-x-1/2 w-10 h-10 md:w-20 md:h-20 sm:h-12 sm:w-12 bg-[#91C644] rounded-full"
               animate={{ y: [0, -10, 0] }}
               transition={{
                 duration: 2,
@@ -357,7 +358,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="w-full md:w-3/4 lg:w-1/2 space-y-4 text-left px-2 md:px-0"
           >
-            <h2 className="text-[24px] sm:text-[28px] md:text-[36px] font-semibold text-black ">
+            <h2 className="text-[24px] sm:text-[28px] md:text-[36px] font-semibold text-black text-center md:text-start ">
               Join Us in This Mission
             </h2>
             <p className="text-gray-700 leading-7 text-balance text-sm sm:text-base ">

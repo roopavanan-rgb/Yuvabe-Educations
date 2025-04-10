@@ -2,7 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaInstagram, FaFacebookF, FaXTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaXTwitter,
+  FaLinkedinIn,
+  FaYoutube
+} from "react-icons/fa6";
 import { IoLocationSharp, IoMailSharp } from "react-icons/io5";
 import { FaGlobe } from "react-icons/fa";
 
@@ -17,11 +23,20 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left Section */}
         <div>
-          <img src="/images/foot.png" alt="Yuvabe Education" className="w-70 mb-12" /> 
-          <div className="mt-6 space-y-6 text-gray-700"> 
+          <img
+            src="/images/foot.png"
+            alt="Yuvabe Education"
+            className="w-70 mb-12"
+          />
+          <div className="mt-6 space-y-6 text-gray-700">
             <p className="flex items-center space-x-2">
               <IoMailSharp className="text-lg text-black" />
-              <span>info@yuvabe.com</span>
+              <a
+                href="mailto:info@yuvabe.com"
+                className="hover:underline break-all"
+              >
+                info@yuvabe.com
+              </a>
             </p>
             <p className="flex items-center space-x-2">
               <FaGlobe className="text-lg text-black" />
@@ -31,22 +46,36 @@ const Footer = () => {
             </p>
             <p className="flex items-center space-x-2">
               <IoLocationSharp className="text-lg text-black" />
-              <span>Yuvabe, Saracon Campus, Auroville, Tamil Nadu - 605101</span>
+              <span>
+                Yuvabe, Saracon Campus, Auroville, Tamil Nadu - 605101
+              </span>
             </p>
           </div>
           {/* Social Icons */}
           <div className="flex space-x-4 mt-12 text-[#592AC7]">
             <Link href="https://www.instagram.com/yuvabe.auroville/">
-              <FaInstagram size={24} className="hover:text-gray-600 transition" />
+              <FaInstagram
+                size={24}
+                className="hover:text-gray-600 transition"
+              />
             </Link>
             <Link href="https://www.facebook.com/yuvabe.auroville">
-              <FaFacebookF size={24} className="hover:text-gray-600 transition" />
+              <FaFacebookF
+                size={24}
+                className="hover:text-gray-600 transition"
+              />
             </Link>
             <Link href="https://twitter.com">
-              <FaXTwitter size={24} className="hover:text-gray-600 transition" />
+              <FaXTwitter
+                size={24}
+                className="hover:text-gray-600 transition"
+              />
             </Link>
             <Link href="https://www.linkedin.com/company/yuvabe/">
-              <FaLinkedinIn size={24} className="hover:text-gray-600 transition" />
+              <FaLinkedinIn
+                size={24}
+                className="hover:text-gray-600 transition"
+              />
             </Link>
             <Link href="https://www.youtube.com/@yuvabe.auroville">
               <FaYoutube size={24} className="hover:text-gray-600 transition" />
@@ -60,10 +89,14 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-3">About Us</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/about-us" className="hover:underline">Who We Are?</Link>
+                <Link href="/about-us" className="hover:underline">
+                  Who We Are?
+                </Link>
               </li>
               <li>
-                <Link href="/about-us#our-impact" className="hover:underline">Our Impact</Link>
+                <Link href="/about-us#our-impact" className="hover:underline">
+                  Our Impact
+                </Link>
               </li>
             </ul>
           </div>
@@ -71,10 +104,14 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-3">Programs</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/steam/about-steam" className="hover:underline">STEAM Program</Link>
+                <Link href="/steam/about-steam" className="hover:underline">
+                  STEAM Program
+                </Link>
               </li>
               <li>
-                <Link href="/bridge/about" className="hover:underline">Bridge Program</Link>
+                <Link href="/bridge/about" className="hover:underline">
+                  Bridge Program
+                </Link>
               </li>
             </ul>
           </div>
@@ -86,13 +123,22 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/blogs" className="hover:underline">Blogs</Link>
+                <Link href="/blogs" className="hover:underline">
+                  Blogs
+                </Link>
               </li>
               <li>
-                <Link href="/stories/newsletters" className="hover:underline">Newsletter</Link>
+                <Link href="/stories/newsletters" className="hover:underline">
+                  Newsletter
+                </Link>
               </li>
               <li>
-                <Link href="https://heyzine.com/flip-book/a7ee0bc0d2.html" className="hover:underline">Impact Report</Link>
+                <Link
+                  href="https://heyzine.com/flip-book/a7ee0bc0d2.html"
+                  className="hover:underline"
+                >
+                  Impact Report
+                </Link>
               </li>
             </ul>
           </div>
@@ -100,13 +146,25 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-3">Contact Us</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/get-involved/join-us" className="hover:underline">Join Us</Link>
+                <Link href="/get-involved/join-us" className="hover:underline">
+                  Join Us
+                </Link>
               </li>
               <li>
-                <Link href="/get-involved/support-us" className="hover:underline">Support Us</Link>
+                <Link
+                  href="/get-involved/support-us"
+                  className="hover:underline"
+                >
+                  Support Us
+                </Link>
               </li>
               <li>
-                <Link href="/get-involved/talk-to-us" className="hover:underline">Talk to Us</Link>
+                <Link
+                  href="/get-involved/talk-to-us"
+                  className="hover:underline"
+                >
+                  Talk to Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -114,10 +172,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-     <div className="mt-10 border-t pt-4 text-center text-gray-500">
-  Copyright &copy; {new Date().getFullYear()} Yuvabe Education | All rights reserved.
-</div>
-
+      <div className="mt-10 border-t pt-4 text-center text-gray-500">
+        Copyright &copy; {new Date().getFullYear()} Yuvabe Education | All
+        rights reserved.
+      </div>
     </motion.footer>
   );
 };
