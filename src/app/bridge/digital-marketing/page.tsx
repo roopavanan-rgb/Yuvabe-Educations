@@ -1,5 +1,4 @@
-"use clinet";
-
+// import Image from "next/image";
 import { AboutCourse } from "@/components/dm/AboutCourse";
 import { AdditionalLearnings } from "@/components/dm/AdditionalLearnings";
 import { ContactUs } from "@/components/dm/ContactUs";

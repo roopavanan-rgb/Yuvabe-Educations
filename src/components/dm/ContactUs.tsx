@@ -3,23 +3,23 @@ import Image from "next/image";
 
 export function ContactUs() {
   return (
-    <section className="relative w-full py-12 bg-[#140F20] text-white text-center overflow-hidden">
+    <section className="relative w-full py-12 bg-[#140F20] text-white text-center overflow-x-hidden">
       {/* Gradient Effect */}
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-radial from-[#964B00] via-[#FF0] to-transparent opacity-60 blur-5xl"></div>
       {/* Heading */}
-      <h2 className="text-3xl font-bold text-[#FFCA2D] mb-4">Contact Us</h2>
+      <h2 className="text-3xl font-raleway font-bold text-[#E8AC35] mt-12">Contact Us</h2>
 
       {/* Contact Info */}
-      <p className="text-gray-300 mb-6">
+      <p className="text-[#FFFFFF] font-sans font-regular mt-4">
         For any questions, reach out to our team directly at{" "}
-        <a href="mailto:bridge@yuvabe.com" className="text-gray-300">
-          bridge@yuvabe.com
+        <a href="mailto:bridge@yuvabe.com" className="text-[#FFFFFF]">
+          <strong>bridge@yuvabe.com</strong>
         </a>{" "}
         / +91 9677604467
       </p>
 
       {/* Social Media Icons */}
-      <h3 className="mt-16 text-lg font-semibold">Follow us on Social Media</h3>
+      <h3 className="mt-16 text-lg font-sans font-bold text-[#FFFFFF]">Follow us on Social Media</h3>
       <div className="mt-6 flex justify-center space-x-6">
         <Image
           src="/dm/icons/tx.png"

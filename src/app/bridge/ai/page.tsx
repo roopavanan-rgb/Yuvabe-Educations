@@ -1,7 +1,5 @@
-"use client";
-
 import { HeroSection } from "@/components/ai/HeroSection"
-import { FeaturesSection } from "@/components/ai/FeaturesSection"
+import { WhatForYou } from "@/components/ai/WhatForYou"
 import { WhatYouLearn } from "@/components/ai/WhatYouLearn"
 import { ProgramOutcome } from "@/components/ai/ProgramOutcome"
 import { ApplicantCategories } from "@/components/ai/ApplicantCategories"
@@ -15,9 +13,9 @@ import HowToApply from "@/components/ai/HowToApply"
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#0C2F47]  text-white">
+    <main className="relative min-h-screen bg-background  text-white">
       <HeroSection />
-      <FeaturesSection />
+      <WhatForYou />
       <WhatYouLearn/>
       <ProgramOutcome/>
       <ApplicantCategories/>
@@ -30,3 +28,8 @@ export default function Home() {
     </main>
   )
 }
+
+
+
+
+

@@ -30,7 +30,8 @@ const learnTopics = [
 
 export default function WhatYouLearn() {
   return (
-    <section className="w-full py-16 flex flex-col items-center text-center bg-[#140F20]">
+    <section className="w-full py-16 flex flex-col items-center bg-[#140F20] text-center overflow-x-hidden">
+      <div className="absolute left-10 blur-3xl w-90 h-90 rounded-full bg-[#976346] opacity-15"></div>
       <h2 className="text-4xl font-bold text-[#FFCA2D]">What You&apos;ll Learn:</h2>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl">

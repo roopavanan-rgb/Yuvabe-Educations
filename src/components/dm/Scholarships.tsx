@@ -29,10 +29,10 @@ const courseFeesAndScholarships = [
 
 export function CourseFeesAndScholarships() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-white">
+    <section className="w-full py-12 bg-[#140F20] text-white overflow-x-hidden">
       
       {/* Title */}
-      <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-8">
+      <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-2">
         Course Fees and Scholarships
       </h2>
       <div className="w-[80px] h-[80px] translate-x-96 translate-y-40 blur-3xl bg-[linear-gradient(90deg,_rgba(123,34,191,1)_0%,_rgba(80,72,185,1)_52%,_rgba(28,103,131,1)_100%)]"></div>

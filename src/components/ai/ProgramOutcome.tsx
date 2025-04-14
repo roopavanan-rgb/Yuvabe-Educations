@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
 
 export function ProgramOutcome() {
   return (
-    <section className="py-16 px-4 bg-background text-white overflow-hidden relative">
+    <section className="py-16 px-4 bg-[#0C2F47] text-white overflow-hidden relative">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative">
         
         {/* Card Container */}
@@ -40,7 +41,7 @@ export function ProgramOutcome() {
           </div>
 
           {/* Program Description */}
-          <p className="relative text-lg md:text-xl font-medium leading-relaxed text-white z-10">
+          <p className="relative text-lg md:text-xl font-raleway font-semibold leading-relaxed text-white z-10">
             "By the end of the program, you would have built an end-to-end application using Python technologies, 
             learnt how to interface, integrate and fine-tune Large Language Models and Computer Vision Models, 
             and completed your real-world capstone project."

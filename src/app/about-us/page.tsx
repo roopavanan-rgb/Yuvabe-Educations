@@ -342,7 +342,7 @@ const AboutUs = () => {
           >
             <Player
               autoplay
-              loop={false}
+              loop={true}
               keepLastFrame
               src="/images/flower.json"
               className="w-[300px] h-[300px] md:w-[500px] md:h-[500px]"
@@ -387,9 +387,14 @@ const AboutUs = () => {
             </div>
 
             {/* Know More Button */}
-            <button className="bg-[#592AC7] text-white px-6 py-3 rounded-2xl shadow-md hover:bg-[#4a1fa7]">
-              Know More
-            </button>
+            <motion.a
+                          href="/get-involved/we-evolve"
+                          className="bg-[#592AC7] text-white font-semibold py-3 px-6 rounded-lg shadow-md inline-block"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          Know More
+                        </motion.a>
           </motion.div>
         </div>
 
@@ -516,6 +521,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+          onClick={() => window.open("https://heyzine.com/flip-book/a7ee0bc0d2.html#page/1", "_blank")}
         >
           Impact Report
         </motion.button>

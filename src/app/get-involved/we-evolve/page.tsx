@@ -60,7 +60,8 @@ const page = () => {
         </div>
       </section>
 
-      <section className="bg-[#FDF7EB] py-16 px-6 lg:px-16 ">
+      <section className="relative bg-[#FDF7EB] py-16 px-6 lg:px-16 ">
+      <div className="absolute top-2 left-10 bg-yellow-400 w-40 h-40 rotate-45 opacity-100"></div>
         <div className="container space-y-12 mx-auto items-center justify-center">
           {/* Expert Talks */}
           <motion.div
@@ -68,9 +69,9 @@ const page = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative flex flex-col lg:flex-row items-center bg-white rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px] "
+            className="flex flex-col lg:flex-row items-center bg-white rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px] "
           >
-            <div className="absolute -top-8 left-10 bg-yellow-400 w-40 h-40 rotate-45 opacity-80 "></div>
+           
             <div className="w-full lg:w-[40%] h-[450px] rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px]">
               <img
                 src="/images/expert.webp"
@@ -131,7 +132,7 @@ const page = () => {
             viewport={{ once: true }}
             className="relative flex flex-col lg:flex-row items-center bg-white rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px] "
           >
-            <div className="absolute -bottom-8 right-10 bg-yellow-400 w-40 h-40 rotate-45 opacity-80 z-0"></div>
+            <div className="absolute -bottom-8 right-10 bg-[#33BED4] w-40 h-40 rotate-45 opacity-100 z-10"></div>
             <div className="relative z-10 w-full lg:w-[40%] h-[450px] rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px]">
               <img
                 src="/images/health.webp"
@@ -188,7 +189,7 @@ const page = () => {
           {blogPosts.map((post, index) => (
             <motion.div
               key={index}
-              className="bg-white text-black rounded-[20px] shadow-lg  overflow-hidden p-4 transition-transform duration-300 hover:scale-105"
+              className="bg-white text-black rounded-[20px] shadow-lg overflow-hidden p-4 transition-transform duration-300 hover:scale-105"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
