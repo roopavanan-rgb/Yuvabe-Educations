@@ -60,9 +60,17 @@ const page = () => {
         </div>
       </section>
 
-      <section className="relative bg-[#FDF7EB] py-16 px-6 lg:px-16 ">
-      <div className="absolute top-2 left-10 bg-yellow-400 w-40 h-40 rotate-45 opacity-100"></div>
-        <div className="container space-y-12 mx-auto items-center justify-center">
+      <section className="relative bg-[#FDF7EB] py-24 px-6 lg:px-16 ">
+
+        <Image
+          src="/assets/weevolve/yp.svg" // Replace with your actual file path
+          alt="Decorative shape"
+          width={700} // This should match your desired size
+          height={700}
+          className="absolute top-4 right-5 bottom-150"
+        />
+
+        <div className="relative z-10 container space-y-12 mx-auto items-center justify-center">
           {/* Expert Talks */}
           <motion.div
             initial={{ x: -100, opacity: 0 }}
@@ -71,7 +79,7 @@ const page = () => {
             viewport={{ once: true }}
             className="flex flex-col lg:flex-row items-center bg-white rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px] "
           >
-           
+
             <div className="w-full lg:w-[40%] h-[450px] rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px]">
               <img
                 src="/images/expert.webp"
@@ -87,7 +95,7 @@ const page = () => {
                 Auroville is a thriving laboratory of social and environmental
                 initiatives. We invite experts based in Auroville, who have come
                 from all over the world, from different walks of life, working
-                in different domains, to come share their experiences with <br/> our
+                in different domains, to come share their experiences with <br /> our
                 youth.
               </p>
             </div>
@@ -102,7 +110,7 @@ const page = () => {
             className="relative flex flex-col-reverse lg:flex-row items-center bg-white rounded-tr-[200px] rounded-bl-[200px] rounded-tl-[50px] rounded-br-[50px] overflow-hidden"
           >
             {/* Text Section */}
-            <div className="w-full lg:w-[60%] p-6 lg:p-18">
+            <div className="relative z-10 w-full lg:w-[60%] p-6 lg:p-18">
               <h3 className="text-[24px] md:text-[48px] text-end md:text-start font-bold text-[#592AC7]">
                 Workshops
               </h3>
@@ -113,9 +121,15 @@ const page = () => {
                 mission; of holistic development of our youth.
               </p>
             </div>
+            <Image
+              src="/assets/weevolve/gc.svg" // Replace with your actual file path
+              alt="Decorative shape"
+              width={350} // This should match your desired size
+              height={350}
+              className="absolute -left-30 -bottom-30" />
 
             {/* Image Section */}
-            <div className="w-full lg:w-[40%] flex justify-end">
+            <div className=" w-full lg:w-[40%] flex justify-end">
               <img
                 src="/images/workshop.webp"
                 alt="Workshops"
@@ -132,7 +146,13 @@ const page = () => {
             viewport={{ once: true }}
             className="relative flex flex-col lg:flex-row items-center bg-white rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px] "
           >
-            <div className="absolute -bottom-8 right-10 bg-[#33BED4] w-40 h-40 rotate-45 opacity-100 z-10"></div>
+            <Image
+              src="/assets/weevolve/bs.svg" // Replace with your actual SVG path
+              alt="Decorative shape"
+              width={160}
+              height={160}
+              className="absolute -bottom-8 right-10 rotate-45 opacity-100"
+            />
             <div className="relative z-10 w-full lg:w-[40%] h-[450px] rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px]">
               <img
                 src="/images/health.webp"
@@ -165,7 +185,7 @@ const page = () => {
             layout="fill"
             objectFit="contain"
             className="hidden md:block top-[-20px] md:top-[-50px] left-0 w-full"
-            // Adjust opacity for better readability
+          // Adjust opacity for better readability
           />
         </div>
 
