@@ -1,5 +1,5 @@
 "use client";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 export default function Bridge_Program_Calendar() {
   return (
@@ -17,11 +17,13 @@ export default function Bridge_Program_Calendar() {
             <div className="flex flex-col gap-y-12">
               {/* Individial Program Blocks */}
               {/* AI */}
-              <motion.div 
-               initial={{ opacity: 0, y: -50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.6, ease: "easeOut" }}
-               viewport={{ once: true }}className="flex flex-row bg-[#EBF8FB] py-[43px]  rounded-[15px] border-2 border-[#33BED4] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="flex flex-row bg-[#EBF8FB] py-[43px]  rounded-[15px] border-2 border-[#33BED4] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+              >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
                   <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
@@ -91,11 +93,12 @@ export default function Bridge_Program_Calendar() {
                 </div>
               </motion.div>
               {/* Corporate */}
-              <motion.div 
-               initial={{ opacity: 0, y: -50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.6, ease: "easeOut" }}
-               className="flex flex-row bg-[#F4F9EC] py-[43px]  rounded-[15px] border-2 border-[#91C644] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-row bg-[#F4F9EC] py-[43px]  rounded-[15px] border-2 border-[#91C644] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+              >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
                   <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
@@ -165,11 +168,12 @@ export default function Bridge_Program_Calendar() {
                 </div>
               </motion.div>
               {/* Digital Marketing */}
-              <motion.div 
-               initial={{ opacity: 0, y: -50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex flex-row bg-[#FFFAEA] py-[43px]  rounded-[15px] border-2 border-[#FFCA2D] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-row bg-[#FFFAEA] py-[43px]  rounded-[15px] border-2 border-[#FFCA2D] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+              >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
                   <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
@@ -240,11 +244,12 @@ export default function Bridge_Program_Calendar() {
                 </div>
               </motion.div>
               {/* 3D Product Design & Prototyping */}
-              <motion.div 
-               initial={{ opacity: 0, y: -50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex flex-row bg-[#FDEDE9] py-[43px]  rounded-[15px] border-2 border-[#F04E26] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-row bg-[#FDEDE9] py-[43px]  rounded-[15px] border-2 border-[#F04E26] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+              >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
                   <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
@@ -320,11 +325,12 @@ export default function Bridge_Program_Calendar() {
                 </div>
               </motion.div>
               {/* UI/UX Design */}
-              <motion.div 
-               initial={{ opacity: 0, y: -50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex flex-row bg-[#FEF6E8] py-[43px]  rounded-[15px] border-2 border-[#FFCA2D] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-row bg-[#FEF6E8] py-[43px]  rounded-[15px] border-2 border-[#FFCA2D] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+              >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
                   <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
@@ -383,23 +389,23 @@ export default function Bridge_Program_Calendar() {
                   {/* Right */}
                   <div className="flex flex-col justify-center  max-w-full lg:max-w-[142px]">
                     {/* Know More Button */}
-                    <Link href="ui-ux">
-                      <div className="bg-[#FFCA2D] py-2 px-4 w-[142px] rounded-[8px]">
-                        <p className="font-secondary font-semibold text-white text-[16px] leading-[30px] text-center">
-                          Know More
-                        </p>
-                      </div>
-                    </Link>
+
+                    <div className="bg-[#FFCA2D] py-2 px-4 w-[142px] rounded-[8px]">
+                      <p className="font-secondary font-semibold text-white text-[16px] leading-[30px] text-center">
+                        Know More
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
 
               {/*Corporate Sustainablity  */}
-                <motion.div 
-               initial={{ opacity: 0, y: -50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex flex-row bg-[#F4F9EC] py-[43px]  rounded-[15px] border-2 border-[#91C644] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-row bg-[#F4F9EC] py-[43px]  rounded-[15px] border-2 border-[#91C644] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+              >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
                   <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
@@ -469,11 +475,12 @@ export default function Bridge_Program_Calendar() {
                 </div>
               </motion.div>
               {/* Digital Marketing */}
-              <motion.div 
-               initial={{ opacity: 0, y: -50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex flex-row bg-[#FFFAEA] py-[43px]  rounded-[15px] border-2 border-[#FFCA2D] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-row bg-[#FFFAEA] py-[43px]  rounded-[15px] border-2 border-[#FFCA2D] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+              >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
                   <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
@@ -544,11 +551,12 @@ export default function Bridge_Program_Calendar() {
                 </div>
               </motion.div>
               {/* UI/UX Design */}
-              <motion.div 
-               initial={{ opacity: 0, y: -50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex flex-row bg-[#FFFAEA] py-[43px]  rounded-[15px] border-2 border-[#FFCA2D] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-row bg-[#FFFAEA] py-[43px]  rounded-[15px] border-2 border-[#FFCA2D] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+              >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
                   <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
@@ -607,22 +615,22 @@ export default function Bridge_Program_Calendar() {
                   {/* Right */}
                   <div className="flex flex-col justify-center  max-w-full lg:max-w-[142px]">
                     {/* Know More Button */}
-                    <Link href="ui-ux">
-                      <div className="bg-[#F8A91E] py-2 px-4 w-[142px] rounded-[8px]">
-                        <p className="font-secondary font-semibold text-white text-[16px] leading-[30px] text-center">
-                          Know More
-                        </p>
-                      </div>
-                    </Link>
+
+                    <div className="bg-[#F8A91E] py-2 px-4 w-[142px] rounded-[8px]">
+                      <p className="font-secondary font-semibold text-white text-[16px] leading-[30px] text-center">
+                        Know More
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
               {/* AI First full stack development */}
-              <motion.div 
-               initial={{ opacity: 0, y: -50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex flex-row bg-[#EBF8FB] py-[43px]  rounded-[15px] border-2 border-[#33BED4] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-row bg-[#EBF8FB] py-[43px]  rounded-[15px] border-2 border-[#33BED4] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+              >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
                   <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
