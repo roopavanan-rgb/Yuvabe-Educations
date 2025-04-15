@@ -117,17 +117,9 @@ export default function Marketing_Analyst() {
                 staying in Auroville for 3 months (Minimum), please reach out to
                 us at{" "}
                 <a href="mailto:info@yuvabe.com?subject=Applying for the role of Marketing Analyst">
-                  info@yuvabe.com
+                  info@yuvabe.com.
                 </a>
-                . For any further queries, please contact{" "}
-                <a href="tel:+91 9867981023">+91 9867981023</a> or write to{" "}
-                <a href="mailto:shrimayee@yuvabe.com?subject=Applying for the role of Marketing Analyst">
-                  shrimayee@yuvabe.com
-                </a>
-                .&nbsp;
               </p>
-
-              <p></p>
             </div>
           </div>
         </div>
