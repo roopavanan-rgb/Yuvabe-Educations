@@ -23,7 +23,7 @@ const courseDetails = [
 
 export function CourseStructure() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-white">
+    <section className="w-full py-12 bg-[#140F20] text-white overflow-x-hidden">
       {/* Title */}
       <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-8">
         Course Structure

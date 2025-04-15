@@ -85,8 +85,8 @@ const faqs = [
     answer: "The course enhances employability through practical skills and industry insights but does not offer direct placement services.",
   },
   {
-    "question": "Do you offer group discounts for organisations or institutions?",
-    "answer": "Yes. Please call or email us for further information.<br><br>Email: <a href='mailto:bridge@yuvabe.com'>bridge@yuvabe.com</a><br><br>Mobile: 9677604467 (9am - 5pm)"
+    question: "Do you offer group discounts for organisations or institutions?",
+    answer: "Yes. Please call or email us for further information.\nEmail:bridge@yuvabe.com \nMobile: 9677604467 (9am - 5pm)"
   }
   
   
@@ -94,13 +94,14 @@ const faqs = [
 
 export default function FaqSection() {
   return (
-    <section className="py-16 px-6 bg-background text-center">
+    <section className="py-16 px-6 bg-[#0C2F47] text-center">
+      <div className="absolute -right-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-30"></div>
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="text-3xl md:text-4xl font-bold text-white"
+        className="text-3xl md:text-4xl font-raleway font-bold text-white"
       >
         Interactive FAQs
       </motion.h2>
@@ -109,7 +110,7 @@ export default function FaqSection() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
-        className="text-white font-semibold"
+        className="text-white font-sans font-bold mt-4"
       >
         Click each question to reveal the answer
       </motion.p>
@@ -125,7 +126,7 @@ export default function FaqSection() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, ease: "easeInOut", delay: index * 0.1 }}
             >
-              <FaqItem question={faq.question} answer={faq.answer} />
+              <FaqItem question={faq.question} answer={faq.answer} isLast={index === faqs.length - 1} />
             </motion.div>
           ))}
         </AnimatePresence>

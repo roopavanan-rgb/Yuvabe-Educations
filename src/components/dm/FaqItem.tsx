@@ -7,9 +7,10 @@ import { Plus } from "lucide-react";
 interface FaqItemProps {
   question: string;
   answer: string;
+  isLast?: boolean;
 }
 
-export default function FaqItem({ question, answer }: FaqItemProps) {
+export default function FaqItem({ question, answer, isLast = false }: FaqItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -36,8 +37,10 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.1, ease: "easeInOut" }}
-            className="px-6 py-4 bg-background text-white/80 text-left"
+            transition={{ duration: 0, ease: "easeInOut" }}
+            className={`px-6 py-4 text-[#FFCA2D] text-left ${
+              isLast ? "whitespace-pre-line" : ""
+            }`}
           >
             {answer}
           </motion.div>

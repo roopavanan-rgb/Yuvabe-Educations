@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const benefits = [
   {
@@ -44,50 +43,54 @@ const benefits = [
 
 export function WhyChoose() {
   return (
-    <section className="relative w-full py-12 bg-[#140F20] text-[#FFFFFF]">
-      {/* Title */}
-      <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-8">
+    <section className="relative w-full py-16 bg-[#140F20] text-white overflow-x-hidden">
+      <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-20">
         Why Choose This Course?
       </h2>
 
-      <div className="relative flex justify-center">
-        {/* Vertical Line (Replace 'vertical-line.png' with your actual image)
-        <Image
-          src="/images/line.png"
-          alt="Vertical Line"
-          width={2}
-          height={1000}
-          className="absolute left-1/2 transform -translate-x-1/2 h-full"
-        /> */}
+      {/* Timeline container */}
+      <div className="relative max-w-6xl mx-auto px-4">
+        {/* Vertical line (visible only on md and up) */}
+        <div className="hidden md:block absolute left-1/2 top-0 w-0.5 bg-[#E8AC35] h-full transform -translate-x-1/2 z-0" />
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl px-6 mx-auto">
-          {benefits.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className={`relative flex items-start space-x-4 ${
-                index % 2 === 0 ? "justify-start" : "justify-end text-left"
-              }`}
-            >
-              {/* Number */}
-              <span className="text-5xl font-bold text-[#FFCA2D]">
-                {item.number}
-              </span>
+        {/* Items */}
+        <div className="flex flex-col gap-16 relative z-10">
+          <div className="absolute right-10 -bottom-10 blur-3xl w-90 h-90 rounded-full bg-[#976346] opacity-15"></div>
 
-              {/* Text Content */}
-              <div>
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="text-[#FFFFFF] mt-1">{item.description}</p>
-              </div>
+          {benefits.map((item, index) => {
+            const isLeft = index % 2 === 0;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="relative w-full flex flex-col md:flex-row items-center"
+              >
+                {/* Text box */}
+                <div
+                  className={`w-full md:w-1/2 px-4 flex items-start gap-4
+                    ${isLeft ? "md:justify-end md:pr-10 text-left" : "md:pl-10"} 
+                    ${!isLeft && "md:ml-auto"}
+                  `}
+                >
+                  <span className="text-4xl font-raleway font-semibold text-[#FFCA2D] whitespace-nowrap">
+                    {item.number}
+                  </span>
+                  <div className="flex flex-col">
+                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <p className="text-base text-white mt-1">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
 
-              {/* Dot (For Alignment with Vertical Line)
-              <div className="absolute left-1/2 top-[60%] transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-yellow-400 rounded-full" /> */}
-            </motion.div>
-          ))}
+                {/* Dot - Only visible on md and up */}
+                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#FFCA2D] rounded-full animate-bounce shadow-lg" />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

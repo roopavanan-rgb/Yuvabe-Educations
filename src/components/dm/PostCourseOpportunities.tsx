@@ -16,9 +16,9 @@ const opportunities = [
 
 export function PostCourseOpportunities() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-[#FFFFFF] text-center">
+    <section className="w-full py-12 bg-[#140F20] text-[#FFFFFF] text-center overflow-x-hidden">
       {/* Title */}
-      <h2 className="text-3xl font-bold text-[#FFCA2D] mb-6">
+      <h2 className="text-3xl  font-raleway font-semibold text-[#FFCA2D] mb-8">
         Post-Course Opportunities
       </h2>
 
@@ -31,7 +31,7 @@ export function PostCourseOpportunities() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="p-6 bg-[#FFCA2D66] opacity-40 border-2 border-[#E8AC35] text-[#FFFFFF] font-semibold rounded-3xl"
+            className="p-8 bg-[#FFCA2D66] opacity-40 border-2 border-[#E8AC35] text-[#FFFFFF] font-sans font-semibold rounded-3xl"
           >
             {opportunity.text}
           </motion.div>

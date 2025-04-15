@@ -16,17 +16,17 @@ const initiatives = [
       "Bringing education to underprivileged communities through innovative learning methods."
   },
   {
-    image: "/images/sarcon.webp",
+    image: "/images/outdoor.webp",
     title: "Beach Cleanups",
     description:
       "Organizing cleanup drives to protect marine life and promote environmental sustainability."
   },
   {
-    image: "/images/outdoor.webp",
+    image: "/images/sarcon.webp",
     title: "Performing Arts",
     description:
       "Empowering youth through cultural performances and artistic expression."
-  }
+  },
 ];
 
 const blogPosts = [
@@ -193,7 +193,7 @@ const page = () => {
                 alt={initiative.title}
                 width={400}
                 height={300}
-                className="w-full h-[250px] object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-[250px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
               />
 
               {/* Hover Overlay - Light White (Opacity 10%) */}

@@ -37,14 +37,16 @@ const highlights = [
 
 export function KeyHighlights() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-white">
+    <section className="w-full py-12 bg-[#140F20] text-white overflow-x-hidden">
       {/* Title */}
-      <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-8">
+      <h2 className="text-3xl font-semibold font-raleway text-center text-[#FFCA2D] mb-12 mt-12">
         Key Highlights
       </h2>
 
       {/* Highlights Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 max-w-6xl mx-auto">
+      <div className="absolute left-10 -bottom-320 blur-3xl w-90 h-90 rounded-full bg-[#976346] opacity-15"></div>
+      <div className="absolute right-10 -bottom-280 blur-3xl w-90 h-90 rounded-full bg-[#FFA6A6] opacity-8"></div>
         {highlights.map((item, index) => (
           <motion.div
             key={index}
@@ -54,9 +56,9 @@ export function KeyHighlights() {
             viewport={{ once: true }}
             className="relative p-6 bg-transparent rounded-lg"
           >
-            <div className="absolute top-0 left-6 w-16 h-[3px] rounded-2xl bg-white"></div>
+            <div className="absolute top-0 left-6 w-16 h-[3px] rounded-2xl bg-white mt-2"></div>
             <h3 className="text-lg font-semibold text-[#FFCA2D] max-w-[250px] break-words">{item.title}</h3>
-            <p className="text-[#FFFFFF] mt-0">{item.description}</p>
+            <p className="text-[#FFFFFF]">{item.description}</p>
           </motion.div>
         ))}
       </div>

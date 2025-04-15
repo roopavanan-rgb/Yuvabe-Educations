@@ -7,13 +7,15 @@ import { Plus } from "lucide-react";
 interface FaqItemProps {
   question: string;
   answer: string;
+  isLast?: boolean;
 }
 
-export default function FaqItem({ question, answer }: FaqItemProps) {
+export default function FaqItem({ question, answer, isLast = false  }: FaqItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-[#0F3956] rounded-lg overflow-hidden">
+    <div className="border border-[#58AEE9] rounded-lg overflow-hidden">
+     
       {/* Question */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -23,9 +25,9 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
         <span className="text-lg font-semibold text-white">{question}</span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0, ease: "easeInOut" }}
         >
-          <Plus className="text-white/80" />
+          <Plus className="text-[#FFFFFF]" />
         </motion.span>
       </button>
 
@@ -36,13 +38,16 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="px-6 py-4 bg-background text-white/80 text-left"
+            transition={{ duration: 0, ease: "easeInOut" }}
+            className={`px-6 py-4 bg-[#0F3956] text-[#FFFFFF] text-left ${
+              isLast ? "whitespace-pre-line" : ""
+            }`}
           >
             {answer}
           </motion.div>
         )}
       </AnimatePresence>
     </div>
+    
   );
 }

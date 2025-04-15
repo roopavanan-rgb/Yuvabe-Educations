@@ -1,123 +1,141 @@
 // pages/joins-us.tsx
 "use client";
-import React, { useState, useEffect } from "react";
-import Head from "next/head";
 import Link from "next/link";
-import { GET_JDS } from "@/lib/graphqlRequest";
 import { motion } from "framer-motion";
-interface JobDescriptionNode {
-  content: string;
-  excerpt: string;
-  jobDescriptions: {
-    experience: string;
-    fieldGroupName: string;
-  };
-  slug: string;
-  title: string;
-}
-
-interface JobDescriptionsData {
-  data: {
-    jobs: {
-      nodes: JobDescriptionNode[];
-    };
-  };
-}
-const JDS: React.FC = () => {
-  const [jobListings, setJobListings] = useState<JobDescriptionNode[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchJobListings = async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const response = await fetch(
-          "https://yuvabeeducation.com/wordpress/graphql",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              query: GET_JDS
-            })
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const result: JobDescriptionsData = await response.json();
-        setJobListings(result.data.jobs.nodes);
-      } catch (err: any) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchJobListings();
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
-  if (!jobListings) return <p>No job listings found.</p>;
-
+export default function JDS() {
   return (
     <div>
-      <Head>
-        <title>Join Us</title>
-      </Head>
-
       <main>
         <div className="bg-white">
           <div className="bg-[#FFF9EA] py-32 relative">
             <div className="max-w-[1028px] flex flex-col m-auto ">
               <div className="flex flex-col gap-y-32 justify-between p-5 md:p-8 flex-wrap xl:p-0">
-              <motion.h2
-    className="text-black text-2xl md:text-[64px] leading-[120%] font-semibold text-center font-primary z-10"
-    initial={{ y: -50, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-    viewport={{ once: true }}
-  >
-    Current Openings
-  </motion.h2>
+                <motion.h2
+                  className="text-black text-2xl md:text-[64px] leading-[120%] font-semibold text-center font-primary z-10"
+                  initial={{ y: -50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                >
+                  Current Openings
+                </motion.h2>
                 {/* Job Listings */}
                 <div className="flex flex-col gap-y-32">
                   {/* Individual Listings */}
-                  {jobListings.map((job) => (
-                    <motion.div
-                    key={job.slug}
+                  {/* Job 1 */}
+                  <motion.div
                     className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut", }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
                   >
-                      <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
-                        {job.title} |
-                        <span>
-                          {job.jobDescriptions?.experience || "Not specified"}
-                        </span>
-                      </h3>
-                      <p
-                        className="font-secondary font-normal text-black text-[18px] leading-[30px]  text-center line-clamp-2"
-                        dangerouslySetInnerHTML={{ __html: job.excerpt }}
-                      ></p>
-                      {/* Read More Button */}
-                      <Link href={`join-us/${job.slug}`}>
-                        <div className="bg-[#592AC7] py-[18px] px-8 w-[142px] rounded-[15px] mt-2">
-                          <p className="font-primary font-semibold text-white text-[14px] leading-[150%]">
-                            Read More
-                          </p>
-                        </div>
-                      </Link>
-                    </motion.div>
-                  ))}
+                    <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
+                      Lead Sustainability Educator |<span> 2 years + exp</span>
+                    </h3>
+                    <p className="font-secondary font-normal text-black text-[18px] leading-[30px]  text-center line-clamp-2">
+                      We are seeking an experienced Lead Sustainability Educator
+                      to join our team in delivering an impactful Corporate
+                      Sustainability Course (among others) tailored for young
+                      professionals. This role is crucial in shaping the future
+                      of sustainability within corporations, empowering
+                      participants with the knowledge and skills to address
+                      today’s environmental challenges. The ideal candidate will
+                      have a solid understanding of climate science, corporate
+                      sustainability frameworks, and effective teaching
+                    </p>
+                    {/* Read More Button */}
+                    <Link href="join-us/lead-sustainability-educator">
+                      <div className="bg-[#592AC7] py-[18px] px-8 w-[142px] rounded-[15px] mt-2">
+                        <p className="font-primary font-semibold text-white text-[14px] leading-[150%]">
+                          Read More
+                        </p>
+                      </div>
+                    </Link>
+                  </motion.div>
+                  {/* Job 3 */}
+                  <motion.div
+                    className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                  >
+                    <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
+                      Sustainability Analyst |<span> 1-3 years exp</span>
+                    </h3>
+                    <p className="font-secondary font-normal text-black text-[18px] leading-[30px]  text-center line-clamp-2">
+                      The Sustainability Analyst role combines the unique and
+                      forward-looking spirit of Auroville with robust science
+                      and research in the areas of sustainability and social
+                      impact. It leverages on a whole gamut of impactful
+                      projects and units within Auroville and tailors the
+                      experience to match the needs and aspirations of
+                      prospective analysts.
+                    </p>
+                    {/* Read More Button */}
+                    <Link href="join-us/sustainability-analyst">
+                      <div className="bg-[#592AC7] py-[18px] px-8 w-[142px] rounded-[15px] mt-2">
+                        <p className="font-primary font-semibold text-white text-[14px] leading-[150%]">
+                          Read More
+                        </p>
+                      </div>
+                    </Link>
+                  </motion.div>
+                  {/* Job 2 */}
+                  <motion.div
+                    className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                  >
+                    <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
+                      Marketing Analyst |<span> 1-2 years exp</span>
+                    </h3>
+                    <p className="font-secondary font-normal text-black text-[18px] leading-[30px]  text-center line-clamp-2">
+                      We are looking for a marketing analyst to join our growing
+                      team at Yuvabe, which offers digital services like
+                      marketing, ERP, design, and business solutions. The ideal
+                      candidate will have a strong understanding of marketing
+                      principles and analytics, as well as experience working
+                      with social media platforms.
+                    </p>
+                    {/* Read More Button */}
+                    <Link href="join-us/marketing-analyst">
+                      <div className="bg-[#592AC7] py-[18px] px-8 w-[142px] rounded-[15px] mt-2">
+                        <p className="font-primary font-semibold text-white text-[14px] leading-[150%]">
+                          Read More
+                        </p>
+                      </div>
+                    </Link>
+                  </motion.div>
+                  {/* Job 1 */}
+                  <motion.div
+                    className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                  >
+                    <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
+                      STEAM Co-ordinator |<span> 1-2 years exp</span>
+                    </h3>
+                    <p className="font-secondary font-normal text-black text-[18px] leading-[30px]  text-center line-clamp-2">
+                      Looking for a STEAM (Science, Technology, Engineering, Art
+                      and Math) Program Coordinator to join the expanding team
+                      at Yuvabe Education, dedicated to providing STEAM Programs
+                      to schools in Auroville and the Bio-region.
+                    </p>
+                    {/* Read More Button */}
+                    <Link href="join-us/steam-co-ordinator">
+                      <div className="bg-[#592AC7] py-[18px] px-8 w-[142px] rounded-[15px] mt-2">
+                        <p className="font-primary font-semibold text-white text-[14px] leading-[150%]">
+                          Read More
+                        </p>
+                      </div>
+                    </Link>
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -200,6 +218,4 @@ const JDS: React.FC = () => {
       </main>
     </div>
   );
-};
-
-export default JDS;
+}

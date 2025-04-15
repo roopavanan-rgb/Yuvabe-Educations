@@ -18,16 +18,18 @@ const teamMembers = [
 
 export function OurTeam() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-white">
+    <section className="w-full py-12 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 bg-[#140F20] text-white overflow-x-hidden">
       {/* Title */}
-      <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-4">Our Team</h2>
-      <p className="text-center text-[#FFFFFF] mb-8 max-w-2xl mx-auto">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-raleway font-semibold text-center text-[#FFCA2D] mb-4">
+        Our Team
+      </h2>
+      <p className="text-center text-[#FFFFFF] font-sans font-medium text-sm sm:text-base max-w-3xl mx-auto mb-8">
         Our team of mentors includes seasoned digital marketers, growth strategists, and industry experts 
         who have worked with global brands and startups.
       </p>
 
       {/* Team Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 sm:gap-8 max-w-7xl mx-auto">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
@@ -35,23 +37,22 @@ export function OurTeam() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="relative rounded-lg overflow-hidden shadow-lg"
+            className="flex flex-col rounded-3xl overflow-hidden shadow-md bg-[#1F1B2D] transition-transform hover:scale-105"
           >
             {/* Image */}
-            <div className="relative w-full h-65">
+            <div className="relative w-full aspect-[3/4]">
               <Image
                 src={member.image}
                 alt={member.name}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-t-2xl"
+                fill
+                className="object-cover"
               />
             </div>
 
-            {/* Solid Gray Box for Name & Role */}
-            <div className="w-full bg-gradient-to-b from-gray-700 to-gray-900 p-3 text-center rounded-b-3xl">
-              <h3 className="text-lg font-semibold text-white">{member.name}</h3>
-              <p className="text-sm text-gray-300">{member.role}</p>
+            {/* Name & Role */}
+            <div className="w-full bg-gradient-to-b from-[#6F675166] to-[#6F6751] p-4 text-center rounded-b-3xl">
+              <h3 className="text-base sm:text-lg md:text-xl font-sans font-bold text-white">{member.name}</h3>
+              <p className="text-xs sm:text-sm md:text-base font-sans font-medium">{member.role}</p>
             </div>
           </motion.div>
         ))}

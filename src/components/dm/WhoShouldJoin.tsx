@@ -19,11 +19,12 @@ const joinCategories = [
 
 export function WhoShouldJoin() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-[#FFFFFF]">
+    <section className="w-full py-12 bg-[#140F20] text-[#FFFFFF] overflow-x-hidden">
+      <div className="absolute left-10 blur-3xl w-90 h-90 rounded-full bg-[#976346] opacity-15"></div>
       {/* Title */}
-      <h2 className="text-3xl font-bold text-center mb-8">
-        <span className="text-[#FFCA2D]">Who Should Join?</span> <br />
-        <span className="text-[#FFFFFF]">This course is designed for:</span>
+      <h2 className="text-3xl font-semibold text-center mb-12">
+      <div className="text-[#FFCA2D] font-raleway font-semibold">Who Should Join?</div>
+      <div className="text-[#FFFFFF] font-sans font-semibold mt-4">This course is designed for:</div>
       </h2>
 
       {/* Cards Grid - 2x2 Layout */}
@@ -37,7 +38,7 @@ export function WhoShouldJoin() {
             viewport={{ once: true }}
             className="p-6 bg-[#FFCA2D66] border-2 border-[#E8AC35] rounded-3xl text-center"
           >
-            <p className="text-[#DFDFDF]">{item.description}</p>
+            <p className="text-[#DFDFDF] font-sans font-semibold">{item.description}</p>
           </motion.div>
         ))}
       </div>

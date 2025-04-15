@@ -147,3 +147,20 @@
   color: black;
   margin-top: 20px;
 }
+.stroke-text-yellow {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 70px;
+  -webkit-text-stroke: 3px #FAD940 ; /* Stroke width and color */
+  -webkit-text-fill-color: transparent; /* Makes inner text transparent */
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); /* Optional: Adds slight shadow for better visibility */
+  opacity: 0.5;
+}
+
+.stroke-text-violet {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 70px;
+  -webkit-text-stroke: 3px #AA78D7 ; 
+  -webkit-text-fill-color: transparent; 
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); 
+  opacity: 0.5;
+}
