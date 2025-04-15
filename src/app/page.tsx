@@ -104,7 +104,7 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-[64px] font-semibold font-primary text-black leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold font-primary text-black leading-tight">
             Empowering Minds, <br />
             <span className="text-[#592AC7]">Bridging Futures</span>
           </h1>
