@@ -53,7 +53,7 @@ const blogPosts = [
 const page = () => {
   return (
     <main className="overflow-x-hidden">
-      <section className="relative bg-[#592AC7] text-white md:min-h-[720px] min-h-[600px] flex items-start md:items-start lg:items-center justify-center px-6 md:px-12 overflow-hidden">
+      <section className="relative bg-[#592AC7] text-white md:min-h-[600px] min-h-[600px] flex items-start md:items-start lg:items-center justify-center px-6 md:px-12 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 w-full relative">
           {/* Left Side - Text Content */}
           <div className="text-center md:text-left">
@@ -73,8 +73,8 @@ const page = () => {
               keepLastFrame
               loop={false}
               src="/images/hema.json"
-              className="w-[350px] h-[350px] max-w-xl sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[800px]
-        relative   top-20 lg:top-20 md:top-60"
+              className="w-[350px] h-[350px] max-w-xl sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[700px]
+        relative   top-20 lg:top-18 md:top-60"
             />
           </div>
         </div>

@@ -36,7 +36,7 @@ const page = () => {
       <section className="relative bg-[#592AC7] text-white   flex items-center justify-center px-6 md:px-12 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-0 md:gap-12 w-full relative">
           {/* Left Side - Text Content */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left ">
             <h2 className="text-3xl md:text-[64px] font-primary font-semibold pt-12 md:pt-6 lg:pt-0">
               We Evolve
             </h2>
@@ -52,9 +52,9 @@ const page = () => {
             <Player
               autoplay
               keepLastFrame
-              loop
+              loop = {false}
               src="/images/arjun.json"
-              className="w-[450px] h-[450px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] top-15 md:top-20 lg:top-25 relative"
+              className="w-[450px] h-[450px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] top-15 md:top-18 lg:top-20 relative"
             />
           </div>
         </div>
