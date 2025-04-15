@@ -56,18 +56,20 @@ const courses = [
       "Our AI First Full Stack Program is designed to provide hands-on experience. You won’t just learn the theory—you’ll apply it to real-world problems, gaining the kind of practical skills that make you stand out to employers.",
     tagColor: "bg-[#592ac7]",
     arrowColor: "bg-[#33BED4]",
+    borderColor: "border-[#33BED4]",
+    bgColor: "bg-[#33BED4]/10",
     link: "/bridge/ai"
   },
   {
     title: "Sustainability",
     status: "Up Coming",
     image: "/images/home/sus.svg",
-    description:
-      "Unlock a comprehensive understanding of sustainability with our 3- month, in-person ‘Corporate Sustainability’ course at Auroville, Tamil Nadu.",
+    description: "Unlock a comprehensive understanding of sustainability with our 3- month, in-person ‘Corporate Sustainability’ course at Auroville, Tamil Nadu.",
     tagColor: "bg-[#33BED4]",
     arrowColor: "bg-[#91C644]",
+    borderColor: "border-[#91C644]",
+    bgColor: "bg-[#91C644]/10",
     link: "/bridge/sustainability"
-
   },
   {
     title: "Digital Marketing",
@@ -77,17 +79,21 @@ const courses = [
       "Yuvabe Education’s Digital Marketing Bridge Program is designed to provide an in-depth understanding of the digital marketing landscape. This 12-week, in-person classroom experience will help you build essential skills through practical training, real-world case studies, and industry mentorship.",
     tagColor: "bg-purple-600",
     arrowColor: "bg-[#FFCA2D]",
+    borderColor: "border-[#FFCA2D]",
+    bgColor: "bg-[#FFCA2D]/10",
     link: "/bridge/digital-marketing"
-
   },
   {
     title: "UI/UX Design",
     status: "Active",
-    image: "https://acquisitioninternational.digital/wp-content/uploads/2021/09/UI-UX-Design.jpg",
+    image:
+      "https://acquisitioninternational.digital/wp-content/uploads/2021/09/UI-UX-Design.jpg",
     description:
-      "Yuvabe Education’s Digital Marketing Bridge Program is designed to provide an in-depth understanding of the digital marketing landscape. This 12-week, in-person classroom experience will help you build essential skills through practical training, real-world case studies, and industry mentorship.",
+      "Our UI/UX program delivers top-tier design thinking education...",
     tagColor: "bg-purple-600",
-    arrowColor: "bg-[#33BED4]",
+    arrowColor: "bg-pink-400",
+    borderColor: "border-pink-400",
+    bgColor: "bg-pink-100",
     link: "/bridge/ui-ux"
   }
 ];
@@ -599,7 +605,6 @@ export default function Home() {
                 <Button href="/get-involved/we-evolve">Read more</Button>
               </div>
               <div className="w-full md:w-1/2 flex justify-center relative">
-                
                 <div className="relative w-full max-w-lg">
                   <Image
                     src="/images/home/priya.png"
@@ -611,18 +616,18 @@ export default function Home() {
                   />
                 </div>
                 <motion.div
-                className="absolute bottom-20 right-5 md:bottom-50 md:right-20 w-0 h-0 rotate-10
+                  className="absolute bottom-20 right-5 md:bottom-50 md:right-20 w-0 h-0 rotate-10
     border-l-[30px] sm:border-l-[40px] md:border-l-[46px] 
     border-r-[30px] sm:border-r-[40px] md:border-r-[46px] 
     border-b-[60px] sm:border-b-[75px] md:border-b-[82px] border-transparent 
     border-b-[#F8A91E] z-10"
-                animate={{ y: [0, -10, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              ></motion.div>
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                ></motion.div>
               </div>
             </motion.div>
           </div>
@@ -663,11 +668,7 @@ export default function Home() {
               <SwiperSlide key={index}>
                 {/* Course Card */}
                 <motion.div
-                  className={`shadow-lg rounded-[20px] overflow-hidden w-full sm:w-[350px] md:w-[370px] h-auto min-h-[500px] flex flex-col mb-8 border-2 ${
-                    index % 2 === 0
-                      ? "border-[#33BED4] bg-[#33BED4]-200"
-                      : "border-[#91C644] bg-[#91C644]-100"
-                  }`}
+                  className={`shadow-lg rounded-[20px] overflow-hidden w-full sm:w-[350px] md:w-[370px] h-auto min-h-[500px] flex flex-col mb-8 border-2 ${course.borderColor} ${course.bgColor}`}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -704,10 +705,7 @@ export default function Home() {
                     </p>
                     {/* Navigation Icon */}
                     <div className="flex justify-end mt-4">
-                      <Link
-                       href={course.link}
-                        className="mt-4"
-                      >
+                      <Link href={course.link} className="mt-4">
                         <div
                           className={`w-10 h-10 flex items-center justify-center rounded-full text-white ${course.arrowColor}`}
                         >
