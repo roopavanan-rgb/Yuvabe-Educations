@@ -103,8 +103,8 @@ const Header = () => {
       links: [
         { name: "About Steam", path: "/steam/about-steam" },
         { name: "Program Calendar", path: "/steam/program-calendar" },
-        { name: "Auroville Program", path: "/steam/auroville-program" },
-        { name: "Visitor Program", path: "/steam/visitor-program" },
+        // { name: "Auroville Program", path: "/steam/auroville-program" },
+        // { name: "Visitor Program", path: "/steam/visitor-program" },
       ],
     },
     {
