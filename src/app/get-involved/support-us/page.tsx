@@ -156,6 +156,21 @@ export default function SupportUs() {
           A big thank you to all our donors and sponsors who have been
           generously supporting us in our journey.
         </motion.p>
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          className="my-8"
+        >
+          <Image
+            src="/images/clientlogo/logo.svg"
+            alt="AVI-USA Logo"
+            width={240}
+            height={240}
+            className="rounded-lg"
+          />
+        </motion.div>
       </section>
     </main>
   );

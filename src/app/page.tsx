@@ -20,7 +20,9 @@ const logos = [
   "/images/clientlogo/deep.webp",
   "/images/clientlogo/play.webp",
   "/images/clientlogo/agastya.webp",
-  "/images/clientlogo/ness.webp"
+  "/images/clientlogo/ness.webp",
+  "/images/clientlogo/c3stream.png"
+  
 ];
 
 const settings = {
@@ -64,7 +66,8 @@ const courses = [
     title: "Sustainability",
     status: "Up Coming",
     image: "/images/home/sus.svg",
-    description: "Unlock a comprehensive understanding of sustainability with our 3- month, in-person ‘Corporate Sustainability’ course at Auroville, Tamil Nadu.",
+    description:
+      "Unlock a comprehensive understanding of sustainability with our 3- month, in-person ‘Corporate Sustainability’ course at Auroville, Tamil Nadu.",
     tagColor: "bg-[#33BED4]",
     arrowColor: "bg-[#91C644]",
     borderColor: "border-[#91C644]",
@@ -102,7 +105,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-12 bg-[#FDF8EE] min-h-[800px] overflow-x-hidden">
+      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-12 bg-[#FDF8EE] min-h-[700px] overflow-x-hidden">
         {/* Right Side - Text */}
         <motion.div
           className="w-full md:w-4/5 lg:w-1/2 text-center md:text-left order-1 md:order-1 lg:order-2"
@@ -114,7 +117,7 @@ export default function Home() {
             Empowering Minds, <br />
             <span className="text-[#592AC7]">Bridging Futures</span>
           </h1>
-          <p className="mt-4 text-gray-700 max-w-[90%] md:max-w-xl font-secondary text-lg md:text-xl">
+          <p className="mt-4 text-gray-700 max-w-full md:max-w-xl font-secondary text-lg md:text-xl">
             Empowering young adults with practical skills, hands-on experience,
             and a purpose-driven community to thrive in a dynamic world.
           </p>
@@ -130,22 +133,22 @@ export default function Home() {
 
         {/* Left Side - Image */}
         <motion.div
-          className="relative w-full md:w-1/2 flex justify-center md:justify-start mt-10 lg:mt-0 order-2 md:order-2 lg:order-1"
+          className="relative w-full md:w-full lg:w-1/2 flex justify-center md:justify-start mt-10 lg:mt-0 order-2 md:order-2 lg:order-1"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full max-w-[600px] md:max-w-[750px] lg:max-w-[650px]">
+          <div className="relative w-full max-w-[600px] md:max-w-[700px] lg:max-w-[750px]">
             {/* Floating Circle */}
             <motion.div
-              className="absolute top-10 left-40 md:top-20 md:left-60 transform -translate-x-1/2 w-20 h-20 bg-[#91C644] rounded-full z-10"
+              className="absolute top-10 left-40 md:top-20 md:left-50 lg:top-20 lg:left-70 transform -translate-x-1/2 w-15 h-15 md:w-20 md:h-20 bg-[#91C644] rounded-full z-10"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             />
 
             {/* Floating Triangle */}
             <motion.div
-              className="absolute bottom-0 left-60  md:bottom-5 md:left-120  transform -translate-x-1/2 w-0 h-0 
+              className="absolute bottom-0 left-60  md:bottom-5 md:left-130  lg:bottom-5 lg:left-120 transform -translate-x-1/2 w-0 h-0 
           border-l-[45px] border-r-[45px] 
           border-b-[80px] border-transparent 
           border-b-[#F8A91E] z-10"
@@ -157,10 +160,10 @@ export default function Home() {
             <Image
               src="/images/home/hero.webp"
               alt="Group working on laptop"
-              width={100}
-              height={100}
+              width={200}
+              height={200}
               priority
-              className="w-full h-auto object-contain top-12 right-8 md:top-20 md:right-18 relative z-0"
+              className="w-full h-auto object-contain top-12 right-6 md:top-12 md:right-38 lg:top-12 lg:right-16 relative z-0"
             />
           </div>
         </motion.div>
@@ -171,7 +174,7 @@ export default function Home() {
         <div className="w-full max-w-screen-xl px-6 sm:px-8 md:px-10">
           <motion.div
             className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:gap-12
- justify-center items-center "
+            justify-center items-center "
             initial="hidden"
             animate="visible"
             variants={{
@@ -212,7 +215,7 @@ export default function Home() {
 
       {/* Our story */}
       <section className="bg-white py-10 md:py-12 lg:py-16 shadow-md shadow-gray-300 overflow-hidden">
-        <div className="container max-w-8xl mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
+        <div className="container  mx-auto ">
           {/* Centered Heading */}
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
@@ -224,7 +227,7 @@ export default function Home() {
             Our Story
           </motion.h2>
 
-          <div className="flex flex-col-reverse lg:flex-row items-center gap-6 sm:gap-8 lg:gap-10">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-2 sm:gap-8 lg:gap-10">
             {/* Left Side - Text */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -233,12 +236,12 @@ export default function Home() {
               viewport={{ once: true }}
               className="w-full lg:w-1/2 text-left mt-6 lg:mt-0 px-6"
             >
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-3 sm:mb-4 font-primary">
                 Yuvabe Education: <br className="hidden sm:block" /> Unleashing
                 Potential <br className="hidden sm:block" /> Through Holistic
                 Growth
               </h3>
-              <p className="text-gray-700 text-sm sm:text-base md:text-lg mb-3 sm:mb-4">
+              <p className="text-gray-700 text-[14px] sm:text-[18px] mb-3 sm:mb-4 text-justify">
                 At Yuvabe Education in Auroville, we believe in the immense
                 potential innate in every individual, especially the youth. The
                 challenge lies not in capability but in providing access to the
@@ -247,7 +250,7 @@ export default function Home() {
                 learners with a transformative platform that fosters
                 self-awareness, growth, and empowerment.
               </p>
-              <p className="text-gray-700 text-sm sm:text-base md:text-lg">
+              <p className="text-gray-700 text-[14px] sm:text-[18px] text-justify">
                 Yuvabe Education was born out of a deep commitment to empowering
                 individuals. We start with external growth areas like acquiring
                 technical and career skills and evolve toward inward
@@ -265,7 +268,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="w-full lg:w-1/2 flex justify-center"
             >
-              <div className="relative w-full max-w-[320px] sm:max-w-[550px] md:max-w-[650px] lg:max-w-[700px] h-[220px] sm:h-[320px] md:h-[450px] lg:h-[600px]">
+              <div className="relative w-full max-w-[420px] sm:max-w-[550px] md:max-w-[650px] lg:max-w-[700px] h-[320px] sm:h-[320px] md:h-[450px] lg:h-[600px]">
                 <Image
                   src="/images/home/story.webp"
                   alt="Our Story"
@@ -275,7 +278,7 @@ export default function Home() {
                   className="rounded-lg w-full h-full object-contain"
                 />
                 <motion.div
-                  className="absolute bottom-0 left-50 md:bottom-15 md:left-80 lg:bottom-10 lg:left-100 w-10 h-10  md:w-26 md:h-26 sm:h-15 sm:w-15 bg-[#91C644] rotate-45 "
+                  className="absolute bottom-5 left-50 md:bottom-15 md:left-80 lg:bottom-10 lg:left-100 w-10 h-10  md:w-26 md:h-26 sm:h-15 sm:w-15 bg-[#91C644] rotate-45 "
                   animate={{ y: [0, -10, 0] }}
                   transition={{
                     duration: 2,
@@ -293,14 +296,14 @@ export default function Home() {
 
       {/* Through program */}
       <section className="bg-[#FFF9EA] py-12 overflow-hidden">
-        <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+        <div className="container  mx-auto  flex flex-col lg:flex-row items-center">
           {/* Left Side - Image */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative lg:w-1/2 flex justify-center items-center mb-10 lg:mb-0"
+            className="relative lg:w-1/2 flex justify-center items-center mb-10 lg:mb-0 ml-6 md:ml-0"
           >
             <motion.div
               className="absolute top-15 right-10 transform -translate-x-1/2 w-10 h-10 md:w-20 md:h-20 sm:h-12 sm:w-12 bg-[#91C644] rounded-full"
@@ -318,7 +321,7 @@ export default function Home() {
               width={800}
               height={800}
               priority
-              className="w-[280px] md:w-[480px] h-auto max-w-full"
+              className="w-[350px] md:w-[680px] h-auto max-w-full"
             />
           </motion.div>
 
@@ -333,7 +336,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center md:text-start">
               Through programs like:
             </h2>
-            <ul className="list-disc list-inside text-gray-700 space-y-4 leading-7 md:leading-8">
+            <ul className="list-disc list-inside text-gray-700 space-y-4 leading-7 md:leading-8 text-justify px-4 sm:px-0 text-[14px] sm:text-[18px]  ">
               <li>
                 <strong>The STEAM Program (ages 7-14):</strong> Building a
                 strong foundation in Science, Technology, Engineering, Arts, and
@@ -345,7 +348,7 @@ export default function Home() {
                 self-discovery.
               </li>
             </ul>
-            <p className="text-gray-700 mt-6 text-base md:text-lg">
+            <p className="text-gray-700 mt-6 text-[14px] sm:text-[18px] text-justify px-4 sm:px-0">
               We plant the seeds of growth at an early age and nurture them
               throughout life’s journey.
             </p>
@@ -355,7 +358,7 @@ export default function Home() {
 
       {/* Join us  */}
       <section className="py-16 px-4 sm:px-6 lg:px-10">
-        <div className="container max-w-screen-xl mx-auto flex flex-col md:flex-col lg:flex-row items-center justify-between gap-10">
+        <div className="container  mx-auto flex flex-col md:flex-col lg:flex-row items-center justify-between gap-10">
           {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -367,17 +370,17 @@ export default function Home() {
             <h2 className="text-[24px] sm:text-[28px] md:text-[36px] font-semibold text-black text-center md:text-start ">
               Join Us in This Mission
             </h2>
-            <p className="text-gray-700 leading-7 text-balance text-sm sm:text-base ">
+            <p className="text-gray-700 leading-7  text-sm sm:text-[18px] text-justify font-secondary">
               For those who feel called to support this initiative, your love
               and blessings can make dreams come true for the talented youth of
               Auroville and its surrounding villages.
             </p>
-            <p className="text-gray-700 leading-7 text-balance text-sm sm:text-base ">
+            <p className="text-gray-700 leading-7  text-sm sm:text-[18px] text-justify font-secondary">
               We've come this far thanks to the generosity of people like you.
               Together, we can continue to create opportunities and help young
               learners realize their true potential.
             </p>
-            <p className="text-gray-700 leading-7 text-balance text-sm sm:text-base mb-6 md:mb-10 ">
+            <p className="text-gray-700 leading-7  text-sm sm:text-[18px] mb-6 md:mb-10 text-justify font-secondary">
               Click here to learn how you can contribute and join us on this
               journey.
             </p>
@@ -431,7 +434,7 @@ export default function Home() {
 
       {/* Vision & Mission */}
       <section className="bg-[#592AC7] text-white py-16 px-4 sm:px-6 lg:px-12">
-        <div className="container max-w-screen-xl mx-auto flex flex-col md:flex-col lg:flex-row items-start justify-between gap-6 md:gap-10">
+        <div className="container  mx-auto flex flex-col md:flex-col lg:flex-row items-start justify-between gap-6 md:gap-10">
           {/* Left: Vision & Mission Text */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -443,7 +446,7 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
               Our Vision
             </h2>
-            <p className="text-base sm:text-lg md:text-xl leading-7 font-regular font-secondary">
+            <p className="text-[14px] sm:text-[18px] md:text-xl leading-7 font-regular font-secondary text-justify">
               To nurture a generation of self-aware, skilled, and purpose-driven
               individuals who contribute meaningfully to the world, guided by
               inner exploration and outward impact.
@@ -455,7 +458,7 @@ export default function Home() {
             <p className="text-base sm:text-lg md:text-xl font-regular font-secondary">
               Through Yuvabe Education, we aim to:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-base sm:text-lg md:text-xl font-regular font-secondary">
+            <ul className="list-disc pl-6 space-y-2 text-[14px] sm:text-[18px] font-regular font-secondary ">
               <li>
                 Equip individuals with futuristic skills for career success.
               </li>
@@ -499,14 +502,14 @@ export default function Home() {
       </section>
 
       {/* Work, serve & evolve */}
-      <section className="bg-white py-16 px-6 min-h-screen flex items-center justify-center">
-        <div className="container max-w-screen-lg mx-auto text-center">
+      <section className="bg-white py-16 px-6 min-h-screen flex items-center justify-center relative">
+        <div className="container mx-auto text-center relative">
           <h2 className="text-4xl font-semibold font-primary text-[64px]">
             Our Motto
           </h2>
 
-          {/* Zig-Zag Line SVG */}
-          <div className="absolute left-1/2 -translate-x-[50%] lg:top-1000 md:top-1380 hidden md:block">
+          {/* Centered Zig-Zag Line Image */}
+          {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[0] hidden md:block">
             <Image
               src="/images/home/plane2.gif"
               alt="Paper Plane"
@@ -514,9 +517,9 @@ export default function Home() {
               height={550}
               priority
             />
-          </div>
+          </div> */}
 
-          <div className="space-y-28 mt-16">
+          <div className="relative z-10 space-y-28 mt-16">
             {/* Work Section */}
             <motion.div
               initial={{ opacity: 0 }} // Only fade in
@@ -527,10 +530,11 @@ export default function Home() {
             >
               <div className="md:w-3/4 space-y-4 text-left">
                 <h3 className="text-[36px] font-semibold font-primary">Work</h3>
-                <p className="text-gray-600 font-secondary text-[18px] mb-6">
+                <p className="text-gray-600 font-secondary text-[18px] mb-6 text-wrap">
                   To nurture a generation of self-aware, skilled, and
-                  purpose-driven individuals who contribute meaningfully to the
-                  world, guided by inner exploration and outward impact.
+                  purpose-driven <br /> individuals who contribute meaningfully
+                  to the world, guided by <br /> inner exploration and outward
+                  impact.
                 </p>
                 <Button href="/about-us">Read more</Button>
               </div>
@@ -553,14 +557,16 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
               className="flex flex-col md:flex-row-reverse items-center gap-18"
             >
-              <div className="md:w-3/4 space-y-4 text-left">
-                <h3 className="text-[36px] font-semibold font-primary">
+              <div className="md:w-3/4 space-y-4 text-left ml-auto z-10 ">
+                <h3 className="text-[36px] font-semibold font-primary z-10">
                   Serve
                 </h3>
-                <p className="text-gray-600 font-secondary text-[18px] mb-6">
+                <p className="text-gray-600 font-secondary text-[18px] mb-6 z-10">
                   To nurture a generation of self-aware, skilled, and
-                  purpose-driven individuals who contribute meaningfully to the
-                  world, guided by inner exploration and outward impact.
+                  purpose-driven <br />
+                  individuals who contribute meaningfully to the world, guided
+                  by <br />
+                  inner exploration and outward impact.
                 </p>
                 <Button href="/get-involved/we-serve">Read more</Button>
               </div>
@@ -599,8 +605,10 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 font-secondary text-[18px] mb-6">
                   To nurture a generation of self-aware, skilled, and
-                  purpose-driven individuals who contribute meaningfully to the
-                  world, guided by inner exploration and outward impact.
+                  purpose-driven
+                  <br /> individuals who contribute meaningfully to the world,
+                  guided by
+                  <br /> inner exploration and outward impact.
                 </p>
                 <Button href="/get-involved/we-evolve">Read more</Button>
               </div>
@@ -640,7 +648,7 @@ export default function Home() {
       {/* course cards slider */}
 
       <section className="py-10 bg-[#FDF7E6]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1240px]">
           {/* Section Title */}
           <motion.h2
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8"

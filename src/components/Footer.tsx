@@ -86,30 +86,30 @@ const Footer = () => {
         {/* Middle Section - Links */}
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">About Us</h3>
+            <h3 className="font-bold font-primary text-gray-900 mb-3">About Us</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/about-us" className="hover:underline">
+                <Link href="/about-us" className="font-regular font-primary hover:underline">
                   Who We Are?
                 </Link>
               </li>
               <li>
-                <Link href="/about-us#our-impact" className="hover:underline">
+                <Link href="/about-us#our-impact" className="font-regular font-primary hover:underline">
                   Our Impact
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Programs</h3>
+            <h3 className="font-bold font-primary text-gray-900 mb-3">Programs</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/steam/about-steam" className="hover:underline">
+                <Link href="/steam/about-steam" className="font-regular font-primary hover:underline">
                   STEAM Program
                 </Link>
               </li>
               <li>
-                <Link href="/bridge/about" className="hover:underline">
+                <Link href="/bridge/about" className="font-regular font-primary hover:underline">
                   Bridge Program
                 </Link>
               </li>
@@ -120,22 +120,22 @@ const Footer = () => {
         {/* Right Section - Links */}
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
+            <h3 className="font-bold font-primary text-gray-900 mb-3">Resources</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/blogs" className="hover:underline">
+                <Link href="/blogs" className="font-regular font-primary hover:underline">
                   Blogs
                 </Link>
               </li>
               <li>
-                <Link href="/stories/newsletters" className="hover:underline">
+                <Link href="/stories/newsletters" className="font-regular font-primary hover:underline">
                   Newsletter
                 </Link>
               </li>
               <li>
                 <Link
                   href="https://heyzine.com/flip-book/a7ee0bc0d2.html"
-                  className="hover:underline"
+                  className="font-regular font-primary hover:underline"
                 >
                   Impact Report
                 </Link>
@@ -143,17 +143,17 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Contact Us</h3>
+            <h3 className="font-bold font-primary text-gray-900 mb-3">Contact Us</h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/get-involved/join-us" className="hover:underline">
+                <Link href="/get-involved/join-us" className="font-regular font-primary hover:underline">
                   Join Us
                 </Link>
               </li>
               <li>
                 <Link
                   href="/get-involved/support-us"
-                  className="hover:underline"
+                  className="font-regular font-primary hover:underline"
                 >
                   Support Us
                 </Link>
@@ -161,7 +161,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/get-involved/talk-to-us"
-                  className="hover:underline"
+                  className="font-regular font-primary hover:underline"
                 >
                   Talk to Us
                 </Link>
