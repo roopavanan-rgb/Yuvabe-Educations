@@ -7,7 +7,7 @@ import {
   FaFacebookF,
   FaXTwitter,
   FaLinkedinIn,
-  FaYoutube
+  FaYoutube,
 } from "react-icons/fa6";
 import { IoLocationSharp, IoMailSharp } from "react-icons/io5";
 import { FaGlobe } from "react-icons/fa";
@@ -65,7 +65,7 @@ const Footer = () => {
                 className="hover:text-gray-600 transition"
               />
             </Link>
-            <Link href="https://twitter.com">
+            <Link href="https://x.com/yuvabeauroville">
               <FaXTwitter
                 size={24}
                 className="hover:text-gray-600 transition"
