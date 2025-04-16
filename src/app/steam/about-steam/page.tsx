@@ -496,81 +496,84 @@ export default function Steam() {
       <ImpactReport />
       {/* Donation */}
       <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
-        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16">
-          <h2 className="text-white text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
-            Your Support Matters!
-          </h2>
-          {/* Donate From.... */}
-          <div className="flex flex-row gap-x-[72px] flex-wrap md:flex-nowrap  py-16 lg:py-32 md:py-24">
-            {/* Donate from India */}
-            <div className="flex flex-col gap-y-16  w-full md:w-1/2">
-              {/* Text */}
-              <div className="flex flex-col gap-y-6">
-                <p className="font-secondary font-bold text-[18px] leading-[30px] text-white">
-                  The success of our STEAM Lab is made possible by the
-                  generosity of donors like you. Your support can help us reach
-                  more children, create lasting change, and bring dreams to
-                  life.
-                  <br />
-                  <br />​ Join hands with Yuvabe to empower our future
-                  innovators and leaders to uncover the potential of every
-                  child. Your donation can light up a child's future, one life
-                  at a time.
-                </p>
-                <p className="font-secondary font-bold text-2xl md:text-4xl leading-[40px] text-[#FFCA2D]">
-                  Donate Today and <br className="hidden lg:block" /> Be
-                  a Changemaker!
-                </p>
-              </div>
-              {/* Donate Button */}
-              <div className="flex flex-col gap-y-8 py-12 px-8 md:py-24 md:px-16 bg-white rounded-[50px] justify-center items-center">
-                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black">
-                  To donate from India, kindly use this link:
-                </p>
-                <Link href={"https://donate.auroville.org/"}>
-                  <div className="py-[18px] px-8 md:px-[61px] rounded-[15px] bg-[#592AC7] justify-center items-center">
-                    <p className="font-secondary font-semibold text-[18px] leading-[150%] text-white">
-                      Donate from India
-                    </p>
-                  </div>
-                </Link>
-                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black">
-                  Please follow these steps on the donation page:
-                  <br />
-                  <br />
-                  <ul>
-                    <li>
-                      Select <strong>'Others'</strong> under Projects to donate,
-                    </li>
-                    <li>
-                      Mention Project name as
-                      <strong>'Yuvabe STEAM Lab'</strong>
-                    </li>
-                  </ul>
-                </p>
-              </div>
-            </div>
-            {/* Donate from Abroad */}
+  <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16">
+    <h2 className="text-white text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+      Your Support Matters!
+    </h2>
 
-            <div className="w-full md:w-1/2">
-              {/* Import Component  */}
-              <motion.div
-                className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[850px]"
-                initial={{ opacity: 0, y: -20, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center">
-                  Donate from Anywhere
-                </h2>
+    {/* Donate From... */}
+    <div className="flex flex-row gap-x-[72px] flex-wrap md:flex-nowrap py-16 lg:py-32 md:py-24">
+      
+      {/* Donate from India */}
+      <div className="flex flex-col gap-y-16 w-full md:w-1/2">
+        {/* Text */}
+        <div className="flex flex-col gap-y-6">
+          <p className="font-secondary font-bold text-[18px] leading-[30px] text-white">
+            The success of our STEAM Lab is made possible by the
+            generosity of donors like you. Your support can help us reach
+            more children, create lasting change, and bring dreams to
+            life.
+            <br />
+            <br />​ Join hands with Yuvabe to empower our future
+            innovators and leaders to uncover the potential of every
+            child. Your donation can light up a child's future, one life
+            at a time.
+          </p>
+          <p className="font-secondary font-bold text-2xl md:text-4xl leading-[40px] text-[#FFCA2D]">
+            Donate Today and <br className="hidden lg:block" /> Be
+            a Changemaker!
+          </p>
+        </div>
 
-                {/* FundraiseUp Widget */}
-                <a href="#XJLHERLT" className=""></a>
-              </motion.div>
+        {/* Donate Button */}
+        <div className="flex flex-col gap-y-8 py-12 px-8 md:py-24 md:px-16 bg-white rounded-[50px] justify-center items-center">
+          <p className="font-secondary font-normal text-[18px] leading-[30px] text-black">
+            To donate from India, kindly use this link:
+          </p>
+
+          <Link href="https://donate.auroville.org/">
+            <div className="py-[18px] px-8 md:px-[61px] rounded-[15px] bg-[#592AC7] justify-center items-center">
+              <p className="font-secondary font-semibold text-[18px] leading-[150%] text-white">
+                Donate from India
+              </p>
             </div>
+          </Link>
+
+          <div className="font-secondary font-normal text-[18px] leading-[30px] text-black">
+            <p>Please follow these steps on the donation page:</p>
+            <br />
+            <ul className="list-disc ml-6">
+              <li>
+                Select <strong>'Others'</strong> under Projects to donate
+              </li>
+              <li>
+                Mention Project name as <strong>'Yuvabe STEAM Lab'</strong>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+
+      {/* Donate from Abroad */}
+      <div className="w-full md:w-1/2">
+        <motion.div
+          className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[850px]"
+          initial={{ opacity: 0, y: -20, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center">
+            Donate from Anywhere
+          </h2>
+
+          {/* FundraiseUp Widget */}
+          <a href="#XJLHERLT" className=""></a>
+        </motion.div>
+      </div>
+    </div>
+  </div>
+</div>
+
     </>
   );
 }

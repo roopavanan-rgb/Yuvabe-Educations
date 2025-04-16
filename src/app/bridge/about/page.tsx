@@ -40,21 +40,22 @@ export default function Bridge() {
 
             {/* Video */}
             <motion.div
-              className="w-full max-w-4xl mx-auto"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              className="max-w-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
             >
-              <div className="relative w-full pt-[56.25%]">
-                {" "}
-                {/* 16:9 Aspect Ratio */}
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full rounded-lg"
-                  src="https://www.youtube.com/embed/xf697xkmu74?si=7gyQHmM7syAgCtiM?autoplay=1&mute=1"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                ></iframe>
-              </div>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/xf697xkmu74?si=7gyQHmM7syAgCtiM?autoplay=1&mute=1"
+                title="YouTube video player"
+                // frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                // referrerpolicy="strict-origin-when-cross-origin"
+                // allowfullscreen
+                className="md:h-[617px] h-64"
+              ></iframe>
             </motion.div>
           </div>
 
@@ -747,17 +748,19 @@ export default function Bridge() {
               </div>
             </div>
             {/* Donate from Abroad */}
-            <div className="w-full md:w-1/2">
-              <div className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[850px]">
-                <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center ">
-                  Donate from Anywhere
-                </h2>
+            <motion.div
+        className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[700px]"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center ">
+          Donate from Anywhere
+        </h2>
 
-                {/* FundraiseUp Widget */}
-                <a href="#XXVLPPSW" className="hidden"></a>
-              </div>
-              {/* Import Component  */}
-            </div>
+        {/* FundraiseUp Widget */}
+        <a href="#XXVLPPSW" className=""></a>
+      </motion.div>
           </div>
         </div>
       </div>
