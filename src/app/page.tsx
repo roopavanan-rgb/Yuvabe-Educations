@@ -503,21 +503,21 @@ export default function Home() {
 
       {/* Work, serve & evolve */}
       <section className="bg-white py-16 px-6 min-h-screen flex items-center justify-center relative">
-        <div className="container mx-auto text-center relative">
+        <div className="container max-w-[1040px] mx-auto text-center relative">
           <h2 className="text-4xl font-semibold font-primary text-[64px]">
             Our Motto
           </h2>
 
           {/* Centered Zig-Zag Line Image */}
-          {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[0] hidden md:block">
+          <div className="absolute top-3/5 left-3/5 transform -translate-x-4/5 -translate-y-1/2 z-[0] hidden md:block">
             <Image
               src="/images/home/plane2.gif"
               alt="Paper Plane"
-              width={550}
-              height={550}
+              width={900}
+              height={900}
               priority
             />
-          </div> */}
+          </div>
 
           <div className="relative z-10 space-y-28 mt-16">
             {/* Work Section */}
