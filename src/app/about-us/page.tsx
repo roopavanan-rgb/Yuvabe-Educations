@@ -161,7 +161,7 @@ const AboutUs = () => {
               transition={{
                 duration: 3.5,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             >
               <Image
@@ -204,7 +204,6 @@ const AboutUs = () => {
               title="YouTube Video"
               allowFullScreen
               allow="autoplay; encrypted-media"
-
             ></iframe>
           </div>
         </motion.div>
@@ -388,13 +387,13 @@ const AboutUs = () => {
 
             {/* Know More Button */}
             <motion.a
-                          href="/get-involved/we-evolve"
-                          className="bg-[#592AC7] text-white font-semibold py-3 px-6 rounded-lg shadow-md inline-block"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          Know More
-                        </motion.a>
+              href="/get-involved/we-evolve"
+              className="bg-[#592AC7] text-white font-semibold py-3 px-6 rounded-lg shadow-md inline-block"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Know More
+            </motion.a>
           </motion.div>
         </div>
 
@@ -443,7 +442,7 @@ const AboutUs = () => {
               duration: 0.8,
               type: "spring",
               stiffness: 200,
-              damping: 10
+              damping: 10,
             }}
             viewport={{ once: true }}
           >
@@ -460,9 +459,10 @@ const AboutUs = () => {
       </section>
 
       {/* Our Impact Section */}
-      <section  id="our-impact" 
+      <section
+        id="our-impact"
         ref={impactSectionRef}
-        className="bg-[#592AC7] text-[#FFFFFF] py-18 text-center px-4 md:px-12"
+        className="bg-[#592AC7] text-[#FFFFFF] py-18 text-center px-4 md:px-12 lg:scroll-mt-14"
       >
         <motion.h2
           className="text-4xl md:text-5xl font-primary font-semibold mb-8"
@@ -491,13 +491,13 @@ const AboutUs = () => {
             {
               count: hoursCount,
               color: "#F2D789",
-              label: "Hours of community service"
+              label: "Hours of community service",
             },
             {
               count: projectsCount,
               color: "#BBD594",
-              label: "Projects Completed"
-            }
+              label: "Projects Completed",
+            },
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -521,7 +521,12 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          onClick={() => window.open("https://heyzine.com/flip-book/a7ee0bc0d2.html#page/1", "_blank")}
+          onClick={() =>
+            window.open(
+              "https://heyzine.com/flip-book/a7ee0bc0d2.html#page/1",
+              "_blank"
+            )
+          }
         >
           Impact Report
         </motion.button>
@@ -609,86 +614,82 @@ const AboutUs = () => {
         <div className="flex flex-wrap justify-center gap-10">
           {/* Card 1 */}
           <Link href="/get-involved/talk-to-us">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="w-70 h-[260px] p-8 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-110 cursor-pointer"
-          >
-            <Image
-              src="/assets/collaborate.svg"
-              alt="Collaborate"
-              width={60}
-              height={60}
-              className="mb-4"
-            />
-            <h3 className="text-lg font-primary font-semibold pr-26 mb-1">
-              Collaborate
-            </h3>
-            <p className="text-sm text-[#000000] font-secondary text-left">
-              Be it AI-driven market research, ERP solution for your enterprise,
-              support in digital marketing or design consultancy, our team is
-              here to help.
-            </p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="w-70 h-[260px] p-8 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-110 cursor-pointer"
+            >
+              <Image
+                src="/assets/collaborate.svg"
+                alt="Collaborate"
+                width={60}
+                height={60}
+                className="mb-4"
+              />
+              <h3 className="text-lg font-primary font-semibold pr-26 mb-1">
+                Collaborate
+              </h3>
+              <p className="text-sm text-[#000000] font-secondary text-left">
+                Be it AI-driven market research, ERP solution for your
+                enterprise, support in digital marketing or design consultancy,
+                our team is here to help.
+              </p>
+            </motion.div>
           </Link>
-
 
           {/* Card 2 */}
           <Link href="/get-involved/support-us">
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="w-70 h-[260px] p-8 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-110 cursor-pointer"
-          >
-            <Image
-              src="/assets/support.svg"
-              alt="Support"
-              width={60}
-              height={60}
-              className="mb-4"
-            />
-            <h3 className="text-lg font-primary font-semibold pr-36 mb-1">
-              Support
-            </h3>
-            <p className="text-sm text-[#000000] font-secondary text-left">
-              Contribute time, skills, or resources by becoming a sponsor,
-              donor, or mentor for our youth.
-            </p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="w-70 h-[260px] p-8 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-110 cursor-pointer"
+            >
+              <Image
+                src="/assets/support.svg"
+                alt="Support"
+                width={60}
+                height={60}
+                className="mb-4"
+              />
+              <h3 className="text-lg font-primary font-semibold pr-36 mb-1">
+                Support
+              </h3>
+              <p className="text-sm text-[#000000] font-secondary text-left">
+                Contribute time, skills, or resources by becoming a sponsor,
+                donor, or mentor for our youth.
+              </p>
+            </motion.div>
           </Link>
-
 
           {/* Card 3 */}
           <Link href="/get-involved/join-us">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="w-70 h-[260px] p-8 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-110 cursor-pointer"
-          >
-            <Image
-              src="/assets/join.svg"
-              alt="Join"
-              width={60}
-              height={60}
-              className="mb-4"
-            />
-            <h3 className="text-lg font-primary font-semibold pr-46 mb-1">
-              Join
-            </h3>
-            <p className="text-sm text-[#000000] font-secondary text-left">
-              Want to be part of a young company, where you can learn, work,
-              serve, and evolve? Get in touch with us!
-            </p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="w-70 h-[260px] p-8 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-110 cursor-pointer"
+            >
+              <Image
+                src="/assets/join.svg"
+                alt="Join"
+                width={60}
+                height={60}
+                className="mb-4"
+              />
+              <h3 className="text-lg font-primary font-semibold pr-46 mb-1">
+                Join
+              </h3>
+              <p className="text-sm text-[#000000] font-secondary text-left">
+                Want to be part of a young company, where you can learn, work,
+                serve, and evolve? Get in touch with us!
+              </p>
+            </motion.div>
           </Link>
-
         </div>
       </section>
 
@@ -920,7 +921,7 @@ const AboutUs = () => {
             className="relative w-full max-w-3xl aspect-video rounded-lg overflow-hidden"
           >
             <video
-              src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/hari-testimonial.mp4"
+              src="./videos/hari testimonial.mp4"
               controls
               autoPlay
               muted
@@ -947,7 +948,7 @@ const AboutUs = () => {
               className="relative aspect-video rounded-lg overflow-hidden"
             >
               <video
-                src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/praveen-testimonial-2-draft-2.mp4"
+                src="./videos/praveen testimonial.mp4"
                 controls
                 className="w-full h-full rounded-lg"
               ></video>
@@ -962,7 +963,7 @@ const AboutUs = () => {
               className="relative aspect-video rounded-lg overflow-hidden"
             >
               <video
-                src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/poovendiran-testimonial-1.mp4"
+                src="./videos/poovendiran testimonial.mp4"
                 controls
                 className="w-full h-full rounded-lg"
               ></video>
@@ -977,7 +978,7 @@ const AboutUs = () => {
               className="relative aspect-video rounded-lg overflow-hidden"
             >
               <video
-                src="http://yuvabeeducation.com/wordpress/wp-content/uploads/2025/04/abilash-testimonial.mp4"
+                src="./videos/abilash testimonial.mp4"
                 controls
                 className="w-full h-full rounded-lg"
               ></video>
@@ -1014,21 +1015,21 @@ const AboutUs = () => {
                 src: "/assets/unwomen.svg",
                 alt: "UN Women",
                 width: 200,
-                height: 200
+                height: 200,
               },
               {
                 src: "/assets/billgates.svg",
                 alt: "Bill & Melinda Gates Foundation",
                 width: 300,
-                height: 300
+                height: 300,
               },
               {
                 src: "/assets/coke.svg",
                 alt: "Coca-Cola",
                 width: 200,
-                height: 200
+                height: 200,
               },
-              { src: "/assets/visa.svg", alt: "Visa", width: 100, height: 100 }
+              { src: "/assets/visa.svg", alt: "Visa", width: 100, height: 100 },
             ].map((logo, index) => (
               <motion.div
                 key={logo.alt}
@@ -1037,7 +1038,7 @@ const AboutUs = () => {
                 transition={{
                   duration: 0.6,
                   ease: "easeOut",
-                  delay: index * 0.2
+                  delay: index * 0.2,
                 }}
                 viewport={{ once: true }}
               >
