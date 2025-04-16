@@ -692,9 +692,9 @@ export default function Bridge() {
             Your Support Matters!
           </h2>
           {/* Donate From.... */}
-          <div className="flex flex-row gap-x-[72px] flex-wrap md:flex-nowrap  py-16 lg:py-32 md:py-24">
+          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap  py-16 lg:py-32 md:py-24">
             {/* Donate from India */}
-            <div className="flex flex-col gap-y-16 w-full md:w-1/2">
+            <div className="flex flex-col gap-y-16 w-full lg:w-1/2">
               {/* Text */}
               <div className="flex flex-col gap-y-6">
                 <p className="font-secondary font-bold text-[18px] leading-[30px] text-white">
@@ -747,8 +747,8 @@ export default function Bridge() {
               </div>
             </div>
             {/* Donate from Abroad */}
-            <div className="w-full md:w-1/2">
-              <div className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[850px]">
+            <div className="w-full lg:w-1/2">
+              <div className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full lg:max-w-[584px] h-auto md:h-[850px] flex flex-col justify-between items-center">
                 <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center ">
                   Donate from Anywhere
                 </h2>

@@ -17,8 +17,6 @@ export default function Newsletters() {
             </h1>
             {/* Individual Newsletter Blocks */}
             <div className="flex flex-col gap-32 relative  md:flex-row md:flex-wrap md:justify-between xl:flex-col xl:flex-nowrap">
-              {/* Newsletter 1 */}
-              {/* Newsletter 1 */}
               {/* Newsletter 15 */}
               <motion.div
                 initial={{ y: -50, opacity: 0 }} // Slide down animation
@@ -26,9 +24,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news15.jpg"
                       alt=""
@@ -57,7 +55,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>February</span>
                         &nbsp;
                         <span>2025</span>
@@ -92,9 +90,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news14.jpg"
                       alt=""
@@ -123,7 +121,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>November</span>
                         &nbsp;
                         <span>2024</span>
@@ -157,9 +155,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news13.jpg"
                       alt=""
@@ -188,7 +186,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>September</span>
                         &nbsp;
                         <span>2024</span>
@@ -222,9 +220,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news12.jpg"
                       alt=""
@@ -253,7 +251,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>July</span>
                         &nbsp;
                         <span>2024</span>
@@ -287,9 +285,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news11.jpg"
                       alt=""
@@ -318,7 +316,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>May</span>
                         &nbsp;
                         <span>2024</span>
@@ -353,9 +351,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news10.jpg"
                       alt=""
@@ -384,7 +382,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>March</span>
                         &nbsp;
                         <span>2024</span>
@@ -418,9 +416,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news9.jpg"
                       alt=""
@@ -449,7 +447,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>January</span>
                         &nbsp;
                         <span>2024</span>
@@ -483,9 +481,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news8.png"
                       alt=""
@@ -514,7 +512,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>December</span>
                         &nbsp;
                         <span>2023</span>
@@ -549,9 +547,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news7.jpg"
                       alt=""
@@ -580,7 +578,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>November</span>
                         &nbsp;
                         <span>2023</span>
@@ -615,9 +613,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news6.jpg"
                       alt=""
@@ -646,7 +644,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>September</span>
                         &nbsp;
                         <span>2023</span>
@@ -683,9 +681,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news5.jpg"
                       alt=""
@@ -714,7 +712,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>July</span>
                         &nbsp;
                         <span>2023</span>
@@ -750,9 +748,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news4.jpg"
                       alt=""
@@ -781,7 +779,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>May</span>
                         &nbsp;
                         <span>2023</span>
@@ -817,9 +815,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news3.jpg"
                       alt=""
@@ -848,7 +846,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>March</span>
                         &nbsp;
                         <span>2023</span>
@@ -883,9 +881,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news2.jpg"
                       alt=""
@@ -914,7 +912,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>January</span>
                         &nbsp;
                         <span>2023</span>
@@ -950,9 +948,9 @@ export default function Newsletters() {
                 transition={{ duration: 0.8, ease: "easeOut" }} // Staggered effect
                 viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is visible
               >
-                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-4 w-full">
+                <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
                   {/* Left */}
-                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[400px] xl:max-h-full justify-center z-10">
+                  <motion.div className="flex flex-col  rounded-[20px] w-full  bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
                     <img
                       src="..\images\newsletters\news1.jpg"
                       alt=""
@@ -981,7 +979,7 @@ export default function Newsletters() {
                   >
                     {/* Date and Content */}
                     <div className="flex flex-col gap-y-6 px-3    ">
-                      <h3 className="font-primary font-semibold text-black text-4xl leading-[120%]">
+                      <h3 className="font-primary font-semibold text-black text-[20px] md:text-2xl lg:text-4xl leading-[120%]">
                         <span>November</span>
                         &nbsp;
                         <span>2022</span>
@@ -1048,7 +1046,7 @@ export default function Newsletters() {
                     fill="#91C644"
                   />
                 </motion.svg>
-                ;{/* Blue Circle Small */}
+                {/* Blue Circle Small */}
                 <motion.svg
                   width="102"
                   height="101"

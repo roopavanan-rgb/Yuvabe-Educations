@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-    --font-primary: Poppins, sans-serif;
-    --font-secondary: Nunito Sans, sans-serif;
-  }
-  
-  .font-primary {
-    font-family: var(--font-primary);
-  }
-  
-  .font-secondary {
-    font-family: var(--font-secondary);
-  }
+  --font-primary: Poppins, sans-serif;
+  --font-secondary: Nunito Sans, sans-serif;
+}
+
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
 
 
 @layer utilities {
@@ -20,8 +20,9 @@
     grid-template-columns: repeat(7, minmax(30px, 1fr));
     gap: 6px;
   }
-/*   Overflow Hidden */
-    /* html,body{
+
+  /*   Overflow Hidden */
+  /* html,body{
    overflow-x: hidden;
     } */
   .calendar-day {
@@ -34,33 +35,33 @@
     border-radius: 4px;
     transition: all 0.2s ease;
   }
-  
+
   .calendar-day.active {
     background-color: #592AC7;
     color: white;
   }
-  
+
   .calendar-day.highlight {
     background-color: #8B5CF6;
     color: white;
   }
-  
+
   .glass-effect {
     backdrop-filter: blur(8px);
     background: rgba(255, 255, 255, 0.6);
   }
-  
+
   .program-card {
     transform: translateY(0);
     opacity: 1;
     transition: all 0.4s ease-out;
   }
-  
+
   .program-card.hidden {
     transform: translateY(-20px);
     opacity: 0;
   }
-  
+
   .program-card.visible {
     transform: translateY(0);
     opacity: 1;
@@ -90,6 +91,10 @@
 
 .box-shadow-card:hover {
   box-shadow: 8.58791px 8.58791px 46.16px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-news {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 /* .blog-list-block>div:nth-child(5) {
@@ -147,20 +152,24 @@
   color: black;
   margin-top: 20px;
 }
+
 .stroke-text-yellow {
   font-family: 'Open Sans', sans-serif;
   font-size: 70px;
-  -webkit-text-stroke: 3px #FAD940 ; /* Stroke width and color */
-  -webkit-text-fill-color: transparent; /* Makes inner text transparent */
-  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); /* Optional: Adds slight shadow for better visibility */
+  -webkit-text-stroke: 3px #FAD940;
+  /* Stroke width and color */
+  -webkit-text-fill-color: transparent;
+  /* Makes inner text transparent */
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  /* Optional: Adds slight shadow for better visibility */
   opacity: 0.5;
 }
 
 .stroke-text-violet {
   font-family: 'Open Sans', sans-serif;
   font-size: 70px;
-  -webkit-text-stroke: 3px #AA78D7 ; 
-  -webkit-text-fill-color: transparent; 
-  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); 
+  -webkit-text-stroke: 3px #AA78D7;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
   opacity: 0.5;
 }

@@ -8,8 +8,8 @@ import { HiOutlineMenu, HiX } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-import { useRouter, usePathname } from "next/navigation"; 
-import { pageData } from "../data/pageData"; 
+import { useRouter, usePathname } from "next/navigation";
+import { pageData } from "../data/pageData";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +18,9 @@ const Header = () => {
   const [isTablet, setIsTablet] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredResults, setFilteredResults] = useState<{ title: string; path: string }[]>([]);
+  const [filteredResults, setFilteredResults] = useState<
+    { title: string; path: string }[]
+  >([]);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -39,7 +41,7 @@ const Header = () => {
 
   // Check if menu dropdown contains active item
   const isDropdownActive = (links: { path: string }[]) => {
-    return links.some(link => pathname.startsWith(link.path));
+    return links.some((link) => pathname.startsWith(link.path));
   };
 
   const toggleMenu = () => {
@@ -63,9 +65,12 @@ const Header = () => {
     if (searchQuery.trim() === "") {
       setFilteredResults([]);
     } else {
-      const results = pageData.filter((page) =>
-        page.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        page.keywords.some(keyword => keyword.toLowerCase().includes(searchQuery.toLowerCase()))
+      const results = pageData.filter(
+        (page) =>
+          page.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          page.keywords.some((keyword) =>
+            keyword.toLowerCase().includes(searchQuery.toLowerCase())
+          )
       );
       setFilteredResults(results);
     }
@@ -120,7 +125,10 @@ const Header = () => {
       links: [
         { name: "Blogs", path: "/stories/blogs" },
         { name: "Newsletter", path: "/stories/newsletters" },
-        { name: "Impact Report", path: "https://heyzine.com/flip-book/a7ee0bc0d2.html" },
+        {
+          name: "Impact Report",
+          path: "https://heyzine.com/flip-book/a7ee0bc0d2.html",
+        },
       ],
     },
     {
@@ -141,60 +149,71 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
-            <Image 
-              src="/logo.svg" 
-              alt="Logo" 
-              width={isMobile ? 40 : 50} 
-              height={isMobile ? 40 : 50} 
-              priority 
-              style={{ width: "auto", height: "auto" }} 
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={isMobile ? 40 : 50}
+              height={isMobile ? 40 : 50}
+              priority
+              style={{ width: "auto", height: "auto" }}
             />
           </Link>
         </div>
 
         {/* Mobile Menu Controls */}
-        <div className="flex items-center space-x-2 lg:hidden">
+        <div className="flex items-center space-x-2 xl:hidden">
           {/* Mobile Search Toggle */}
-          <button 
+          <button
             onClick={toggleSearch}
             className="p-2 rounded-full hover:bg-gray-100 transition duration-300"
             aria-label="Toggle search"
           >
-            <FiSearch size={24} className="text-gray-700 hover:text-[#592AC7]" />
+            <FiSearch
+              size={24}
+              className="text-gray-700 hover:text-[#592AC7]"
+            />
           </button>
-          
+
           {/* Mobile Menu Toggle */}
-          <button 
-            className="p-2 rounded-full hover:bg-gray-100 transition duration-300" 
+          <button
+            className="p-2 rounded-full hover:bg-gray-100 transition duration-300"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {menuOpen ? 
-              <HiX size={24} className="text-gray-700 hover:text-[#592AC7]" /> : 
-              <HiOutlineMenu size={24} className="text-gray-700 hover:text-[#592AC7]" />
-            }
+            {menuOpen ? (
+              <HiX size={24} className="text-gray-700 hover:text-[#592AC7]" />
+            ) : (
+              <HiOutlineMenu
+                size={24}
+                className="text-gray-700 hover:text-[#592AC7]"
+              />
+            )}
           </button>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex lg:space-x-6 xl:space-x-10 text-black font-medium font-primary">
+        <ul className="hidden xl:flex lg:space-x-6 xl:space-x-10 text-black font-medium font-primary">
           <li>
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               onClick={closeDropdown}
               className={`hover:text-[#592AC7] transition duration-300 py-2 px-1 block border-b-2 ${
-                isActive("/") ? "text-[#592AC7] border-[#592AC7]" : "border-transparent"
+                isActive("/")
+                  ? "text-[#592AC7] border-[#592AC7]"
+                  : "border-transparent"
               }`}
             >
               Home
             </Link>
           </li>
           <li>
-            <Link 
-              href="/about-us" 
+            <Link
+              href="/about-us"
               onClick={closeDropdown}
               className={`hover:text-[#592AC7] transition duration-300 py-2 px-1 block border-b-2 ${
-                isActive("/about-us") ? "text-[#592AC7] border-[#592AC7]" : "border-transparent"
+                isActive("/about-us")
+                  ? "text-[#592AC7] border-[#592AC7]"
+                  : "border-transparent"
               }`}
             >
               About Us
@@ -208,9 +227,11 @@ const Header = () => {
               onMouseEnter={() => handleDropdownOpen(menu.label)}
               onMouseLeave={closeDropdown}
             >
-              <button 
+              <button
                 className={`flex items-center whitespace-nowrap py-2 px-1 border-b-2 transition duration-300 ${
-                  isDropdownActive(menu.links) ? "text-[#592AC7] border-[#592AC7]" : "hover:text-[#592AC7] border-transparent hover:border-[#592AC7]"
+                  isDropdownActive(menu.links)
+                    ? "text-[#592AC7] border-[#592AC7]"
+                    : "hover:text-[#592AC7] border-transparent hover:border-[#592AC7]"
                 }`}
               >
                 {menu.label} <IoMdArrowDropdown className="ml-1" />
@@ -225,12 +246,12 @@ const Header = () => {
                   >
                     {menu.links.map((link, i) => (
                       <li key={i}>
-                        <Link 
-                          href={link.path} 
+                        <Link
+                          href={link.path}
                           onClick={closeDropdown}
                           className={`block py-2 px-4 rounded-md ${
-                            isActive(link.path) 
-                              ? "bg-[#592AC7]/10 text-[#592AC7]" 
+                            isActive(link.path)
+                              ? "bg-[#592AC7]/10 text-[#592AC7]"
                               : "hover:bg-gray-100 hover:text-[#592AC7]"
                           } transition duration-300`}
                         >
@@ -246,13 +267,13 @@ const Header = () => {
         </ul>
 
         {/* Desktop Search & Donate */}
-        <div className="hidden lg:flex items-center space-x-4">
-          <div className="relative flex bg-gray-100 p-2 rounded-[15px] items-center hover:shadow-md transition duration-300">
+        <div className="hidden xl:flex items-center space-x-4">
+          <div className="relative flex bg-gray-100 p-3 rounded-[15px] items-center hover:shadow-md transition duration-300">
             <FiSearch className="text-gray-500" />
             <input
               type="text"
               placeholder="Search"
-              className="bg-transparent outline-none pl-2 w-32 md:w-40 lg:w-48 xl:w-60"
+              className="bg-transparent outline-none pl-2 w-32 md:w-40 lg:w-48 xl:w-full"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -260,9 +281,9 @@ const Header = () => {
             {filteredResults.length > 0 && (
               <ul className="absolute top-12 left-0 w-full bg-white shadow-md rounded-md max-h-60 overflow-auto z-10">
                 {filteredResults.map((result, index) => (
-                  <li 
-                    key={index} 
-                    className="p-2 hover:bg-[#592AC7]/10 hover:text-[#592AC7] cursor-pointer transition duration-300" 
+                  <li
+                    key={index}
+                    className="p-2 hover:bg-[#592AC7]/10 hover:text-[#592AC7] cursor-pointer transition duration-300"
                     onClick={() => handleResultClick(result.path)}
                   >
                     {result.title}
@@ -271,7 +292,12 @@ const Header = () => {
               </ul>
             )}
           </div>
-          <Button href="/get-involved/support-us" className="hover:bg-[#592AC7]/90 transition duration-300">Donate</Button>
+          <Button
+            href="/get-involved/support-us"
+            className="hover:bg-[#592AC7]/90 transition duration-300"
+          >
+            Donate
+          </Button>
         </div>
       </nav>
 
@@ -282,7 +308,7 @@ const Header = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden flex py-3 bg-white"
+            className="xl:hidden flex py-3 bg-white"
           >
             <div className="relative flex-1 flex bg-gray-100 p-2 rounded-[15px] items-center shadow-sm">
               <FiSearch className="text-gray-500" />
@@ -297,9 +323,9 @@ const Header = () => {
               {filteredResults.length > 0 && (
                 <ul className="absolute top-12 left-0 w-full bg-white shadow-md rounded-md max-h-60 overflow-auto z-10">
                   {filteredResults.map((result, index) => (
-                    <li 
-                      key={index} 
-                      className="p-2 hover:bg-[#592AC7]/10 hover:text-[#592AC7] cursor-pointer transition duration-300" 
+                    <li
+                      key={index}
+                      className="p-2 hover:bg-[#592AC7]/10 hover:text-[#592AC7] cursor-pointer transition duration-300"
                       onClick={() => handleResultClick(result.path)}
                     >
                       {result.title}
@@ -319,22 +345,26 @@ const Header = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden flex flex-col space-y-2 py-4 bg-white overflow-y-auto max-h-[80vh]"
+            className="xl:hidden flex flex-col space-y-2 py-8 bg-white overflow-y-auto max-h-[80vh]"
           >
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               onClick={closeMobileMenu}
               className={`px-4 py-2 rounded-md transition duration-300 ${
-                isActive("/") ? "bg-[#592AC7]/10 text-[#592AC7]" : "hover:bg-gray-100 hover:text-[#592AC7]"
+                isActive("/")
+                  ? "bg-[#592AC7]/10 text-[#592AC7]"
+                  : "hover:bg-gray-100 hover:text-[#592AC7]"
               }`}
             >
               Home
             </Link>
-            <Link 
-              href="/about-us" 
+            <Link
+              href="/about-us"
               onClick={closeMobileMenu}
               className={`px-4 py-2 rounded-md transition duration-300 ${
-                isActive("/about-us") ? "bg-[#592AC7]/10 text-[#592AC7]" : "hover:bg-gray-100 hover:text-[#592AC7]"
+                isActive("/about-us")
+                  ? "bg-[#592AC7]/10 text-[#592AC7]"
+                  : "hover:bg-gray-100 hover:text-[#592AC7]"
               }`}
             >
               About Us
@@ -342,14 +372,20 @@ const Header = () => {
 
             {navLinks.map((menu, index) => (
               <div key={index} className="flex flex-col">
-                <button 
-                  onClick={() => handleDropdownOpen(menu.label)} 
+                <button
+                  onClick={() => handleDropdownOpen(menu.label)}
                   className={`flex items-center justify-between w-full text-left px-4 py-2 rounded-md transition duration-300 ${
-                    isDropdownActive(menu.links) ? "bg-[#592AC7]/10 text-[#592AC7]" : "hover:bg-gray-100 hover:text-[#592AC7]"
+                    isDropdownActive(menu.links)
+                      ? "bg-[#592AC7]/10 text-[#592AC7]"
+                      : "hover:bg-gray-100 hover:text-[#592AC7]"
                   }`}
                 >
                   <span>{menu.label}</span>
-                  <IoMdArrowDropdown className={`transition-transform duration-300 ${openDropdown === menu.label ? 'rotate-180' : ''}`} />
+                  <IoMdArrowDropdown
+                    className={`transition-transform duration-300 ${
+                      openDropdown === menu.label ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
                 <AnimatePresence>
                   {openDropdown === menu.label && (
@@ -361,12 +397,12 @@ const Header = () => {
                     >
                       {menu.links.map((link, i) => (
                         <li key={i}>
-                          <Link 
-                            href={link.path} 
+                          <Link
+                            href={link.path}
                             onClick={closeMobileMenu}
                             className={`block px-4 py-2 rounded-md transition duration-300 ${
-                              isActive(link.path) 
-                                ? "bg-[#592AC7]/10 text-[#592AC7]" 
+                              isActive(link.path)
+                                ? "bg-[#592AC7]/10 text-[#592AC7]"
                                 : "hover:bg-gray-100 hover:text-[#592AC7]"
                             }`}
                           >
@@ -380,7 +416,12 @@ const Header = () => {
               </div>
             ))}
             <div className="px-4 pt-2">
-              <Button href="/donate" className="w-full hover:bg-[#592AC7]/90 transition duration-300">Donate</Button>
+              <Button
+                href="/donate"
+                className="w-full hover:bg-[#592AC7]/90 transition duration-300"
+              >
+                Donate
+              </Button>
             </div>
           </motion.div>
         )}

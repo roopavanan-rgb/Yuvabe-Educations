@@ -130,7 +130,7 @@ export default function Steam() {
                   transition={{
                     duration: 2,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: "easeInOut",
                   }}
                 >
                   <path
@@ -182,7 +182,7 @@ export default function Steam() {
                   transition={{
                     repeat: Infinity,
                     duration: 2,
-                    ease: "easeInOut"
+                    ease: "easeInOut",
                   }}
                   viewport={{ once: true }}
                   width="148"
@@ -349,20 +349,20 @@ export default function Steam() {
             {[
               {
                 img: "/images/bridge/bridge-icon1.png",
-                text: "Drive engagement in Auroville, the bioregion and in underserved communities through an accessible centralised STEAM Lab."
+                text: "Drive engagement in Auroville, the bioregion and in underserved communities through an accessible centralised STEAM Lab.",
               },
               {
                 img: "/images/bridge/bridge-icon2.png",
-                text: "Out of school and school break programs for Aurovillians and bioregion kids."
+                text: "Out of school and school break programs for Aurovillians and bioregion kids.",
               },
               {
                 img: "/images/bridge/bridge-icon3.png",
-                text: "A more personalised learning with low mentor-student ratio with about 4 Yuvabe youth assigned to each class."
+                text: "A more personalised learning with low mentor-student ratio with about 4 Yuvabe youth assigned to each class.",
               },
               {
                 img: "/images/bridge/bridge-icon4.png",
-                text: "Partnership with various STEAM and Experiential learning organisations like Agastya Foundation, ThinkTac etc."
-              }
+                text: "Partnership with various STEAM and Experiential learning organisations like Agastya Foundation, ThinkTac etc.",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -371,7 +371,7 @@ export default function Steam() {
                 transition={{
                   duration: 0.5,
                   ease: "easeOut",
-                  delay: index * 0.2
+                  delay: index * 0.2,
                 }}
                 viewport={{ once: true }}
                 className="flex flex-row gap-x-4 md:gap-y-[65px] gap-y-8 lg:w-[49%] items-center flex-wrap lg:flex-nowrap justify-center w-full"
@@ -430,8 +430,8 @@ export default function Steam() {
                   hidden: { opacity: 0 },
                   visible: {
                     opacity: 1,
-                    transition: { staggerChildren: 0.3 }
-                  }
+                    transition: { staggerChildren: 0.3 },
+                  },
                 }}
               >
                 {[
@@ -440,22 +440,22 @@ export default function Steam() {
                     href: "/steam/program-calendar",
                     imgSrc: "/images/bridge/calendar.svg",
                     borderColor: "#9688C0",
-                    bgColor: "#F4F3F9"
+                    bgColor: "#F4F3F9",
                   },
                   {
                     title: "Auroville Program",
                     href: "/auroville-program",
                     imgSrc: "/images/bridge/matrimandir-oultine.svg",
                     borderColor: "#F8A91E",
-                    bgColor: "#FEF6E8"
+                    bgColor: "#FEF6E8",
                   },
                   {
                     title: "Visitor Program",
                     href: "/visitor-program",
                     imgSrc: "/images/bridge/laptop.svg",
                     borderColor: "#91C644",
-                    bgColor: "#F4F9EC"
-                  }
+                    bgColor: "#F4F9EC",
+                  },
                 ].map((program, index) => (
                   <Link
                     key={index}
@@ -466,11 +466,11 @@ export default function Steam() {
                       className="flex flex-col border-[1.5px] rounded-[15px] gap-y-[13px] justify-center items-center pt-8 pb-[22px] px-[28px] box-shadow-card cursor-pointer hover:scale-105 transition-transform duration-300"
                       style={{
                         borderColor: program.borderColor,
-                        backgroundColor: program.bgColor
+                        backgroundColor: program.bgColor,
                       }}
                       variants={{
                         hidden: { opacity: 0, y: 40, scale: 0.9 },
-                        visible: { opacity: 1, y: 0, scale: 1 }
+                        visible: { opacity: 1, y: 0, scale: 1 },
                       }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -501,9 +501,9 @@ export default function Steam() {
             Your Support Matters!
           </h2>
           {/* Donate From.... */}
-          <div className="flex flex-row gap-x-[72px] flex-wrap md:flex-nowrap  py-16 lg:py-32 md:py-24">
+          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap  py-16 lg:py-32 md:py-24">
             {/* Donate from India */}
-            <div className="flex flex-col gap-y-16  w-full md:w-1/2">
+            <div className="flex flex-col gap-y-16  w-full lg:w-1/2">
               {/* Text */}
               <div className="flex flex-col gap-y-6">
                 <p className="font-secondary font-bold text-[18px] leading-[30px] text-white">
@@ -552,10 +552,10 @@ export default function Steam() {
             </div>
             {/* Donate from Abroad */}
 
-            <div className="w-full md:w-1/2">
+            <div className="w-full lg:w-1/2">
               {/* Import Component  */}
               <motion.div
-                className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[850px]"
+                className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full lg:max-w-[584px] h-auto md:h-[850px] flex flex-col justify-between items-center"
                 initial={{ opacity: 0, y: -20, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
