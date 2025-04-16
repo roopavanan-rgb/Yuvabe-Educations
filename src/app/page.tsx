@@ -503,7 +503,7 @@ export default function Home() {
 
       {/* Work, serve & evolve */}
       <section className="bg-white py-16 px-6 min-h-screen flex items-center justify-center relative">
-        <div className="container max-w-[1040px] mx-auto text-center relative">
+        <div className="container max-w-[1140px] mx-auto text-center relative">
           <h2 className="text-4xl font-semibold font-primary text-[64px]">
             Our Motto
           </h2>
