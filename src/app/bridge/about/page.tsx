@@ -748,19 +748,21 @@ export default function Bridge() {
               </div>
             </div>
             {/* Donate from Abroad */}
-            <motion.div
-              className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[700px]"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center ">
-                Donate from Anywhere
-              </h2>
+            <div className="w-full lg:w-1/2">
+              <motion.div
+                className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full lg:max-w-[584px] h-auto lg:h-[850px] flex flex-col justify-between items-center gap-y-8"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center font-primary">
+                  Donate from Anywhere
+                </h2>
 
-              {/* FundraiseUp Widget */}
-              <a href="#XXVLPPSW" className=""></a>
-            </motion.div>
+                {/* FundraiseUp Widget */}
+                <a href="#XXVLPPSW" className=""></a>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
