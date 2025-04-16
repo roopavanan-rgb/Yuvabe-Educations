@@ -17,9 +17,9 @@ const AboutUs = () => {
     { ssr: false }
   );
 
-  const targetYouth = 45;
-  const targetHours = 31294;
-  const targetProjects = 25;
+  const targetYouth = 54;
+  const targetHours = 32162;
+  const targetProjects = 157;
   const duration = 2000; // 2 seconds
 
   useEffect(() => {

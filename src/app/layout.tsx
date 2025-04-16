@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Youth Empowerment",
     "Education",
   ],
-  authors: [{ name: "Yuvabe Education", url: "https://yuvabe.com" }],
+  authors: [{ name: "Yuvabe Education", url: "https://yuvabeeducation.com" }],
   creator: "Yuvabe Education",
   publisher: "Yuvabe Education",
   icons: {
