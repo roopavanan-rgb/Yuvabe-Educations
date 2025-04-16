@@ -40,7 +40,7 @@ export default function Steam() {
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/p4Qo589mg8U?si=SBmFHyM6WwT1H2iQ"
+                src="https://www.youtube.com/embed/p4Qo589mg8U?autoplay=1&mute=1"
                 title="YouTube video player"
                 // frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -146,7 +146,7 @@ export default function Steam() {
       {/* The Challenge */}
       <div className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24 overflow-hidden">
         <div className="max-w-[1240px] w-full flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
-          <div className="flex flex-col gap-y-[64px]">
+          <div className="flex flex-col gap-y-8 md:gap-y-16">
             {/* Heading Animation */}
             <motion.h2
               initial={{ opacity: 0, y: -50 }}
@@ -266,7 +266,7 @@ export default function Steam() {
                 transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px]">
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center lg:text-left">
                   Through our STEAM program, we want to re-introduce the
                   <span className="text-[#592AC7] font-bold">
                     {" "}
@@ -378,7 +378,7 @@ export default function Steam() {
                 className="flex flex-row gap-x-4 md:gap-y-[65px] gap-y-8 lg:w-[49%] items-center flex-wrap lg:flex-nowrap justify-center w-full"
               >
                 <Image src={item.img} alt="" width={104} height={104} />
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-left md:text-center lg:text-left">
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-center lg:text-left">
                   {item.text}
                 </p>
               </motion.div>
@@ -497,18 +497,18 @@ export default function Steam() {
       <ImpactReport />
       {/* Donation */}
       <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
-        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16">
+        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-8 md:gap-y-16">
           <h2 className="text-white text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
             Your Support Matters!
           </h2>
 
           {/* Donate From... */}
-          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap py-16 lg:py-32 md:py-24">
+          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap py-0 lg:py-32 md:py-24">
             {/* Donate from India */}
             <div className="flex flex-col gap-y-16 w-full lg:w-1/2">
               {/* Text */}
               <div className="flex flex-col gap-y-6">
-                <p className="font-secondary font-bold text-[18px] leading-[30px] text-white">
+                <p className="font-secondary font-bold text-[18px] leading-[30px] text-white text-center lg:text-left">
                   The success of our STEAM Lab is made possible by the
                   generosity of donors like you. Your support can help us reach
                   more children, create lasting change, and bring dreams to
@@ -519,7 +519,7 @@ export default function Steam() {
                   child. Your donation can light up a child's future, one life
                   at a time.
                 </p>
-                <p className="font-secondary font-bold text-2xl md:text-4xl leading-[40px] text-[#FFCA2D]">
+                <p className="font-secondary font-bold text-2xl md:text-4xl leading-[40px] text-[#FFCA2D] text-center lg:text-left">
                   Donate Today and <br className="hidden lg:block" /> Be
                   a Changemaker!
                 </p>
@@ -527,19 +527,19 @@ export default function Steam() {
 
               {/* Donate Button */}
               <div className="flex flex-col gap-y-8 py-12 px-8 md:py-24 md:px-16 bg-white rounded-[50px] justify-center items-center">
-                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black">
+                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black text-center lg:text-left">
                   To donate from India, kindly use this link:
                 </p>
 
                 <Link href="https://donate.auroville.org/">
                   <div className="py-[18px] px-8 md:px-[61px] rounded-[15px] bg-[#592AC7] justify-center items-center">
-                    <p className="font-secondary font-semibold text-[18px] leading-[150%] text-white">
+                    <p className="font-secondary font-semibold text-[18px] leading-[150%] text-white text-center lg:text-left">
                       Donate from India
                     </p>
                   </div>
                 </Link>
 
-                <div className="font-secondary font-normal text-[18px] leading-[30px] text-black">
+                <div className="font-secondary font-normal text-[18px] leading-[30px] text-black text-center lg:text-left">
                   <p>Please follow these steps on the donation page:</p>
                   <br />
                   <ul className="list-disc ml-6">

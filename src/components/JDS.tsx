@@ -7,11 +7,11 @@ export default function JDS() {
     <div>
       <main>
         <div className="bg-white">
-          <div className="bg-[#FFF9EA] py-32 relative">
+          <div className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24 relative">
             <div className="max-w-[1028px] flex flex-col m-auto ">
-              <div className="flex flex-col gap-y-32 justify-between p-5 md:p-8 flex-wrap xl:p-0">
+              <div className="flex flex-col gap-y-8 md:gap-y-16 lg:gap-y-32 justify-between px-5 md:px-8 xl:px-0 md:p-8 flex-wrap xl:p-0">
                 <motion.h2
-                  className="text-black text-2xl md:text-[64px] leading-[120%] font-semibold text-center font-primary z-10"
+                  className="text-black text-4xl md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary z-10"
                   initial={{ y: -50, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
@@ -20,11 +20,11 @@ export default function JDS() {
                   Current Openings
                 </motion.h2>
                 {/* Job Listings */}
-                <div className="flex flex-col gap-y-32">
+                <div className="flex flex-col gap-y-8 md:gap-y-16 lg:gap-y-32">
                   {/* Individual Listings */}
-                  {/* Job 1 */}
+                  {/* Job 4 */}
                   <motion.div
-                    className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
+                    className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -55,7 +55,7 @@ export default function JDS() {
                   </motion.div>
                   {/* Job 3 */}
                   <motion.div
-                    className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
+                    className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -84,7 +84,7 @@ export default function JDS() {
                   </motion.div>
                   {/* Job 2 */}
                   <motion.div
-                    className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
+                    className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -112,7 +112,7 @@ export default function JDS() {
                   </motion.div>
                   {/* Job 1 */}
                   <motion.div
-                    className="flex flex-col py-4 px-5 md:py-16 md:px-[74px] max-w-[1028] bg-white rounded-[50px] gap-y-6 items-center z-10"
+                    className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
