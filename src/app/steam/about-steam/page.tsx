@@ -497,13 +497,14 @@ export default function Steam() {
       {/* Donation */}
       <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16">
-          <h2 className="text-white text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+          <h2 className="text-white text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
             Your Support Matters!
           </h2>
-          {/* Donate From.... */}
-          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap  py-16 lg:py-32 md:py-24">
+
+          {/* Donate From... */}
+          <div className="flex flex-row gap-x-[72px] flex-wrap md:flex-nowrap py-16 lg:py-32 md:py-24">
             {/* Donate from India */}
-            <div className="flex flex-col gap-y-16  w-full lg:w-1/2">
+            <div className="flex flex-col gap-y-16 w-full md:w-1/2">
               {/* Text */}
               <div className="flex flex-col gap-y-6">
                 <p className="font-secondary font-bold text-[18px] leading-[30px] text-white">
@@ -522,40 +523,41 @@ export default function Steam() {
                   a Changemaker!
                 </p>
               </div>
+
               {/* Donate Button */}
               <div className="flex flex-col gap-y-8 py-12 px-8 md:py-24 md:px-16 bg-white rounded-[50px] justify-center items-center">
                 <p className="font-secondary font-normal text-[18px] leading-[30px] text-black">
                   To donate from India, kindly use this link:
                 </p>
-                <Link href={"https://donate.auroville.org/"}>
+
+                <Link href="https://donate.auroville.org/">
                   <div className="py-[18px] px-8 md:px-[61px] rounded-[15px] bg-[#592AC7] justify-center items-center">
                     <p className="font-secondary font-semibold text-[18px] leading-[150%] text-white">
                       Donate from India
                     </p>
                   </div>
                 </Link>
-                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black">
-                  Please follow these steps on the donation page:
+
+                <div className="font-secondary font-normal text-[18px] leading-[30px] text-black">
+                  <p>Please follow these steps on the donation page:</p>
                   <br />
-                  <br />
-                  <ul>
+                  <ul className="list-disc ml-6">
                     <li>
-                      Select <strong>'Others'</strong> under Projects to donate,
+                      Select <strong>'Others'</strong> under Projects to donate
                     </li>
                     <li>
-                      Mention Project name as
+                      Mention Project name as{" "}
                       <strong>'Yuvabe STEAM Lab'</strong>
                     </li>
                   </ul>
-                </p>
+                </div>
               </div>
             </div>
-            {/* Donate from Abroad */}
 
-            <div className="w-full lg:w-1/2">
-              {/* Import Component  */}
+            {/* Donate from Abroad */}
+            <div className="w-full md:w-1/2">
               <motion.div
-                className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full lg:max-w-[584px] h-auto md:h-[850px] flex flex-col justify-between items-center"
+                className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[850px]"
                 initial={{ opacity: 0, y: -20, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
