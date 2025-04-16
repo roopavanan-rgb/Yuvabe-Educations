@@ -5,15 +5,14 @@ import React from "react";
 import { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 
-
 export default function Join_Us() {
-
   const Player = dynamic(
     () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
     { ssr: false }
   );
   const Controls = dynamic(
-    () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Controls),
+    () =>
+      import("@lottiefiles/react-lottie-player").then((mod) => mod.Controls),
     { ssr: false }
   );
   return (
@@ -25,10 +24,10 @@ export default function Join_Us() {
           <div className="flex flex-row gap-x-[150px] gap-y-16 justify-between p-5 md:pb-0 flex-wrap xl:flex-nowrap">
             {/* Left */}
             <div className="flex flex-col gap-y-8 gap-x-4 w-full xl:w-[50%] justify-center">
-              <h1 className="font-primary font-semibold leading-[120%] text-[40px]  md:text-[62px] lg:text-[64px] text-[#592AC7]">
+              <h1 className="font-primary font-semibold leading-[120%] text-[40px]  md:text-[62px] lg:text-[64px] text-[#592AC7] text-center lg:text-left">
                 Come Join Us!
               </h1>
-              <p className="font-secondary font-normal text-black text-[18px] leading-[120%]">
+              <p className="font-secondary font-normal text-black text-[18px] leading-[120%] text-center lg:text-left">
                 <strong>
                   Yuvabe is redefining the future of work with our #Work.
                   #Serve. #Evolve. (WSE) model!

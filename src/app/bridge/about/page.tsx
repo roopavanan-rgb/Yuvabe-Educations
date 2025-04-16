@@ -30,7 +30,7 @@ export default function Bridge() {
               <h1 className="text-[#592AC7] text-[32px] md:text-[48px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
                 Bridge
               </h1>
-              <p className="font-secondary font-medium text-black text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-center">
+              <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] text-center">
                 We transform education into experience, bridging the gap between
                 academia and the professional world. Through real-world impact,
                 personal growth, and career-focused learning, we empower you to
@@ -78,7 +78,7 @@ export default function Bridge() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
               >
-                <p className="font-secondary font-medium text-black text-[16px] md:text-[18px] leading-[28px] md:leading-[30px]">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left">
                   The Auroville Bio-region comprises approximately&nbsp;
                   <span className="text-[#592AC7] font-bold">
                     13 villages with about 40,000 people.
@@ -159,7 +159,7 @@ export default function Bridge() {
       <div className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24 overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
           <motion.div
-            className="flex flex-col gap-y-[64px]"
+            className="flex flex-col gap-y-8 md:gap-y-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -218,7 +218,7 @@ export default function Bridge() {
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px]">
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px]  text-center lg:text-left">
                   Conventional education system’s emphasis on rote learning and
                   lack of application-based curricula has led to the youth{" "}
                   <span className="text-[#592AC7] font-bold">
@@ -259,7 +259,7 @@ export default function Bridge() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="flex flex-col gap-y-[64px]"
+            className="flex flex-col gap-y-8 md:gap-y-16"
           >
             <h2 className="text-black text-[32px]  md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary">
               The Bridge Program
@@ -272,7 +272,7 @@ export default function Bridge() {
                 viewport={{ once: true }}
                 className="lg:w-[55%]"
               >
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px]">
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px]  text-center lg:text-left">
                   The 
                   <span className="text-[#592AC7] font-bold">
                     Bridge Program is a 3-6 month program 
@@ -645,7 +645,7 @@ export default function Bridge() {
                           width={90}
                           height={90}
                         />
-                        <h3 className="font-primary text-[16px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
+                        <h3 className="font-primary text-[18px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
                           {title}
                         </h3>
                         <div
@@ -688,17 +688,17 @@ export default function Bridge() {
       {/* Add Impact Report from Homepage */}
       {/* Donation */}
       <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
-        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16">
+        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-8 md:gap-y-16">
           <h2 className="text-white text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
             Your Support Matters!
           </h2>
           {/* Donate From.... */}
-          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap  py-16 lg:py-32 md:py-24">
+          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap  py-0 lg:py-32 md:py-24">
             {/* Donate from India */}
             <div className="flex flex-col gap-y-16 w-full lg:w-1/2">
               {/* Text */}
               <div className="flex flex-col gap-y-6">
-                <p className="font-secondary font-bold text-[18px] leading-[30px] text-white">
+                <p className="font-secondary font-bold text-[18px] leading-[30px] text-white  text-center lg:text-left">
                   The whole month of December 2024 all the donations will be
                   doubled, thanks to  AVI-USA's
                   <span className="text-[#FFCA2D]"> Match the Donation </span>
@@ -715,19 +715,19 @@ export default function Bridge() {
                   a steady and reliable source of funding for the entire
                   duration of the internship.
                 </p>
-                <p className="font-secondary font-semibold text-2xl md:text-4xl leading-[40px] text-[#FFCA2D]">
+                <p className="font-secondary font-semibold text-2xl md:text-4xl leading-[40px] text-[#FFCA2D]  text-center lg:text-left">
                   Let’s empower one youth at a time and gift them a better
                   future!
                 </p>
               </div>
               {/* Donate Button */}
               <div className="flex flex-col gap-y-8 py-12 px-8 md:py-24 md:px-16 bg-white rounded-[15px] justify-center items-center">
-                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black">
+                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black  text-center lg:text-left">
                   To donate from India, kindly use this link:
                 </p>
                 <Link href={"https://donate.auroville.org/"}>
                   <div className="px-8 py-[18px] md:px-[61px] rounded-[15px] bg-[#592AC7] justify-center items-center">
-                    <p className="font-secondary font-semibold text-[18px] leading-[150%] text-white">
+                    <p className="font-secondary font-semibold text-[18px] leading-[150%] text-white  text-center lg:text-left">
                       Donate from India
                     </p>
                   </div>
