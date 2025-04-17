@@ -10,7 +10,7 @@ export default function ImpactReport() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-center text-[24px] md:text-[64px] font-semibold text-gray-900"
+        className="text-center text-[24px] md:text-[48px] lg:text-[64px] font-semibold font-primary text-gray-900"
       >
         Impact Report
       </motion.h2>
@@ -27,7 +27,7 @@ export default function ImpactReport() {
           <motion.img
             src="/images/home/flipbook.gif"
             alt="Impact Report 2024"
-            className="w-[800px] h-[400px] md:h-[500px] max-w-lg lg:max-w-2xl "
+            className="w-[800px] h-[400px] md:h-[400px] max-w-lg lg:max-w-2xl "
             initial={{ scale: 0.9 }}   
 
             animate={{ scale: 1 }}
@@ -37,9 +37,10 @@ export default function ImpactReport() {
 
         {/* Text & Button - Right Side */}
         <div className="text-center lg:text-left">
-          <p className="text-gray-700 text-[22px] md:text-[40px] text-base/8 md:text-balance/10 font-secondary">
-            Explore the transformative journeys of our next generation of leaders.
-          </p>
+        <p className="text-gray-700 text-[22px] md:text-[40px] leading-8 md:leading-[52px] font-secondary">
+  Explore the transformative journeys of our next generation of leaders.
+</p>
+
           <p className="mt-2 text-gray-500 text-[18px] md:text-[24px]">View Yuvabe's Impact Report.</p>
 
           <motion.a

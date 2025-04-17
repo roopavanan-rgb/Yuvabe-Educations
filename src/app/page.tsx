@@ -11,10 +11,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { ImArrowUpRight2 } from "react-icons/im";
 import Link from "next/link";
-import { once } from "events";
 
 const logos = [
   "/images/clientlogo/deep.webp",
@@ -108,16 +106,16 @@ export default function Home() {
       <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-12 bg-[#FDF8EE] min-h-[700px] overflow-x-hidden">
         {/* Right Side - Text */}
         <motion.div
-          className="w-full md:w-4/5 lg:w-1/2 text-center md:text-left order-1 md:order-1 lg:order-2"
+          className="w-full md:w-4/5 lg:w-1/2 text-center md:text-center lg:text-start  order-1 md:order-1 lg:order-2"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold font-primary text-black leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold font-primary text-black leading-tight ">
             Empowering Minds, <br />
             <span className="text-[#592AC7]">Bridging Futures</span>
           </h1>
-          <p className="mt-4 text-gray-700 max-w-full md:max-w-xl font-secondary text-lg md:text-xl">
+          <p className="mt-4 text-gray-700 max-w-full md:max-w-xl font-secondary font-normal text-lg md:text-xl ">
             Empowering young adults with practical skills, hands-on experience,
             and a purpose-driven community to thrive in a dynamic world.
           </p>
@@ -138,7 +136,7 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full max-w-[600px] md:max-w-[700px] lg:max-w-[750px]">
+          <div className="relative w-full max-w-[600px] md:max-w-[800px] lg:max-w-[850px]">
             {/* Floating Circle */}
             <motion.div
               className="absolute top-10 left-40 md:top-20 md:left-50 lg:top-20 lg:left-70 transform -translate-x-1/2 w-15 h-15 md:w-20 md:h-20 bg-[#91C644] rounded-full z-10"
@@ -163,7 +161,7 @@ export default function Home() {
               width={200}
               height={200}
               priority
-              className="w-full h-auto object-contain top-12 right-6 md:top-12 md:right-38 lg:top-12 lg:right-16 relative z-0"
+              className="w-full h-auto object-contain top-12 right-6 md:top-10 md:right-18 lg:top-12 lg:right-16 relative z-0"
             />
           </div>
         </motion.div>
@@ -215,7 +213,7 @@ export default function Home() {
 
       {/* Our story */}
       <section className="bg-white py-10 md:py-12 lg:py-16 shadow-md shadow-gray-300 overflow-hidden">
-        <div className="container  mx-auto ">
+        <div className="container max-w-[1240px]  mx-auto ">
           {/* Centered Heading */}
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
@@ -236,12 +234,12 @@ export default function Home() {
               viewport={{ once: true }}
               className="w-full lg:w-1/2 text-left mt-6 lg:mt-0 px-6"
             >
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-3 sm:mb-4 font-primary">
-                Yuvabe Education: <br className="hidden sm:block" /> Unleashing
-                Potential <br className="hidden sm:block" /> Through Holistic
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-3 sm:mb-4 font-primary text-center md:text-center lg:text-start">
+                Yuvabe Education:  Unleashing
+                Potential  Through Holistic
                 Growth
               </h3>
-              <p className="text-gray-700 text-[14px] sm:text-[18px] mb-3 sm:mb-4 text-justify">
+              <p className="text-gray-700 text-[14px] sm:text-[18px] mb-3 sm:mb-4 text-center md:text-center lg:text-start">
                 At Yuvabe Education in Auroville, we believe in the immense
                 potential innate in every individual, especially the youth. The
                 challenge lies not in capability but in providing access to the
@@ -250,7 +248,7 @@ export default function Home() {
                 learners with a transformative platform that fosters
                 self-awareness, growth, and empowerment.
               </p>
-              <p className="text-gray-700 text-[14px] sm:text-[18px] text-justify">
+              <p className="text-gray-700 text-[14px] sm:text-[18px] text-center md:text-center lg:text-start">
                 Yuvabe Education was born out of a deep commitment to empowering
                 individuals. We start with external growth areas like acquiring
                 technical and career skills and evolve toward inward
@@ -296,7 +294,7 @@ export default function Home() {
 
       {/* Through program */}
       <section className="bg-[#FFF9EA] py-12 overflow-hidden">
-        <div className="container  mx-auto  flex flex-col lg:flex-row items-center">
+        <div className="container max-w-[1240px] mx-auto  flex flex-col lg:flex-row items-center">
           {/* Left Side - Image */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -327,74 +325,69 @@ export default function Home() {
 
           {/* Right Side - Text */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="lg:w-1/2 text-left lg:pl-12"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center md:text-start">
-              Through programs like:
-            </h2>
-            <ul className="list-disc list-inside text-gray-700 space-y-4 leading-7 md:leading-8 text-justify px-4 sm:px-0 text-[14px] sm:text-[18px]  ">
-              <li>
-                <strong>The STEAM Program (ages 7-14):</strong> Building a
-                strong foundation in Science, Technology, Engineering, Arts, and
-                Math, inspiring curiosity and critical thinking in young minds.
-              </li>
-              <li>
-                <strong>The Bridge Program (ages 20+):</strong> A launchpad for
-                young adults, focused on skill-building, career readiness, and
-                self-discovery.
-              </li>
-            </ul>
-            <p className="text-gray-700 mt-6 text-[14px] sm:text-[18px] text-justify px-4 sm:px-0">
-              We plant the seeds of growth at an early age and nurture them
-              throughout life’s journey.
-            </p>
-          </motion.div>
+  initial={{ opacity: 0, x: 100 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="w-full lg:w-1/2 px-4 sm:px-6 lg:px-12 text-center lg:text-left"
+>
+  <h2 className="text-2xl md:text-3xl font-semibold font-primary text-gray-900 mb-6">
+    Through programs like:
+  </h2>
+  <ul className="list-disc list-inside text-gray-700 space-y-4 leading-7 md:leading-8 text-[14px] sm:text-[18px] font-secondary font-regular">
+    <li>
+      <strong>The STEAM Program (ages 7-14):</strong> Building a strong foundation
+      in Science, Technology, Engineering, Arts, and Math, inspiring curiosity and
+      critical thinking in young minds.
+    </li>
+    <li>
+      <strong>The Bridge Program (ages 20+):</strong> A launchpad for young adults,
+      focused on skill-building, career readiness, and self-discovery.
+    </li>
+  </ul>
+  <p className="text-gray-700 mt-6 text-[14px] sm:text-[18px] text-center lg:text-left">
+    We plant the seeds of growth at an early age and nurture them throughout life’s journey.
+  </p>
+</motion.div>
+
         </div>
       </section>
 
       {/* Join us  */}
       <section className="py-16 px-4 sm:px-6 lg:px-10">
-        <div className="container  mx-auto flex flex-col md:flex-col lg:flex-row items-center justify-between gap-10">
+        <div className="container  max-w-[1240px] mx-auto flex flex-col md:flex-col lg:flex-row items-center justify-between gap-10">
           {/* Left: Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="w-full md:w-3/4 lg:w-1/2 space-y-4 text-left px-2 md:px-0"
-          >
-            <h2 className="text-[24px] sm:text-[28px] md:text-[36px] font-semibold text-black text-center md:text-start ">
-              Join Us in This Mission
-            </h2>
-            <p className="text-gray-700 leading-7  text-sm sm:text-[18px] text-justify font-secondary">
-              For those who feel called to support this initiative, your love
-              and blessings can make dreams come true for the talented youth of
-              Auroville and its surrounding villages.
-            </p>
-            <p className="text-gray-700 leading-7  text-sm sm:text-[18px] text-justify font-secondary">
-              We've come this far thanks to the generosity of people like you.
-              Together, we can continue to create opportunities and help young
-              learners realize their true potential.
-            </p>
-            <p className="text-gray-700 leading-7  text-sm sm:text-[18px] mb-6 md:mb-10 text-justify font-secondary">
-              Click here to learn how you can contribute and join us on this
-              journey.
-            </p>
+  initial={{ opacity: 0, x: -100 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="w-full md:w-3/4 lg:w-1/2 space-y-4 px-4 sm:px-6 lg:px-0 text-center lg:text-left"
+>
+  <h2 className="text-[24px] sm:text-[28px] md:text-[36px] font-semibold font-primary text-black">
+    Join Us in This Mission
+  </h2>
+  <p className="text-gray-700 leading-7 text-sm  md:text-[18px] text-justify font-secondary font-normal">
+    For those who feel called to support this initiative, your love and blessings can make dreams come true for the talented youth of Auroville and its surrounding villages.
+  </p>
+  <p className="text-gray-700 leading-7 text-sm  md:text-[18px] text-justify font-secondary font-normal">
+    We've come this far thanks to the generosity of people like you. Together, we can continue to create opportunities and help young learners realize their true potential.
+  </p>
+  <p className="text-gray-700 leading-7 text-sm  md:text-[18px] mb-6 md:mb-10 text-justify font-secondary font-normal">
+    Click here to learn how you can contribute and join us on this journey.
+  </p>
 
-            {/* Button */}
-            <motion.a
-              href="/get-involved/join-us"
-              className="mt-6 mx-auto block sm:inline-block px-6 py-3 text-white bg-[#592AC7] rounded-lg shadow-md hover:bg-white hover:text-[#592ac7] transition w-fit"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Know More
-            </motion.a>
-          </motion.div>
+  {/* Button */}
+  <motion.a
+    href="/get-involved/join-us"
+    className="mt-6 mx-auto lg:ml-0 block sm:inline-block px-6 py-3 text-white bg-[#592AC7] rounded-lg shadow-md hover:bg-white hover:text-[#592ac7] transition w-fit"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    Know More
+  </motion.a>
+</motion.div>
+
 
           {/* Right: Image Content */}
           <motion.div
@@ -434,49 +427,35 @@ export default function Home() {
 
       {/* Vision & Mission */}
       <section className="bg-[#592AC7] text-white py-16 px-4 sm:px-6 lg:px-12">
-        <div className="container  mx-auto flex flex-col md:flex-col lg:flex-row items-start justify-between gap-6 md:gap-10">
+        <div className="container max-w-[1240px]  mx-auto flex flex-col md:flex-col lg:flex-row items-start justify-between gap-6 md:gap-10">
           {/* Left: Vision & Mission Text */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="w-full lg:w-1/2 space-y-6 text-left"
-          >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              Our Vision
-            </h2>
-            <p className="text-[14px] sm:text-[18px] md:text-xl leading-7 font-regular font-secondary text-justify">
-              To nurture a generation of self-aware, skilled, and purpose-driven
-              individuals who contribute meaningfully to the world, guided by
-              inner exploration and outward impact.
-            </p>
+  initial={{ opacity: 0, x: -100 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="w-full lg:w-1/2 space-y-6 px-4 sm:px-6 lg:px-0 text-center lg:text-left"
+>
+  <h2 className="text-[36px] font-primary font-semibold">Our Vision</h2>
+  <p className="text-[18px] leading-7 font-secondary font-normal text-justify">
+    To nurture a generation of self-aware, skilled, and purpose-driven
+    individuals who contribute meaningfully to the world, guided by
+    inner exploration and outward impact.
+  </p>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              Our Mission
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl font-regular font-secondary">
-              Through Yuvabe Education, we aim to:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-[14px] sm:text-[18px] font-regular font-secondary ">
-              <li>
-                Equip individuals with futuristic skills for career success.
-              </li>
-              <li>
-                Foster self-awareness and inner exploration to uncover true
-                purpose.
-              </li>
-              <li>
-                Support holistic development through our unique
-                Work-Serve-Evolve model.
-              </li>
-              <li>
-                Provide access to opportunities for lifelong learning,
-                emphasizing that age is just a number when it comes to personal
-                growth.
-              </li>
-            </ul>
-          </motion.div>
+  <h2 className="text-[36px] font-primary font-semibold">Our Mission</h2>
+  <p className="text-[18px] font-secondary">
+    Through Yuvabe Education, we aim to:
+  </p>
+  <ul className="list-disc pl-5 space-y-2 text-[18px] font-secondary font-normal text-left">
+  <li>Equip individuals with futuristic skills for career success.</li>
+  <li>Foster self-awareness and inner exploration to uncover true purpose.</li>
+  <li>Support holistic development through our unique Work-Serve-Evolve model.</li>
+  <li>Provide access to opportunities for lifelong learning, emphasizing that age is just a number when it comes to personal growth.</li>
+</ul>
+
+</motion.div>
+
 
           {/* Right: Image Section */}
           <motion.div
@@ -504,7 +483,7 @@ export default function Home() {
       {/* Work, serve & evolve */}
       <section className="bg-white py-16 px-6 min-h-screen flex items-center justify-center relative">
         <div className="container max-w-[1140px] mx-auto text-center relative">
-          <h2 className="text-4xl font-semibold font-primary text-[64px]">
+          <h2 className="text-4xl font-semibold font-primary lg:text-[64px] text-[48px]">
             Our Motto
           </h2>
 
@@ -530,10 +509,10 @@ export default function Home() {
             >
               <div className="md:w-3/4 space-y-4 text-left">
                 <h3 className="text-[36px] font-semibold font-primary">Work</h3>
-                <p className="text-gray-600 font-secondary text-[18px] mb-6 text-wrap">
+                <p className="text-gray-600 font-secondary font-normal  text-[18px] mb-6 text-wrap">
                   To nurture a generation of self-aware, skilled, and
-                  purpose-driven <br /> individuals who contribute meaningfully
-                  to the world, guided by <br /> inner exploration and outward
+                  purpose-driven  individuals who contribute meaningfully
+                  to the world, guided by  inner exploration and outward
                   impact.
                 </p>
                 <Button href="/about-us">Read more</Button>
@@ -561,18 +540,18 @@ export default function Home() {
                 <h3 className="text-[36px] font-semibold font-primary z-10">
                   Serve
                 </h3>
-                <p className="text-gray-600 font-secondary text-[18px] mb-6 z-10">
+                <p className="text-gray-600 font-secondary font-normal  text-[18px] mb-6 z-10">
                   To nurture a generation of self-aware, skilled, and
-                  purpose-driven <br />
+                  purpose-driven 
                   individuals who contribute meaningfully to the world, guided
-                  by <br />
+                  by 
                   inner exploration and outward impact.
                 </p>
                 <Button href="/get-involved/we-serve">Read more</Button>
               </div>
               <div className="md:w-1/2 flex justify-center relative">
                 <motion.div
-                  className="absolute top-20 left-10 w-20 h-20 bg-[#33BED4] rounded-full"
+                  className="absolute top-20 left-10 md:top-5 md:left-5 lg:top-20 lg:left-10 w-20 h-20 bg-[#33BED4] rounded-full"
                   animate={{ y: [0, -10, 0] }} // This keeps bouncing
                   transition={{
                     duration: 2,
@@ -603,12 +582,12 @@ export default function Home() {
                 <h3 className="text-[36px] font-semibold font-primary">
                   Evolve
                 </h3>
-                <p className="text-gray-600 font-secondary text-[18px] mb-6">
+                <p className="text-gray-600 font-secondary font-normal text-[18px] mb-6">
                   To nurture a generation of self-aware, skilled, and
                   purpose-driven
-                  <br /> individuals who contribute meaningfully to the world,
+                   individuals who contribute meaningfully to the world,
                   guided by
-                  <br /> inner exploration and outward impact.
+                  inner exploration and outward impact.
                 </p>
                 <Button href="/get-involved/we-evolve">Read more</Button>
               </div>
@@ -624,7 +603,7 @@ export default function Home() {
                   />
                 </div>
                 <motion.div
-                  className="absolute bottom-20 right-5 md:bottom-50 md:right-20 w-0 h-0 rotate-10
+                  className="absolute bottom-20 right-5 md:bottom-10 md:right-20 lg:bottom-50 w-0 h-0 rotate-10
     border-l-[30px] sm:border-l-[40px] md:border-l-[46px] 
     border-r-[30px] sm:border-r-[40px] md:border-r-[46px] 
     border-b-[60px] sm:border-b-[75px] md:border-b-[82px] border-transparent 
@@ -648,98 +627,94 @@ export default function Home() {
       {/* course cards slider */}
 
       <section className="py-10 bg-[#FDF7E6]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1240px]">
-          {/* Section Title */}
-          <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8"
-            initial={{ opacity: 0, y: 20 }}
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1240px]">
+    {/* Section Title */}
+    <motion.h2
+      className="text-2xl md:text-4xl lg:text-[48px] font-semibold font-primary text-center mb-8"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      Enroll On Our Latest Bridge Courses
+    </motion.h2>
+
+    {/* Swiper Carousel */}
+    <Swiper
+      modules={[Autoplay]}
+      spaceBetween={24}
+      slidesPerView={1}
+      breakpoints={{
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1280: { slidesPerView: 3 }
+      }}
+      autoplay={{ delay: 4000 }}
+      className="w-full"
+    >
+      {courses.map((course, index) => (
+        <SwiperSlide key={index} className="flex justify-center">
+          {/* Course Card */}
+          <motion.div
+            className={`w-full max-w-[360px] md:max-w-[370px] h-auto min-h-[520px] flex flex-col border-2 rounded-[20px] shadow-lg overflow-hidden ${course.borderColor} ${course.bgColor}`}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            Enroll On Our Latest Bridge Courses
-          </motion.h2>
-
-          {/* Swiper Carousel */}
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 }
-            }}
-            autoplay={{ delay: 4000 }}
-            className="w-full"
-          >
-            {courses.map((course, index) => (
-              <SwiperSlide key={index}>
-                {/* Course Card */}
-                <motion.div
-                  className={`shadow-lg rounded-[20px] overflow-hidden w-full sm:w-[350px] md:w-[370px] h-auto min-h-[500px] flex flex-col mb-8 border-2 ${course.borderColor} ${course.bgColor}`}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
-                >
-                  {/* Image Section */}
-                  <div className="relative w-full h-[180px] sm:h-[200px]">
-                    <Image
-                      src={course.image}
-                      alt={course.title}
-                      priority
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-t-lg"
-                    />
-                    {/* Tag */}
-                    <span
-                      className={`absolute top-3 right-3 px-3 py-1 text-xs font-semibold rounded ${
-                        course.status === "Active"
-                          ? "bg-[#592ac7] text-white"
-                          : "bg-blue-600 text-white"
-                      }`}
-                    >
-                      {course.status}
-                    </span>
-                  </div>
-
-                  {/* Text Section */}
-                  <div className="p-5 flex flex-col flex-grow">
-                    {/* Title */}
-                    <h3 className="text-lg font-semibold">{course.title}</h3>
-                    {/* Description */}
-                    <p className="text-gray-700 text-sm mt-2 flex-grow">
-                      {course.description}
-                    </p>
-                    {/* Navigation Icon */}
-                    <div className="flex justify-end mt-4">
-                      <Link href={course.link} className="mt-4">
-                        <div
-                          className={`w-10 h-10 flex items-center justify-center rounded-full text-white ${course.arrowColor}`}
-                        >
-                          <FontAwesomeIcon icon={faArrowRight} />
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          {/* View More Button */}
-          <div className="text-center mt-8">
-            <Link href="/bridge/bridge-program" passHref>
-              <motion.button
-                className="px-6 py-3 bg-[#592Ac7] text-white rounded-lg font-semibold shadow-md hover:bg-violet-400 transition"
-                whileHover={{ scale: 1.05 }}
+            {/* Image */}
+            <div className="relative w-full h-[180px] sm:h-[200px]">
+              <Image
+                src={course.image}
+                alt={course.title}
+                fill
+                className="object-cover rounded-t-[18px]"
+              />
+              <span
+                className={`absolute top-3 right-3 px-3 py-1 text-xs font-semibold rounded ${
+                  course.status === "Active"
+                    ? "bg-[#592ac7] text-white"
+                    : "bg-blue-600 text-white"
+                }`}
               >
-                View more
-              </motion.button>
-            </Link>
-          </div>
-        </div>
-      </section>
+                {course.status}
+              </span>
+            </div>
+
+            {/* Content */}
+            <div className="p-5 flex flex-col flex-grow">
+              <h3 className="text-lg font-semibold">{course.title}</h3>
+              <p className="text-gray-700 text-sm mt-2 flex-grow">
+                {course.description}
+              </p>
+              <div className="flex justify-end mt-4">
+                <Link href={course.link} className="mt-4">
+                  <div
+                    className={`w-10 h-10 flex items-center justify-center rounded-full text-white ${course.arrowColor}`}
+                  >
+<ImArrowUpRight2 />
+</div>
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+
+    {/* View More Button */}
+    <div className="text-center mt-8">
+      <Link href="/bridge/bridge-program" passHref>
+        <motion.button
+          className="px-6 py-3 bg-[#592Ac7] text-white rounded-lg font-semibold shadow-md hover:bg-violet-400 transition"
+          whileHover={{ scale: 1.05 }}
+        >
+          View more
+        </motion.button>
+      </Link>
+    </div>
+  </div>
+</section>
+
 
       {/* Call to Action section */}
       <section className="flex justify-center items-center py-16 px-6">
