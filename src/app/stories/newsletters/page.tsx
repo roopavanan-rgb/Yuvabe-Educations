@@ -204,9 +204,9 @@ const NewsletterBlock = ({ newsletter }: { newsletter: NewsletterItem }) => (
     transition={{ duration: 0.8, ease: "easeOut" }}
     viewport={{ once: true, amount: 0.2 }}
   >
-    <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap xl:flex-nowrap lg:w-[100%] gap-y-8 w-full">
+    <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] z-10 flex-wrap lg:flex-nowrap lg:w-[100%] gap-y-8 w-full">
       {/* Left */}
-      <motion.div className="flex flex-col rounded-[20px] w-full bg-white xl:w-[34%] md:max-h-[600px] xl:max-h-full justify-center z-10 box-shadow-news">
+      <motion.div className="flex flex-col rounded-[20px] w-full bg-white xl:w-[34%] md:max-h-[550px] xl:max-h-full justify-center z-10 box-shadow-news">
         <Image
           src={newsletter.imageUrl}
           alt=""

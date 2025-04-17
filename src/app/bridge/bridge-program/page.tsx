@@ -26,7 +26,7 @@ export default function Bridge_Program_Calendar() {
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
-                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
+                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7 w-full lg:w-[40%]">
                     {/* Bottom */}
                     <div className="flex flex-row justify-between">
                       <h2 className="font-primary font-semibold leading-[120%] text-2xl text-black lg:max-w-[212px]">
@@ -101,7 +101,7 @@ export default function Bridge_Program_Calendar() {
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
-                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
+                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7 w-full lg:w-[40%]">
                     {/* Bottom */}
                     <div className="flex flex-row justify-between">
                       <h2 className="font-primary font-semibold leading-[120%] text-2xl text-black lg:max-w-[212px]">
@@ -176,7 +176,7 @@ export default function Bridge_Program_Calendar() {
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
-                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
+                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7 w-full lg:w-[40%]">
                     {/* Bottom */}
                     <div className="flex flex-row justify-between">
                       <h2 className="font-primary font-semibold leading-[120%] text-2xl text-black lg:max-w-[212px]">
@@ -252,7 +252,7 @@ export default function Bridge_Program_Calendar() {
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
-                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
+                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7 w-full lg:w-[40%]">
                     {/* Bottom */}
                     <div className="flex flex-row justify-between">
                       <h2 className="font-primary font-semibold leading-[120%] text-2xl text-black lg:max-w-[248.6953125px]">
@@ -333,7 +333,7 @@ export default function Bridge_Program_Calendar() {
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
-                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
+                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7 w-full lg:w-[40%]">
                     {/* Bottom */}
                     <div className="flex flex-row justify-between">
                       <h2 className="font-primary font-semibold leading-[120%] text-2xl text-black lg:max-w-[212px]">
@@ -408,7 +408,7 @@ export default function Bridge_Program_Calendar() {
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
-                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
+                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7 w-full lg:w-[40%]">
                     {/* Bottom */}
                     <div className="flex flex-row justify-between">
                       <h2 className="font-primary font-semibold leading-[120%] text-2xl text-black lg:max-w-[212px]">
@@ -483,7 +483,7 @@ export default function Bridge_Program_Calendar() {
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
-                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
+                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7 w-full lg:w-[40%]">
                     {/* Bottom */}
                     <div className="flex flex-row justify-between">
                       <h2 className="font-primary font-semibold leading-[120%] text-2xl text-black lg:max-w-[212px]">
@@ -559,7 +559,7 @@ export default function Bridge_Program_Calendar() {
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
-                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
+                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7 w-full lg:w-[40%]">
                     {/* Bottom */}
                     <div className="flex flex-row justify-between">
                       <h2 className="font-primary font-semibold leading-[120%] text-2xl text-black lg:max-w-[212px]">
@@ -633,7 +633,7 @@ export default function Bridge_Program_Calendar() {
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
-                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7">
+                  <div className="flex flex-col justify-between  max-w-full xl:max-w-[318px] lg:max-w[40%]  gap-y-7 w-full lg:w-[40%] ">
                     {/* Bottom */}
                     <div className="flex flex-row justify-between">
                       <h2 className="font-primary font-semibold leading-[120%] text-2xl text-black lg:max-w-[212px]">

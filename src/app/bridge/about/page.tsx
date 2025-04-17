@@ -350,7 +350,7 @@ export default function Bridge() {
       <div className="bg-[#FFF9EA] py-16 lg:py-32 md:py-24 overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
           <motion.h2
-            className="text-black text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
+            className="text-black text-[40px] md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -381,7 +381,7 @@ export default function Bridge() {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="flex flex-row gap-x-4 items-center flex-wrap lg:flex-nowrap justify-center lg:w-[49%] w-full"
+                className="flex lg:flex-row flex-col gap-x-4  md:gap-y-[65px] gap-y-8  items-center flex-wrap lg:flex-nowrap justify-center lg:w-[49%] w-full"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
@@ -392,7 +392,7 @@ export default function Bridge() {
                 viewport={{ once: true }}
               >
                 <Image src={item.img} alt="" width={104} height={104} />
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-center  lg:text-left mt-8 md:mt-0">
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full md:w-[320px] lg:w-full text-center  lg:text-left mt-8 md:mt-0">
                   {item.text}
                 </p>
               </motion.div>
@@ -409,7 +409,7 @@ export default function Bridge() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-black text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
+            className="text-black  text-[40px] md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
           >
             Our Program
           </motion.h2>
@@ -689,11 +689,11 @@ export default function Bridge() {
       {/* Donation */}
       <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-8 md:gap-y-16">
-          <h2 className="text-white text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+          <h2 className="text-white text-[40px]  md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
             Your Support Matters!
           </h2>
           {/* Donate From.... */}
-          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap  py-0 lg:py-32 md:py-24">
+          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap  py-0 lg:py-32 ">
             {/* Donate from India */}
             <div className="flex flex-col gap-y-16 w-full lg:w-1/2">
               {/* Text */}
