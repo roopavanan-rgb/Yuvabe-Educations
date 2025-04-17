@@ -20,7 +20,7 @@ export default function Steam() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-[#592AC7] text-[40px]  md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+              <h1 className="text-[#592AC7] text-[40px]  md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
                 STEAM
               </h1>
               <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center">
@@ -56,7 +56,7 @@ export default function Steam() {
             {/* Heading with Slide Down Animation */}
             <motion.h2
               className="text-black text-[32px] md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary"
-              initial={{ opacity: 0, y: -50 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
@@ -73,7 +73,7 @@ export default function Steam() {
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center md:text-left">
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center lg:text-left">
                   The Auroville Bio-region comprises of approximately&nbsp;
                   <span className="text-[#592AC7] font-bold">
                     13 villages with about 40,000 people.
@@ -245,7 +245,7 @@ export default function Steam() {
       {/* The STEAM Lab */}
       <div className="bg-white py-16 lg:py-48 md:py-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
-          <div className="flex flex-col gap-y-24 md:gap-y-32 lg:gap-y-40">
+          <div className="flex flex-col gap-y-8 md:gap-y-16">
             {/* Animated Title */}
             <motion.h2
               className="text-black text-[32px] md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary"
@@ -339,7 +339,7 @@ export default function Steam() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-black text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
+            className="text-black text-[40px] md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
           >
             What do we want to do?
           </motion.h2>
@@ -375,10 +375,10 @@ export default function Steam() {
                   delay: index * 0.2,
                 }}
                 viewport={{ once: true }}
-                className="flex flex-row gap-x-4 md:gap-y-[65px] gap-y-8 lg:w-[49%] items-center flex-wrap lg:flex-nowrap justify-center w-full"
+                className="flex lg:flex-row flex-col gap-x-4 md:gap-y-[65px] gap-y-8 lg:w-[49%] items-center flex-wrap lg:flex-nowrap justify-center w-full"
               >
                 <Image src={item.img} alt="" width={104} height={104} />
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full text-center lg:text-left">
+                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full md:w-[320px] lg:w-full text-center lg:text-left">
                   {item.text}
                 </p>
               </motion.div>
@@ -396,7 +396,7 @@ export default function Steam() {
       >
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-16 md:gap-y-24 lg:gap-y-32">
           <motion.h2
-            className="text-black text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
+            className="text-black text-[40px] md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
@@ -496,14 +496,14 @@ export default function Steam() {
       {/* Add Impact Report from Homepage */}
       <ImpactReport />
       {/* Donation */}
-      <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
+      <div className="bg-[#592AC7] py-16 lg:py-32">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-8 md:gap-y-16">
-          <h2 className="text-white text-[40px] md:text-[62px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+          <h2 className="text-white text-[40px] md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
             Your Support Matters!
           </h2>
 
           {/* Donate From... */}
-          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap py-0 lg:py-32 md:py-24">
+          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap py-0 lg:py-32">
             {/* Donate from India */}
             <div className="flex flex-col gap-y-16 w-full lg:w-1/2">
               {/* Text */}
