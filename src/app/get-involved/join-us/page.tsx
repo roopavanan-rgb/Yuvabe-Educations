@@ -18,7 +18,7 @@ export default function Join_Us() {
   return (
     <>
       {/* Wrapper */}
-      <div className="bg-whitepb-16 xl:pb-32 md:pb-24 xl:pt-[85px] pt-16 md:pt-24">
+      <div className="bg-white pb-16 xl:pb-32 md:pb-24 xl:pt-[85px] pt-16 md:pt-24">
         <div className="max-w-[1240px] flex flex-col m-auto">
           {/* Join Us */}
           <div className="flex flex-row gap-x-[150px] gap-y-16 justify-between p-5 md:pb-0 flex-wrap xl:flex-nowrap">

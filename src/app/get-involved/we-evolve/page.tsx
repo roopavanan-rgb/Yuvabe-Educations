@@ -6,8 +6,10 @@ import dynamic from "next/dynamic";
 
 import Image from "next/image";
 
-const Player = dynamic(() => import("@lottiefiles/react-lottie-player").then(mod => mod.Player), { ssr: false });
-
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then(mod => mod.Player),
+  { ssr: false }
+);
 
 const blogPosts = [
   {
@@ -33,53 +35,61 @@ const blogPosts = [
 const page = () => {
   return (
     <main className="overflow-x-hidden">
-      <section className="relative bg-[#592AC7] text-white   flex items-center justify-center px-6 md:px-12 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-0 md:gap-12 w-full relative">
-          {/* Left Side - Text Content */}
-          <div className="text-center md:text-left ">
-            <h2 className="text-3xl md:text-[64px] font-primary font-semibold pt-12 md:pt-6 lg:pt-0">
-              We Evolve
-            </h2>
-            <p className="mt-4 text-base md:text-lg font-secondary max-w-md md:max-w-lg mx-auto md:mx-0">
-              We aim to be a space where youth are supported to rise to their
-              potential, not just in their professional, but also in their
-              personal endeavors.
-            </p>
-          </div>
+      <section className="relative bg-[#592AC7] text-white pt-16 md:pt-24 flex items-center justify-center px-6 md:px-12 overflow-hidden">
+        <div className="max-w-[1240px] flex flex-col m-auto">
+          {/* Join Us */}
+          <div className="flex flex-row gap-x-[150px] gap-y-16 justify-between flex-wrap xl:flex-nowrap">
+            {/* Left - Text */}
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-y-8 gap-x-4 w-full xl:w-[50%] justify-center"
+            >
+              <h1 className="font-primary font-semibold leading-[120%] text-[40px] md:text-[62px] lg:text-[64px] text-center lg:text-left">
+                We Evolve
+              </h1>
+              <p className="font-secondary font-normal text-[18px] text-center lg:text-left">
+                We aim to be a space where youth are supported to rise to their
+                potential, not just in their professional, but also in their
+                personal endeavors.
+              </p>
+            </motion.div>
 
-          {/* Right Side - Lottie Animation */}
-          <div className="flex justify-center md:justify-end relative w-full">
-            <Player
-              autoplay
-              keepLastFrame
-              loop = {false}
-              src="/images/arjun.json"
-              className="w-[450px] h-[450px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] top-15 md:top-18 lg:top-20 relative"
-            />
+            {/* Right - Player */}
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="w-full flex justify-center xl:justify-end"
+            >
+              <Player
+                autoplay
+                speed={0.75}
+                loop={false}
+                keepLastFrame
+                src="/images/arjun.json"
+                style={{ height: "100%", width: "100%" }}
+                className="lg:mt-[-30px]"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
 
+      {/* talks, workshops & health */}
       <section className="relative bg-[#FDF7EB] py-24 px-6 lg:px-16 ">
-
-        <Image
-          src="/assets/weevolve/yp.svg" // Replace with your actual file path
-          alt="Decorative shape"
-          width={700} // This should match your desired size
-          height={700}
-          className="absolute top-4 right-5 bottom-150"
-        />
-
-        <div className="relative z-10 container space-y-12 mx-auto items-center justify-center">
+        <div className="relative  container max-w=[1240px] space-y-12 mx-auto items-center justify-center z-10">
           {/* Expert Talks */}
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row items-center bg-white rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px] "
+            className="flex flex-col lg:flex-row z-10 items-center bg-white rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px] "
           >
-
             <div className="w-full lg:w-[40%] h-[450px] rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px]">
               <img
                 src="/images/expert.webp"
@@ -95,8 +105,8 @@ const page = () => {
                 Auroville is a thriving laboratory of social and environmental
                 initiatives. We invite experts based in Auroville, who have come
                 from all over the world, from different walks of life, working
-                in different domains, to come share their experiences with <br /> our
-                youth.
+                in different domains, to come share their experiences with{" "}
+                <br /> our youth.
               </p>
             </div>
           </motion.div>
@@ -107,7 +117,7 @@ const page = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative flex flex-col-reverse lg:flex-row items-center bg-white rounded-tr-[200px] rounded-bl-[200px] rounded-tl-[50px] rounded-br-[50px] overflow-hidden"
+            className="relative flex z-10 flex-col-reverse lg:flex-row items-center bg-white rounded-tr-[200px] rounded-bl-[200px] rounded-tl-[50px] rounded-br-[50px] overflow-hidden"
           >
             {/* Text Section */}
             <div className="relative z-10 w-full lg:w-[60%] p-6 lg:p-18">
@@ -121,12 +131,6 @@ const page = () => {
                 mission; of holistic development of our youth.
               </p>
             </div>
-            <Image
-              src="/assets/weevolve/gc.svg" // Replace with your actual file path
-              alt="Decorative shape"
-              width={350} // This should match your desired size
-              height={350}
-              className="absolute -left-30 -bottom-30" />
 
             {/* Image Section */}
             <div className=" w-full lg:w-[40%] flex justify-end">
@@ -144,15 +148,8 @@ const page = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative flex flex-col lg:flex-row items-center bg-white rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px] "
+            className="relative flex flex-col z-10 lg:flex-row items-center bg-white rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px] "
           >
-            <Image
-              src="/assets/weevolve/bs.svg" // Replace with your actual SVG path
-              alt="Decorative shape"
-              width={160}
-              height={160}
-              className="absolute -bottom-8 right-10 rotate-45 opacity-100"
-            />
             <div className="relative z-10 w-full lg:w-[40%] h-[450px] rounded-tl-[200px] rounded-br-[200px] rounded-tr-[50px] rounded-bl-[50px]">
               <img
                 src="/images/health.webp"
@@ -174,8 +171,63 @@ const page = () => {
             </div>
           </motion.div>
         </div>
+        <div className="shapes">
+          <motion.svg
+            width="260"
+            height="259"
+            viewBox="0 0 260 259"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute right-[0.2%] top-[85%] scale-50 xl:scale-100"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <rect
+              x="100.289"
+              width="187.637"
+              height="187.637"
+              transform="rotate(32.0259 100.289 0)"
+              fill="#33BED4"
+            />
+          </motion.svg>
+
+          <motion.svg
+            width="404"
+            height="403"
+            viewBox="0 0 404 403"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute left-[5%] top-[45%] scale-50 xl:scale-100"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <circle cx="202.281" cy="201.5" r="201.5" fill="#91C644" />
+          </motion.svg>
+          <motion.svg
+            width="600"
+            height="600"
+            viewBox="0 0 251 256"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute top-[2%] right-[15%] scale-50 xl:scale-100"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <path
+              d="M250.547 0.865651L192.006 255.82L0.479068 77.6452L250.547 0.865651Z"
+              fill="#FFCA2D"
+            />
+          </motion.svg>
+        </div>
       </section>
 
+      {/* Blogs */}
       <section className="relative bg-[#5F2DC6] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
         {/* Background GIF */}
         <div className="absolute inset-0 flex justify-center items-center  ">
@@ -185,7 +237,7 @@ const page = () => {
             layout="fill"
             objectFit="contain"
             className="hidden md:block top-[-20px] md:top-[-50px] left-0 w-full"
-          // Adjust opacity for better readability
+            // Adjust opacity for better readability
           />
         </div>
 
@@ -206,7 +258,7 @@ const page = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {blogPosts.map((post, index) => (
+          {blogPosts.map((post, index) =>
             <motion.div
               key={index}
               className="bg-white text-black rounded-[20px] shadow-lg overflow-hidden p-4 transition-transform duration-300 hover:scale-105"
@@ -226,11 +278,15 @@ const page = () => {
 
               {/* Blog Content */}
               <div className="mt-4">
-                <h3 className="text-lg font-bold">{post.title}</h3>
-                <p className="text-sm mt-2">{post.description}</p>
+                <h3 className="text-lg font-bold">
+                  {post.title}
+                </h3>
+                <p className="text-sm mt-2">
+                  {post.description}
+                </p>
               </div>
             </motion.div>
-          ))}
+          )}
         </motion.div>
 
         {/* CTA Button */}

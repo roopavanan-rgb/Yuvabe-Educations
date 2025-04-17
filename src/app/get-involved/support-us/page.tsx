@@ -42,10 +42,10 @@ export default function SupportUs() {
   return (
     <main className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
+      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
         {/* Left Side - Centered Text */}
         <motion.div
-          className="w-full md:w-1/2 flex flex-col justify-center items-start text-left mt-8 md:mt-0 md:ml-18 ml-0 "
+          className="flex flex-col lg:justify-start lg:items-start lg:text-left justify-center items-center text-center lg:pl-20 pl-0 "
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -62,12 +62,12 @@ export default function SupportUs() {
 
         {/* Right Side - Image */}
         <motion.div
-          className="w-full md:w-1/2 flex justify-center md:justify-end mt-12 md:mt-0 relative"
+          className="w-full lg:w-1/2 flex justify-center md:justify-end mt-12 md:mt-0 relative"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full max-w-[600px] md:max-w-[800px] lg:max-w-[900px]">
+          <div className="relative w-full ">
             {/* Floating Shape */}
             <motion.div
               className="absolute top-12 right-10 w-10 h-10 md:w-20 md:h-20 bg-[#33BED4]  z-10"
@@ -81,7 +81,7 @@ export default function SupportUs() {
               alt="Group working on laptop"
               width={900}
               height={600}
-              className="w-full h-auto left-8 top-12 md:left-18 md:top-15 relative "
+              className="w-full h-auto left-8 top-12 md:left-20 md:top-15 lg:left-18 lg:top-15 relative "
             />
           </div>
         </motion.div>

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
@@ -168,10 +169,8 @@ export default function Home() {
 
       {/* Client Logo Slider */}
       <section className="bg-white py-10 shadow-lg backdrop-blur-lg flex justify-center items-center overflow-hidden">
-        <div className="w-full max-w-screen-xl px-6 sm:px-8 md:px-10">
+        <div className="w-full  px-6 sm:px-8 md:px-10">
           <motion.div
-            className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:gap-12
-            justify-center items-center "
             initial="hidden"
             animate="visible"
             variants={{
@@ -182,28 +181,30 @@ export default function Home() {
               }
             }}
           >
-            {logos.map((logo, index) => (
-              <motion.div
-                key={index}
-                className="flex justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  ease: "easeOut",
-                  delay: index * 0.1
-                }}
-              >
-                <Image
-                  src={logo}
-                  alt={`Client logo ${index + 1}`}
-                  width={150}
-                  height={75}
-                  priority
-                  className="w-[100px] sm:w-[140px] md:w-[160px] lg:w-[180px] object-contain transition duration-300"
-                />
-              </motion.div>
-            ))}
+            <Slider {...settings}>
+              {logos.map((logo, index) => (
+                <motion.div
+                  key={index}
+                  className="flex justify-center px-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeOut",
+                    delay: index * 0.1
+                  }}
+                >
+                  <Image
+                    src={logo}
+                    alt={`Client logo ${index + 1}`}
+                    width={150}
+                    height={75}
+                    priority
+                    className="w-[100px] sm:w-[140px] md:w-[130px] lg:w-[150px] object-contain transition duration-300"
+                  />
+                </motion.div>
+              ))}
+            </Slider>
           </motion.div>
         </div>
       </section>
@@ -352,7 +353,7 @@ export default function Home() {
       </section>
 
       {/* Join us  */}
-      <section className="py-16 overflow-hidden">
+      <section className="py-16 overflow-hidden px-12">
         <div className="container  max-w-[1240px] mx-auto flex flex-col md:flex-col lg:flex-row items-center justify-between gap-10">
           {/* Left: Text Content */}
           <motion.div
@@ -397,7 +398,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-       className="w-full md:w-4/5 lg:w-1/2 flex justify-center items-center mt-16"
+            className="w-full md:w-4/5 lg:w-1/2 flex justify-center items-center mt-16"
           >
             <div className="relative w-[90%] sm:w-[75%] md:w-full lg:w-full">
               <Image
@@ -441,7 +442,7 @@ export default function Home() {
             <h2 className="text-[36px] font-primary font-semibold">
               Our Vision
             </h2>
-            <p className="text-[18px] leading-7 font-secondary font-normal text-justify">
+            <p className="text-[18px] leading-7 font-secondary font-normal text-center md:text-center lg:text-left">
               To nurture a generation of self-aware, skilled, and purpose-driven
               individuals who contribute meaningfully to the world, guided by
               inner exploration and outward impact.

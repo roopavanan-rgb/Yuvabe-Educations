@@ -53,32 +53,47 @@ const blogPosts = [
 const page = () => {
   return (
     <main className="overflow-x-hidden">
-      <section className="relative bg-[#592AC7] text-white md:min-h-[600px] min-h-[600px] flex items-start md:items-start lg:items-center justify-center px-6 md:px-12 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 w-full relative">
-          {/* Left Side - Text Content */}
-          <div className="text-center md:text-left">
-            <h2 className="text-3xl md:text-[64px] font-primary font-semibold pt-[32px] md:pt-[18px] lg:pt-0">
-              We Serve
-            </h2>
-            <p className="mt-4 text-base md:text-lg font-secondary max-w-lg mx-auto md:mx-0">
-              We are committed to providing support to our community and
-              engaging in opportunities where we can make a difference.
-            </p>
-          </div>
-
-          {/* Right Side - Lottie Animation */}
-          <div className="flex justify-center md:justify-end relative w-full">
-            <Player
-              autoplay
-              keepLastFrame
-              loop={false}
-              src="/images/hema.json"
-              className="w-[350px] h-[350px] max-w-xl sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[800px] lg:h-[700px]
-        relative   top-20 lg:top-18 md:top-60"
-            />
-          </div>
-        </div>
-      </section>
+      <section className="relative bg-[#592AC7] text-white pt-16 md:pt-24 flex items-center justify-center px-6 md:px-12 overflow-hidden">
+              <div className="max-w-[1240px] flex flex-col m-auto">
+                {/* Join Us */}
+                <div className="flex flex-row gap-x-[150px] gap-y-16 justify-between flex-wrap xl:flex-nowrap">
+                  {/* Left - Text */}
+                  <motion.div
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="flex flex-col gap-y-8 gap-x-4 w-full xl:w-[50%] justify-center"
+                  >
+                    <h1 className="font-primary font-semibold leading-[120%] text-[40px] md:text-[62px] lg:text-[64px] text-center lg:text-left">
+                      We Serve
+                    </h1>
+                    <p className="font-secondary font-normal text-[18px] text-center lg:text-left">
+                    We are committed to providing support to our community, and engage in opportunities where we can make a difference.
+                    </p>
+                  </motion.div>
+      
+                  {/* Right - Player */}
+                  <motion.div
+                    initial={{ x: 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="w-full lg:w-1/2 flex justify-center xl:justify-end"
+                  >
+                    <Player
+                      autoplay
+                      speed={0.75}
+                      loop={false}
+                      keepLastFrame
+                      src="/images/hema.json"
+                      style={{ height: "100%", width: "100%" }}
+                      className="lg:mt-[-30px]"
+                    />
+                  </motion.div>
+                </div>
+              </div>
+            </section>
 
       <section className="relative bg-white text-black py-16 px-6 md:px-12 lg:px-20">
         {/* Heading */}
