@@ -22,7 +22,7 @@ const initiatives = [
       "Organizing cleanup drives to protect marine life and promote environmental sustainability."
   },
   {
-    image: "/images/sarcon.webp",
+    image: "/images/saracon.png",
     title: "Performing Arts",
     description:
       "Empowering youth through cultural performances and artistic expression."
@@ -248,7 +248,7 @@ const page = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-5xl font-semibold text-center relative z-10"
+          className="text-2xl md:text-3xl lg:text-[64px] font-primary font-semibold text-center relative z-10"
         >
           Read more about our community <br /> activities in and around
           Auroville
