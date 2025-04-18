@@ -81,7 +81,7 @@ const page = () => {
 
       {/* talks, workshops & health */}
       <section className="relative bg-[#FDF7EB] py-24 px-6 lg:px-16 ">
-        <div className="relative  container max-w=[1240px] space-y-12 mx-auto items-center justify-center z-10">
+        <div className="relative container max-w=[1240px] space-y-12 mx-auto items-center justify-center z-10 hidden lg:block ">
           {/* Expert Talks */}
           <motion.div
             initial={{ x: -100, opacity: 0 }}
@@ -98,10 +98,10 @@ const page = () => {
               />
             </div>
             <div className="w-full lg:w-1/2 p-6 lg:p-10">
-              <h3 className="text-[24px] md:text-[48px] font-bold text-[#592AC7] mx-2 md:mx-0 ">
+              <h3 className="text-[24px] md:text-[48px] font-semibold font-primary text-[#592AC7] mx-2 md:mx-0 ">
                 Expert Talks
               </h3>
-              <p className="text-gray-600 text-[18px] mt-4 mx-2 md:mx-0">
+              <p className="text-gray-600 text-[18px] mt-4 mx-2 md:mx-0 font-secondary font-normal">
                 Auroville is a thriving laboratory of social and environmental
                 initiatives. We invite experts based in Auroville, who have come
                 from all over the world, from different walks of life, working
@@ -121,10 +121,10 @@ const page = () => {
           >
             {/* Text Section */}
             <div className="relative z-10 w-full lg:w-[60%] p-6 lg:p-18">
-              <h3 className="text-[24px] md:text-[48px] text-end md:text-start font-bold text-[#592AC7]">
+              <h3 className="text-[24px] md:text-[48px] text-end md:text-start font-primary font-semibold text-[#592AC7]">
                 Workshops
               </h3>
-              <p className="text-gray-600 mt-4 text-end md:text-start">
+              <p className="text-gray-600 mt-4 text-end md:text-start font-secondary font-normal">
                 By engaging in practical workshops, our team is able to discover
                 and grow not just as professionals but as people. These
                 workshops are an important aspect of our work towards our core
@@ -158,10 +158,10 @@ const page = () => {
               />
             </div>
             <div className="w-full lg:w-1/2 p-6 lg:p-10">
-              <h3 className="text-[24px] md:text-[48px] font-bold text-[#592AC7] mx-2 md:mx-0">
+              <h3 className="text-[24px] md:text-[48px] font-semibold font-primary text-[#592AC7] mx-2 md:mx-0">
                 Integral Health
               </h3>
-              <p className="text-gray-600 text-[18px] mt-4 mx-2 md:mx-0">
+              <p className="text-gray-600 text-[18px] mt-4 mx-2 md:mx-0 font-secondary font-normal">
                 By taking different approaches, we aspire to keep our youth
                 focused on health. From weekly cycling trips to yoga classes, as
                 well as collaborating with the community’s primary mental health
@@ -171,6 +171,86 @@ const page = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* mobile & tab view */}
+
+        <div className="container mx-auto px-4 py-8 block lg:hidden ">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-8 place-items-center">
+            {/* Expert Talks */}
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="bg-white rounded-[50px] overflow-hidden shadow-md flex flex-col items-center text-center z-10 max-w-[350px] w-full"
+            >
+              <img
+                src="/images/expert1.webp"
+                alt="Expert Talks"
+                className="w-full h-[250px] object-cover rounded-t-[50px]"
+              />
+              <div className="p-6">
+                <h3 className="text-[24px] md:text-[32px] font-semibold font-primary text-[#592AC7]">
+                  Expert Talks
+                </h3>
+                <p className="text-gray-600 text-[16px] mt-4 font-secondary">
+                  Auroville is a thriving laboratory of social and environmental
+                  initiatives. Experts from around the world share their
+                  experience with our youth.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Workshops */}
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="bg-white rounded-[50px] overflow-hidden shadow-md flex flex-col items-center text-center z-10 max-w-[350px] w-full"
+            >
+              <img
+                src="/images/workshop1.webp"
+                alt="Workshops"
+                className="w-full h-[250px] object-cover rounded-t-[50px]"
+              />
+              <div className="p-6">
+                <h3 className="text-[24px] md:text-[32px] font-semibold font-primary text-[#592AC7]">
+                  Workshops
+                </h3>
+                <p className="text-gray-600 text-[16px] mt-4 font-secondary">
+                  Engaging in hands-on workshops allows our team to grow both
+                  personally and professionally.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Integral Health */}
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="max-w-[350px] w-full md:col-span-2 md:justify-self-center items-center text-center lg:col-span-1 z-10 bg-white rounded-[50px]"
+            >
+              <img
+                src="/images/health1.webp"
+                alt="Integral Health"
+                className="w-full h-[250px] object-cover rounded-t-[50px]"
+              />
+              <div className="p-6">
+                <h3 className="text-[24px] md:text-[32px] font-semibold font-primary text-[#592AC7]">
+                  Integral Health
+                </h3>
+                <p className="text-gray-600 text-[16px] mt-4 font-secondary">
+                  Through cycling, yoga, and mental health initiatives, we
+                  support our youth’s holistic wellbeing.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
         <div className="shapes">
           <motion.svg
             width="260"
@@ -178,7 +258,7 @@ const page = () => {
             viewBox="0 0 260 259"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute right-[0.2%] top-[85%] scale-50 xl:scale-100"
+            className="absolute right-[0.2%] top-[85%] md:right-[10%] md:top-[75%] lg:right-[5%] lg:top-[85%] scale-50 xl:scale-100"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -193,13 +273,14 @@ const page = () => {
             />
           </motion.svg>
 
+          {/* circle */}
           <motion.svg
             width="404"
             height="403"
             viewBox="0 0 404 403"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute left-[5%] top-[45%] scale-50 xl:scale-100"
+            className="absolute lg:left-[5%] lg:top-[45%] left-[18%] top-[50%] md:left-[45%] md:top-[30%] scale-50 xl:scale-100"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -207,13 +288,15 @@ const page = () => {
           >
             <circle cx="202.281" cy="201.5" r="201.5" fill="#91C644" />
           </motion.svg>
+
+          {/* triangle */}
           <motion.svg
             width="600"
             height="600"
             viewBox="0 0 251 256"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute top-[2%] right-[15%] scale-50 xl:scale-100"
+            className="absolute lg:top-[2%] lg:right-[15%] -top-[6%] right-[10%] scale-50 xl:scale-100"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -258,7 +341,7 @@ const page = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {blogPosts.map((post, index) =>
+          {blogPosts.map((post, index) => (
             <motion.div
               key={index}
               className="bg-white text-black rounded-[20px] shadow-lg overflow-hidden p-4 transition-transform duration-300 hover:scale-105"
@@ -278,15 +361,11 @@ const page = () => {
 
               {/* Blog Content */}
               <div className="mt-4">
-                <h3 className="text-lg font-bold">
-                  {post.title}
-                </h3>
-                <p className="text-sm mt-2">
-                  {post.description}
-                </p>
+                <h3 className="text-lg font-bold">{post.title}</h3>
+                <p className="text-sm mt-2">{post.description}</p>
               </div>
             </motion.div>
-          )}
+          ))}
         </motion.div>
 
         {/* CTA Button */}

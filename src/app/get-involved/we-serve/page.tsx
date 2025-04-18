@@ -54,46 +54,47 @@ const page = () => {
   return (
     <main className="overflow-x-hidden">
       <section className="relative bg-[#592AC7] text-white pt-16 md:pt-24 flex items-center justify-center px-6 md:px-12 overflow-hidden">
-              <div className="max-w-[1240px] flex flex-col m-auto">
-                {/* Join Us */}
-                <div className="flex flex-row gap-x-[150px] gap-y-16 justify-between flex-wrap xl:flex-nowrap">
-                  {/* Left - Text */}
-                  <motion.div
-                    initial={{ x: -100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                    className="flex flex-col gap-y-8 gap-x-4 w-full xl:w-[50%] justify-center"
-                  >
-                    <h1 className="font-primary font-semibold leading-[120%] text-[40px] md:text-[62px] lg:text-[64px] text-center lg:text-left">
-                      We Serve
-                    </h1>
-                    <p className="font-secondary font-normal text-[18px] text-center lg:text-left">
-                    We are committed to providing support to our community, and engage in opportunities where we can make a difference.
-                    </p>
-                  </motion.div>
-      
-                  {/* Right - Player */}
-                  <motion.div
-                    initial={{ x: 100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                    className="w-full lg:w-1/2 flex justify-center xl:justify-end"
-                  >
-                    <Player
-                      autoplay
-                      speed={0.75}
-                      loop={false}
-                      keepLastFrame
-                      src="/images/hema.json"
-                      style={{ height: "100%", width: "100%" }}
-                      className="lg:mt-[-30px]"
-                    />
-                  </motion.div>
-                </div>
-              </div>
-            </section>
+        <div className="max-w-[1240px] flex flex-col m-auto">
+          {/* Join Us */}
+          <div className="flex flex-row gap-x-[150px] gap-y-16 justify-between flex-wrap xl:flex-nowrap">
+            {/* Left - Text */}
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-y-8 gap-x-4 w-full xl:w-[50%] justify-center"
+            >
+              <h1 className="font-primary font-semibold leading-[120%] text-[40px] md:text-[62px] lg:text-[64px] text-center lg:text-left">
+                We Serve
+              </h1>
+              <p className="font-secondary font-normal text-[18px] text-center lg:text-left">
+                We are committed to providing support to our community, and
+                engage in opportunities where we can make a difference.
+              </p>
+            </motion.div>
+
+            {/* Right - Player */}
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="w-full lg:w-1/2 flex justify-center xl:justify-end"
+            >
+              <Player
+                autoplay
+                speed={0.75}
+                loop={false}
+                keepLastFrame
+                src="/images/hema.json"
+                style={{ height: "100%", width: "100%" }}
+                className="lg:mt-[-30px]"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       <section className="relative bg-white text-black py-16 px-6 md:px-12 lg:px-20">
         {/* Heading */}
@@ -101,7 +102,7 @@ const page = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-5xl font-bold text-center mb-12"
+          className="text-2xl md:text-4xl lg:text-[64px] font-semibold font-primary  text-center mb-12"
         >
           Enabling Educational Empowerment
         </motion.h2>
@@ -131,21 +132,22 @@ const page = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center md:text-center lg:text-left"
           >
-            <p className="text-base md:text-lg mb-6">
+            <p className="text-base md:text-lg mb-6 ">
               With the mission to enable educational empowerment among school
               children, we created a project-based, interdisciplinary curriculum
               that brings Science, Technology, Engineering, Art & Math together
               under one umbrella.
             </p>
-            <p className="text-base md:text-lg mb-6">
+            <p className="text-base md:text-lg mb-6 ">
               Each year culminates with the annual STEAM Fest where all the
               students present their projects to the community.{" "}
               <a href="#" className="text-[#592AC7] font-semibold underline">
                 Read more about this one-of-a-kind educational fair!
               </a>
             </p>
-            <p className="font-bold text-lg mb-6">
+            <p className="font-bold text-lg mb-6 ">
               Your support will help us take this unique educational offering to
               more schools in the region!
             </p>
@@ -153,7 +155,7 @@ const page = () => {
             {/* Button */}
             <motion.a
               href="/get-involved/support-us"
-              className="bg-[#592AC7] text-white font-semibold py-3 px-6 rounded-lg shadow-md inline-block"
+              className="bg-[#592AC7] text-white font-semibold font-primary py-3 px-6 rounded-lg shadow-md inline-block "
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -169,7 +171,7 @@ const page = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-5xl font-bold text-center mb-4"
+          className="text-3xl md:text-4xl lg:text-[64px] font-semibold font-primary text-center mb-4"
         >
           Other Community Initiatives
         </motion.h2>
@@ -179,7 +181,7 @@ const page = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center text-base md:text-lg max-w-3xl mx-auto mb-12"
+          className="text-center text-base md:text-lg max-w-3xl mx-auto mb-12 font-secondary "
         >
           Apart from spreading educational empowerment, our team is also
           committed to being an active force for good in the community in many
@@ -188,7 +190,7 @@ const page = () => {
 
         {/* Cards Container */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -208,7 +210,7 @@ const page = () => {
                 alt={initiative.title}
                 width={400}
                 height={300}
-                className="w-full h-[250px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-[250px] object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105"
               />
 
               {/* Hover Overlay - Light White (Opacity 10%) */}

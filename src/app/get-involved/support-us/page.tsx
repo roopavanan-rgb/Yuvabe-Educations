@@ -92,17 +92,17 @@ export default function SupportUs() {
 
       {/* Support Section */}
       <section className="py-16 bg-[#FBF6EF] text-center">
-        <h2 className="text-xl md:text-5xl font-semibold text-black mb-12">
+        <h2 className="text-xl md:text-4xl lg:text-[64px] font-semibold font-primary text-black mb-12">
           Your contribution will help us support
         </h2>
-        <div className="flex flex-wrap justify-center gap-6 px-4 md:px-8 lg:px-12">
+        <div className="flex flex-col md:flex-row justify-center gap-6 px-4 md:px-8 lg:px-12">
           {cards.map((card, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="relative w-full sm:w-[300px] md:w-[320px] lg:w-[327px] h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group"
+              className="relative w-full sm:w-[300px] md:w-[254px] lg:w-[327px] h-[500px] md:h-[447px] lg:h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group"
             >
-              <h3 className="text-xl font-bold mb-4 z-10 text-center">
+              <h3 className="text-[16px] font-semibold font-primary mb-4 z-10 text-center">
                 {card.title}
               </h3>
 
@@ -111,9 +111,9 @@ export default function SupportUs() {
                 alt={card.title}
                 width={278}
                 height={261}
-                className="w-[278px] h-[261px] rounded-lg object-cover z-10"
+                className="w-[278px] h-[261px] md:w-[207px] md:h-[195px] lg:w-[278px] lg:h-[261px] rounded-lg object-cover z-10"
               />
-              <p className="text-sm mt-2 z-10 text-center">
+              <p className="text-sm mt-2 z-10 text-center leading-4.5">
                 {card.description}
               </p>
 
