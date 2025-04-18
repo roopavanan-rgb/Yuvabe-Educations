@@ -21,22 +21,25 @@ export default function SupportUs() {
       image: "/images/getinvolved/img1.svg",
       description:
         "Your contribution will help us provide our young adults with an infrastructure, including tools and materials needed for their learning and growth.",
-      bgShape: "bg-[#F8A91E]"
+      bgShape: "bg-[#F8A91E]",
+      link: "/bridge/about",
     },
     {
       title: "Emotional Resilience",
       image: "/images/getinvolved/img2.svg",
       description:
         "Your donation will help us create an ecosystem of support for the youth, that comprises experts in integral health, counselling, coaching and more.",
-      bgShape: "bg-[#592AC7]"
+      bgShape: "bg-[#592AC7]",
+      link: "/programs/emotional-resilience",
     },
     {
       title: "STEAM Program",
       image: "/images/getinvolved/img3.svg",
       description:
         "Your gift for our unique educational offering will help cover expenses for a dedicated space for STEAM Lab, teacher support, and project materials.",
-      bgShape: "bg-[#33BED4]"
-    }
+      bgShape: "bg-[#33BED4]",
+      link: "/steam/about-steam",
+    },
   ];
 
   return (
@@ -92,14 +95,16 @@ export default function SupportUs() {
         <h2 className="text-xl md:text-5xl font-semibold text-black mb-12">
           Your contribution will help us support
         </h2>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 px-4 md:px-12">
+        <div className="flex flex-wrap justify-center gap-6 px-4 md:px-8 lg:px-12">
           {cards.map((card, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="relative w-[327px] h-[516px] md:w-[327px] md:h-[516px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group"
+              className="relative w-full sm:w-[300px] md:w-[320px] lg:w-[327px] h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group"
             >
-              <h3 className="text-xl font-bold mb-4 z-10">{card.title}</h3>
+              <h3 className="text-xl font-bold mb-4 z-10 text-center">
+                {card.title}
+              </h3>
 
               <Image
                 src={card.image}
@@ -108,10 +113,15 @@ export default function SupportUs() {
                 height={261}
                 className="w-[278px] h-[261px] rounded-lg object-cover z-10"
               />
-              <p className="text-sm mt-2 z-10">{card.description}</p>
-              <motion.div className="absolute bottom-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7]">
-                <ArrowUpRight size={24} />
-              </motion.div>
+              <p className="text-sm mt-2 z-10 text-center">
+                {card.description}
+              </p>
+
+              <a href={card.link} className="absolute bottom-6 right-6">
+                <motion.div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7]">
+                  <ArrowUpRight size={24} />
+                </motion.div>
+              </a>
             </motion.div>
           ))}
         </div>

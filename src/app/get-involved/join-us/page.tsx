@@ -1,6 +1,5 @@
 "use client";
 import JDS from "@/components/JDS";
-import Image from "next/image";
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
@@ -15,6 +14,13 @@ export default function Join_Us() {
       import("@lottiefiles/react-lottie-player").then((mod) => mod.Controls),
     { ssr: false }
   );
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+
   return (
     <>
       {/* Wrapper */}
@@ -42,20 +48,22 @@ export default function Join_Us() {
             </div>
             {/* Right */}
             <div className="w-full xl:w-[50%] flex justify-center  xl:justify-end">
-              <Player
-                autoplay
-                speed={0.75}
-                loop={false}
-                keepLastFrame
-                src="/images/join-us/ai-team.json"
-                style={{ height: "100%", width: "100%" }}
-                className="lg:mt-[-50px]"
-              >
-                <Controls
-                  visible={false}
-                  buttons={["play", "repeat", "frame", "debug"]}
-                />
-              </Player>
+              {mounted && (
+                <Player
+                  autoplay
+                  speed={0.75}
+                  loop={false}
+                  keepLastFrame
+                  src="/images/join-us/ai-team.json"
+                  style={{ height: "100%", width: "100%" }}
+                  className="lg:mt-[-50px]"
+                >
+                  <Controls
+                    visible={false}
+                    buttons={["play", "repeat", "frame", "debug"]}
+                  />
+                </Player>
+              )}
             </div>
           </div>
         </div>

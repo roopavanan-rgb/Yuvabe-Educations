@@ -4,20 +4,21 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-
 export default function TalkToUsPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  
+
   const Player = dynamic(
     () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
     { ssr: false }
   );
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -26,93 +27,89 @@ export default function TalkToUsPage() {
   //   alert("Form submitted!");
   // };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-
-  try {
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    const result = await response.json();
-    if (response.ok) {
-      alert("Message sent successfully!");
-    } else {
-      alert(`Error: ${result.message}`);
+      const result = await response.json();
+      if (response.ok) {
+        alert("Message sent successfully!");
+      } else {
+        alert(`Error: ${result.message}`);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Something went wrong. Please try again later.");
     }
-  } catch (error) {
-    console.error("Submission error:", error);
-    alert("Something went wrong. Please try again later.");
-  }
-};
+  };
 
-  
   return (
     <>
       {/* Hero Section */}
       <section className="bg-white pt-22 pb-16 px-6 md:px-12 lg:px-16">
-  <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-12">
-    
-    {/* Left Content */}
-    <motion.div 
-      className="w-full max-w-2xl text-center md:text-left"
-      initial={{ opacity: 0, x: -50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-      <motion.h1 
-        className="text-[42px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold text-[#592AC7] font-primary leading-tight"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        Talk to us
-      </motion.h1>
-      <motion.p 
-        className="mt-6 text-gray-600 text-[16px] sm:text-[18px] font-secondary leading-relaxed max-w-lg mx-auto md:mx-0"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-      >
-        Let’s team up and make things happen! Whether you're looking to scale, innovate, or create impact, we’re here to help you turn goals into results. 
-        Reach out, and let’s explore how we can grow together!
-      </motion.p>
-    </motion.div>
+        <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-center gap-12">
+          {/* Left Content */}
+          <motion.div
+            className="w-full max-w-[1240px] text-center lg:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <motion.h1
+              className="text-[42px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-semibold text-[#592AC7] font-primary leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              Talk to us
+            </motion.h1>
 
-    {/* Right Side Image and Shapes */}
-    <motion.div 
-      className="w-full max-w-md lg:max-w-lg xl:max-w-xl relative flex justify-center"
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
-    >
-      {/* Lottie Animation */}
-      <div className="overflow-hidden w-full">
-        <Player
-          autoplay
-          keepLastFrame
-          loop={false}
-          src="/images/keerthana.json"
-          className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[500px] xl:w-[600px] h-auto"
-        />
-      </div>
-    </motion.div>
+            <motion.p
+              className="mt-6 text-gray-600 text-[18px] font-secondary max-w-lg mx-auto lg:mx-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+            >
+              Let’s team up and make things happen! Whether you're looking to
+              scale, innovate, or create impact, we’re here to help you turn
+              goals into results. Reach out, and let’s explore how we can grow
+              together!
+            </motion.p>
+          </motion.div>
 
-  </div>
-</section>
-
+          {/* Right Side Image and Shapes */}
+          <motion.div
+            className="w-full max-w-md lg:max-w-lg xl:max-w-xl relative flex justify-center"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+          >
+            {/* Lottie Animation */}
+            <div className="overflow-hidden w-full">
+              <Player
+                autoplay
+                keepLastFrame
+                loop={false}
+                src="/images/keerthana.json"
+                className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[500px] xl:w-[600px] h-auto"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <section className="bg-[#592AC7] py-16 px-4">
-        <div className="container mx-auto max-w-5xl flex flex-col md:flex-row gap-18">
-
+        <div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-18">
           {/* Google Map */}
-          <motion.div 
-            className="w-full md:w-[604px] h-[450px] rounded-lg overflow-hidden shadow-lg"
+          <motion.div
+            className="w-full md:w-[604px] h-[500px] lg:h-[470px] rounded-lg overflow-hidden shadow-lg"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -127,16 +124,23 @@ const handleSubmit = async (e: React.FormEvent) => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div 
-            className="w-full md:w-[50%] bg-white shadow-lg rounded-lg p-6 md:p-8"
+          <motion.div
+            className="w-full md:w-[60%] bg-white shadow-lg rounded-lg p-6 md:p-8"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <h2 className="text-2xl font-bold text-[#592AC7] mb-4">Get in Touch</h2>
-            <p className="text-gray-600 mb-6">We'd love to hear from you! Fill out the form below:</p>
+            <h2 className="text-2xl md:text-[36px] font-primary font-semibold text-[#592AC7] mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-gray-600 mb-6">
+              We'd love to hear from you! Fill out the form below:
+            </p>
 
-            <form action="https://api.web3forms.com/submit" className="flex flex-col gap-4">
+            <form
+              action="https://api.web3forms.com/submit"
+              className="flex flex-col gap-4"
+            >
               <motion.input
                 type="text"
                 name="name"
@@ -178,7 +182,6 @@ const handleSubmit = async (e: React.FormEvent) => {
               </motion.div>
             </form>
           </motion.div>
-
         </div>
       </section>
     </>

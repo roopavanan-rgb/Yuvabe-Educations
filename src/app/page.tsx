@@ -485,8 +485,7 @@ export default function Home() {
             <div className="relative w-full max-w-[90%] sm:max-w-[75%] md:max-w-[600px] lg:max-w-[800px]">
               <Image
                 src="/images/home/mission.webp"
-                alt="Vision Mission"
-                layout="responsive"
+                alt="Vision-Mission"
                 width={800}
                 height={600}
                 priority

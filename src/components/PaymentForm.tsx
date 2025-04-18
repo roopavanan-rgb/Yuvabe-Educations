@@ -22,73 +22,80 @@ export default function DonationForm() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-[#fdf6ec] p-6 space-y-6 md:space-y-0 md:space-x-22 mt-10">
+    <div className="flex flex-col md:flex-row justify-center items-center  bg-[#fdf6ec] px-4 py-10 gap-8">
       {/* Donate from India */}
       <motion.div
-        className="bg-white p-6 md:p-8 rounded-[30px] md:rounded-[50px] shadow-lg w-full max-w-[584px] h-auto md:h-[700px] border border-gray-200 content-center"
+        className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg w-full max-w-[584px] md:max-w-[400px] lg:max-w-[584px]  border border-gray-200 flex flex-col justify-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center ">
-          Donate from India
-        </h2>
+        <div>
+          <h2 className="text-[28px] lg:text-[40px] font-semibold font-primary text-[#592Ac7] text-center">
+            Donate from India
+          </h2>
+          <p className="text-gray-600 text-center mt-3 text-[15px] lg:text-[17px] leading-relaxed font-secondary">
+            Donations made from this channel are processed through the Auroville
+            Unity Fund account.
+          </p>
 
-        <p className="text-gray-600 mt-3 text-center text-[16px] md:text-[18px] leading-relaxed">
-          Donations made from this channel are processed through the Auroville
-          Unity Fund account.
-        </p>
-
-        <div className="p-4 md:p-6 rounded-lg mt-4">
-          <h3 className="text-[16px] md:text-[18px] font-semibold text-[#592Ac7] text-start">
-            On the donation page, kindly follow these steps:
-          </h3>
-          <ul className="text-gray-700 mt-2 list-disc pl-5 text-start text-[15px] md:text-[16px] leading-relaxed">
-            <li>
-              Select <strong>'For Indian Donors'</strong> tab in Donation Page.
-            </li>
-            <li>Fill up your details.</li>
-            <li>
-              Select <strong>'Yuvabe'</strong> under projects.
-            </li>
-          </ul>
+          <div className="mt-6 mx-6">
+            <h3 className="text-[16px] lg:text-[18px] font-semibold font-secondary text-[#592Ac7] text-center lg:text-start">
+              On the donation page, kindly follow these steps:
+            </h3>
+            <ul className="text-gray-700 mt-2 list-disc pl-5 text-[15px] lg:text-[16px] leading-relaxed text-center lg:text-start font-secondary">
+              <li>
+                Select <strong>'For Indian Donors'</strong> tab in Donation
+                Page.
+              </li>
+              <li>Fill up your details.</li>
+              <li>
+                Select <strong>'Yuvabe'</strong> under projects.
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className="flex justify-center mt-6">
+        <div className="flex flex-col items-center gap-4 mt-6">
           <a
             href="https://donate.auroville.org/"
-            className="bg-[#592AC7] text-white text-center font-semibold py-3 px-6 w-2/3 md:w-1/2 rounded-lg shadow-md transition-all hover:bg-[#4a22a5]"
+            className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 w-2/3 lg:w-1/2 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5]"
           >
             Donate to Yuvabe
           </a>
+          <p className="text-gray-500 text-[18px] text-center px-2 font-secondary">
+            Kindly contact{" "}
+            <a
+              href="mailto:donations@auroville.org.in"
+              className="text-[#592Ac7] underline font-medium"
+            >
+              donations@auroville.org.in
+            </a>{" "}
+            for tax-exempt receipt or compliance info.
+          </p>
         </div>
-
-        <p className="text-gray-500 text-[15px] md:text-[18px] mt-4 text-center px-4">
-          Kindly contact{" "}
-          <a
-            href="mailto:donations@auroville.org.in"
-            className="text-[#592Ac7] underline font-medium"
-          >
-            donations@auroville.org.in
-          </a>{" "}
-          for tax-exempt receipt or for information on how to comply with
-          applicable regulations.
-        </p>
       </motion.div>
 
       {/* Donate from Anywhere */}
       <motion.div
-        className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] h-auto md:h-[700px]"
+        className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] md:max-w-[400px] lg:max-w-[550px]  h-[650px] flex flex-col justify-start"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-[32px] md:text-[48px] font-semibold text-[#592Ac7] text-center ">
+        <h2 className="text-[24px] lg:text-[40px] font-semibold font-primary text-[#592Ac7] text-center mb-4">
           Donate from Anywhere
         </h2>
 
-        {/* FundraiseUp Widget */}
-        <a href="#XJLHERLT" className=""></a>
+        <div className="flex-1 flex items-center justify-center">
+          {/* Replace this placeholder with actual widget if needed */}
+          <a
+            href="#XJLHERLT"
+            className="w-full h-full border border-dashed border-gray-300 rounded-lg flex items-center justify-center text-gray-400 text-sm"
+          >
+            FundraiseUp Widget Placeholder
+          </a>
+        </div>
       </motion.div>
     </div>
   );
