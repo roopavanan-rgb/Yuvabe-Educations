@@ -147,7 +147,7 @@ const Header = () => {
     <header className="bg-white/95 shadow-lg shadow-gray-300 w-full px-3 sm:px-6 md:px-10 lg:px-14 xl:px-18 top-0 left-0 z-50 backdrop-blur-lg sticky">
       <nav className="flex items-center justify-between py-3">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex flex-col items-center">
           <Link href="/">
             <Image
               src="/logo.svg"
@@ -158,6 +158,7 @@ const Header = () => {
               style={{ width: "auto", height: "auto" }}
             />
           </Link>
+          <h2 className="Font-primary font-semibold text-[16px] ">Yuvabe Education</h2>
         </div>
 
         {/* Mobile Menu Controls */}

@@ -24,10 +24,12 @@ const Footer = () => {
         {/* Left Section */}
         <div>
           <img
-            src="/images/foot.png"
+            src="/images/footer.svg"
             alt="Yuvabe Education"
-            className="w-70 mb-12"
+            className="w-20"
           />
+          <h2 className="font-primary font-semibold mt-2">Yuvabe Education</h2>
+          <p className="font-secondary text-[12px]">A social initiative by Yuvabe, Auroville Foundation</p>
           <div className="mt-6 space-y-6 text-gray-700">
             <p className="flex items-center space-x-2">
               <IoMailSharp className="text-lg text-black" />
@@ -86,30 +88,46 @@ const Footer = () => {
         {/* Middle Section - Links */}
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <h3 className="font-bold font-primary text-gray-900 mb-3">About Us</h3>
+            <h3 className="font-bold font-primary text-gray-900 mb-3">
+              About Us
+            </h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/about-us" className="font-regular font-primary hover:underline">
+                <Link
+                  href="/about-us"
+                  className="font-regular font-primary hover:underline"
+                >
                   Who We Are?
                 </Link>
               </li>
               <li>
-                <Link href="/about-us#our-impact" className="font-regular font-primary hover:underline">
+                <Link
+                  href="/about-us#our-impact"
+                  className="font-regular font-primary hover:underline"
+                >
                   Our Impact
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="font-bold font-primary text-gray-900 mb-3">Programs</h3>
+            <h3 className="font-bold font-primary text-gray-900 mb-3">
+              Programs
+            </h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/steam/about-steam" className="font-regular font-primary hover:underline">
+                <Link
+                  href="/steam/about-steam"
+                  className="font-regular font-primary hover:underline"
+                >
                   STEAM Program
                 </Link>
               </li>
               <li>
-                <Link href="/bridge/about" className="font-regular font-primary hover:underline">
+                <Link
+                  href="/bridge/about"
+                  className="font-regular font-primary hover:underline"
+                >
                   Bridge Program
                 </Link>
               </li>
@@ -120,15 +138,23 @@ const Footer = () => {
         {/* Right Section - Links */}
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <h3 className="font-bold font-primary text-gray-900 mb-3">Resources</h3>
+            <h3 className="font-bold font-primary text-gray-900 mb-3">
+              Resources
+            </h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/blogs" className="font-regular font-primary hover:underline">
+                <Link
+                  href="/blogs"
+                  className="font-regular font-primary hover:underline"
+                >
                   Blogs
                 </Link>
               </li>
               <li>
-                <Link href="/stories/newsletters" className="font-regular font-primary hover:underline">
+                <Link
+                  href="/stories/newsletters"
+                  className="font-regular font-primary hover:underline"
+                >
                   Newsletter
                 </Link>
               </li>
@@ -143,10 +169,15 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold font-primary text-gray-900 mb-3">Contact Us</h3>
+            <h3 className="font-bold font-primary text-gray-900 mb-3">
+              Contact Us
+            </h3>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <Link href="/get-involved/join-us" className="font-regular font-primary hover:underline">
+                <Link
+                  href="/get-involved/join-us"
+                  className="font-regular font-primary hover:underline"
+                >
                   Join Us
                 </Link>
               </li>
