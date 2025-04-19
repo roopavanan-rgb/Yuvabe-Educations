@@ -19,6 +19,18 @@ interface NewsletterItem {
 // Array of newsletter data
 const newslettersData: NewsletterItem[] = [
   {
+    id: 16,
+    title: "YUVABEAT",
+    subtitle: "STEAMing with Possibilities!",
+    month: "April",
+    year: "2025",
+    description:
+      "The past two months at YUVABeat were filled with meaningful moments, from igniting young minds to celebrating community spirit. Highlights included the 4th STEAM Fest, where families, students, and educators came together for a day of playful learning and collaboration.",
+    imageUrl: "../images/newsletters/steamfest-2025.jpeg",
+    linkUrl:
+      "https://mailchi.mp/dd3683237f14/steaming-with-possibilities-6747887",
+  },
+  {
     id: 15,
     title: "YUVABEAT",
     subtitle: "Embracing fresh beginnings!",
