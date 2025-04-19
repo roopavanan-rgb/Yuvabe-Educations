@@ -152,13 +152,13 @@ const Header = () => {
             <Image
               src="/logo.svg"
               alt="Logo"
-              width={isMobile ? 40 : 50}
-              height={isMobile ? 40 : 50}
+              width={isMobile ? 30 : 40}
+              height={isMobile ? 30 : 40}
               priority
               style={{ width: "auto", height: "auto" }}
             />
           </Link>
-          <h2 className="Font-primary font-semibold text-[16px] ">Yuvabe Education</h2>
+          <h2 className="Font-primary font-semibold text-[16px] mt-2 ">Yuvabe Education</h2>
         </div>
 
         {/* Mobile Menu Controls */}
