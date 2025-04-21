@@ -10,32 +10,28 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ monthData }) => {
   const daysOfWeek = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
   return (
-    <div className="bg-white rounded-xl p-4 flex flex-col h-full">
-      <h3 className="text-lg font-semibold text-center mb-2">
+    <div className="bg-white rounded-2xl p-6 shadow-lg flex flex-col h-full min-h-[300px]">
+      <h3 className="text-center text-xl font-semibold text-[#592AC7] mb-2">
         {monthData.month}
       </h3>
 
-      <div className="grid grid-cols-7 gap-1 mb-1">
+      <div className="grid grid-cols-7 gap-2 text-xs font-medium text-center text-gray-500 mb-1">
         {daysOfWeek.map((day) => (
-          <div
-            key={day}
-            className="text-xs text-gray-500 font-medium text-center"
-          >
-            {day}
-          </div>
+          <div key={day}>{day}</div>
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-1 flex-grow">
+      <div className="grid grid-cols-7 gap-2 flex-grow text-center text-sm">
         {monthData.days.map((day, idx) => (
           <div
             key={idx}
             className={cn(
-              "calendar-day text-xs",
+              "h-8 flex items-center justify-center rounded-md",
+              day.day === 0 ? "text-transparent" : "",
               day.active && day.highlight
-                ? "highlight"
+                ? "bg-purple-300 text-white"
                 : day.active
-                ? "active"
+                ? "bg-[#592AC7] text-white"
                 : "text-gray-400"
             )}
           >
@@ -45,16 +41,10 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ monthData }) => {
       </div>
 
       {monthData.dates && (
-        <div className="mt-2 text-xs text-gray-600 text-center">
+        <div className="mt-3 text-xs text-gray-600 text-center">
           {monthData.dates.start} to {monthData.dates.end}
         </div>
       )}
-
-      {monthData.month === "May" || monthData.month === "Jun" ? (
-        <div className="mt-2 text-xs text-gray-600 text-center italic">
-          Holiday
-        </div>
-      ) : null}
     </div>
   );
 };
