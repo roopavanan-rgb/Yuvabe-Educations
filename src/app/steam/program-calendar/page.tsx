@@ -67,12 +67,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-18">
+    <div className="min-h-screen bg-gray-50 md:pt-18">
       <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-8">
           <h1
-            className="text-4xl md:text-6xl font-bold text-[#592AC7] animate-fade-in-up"
-            style={{ fontSize: "64px" }}
+            className="text-3xl md:text-6xl font-semibold font-primary text-[#592AC7] "
+            
           >
             Steam program calender 2025
           </h1>
@@ -88,23 +88,29 @@ const Index = () => {
               className="h-[1250px] overflow-y-auto pr-4 space-y-4"
             >
               {filteredPrograms.map((program) => (
-                <ProgramCard
-                  key={program.id}
-                  program={program}
-                  isActive={activeProgram?.id === program.id}
-                  onClick={() => handleProgramClick(program)}
-                />
+                <div key={program.id}>
+                  <ProgramCard
+                    program={program}
+                    isActive={activeProgram?.id === program.id}
+                    onClick={() => handleProgramClick(program)}
+                  />
+
+                  {/* 📱 Mobile: show calendar inline with card */}
+                  <div className="lg:hidden">
+                    {activeProgram?.id === program.id && (
+                      <div className="mt-4">
+                        <ProgramCalendar program={activeProgram} />
+                      </div>
+                    )}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
 
           {/* Calendar Section */}
-          <div
-            className={cn(
-              "lg:w-full bg-[#592AC7] rounded-2xl p-6 transition-all duration-500 ",
-              activeProgram ? "opacity-100" : "opacity-80"
-            )}
-          >
+          {/* 🖥️ Desktop calendar */}
+          <div className="hidden lg:block lg:w-full bg-[#592AC7] rounded-2xl p-6 transition-all duration-500">
             <ProgramCalendar program={activeProgram} />
           </div>
         </div>

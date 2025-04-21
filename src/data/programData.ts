@@ -2,26 +2,48 @@
 import { Program } from '@/types/programs';
 
 // Helper function to generate calendar days for a month
-const generateMonth = (month: string, active: number[], highlight: number[] = [], dates?: { start: string; end: string }) => {
-  const totalDays = 31; // For simplicity, assume all months have 30 days
-  const days = Array.from({ length: totalDays }, (_, i) => ({
-    day: i + 1,
-    active: active.includes(i + 1),
-    highlight: highlight.includes(i + 1)
-  }));
+const generateMonth = (
+  month: string,
+  active: number[],
+  highlight: number[] = [],
+  dates?: { start: string; end: string }
+) => {
+  const monthIndex = new Date(`${month} 1, 2025`).getMonth();
+  const year = 2025;
+
+  const firstDay = new Date(year, monthIndex, 1).getDay(); // 0-6
+  const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+
+  const days: { day: number; active: boolean; highlight?: boolean }[] = [];
+
+  // Fill leading empty days
+  for (let i = 0; i < firstDay; i++) {
+    days.push({ day: 0, active: false });
+  }
+
+  // Fill actual days
+  for (let i = 1; i <= daysInMonth; i++) {
+    days.push({
+      day: i,
+      active: active.includes(i),
+      highlight: highlight.includes(i),
+    });
+  }
 
   return {
     month,
     days,
-    dates
+    dates,
   };
 };
+
+
 
 export const programsData: Program[] = [
   {
     id: '1',
     name: 'Deepanam School',
-    description: 'Providing STEAM Education To Auroville Bio-Region Schools',
+    description: 'Experience how Deepanam School brings STEAM to life.',
     type: 'Full Year Program',
     location: 'Auroville, Tamil Nadu',
     status: 'active',
@@ -43,7 +65,7 @@ export const programsData: Program[] = [
   {
     id: '2',
     name: 'NESS School',
-    description: 'Providing STEAM Education To Auroville Bio-Region Schools',
+    description: 'Experience how NESS School brings STEAM to life.',
     type: 'Full Year Program',
     location: 'Auroville, Tamil Nadu',
     status: 'active',
@@ -65,7 +87,7 @@ export const programsData: Program[] = [
   {
     id: '3',
     name: 'Weekend Program',
-    description: 'Providing STEAM Education To Auroville Bio-Region Schools',
+    description: 'Weekends are where curiosity takes center stage!',
     type: 'One Session/Week',
     location: 'Auroville, Tamil Nadu',
     status: 'upcoming',
@@ -87,8 +109,8 @@ export const programsData: Program[] = [
   {
     id: '4',
     name: 'Steam Fest',
-    description: 'providing STEAM education to Auroville ',
-    type: 'One month preparation',
+    description: 'a celebration of creativity, where students and mentors showcase projects and explore ideas! ',
+    type: 'Annual Event',
     location: 'bio- region schools',
     status: 'upcoming',
     calendar: [
@@ -109,7 +131,7 @@ export const programsData: Program[] = [
   {
     id: '5',
     name: "Visitor Program",
-    description: 'providing STEAM education to Auroville',
+    description: 'an interactive opportunity for guests to explore innovative projects and engage with students and mentors.',
     type: 'Full year Program',
     location: 'bio- region schools',
     status: 'completed',
@@ -131,7 +153,7 @@ export const programsData: Program[] = [
   {
     id: '6',
     name: "Seasonal STEAM Camps",
-    description: 'providing STEAM education to Auroville',
+    description: 'Immersive, hands-on learning experiences where students explore STEAM through fun, seasonal projects and activities.',
     type: 'Only on School Holidays',
     location: 'bio- region schools',
     status: 'completed',
@@ -153,7 +175,7 @@ export const programsData: Program[] = [
   {
     id: '7',
     name: "Sustainability Program",
-    description: 'Providing STEAM education to Auroville',
+    description: 'This sparks creativity by combining science, tech, engineering, arts, and math to empower students to design innovative solutions for a greener, more sustainable future.',
     type: 'Two months',
     location: 'bio- region schools',
     status: 'completed',
@@ -175,7 +197,7 @@ export const programsData: Program[] = [
    {
     id: '8',
     name: "STEAM Kit Development",
-    description: 'Providing STEAM education to Auroville',
+    description: 'This program designs hands-on, interactive kits enabling students to explore concepts through engaging, self-guided projects.',
     type: 'Full Year',
     location: 'bio- region schools',
     status: 'completed',
