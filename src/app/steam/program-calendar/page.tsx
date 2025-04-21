@@ -72,7 +72,7 @@ const Index = () => {
         <header className="text-center mb-8">
           <h1
             className="text-3xl md:text-6xl font-semibold font-primary text-[#592AC7] "
-            style={{ fontSize: "64px" }}
+            
           >
             Steam program calender 2025
           </h1>
