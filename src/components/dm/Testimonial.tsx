@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function StudentTestimonial() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-white overflow-x-hidden">
+    <section className="w-full py-12 bg-[#140F20] text-white overflow-hidden">
      <div className="w-[50px] h-[50px] translate-x-[870px] translate-y-8 blur-2xl border-rounded-full bg-[radial-gradient(circle,_rgba(105,176,189,1)_20%,_rgba(48,81,87,1)_100%)]"></div>
 
       {/* Title */}

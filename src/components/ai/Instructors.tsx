@@ -16,11 +16,11 @@ export function Instructors() {
           </div>
           {/* Content */}
           <div className="text-left max-w-xl">
-          <h3 className="text-[70px] font-sans font-extrabold uppercase stroke-text-violet">
+            <h3 className="text-[70px] font-sans font-extrabold uppercase stroke-text-violet">
               ANUPAMA
             </h3>
             <p className="text-sm md:text-base mt-4 font-normal font-sans">
-              AI/ML Expert, with over 25 years of experience architecting and delivering transformative AI/ML and digital solutions 
+              AI/ML Expert, with over 25 years of experience architecting and delivering transformative AI/ML and digital solutions
               for startups and large enterprises across India, Europe, Singapore, and the USA.
             </p>
             {/* LinkedIn Icon */}
@@ -41,9 +41,9 @@ export function Instructors() {
           </div>
           {/* Content */}
           <div className="text-left max-w-xl">
-          <h3 className="text-[70px] font-sans font-extrabold uppercase stroke-text-yellow">
-            VIMAL
-          </h3>
+            <h3 className="text-[70px] font-sans font-extrabold uppercase stroke-text-yellow">
+              VIMAL
+            </h3>
 
             <p className="text-sm md:text-base mt-4 font-normal font-sans">
               AI/ML and Data Science leader with over 15 years of deep architectural expertise and full-stack innovation.
@@ -57,19 +57,19 @@ export function Instructors() {
         </div>
       </div>
 
-{/* Get Ready to Build Section */}
-<section className="py-16 px-4 bg-[#0C2F47] text-white text-center mt-24">
-<div className="max-w-5xl mx-auto">
-<div className="absolute text-5xl -left-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-60"></div>
-  {/* Title */}
-  <h3 className="text-3xl md:text-4xl font-bold font-raleway">Get Ready to Build</h3>
+      {/* Get Ready to Build Section */}
+      <section className="py-16 px-4 bg-[#0C2F47] text-white text-center mt-24">
+        <div className="max-w-5xl mx-auto">
+          <div className="absolute text-5xl -left-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-60"></div>
+          {/* Title */}
+          <h3 className="text-3xl md:text-4xl font-bold font-raleway">Get Ready to Build</h3>
 
-  {/* Description */}
-  <p className="mt-4 text-lg text-white font-sans font-bold">
-    During the internship, you’ll work on projects like building a Natural Language Processing (NLP) chatbot for customer service or creating an AI-driven recommendation engine. Each project is designed to give you hands-on experience in AI problem-solving, preparing you for real-world scenarios.
-  </p>
-</div>
-</section>
-</section>
-);
+          {/* Description */}
+          <p className="mt-4 text-lg text-white font-sans font-bold">
+            During the internship, you’ll work on projects like building a Natural Language Processing (NLP) chatbot for customer service or creating an AI-driven recommendation engine. Each project is designed to give you hands-on experience in AI problem-solving, preparing you for real-world scenarios.
+          </p>
+        </div>
+      </section>
+    </section>
+  );
 }

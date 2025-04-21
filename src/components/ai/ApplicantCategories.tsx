@@ -44,7 +44,7 @@ export function ApplicantCategories() {
           </div>
 
           {/* Gradient Glow Circle */}
-          <div className="absolute right-50  w-[300px] h-[300px] blur-2xl opacity-30 bg-gradient-to-r from-[#394BBD] to-[#A339BD] -translate-y-24" />
+          <div className="absolute center w-[300px] h-[300px] blur-2xl opacity-30 bg-gradient-to-r from-[#394BBD] to-[#A339BD] -translate-y-24" />
 
           {/* Card 3 */}
           <div className="relative bg-[#0F3956] p-6 md:p-8 rounded-2xl border border-[#58AEE9] shadow-lg max-w-md text-left flex flex-col gap-4">

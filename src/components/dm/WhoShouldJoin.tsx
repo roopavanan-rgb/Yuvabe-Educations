@@ -19,7 +19,7 @@ const joinCategories = [
 
 export function WhoShouldJoin() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-[#FFFFFF] overflow-x-hidden">
+    <section className="w-full py-12 bg-[#140F20] text-[#FFFFFF] overflow-hidden">
       <div className="absolute left-10 blur-3xl w-90 h-90 rounded-full bg-[#976346] opacity-15"></div>
       {/* Title */}
       <h2 className="text-3xl font-semibold text-center mb-12">

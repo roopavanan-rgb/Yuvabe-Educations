@@ -23,7 +23,7 @@ const HowToApply = () => {
             </p>
           </div>
         </div>
-        <div className="absolute -right-60 -bottom-30 blur-3xl w-80 h-80 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-60 "></div>
+        <div className="absolute -right-60 bottom-30 blur-3xl w-80 h-80 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-60 "></div>
 
 
         {/* Step 2 */}
@@ -60,18 +60,18 @@ const HowToApply = () => {
 
       {/* Join the AI/ML Revolution Card */}
       <div className=" mt-16 p-8 border border-[#58AEE9] rounded-3xl text-center max-w-4xl mx-auto">
-        <div className="absolute -left-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-30"></div>
+      
         <h3 className="text-2xl font-bold">Join the AI/ML Revolution!</h3>
         <p className="mt-4 text-base max-w-2xl mx-auto">
           Gain the skills, network, and experience you need to stand out in the competitive AI and ML fields. Apply now and be part of a program that transforms careers.
         </p>
-        <div className="absolute right-80 bottom-80 blur-3xl w-96 h-96 rounded-full bg-gradient-to-r from-[#394BBD] to-[#A339BD] opacity-15"></div>
+        <div className="absolute right-80 bottom-80 blur-3xl w-96 h-96 rounded-full bg-gradient-to-r from-[#394BBD] to-[#A339BD] opacity-15 pointer-events-none"></div>
 
-        {/* <div className="mt-6 flex justify-center space-x-4"> */}
+
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-8">
           <Button
             size="lg"
-            className="bg-white text-black"
+            className="bg-white text-black hover:bg-[#58AEE9]"
             onClick={() => window.open("https://docs.google.com/forms/d/1je4Sg2PuywkvdQj2B-g7hEAFPy3wapcVlitbeff8IPY/viewform?edit_requested=true", "_blank")}
           >
             APPLY NOW
@@ -80,7 +80,7 @@ const HowToApply = () => {
           <Button
             size="lg"
             variant="outline"
-            className="gap-2 border-white bg-[#0C2A41]"
+            className="gap-2 border-white bg-[#0C2A41] hover:bg-blue-950"
             onClick={() => window.open("https://www.yuvabe.com/_files/ugd/92aaf3_255bf92fe9ee43929a2fb1dc40ced226.pdf", "_blank")}
           >
             DOWNLOAD BROCHURE

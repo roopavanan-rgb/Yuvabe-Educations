@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function ContactUs() {
   return (
-    <section className="relative w-full py-12 bg-[#140F20] text-white text-center overflow-x-hidden">
+    <section className="relative w-full py-12 bg-[#140F20] text-white text-center overflow-hidden">
       {/* Gradient Effect */}
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-radial from-[#964B00] via-[#FF0] to-transparent opacity-60 blur-5xl"></div>
       {/* Heading */}

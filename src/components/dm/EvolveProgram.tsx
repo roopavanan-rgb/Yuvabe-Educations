@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function EvolveProgram() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-white text-center overflow-x-hidden">
+    <section className="w-full py-12 bg-[#140F20] text-white text-center overflow-hidden">
       {/* Title */}
       <h2 className="text-3xl font-bold text-[#FFCA2D] mb-8">
         What Is The EVOLVE Program?

@@ -43,7 +43,7 @@ const benefits = [
 
 export function WhyChoose() {
   return (
-    <section className="relative w-full py-16 bg-[#140F20] text-white overflow-x-hidden">
+    <section className="relative w-full py-16 bg-[#140F20] text-white overflow-hidden">
       <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-20">
         Why Choose This Course?
       </h2>

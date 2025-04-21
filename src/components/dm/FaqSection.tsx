@@ -88,7 +88,7 @@ const faqs = [
 
 export default function FaqSection() {
   return (
-    <section className=" bg-[#140F20] py-16 px-6 bg-background text-center overflow-x-hidden">
+    <section className=" bg-[#140F20] py-16 px-6 bg-background text-center overflow-hidden">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}

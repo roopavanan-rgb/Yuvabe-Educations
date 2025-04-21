@@ -88,14 +88,14 @@ const faqs = [
     question: "Do you offer group discounts for organisations or institutions?",
     answer: "Yes. Please call or email us for further information.\nEmail:bridge@yuvabe.com \nMobile: 9677604467 (9am - 5pm)"
   }
-  
-  
+
+
 ];
 
 export default function FaqSection() {
   return (
     <section className="py-16 px-6 bg-[#0C2F47] text-center">
-      <div className="absolute -right-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-30"></div>
+      <div className="absolute -right-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full  bg-[#3991BD] opacity-30"></div>
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}

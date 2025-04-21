@@ -1,62 +1,3 @@
-// "use client";
-
-// import { ModuleCard } from "@/components/ModuleCard";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
-// const modules = [
-//   { title: "Introduction to Digital Marketing", description: "Fundamentals, scope, and industry trends.", icon: "/icons/idm.png" },
-//   { title: "Website & Blog Creation ", description: "Building a strong online presence.", icon: "/icons/wbc.png" },
-//   { title: "Digital Marketing Landscape", description: "Navigating evolving strategies and channels.", icon: "/icons/dml.png" },
-//   { title: "Behavioral Marketing", description: "Understanding consumer psychology and targeting.", icon: "/icons/bm.png" },
-//   { title: "Search Engine Optimization (SEO)", description: "Boosting organic visibility and rankings.", icon: "/icons/seo.png" },
-//   { title: "Search Engine Marketing (SEM) ", description: " Paid search strategies for maximum reach.", icon: "/icons/sem.png" },
-//   { title: "Social Media & Content Strategies", description: "Engaging customers, building brand advocacy, and crafting compelling messages.", icon: "/icons/smcs.png" },
-//   { title: "Email Marketing", description: "Leveraging personalization for customer engagement.", icon: "/icons/em.png" },
-//   { title: "Mobile Marketing", description: "Capturing audiences in the mobile-first era.", icon: "/icons/mm.png" },
-//   { title: "Brand Design & Strategy", description: "Crafting a compelling brand identity.", icon: "/icons/bds.png" },
-//   { title: "AI in Digital Marketing ", description: " Harnessing automation and emerging technologies.", icon: "/icons/ai.png" },
-//   { title: "Analytics & ROI Optimization ", description: "Measuring success and refining strategies.", icon: "/icons/ao.png" },
-// ];
-
-// export function ModulesSlider() {
-//   const settings = {
-//     dots: false,
-//     infinite: true,
-//     speed: 6000,        // Speed of scrolling
-//     slidesToShow: 4,    // Show 4 cards at a time
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 0,   // Continuous scrolling
-//     cssEase: "linear",  // Smooth motion
-//     pauseOnHover: false,
-//   };
-
-//   return (
-//     <section className="w-full py-12 bg-[#140F20] mt-14">
-//       <div className="absolute center -bottom-90  blur-3xl w-70 h-70 rounded-full bg-[#FFA6A6] opacity-15"></div>
-//       <h2 className="text-3xl text-center font-raleway font-semibold text-[#FFCA2D] mb-16">
-//         12 Immersive Modules
-//       </h2>
-
-//       <Slider {...settings} className="px-6">
-//         {modules.map((module, index) => (
-//           <div key={index}>
-//             <ModuleCard
-//               title={module.title}
-//               description={module.description}
-//               icon={module.icon}
-//             />
-//           </div>
-//         ))}
-//       </Slider>
-//     </section>
-//   );
-// }
-
-
-
 "use client";
 
 import { ModuleCard } from "@/components/dm/ModuleCard";
@@ -114,7 +55,7 @@ export function ModulesSlider() {
   };
 
   return (
-    <section className="w-full py-12 bg-[#140F20] overflow-x-hidden">
+    <section className="w-full py-12 bg-[#140F20] overflow-hidden">
       {/* Background circle */}
       <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-20 blur-3xl w-72 h-72 rounded-full bg-[#FFA6A6] opacity-15 z-0"></div>
 

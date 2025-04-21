@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import { AboutCourse } from "@/components/dm/AboutCourse";
 import { AdditionalLearnings } from "@/components/dm/AdditionalLearnings";
 import { ContactUs } from "@/components/dm/ContactUs";
@@ -19,7 +18,7 @@ import { WhyChoose } from "@/components/dm/WhyChoose";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-hidden">
       <Hero />
       <AboutCourse />
       <ModulesSlider />

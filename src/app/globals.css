@@ -21,10 +21,10 @@
     gap: 6px;
   }
 
-  /*   Overflow Hidden */
-  /* html,body{
+    /* Overflow Hidden */
+  html,body{
    overflow-x: hidden;
-    } */
+    }
   .calendar-day {
     width: 32px;
     height: 32px;

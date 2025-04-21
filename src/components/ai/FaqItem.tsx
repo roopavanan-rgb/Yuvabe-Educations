@@ -10,17 +10,17 @@ interface FaqItemProps {
   isLast?: boolean;
 }
 
-export default function FaqItem({ question, answer, isLast = false  }: FaqItemProps) {
+export default function FaqItem({ question, answer, isLast = false }: FaqItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="border border-[#58AEE9] rounded-lg overflow-hidden">
-     
+
       {/* Question */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full text-left px-6 py-4 flex justify-between items-center 
-                   bg-[#0F3956] hover:bg-primary/30 transition"
+                   bg-[#0F3956] hover:bg-[#58AEE9]/30 transition"
       >
         <span className="text-lg font-semibold text-white">{question}</span>
         <motion.span
@@ -39,15 +39,14 @@ export default function FaqItem({ question, answer, isLast = false  }: FaqItemPr
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0, ease: "easeInOut" }}
-            className={`px-6 py-4 bg-[#0F3956] text-[#FFFFFF] text-left ${
-              isLast ? "whitespace-pre-line" : ""
-            }`}
+            className={`px-6 py-4 bg-[#0F3956] text-[#FFFFFF] text-left ${isLast ? "whitespace-pre-line" : ""
+              }`}
           >
             {answer}
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-    
+
   );
 }
