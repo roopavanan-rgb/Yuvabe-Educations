@@ -20,7 +20,7 @@ const logos = [
   "/images/clientlogo/play.webp",
   "/images/clientlogo/agastya.webp",
   "/images/clientlogo/ness.webp",
-  "/images/clientlogo/c3stream.png"
+  "/images/clientlogo/c3stream.png",
 ];
 
 const settings = {
@@ -34,17 +34,17 @@ const settings = {
   responsive: [
     {
       breakpoint: 1024,
-      settings: { slidesToShow: 3 }
+      settings: { slidesToShow: 3 },
     },
     {
       breakpoint: 768,
-      settings: { slidesToShow: 2 }
+      settings: { slidesToShow: 2 },
     },
     {
       breakpoint: 480,
-      settings: { slidesToShow: 2 }
-    }
-  ]
+      settings: { slidesToShow: 2 },
+    },
+  ],
 };
 
 const courses = [
@@ -58,7 +58,7 @@ const courses = [
     arrowColor: "bg-[#33BED4]",
     borderColor: "border-[#33BED4]",
     bgColor: "bg-[#33BED4]/10",
-    link: "/bridge/ai"
+    link: "/bridge/ai",
   },
   {
     title: "Sustainability",
@@ -70,7 +70,7 @@ const courses = [
     arrowColor: "bg-[#91C644]",
     borderColor: "border-[#91C644]",
     bgColor: "bg-[#91C644]/10",
-    link: "/bridge/sustainability"
+    link: "/bridge/sustainability",
   },
   {
     title: "Digital Marketing",
@@ -82,21 +82,20 @@ const courses = [
     arrowColor: "bg-[#FFCA2D]",
     borderColor: "border-[#FFCA2D]",
     bgColor: "bg-[#FFCA2D]/10",
-    link: "/bridge/digital-marketing"
+    link: "/bridge/digital-marketing",
   },
   {
     title: "UI/UX Design",
     status: "Active",
-    image:
-      "https://acquisitioninternational.digital/wp-content/uploads/2021/09/UI-UX-Design.jpg",
+    image: "/images/home/UI-UX-Design.jpg",
     description:
       "Our UI/UX program delivers top-tier design thinking education...",
     tagColor: "bg-purple-600",
     arrowColor: "bg-pink-400",
     borderColor: "border-pink-400",
     bgColor: "bg-pink-100",
-    link: "/bridge/ui-ux"
-  }
+    link: "/bridge/ui-ux",
+  },
 ];
 
 export default function Home() {
@@ -177,8 +176,8 @@ export default function Home() {
               hidden: { opacity: 0 },
               visible: {
                 opacity: 1,
-                transition: { staggerChildren: 0.2 }
-              }
+                transition: { staggerChildren: 0.2 },
+              },
             }}
           >
             <Slider {...settings}>
@@ -191,7 +190,7 @@ export default function Home() {
                   transition={{
                     duration: 0.6,
                     ease: "easeOut",
-                    delay: index * 0.1
+                    delay: index * 0.1,
                   }}
                 >
                   <Image
@@ -279,7 +278,7 @@ export default function Home() {
                   transition={{
                     duration: 2,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: "easeInOut",
                   }}
                 ></motion.div>
               </div>
@@ -307,7 +306,7 @@ export default function Home() {
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             ></motion.div>
 
@@ -420,7 +419,7 @@ export default function Home() {
                 transition={{
                   duration: 2,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
               ></motion.div>
             </div>
@@ -570,7 +569,7 @@ export default function Home() {
                     duration: 2,
                     repeat: Infinity,
                     repeatType: "reverse",
-                    ease: "easeInOut"
+                    ease: "easeInOut",
                   }}
                 />
                 <Image
@@ -623,7 +622,7 @@ export default function Home() {
                   transition={{
                     duration: 2,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: "easeInOut",
                   }}
                 ></motion.div>
               </div>
@@ -658,7 +657,7 @@ export default function Home() {
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 3 }
+              1280: { slidesPerView: 3 },
             }}
             autoplay={{ delay: 4000 }}
             className="w-full"
