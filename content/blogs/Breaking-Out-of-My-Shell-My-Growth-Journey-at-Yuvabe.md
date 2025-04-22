@@ -1,5 +1,5 @@
 ---
-title: "Breaking Out of My Shell: My Growth Journey at Yuvabe"
+title: 'Breaking Out of My Shell: My Growth Journey at Yuvabe'
 featuredImage: /images/blogs/9153b2_306d734fe77844499e1710703df3a9dc~mv2.avif
 excerpt: >-
   In this compelling blog post, Logasundari shares her inspiring journey from a
@@ -19,11 +19,11 @@ tags:
   - work
 ---
 
-#### In this compelling blog post, Logasundari shares her inspiring journey from a digital marketing novice to a confident project leader at Yuvabe. From overcoming personal challenges to leading major projects, her story is a testament to growth, resilience, and the power of embracing new opportunities. Dive into her inspiring evolution and see how Yuvabe became the catalyst for her professional and personal development.
+*In this compelling blog post, Logasundari shares her inspiring journey from a digital marketing novice to a confident project leader at Yuvabe. From overcoming personal challenges to leading major projects, her story is a testament to growth, resilience, and the power of embracing new opportunities. Dive into her inspiring evolution and see how Yuvabe became the catalyst for her professional and personal development.*
 
-Hello, I'm Logasundari from the Auroville Bioregion. With a Bachelor's degree in Commerce ([B.Com](http://B.Com)) and currently pursuing my Master’s in Human Resource Management, I initially joined Yuvabe with just a basic grasp of digital marketing. What began as a modest start has evolved into a journey of significant personal and professional growth. Here’s a glimpse into my transformation and the incredible experiences I've had along the way.
+Hello, I'm Logasundari from the Auroville Bioregion. With a Bachelor's degree in Commerce (B.Com) and currently pursuing my Master’s in Human Resource Management, I initially joined Yuvabe with just a basic grasp of digital marketing. What began as a modest start has evolved into a journey of significant personal and professional growth. Here’s a glimpse into my transformation and the incredible experiences I've had along the way.
 
-![](/images/blogs/9153b2_306d734fe77844499e1710703df3a9dc~mv2.avif)
+![](/images/blogs/9153b2_306d734fe77844499e1710703df3a9dc~mv2.avif#md-left)
 
 #### From Hesitant Beginnings to Confident Leadership
 
@@ -37,9 +37,9 @@ One of the biggest challenges for me was interacting with people of different ge
 
 #### Memorable Projects and Learning Experiences
 
-Among the many experiences at Yuvabe, [Project 365](https://www.youtube.com/watch?v=yz2ksYMFzT8&t=128s) and the [Auroville Marathon](https://www.instagram.com/p/C5LzTCUhO1D/) stand out. In Project 365, we posted content daily on Instagram and Facebook, along with publishing a blog. The daily routine of content creation and management was intense, but it taught me resilience and the ability to manage high-pressure tasks effectively. Krishna Mckenzie was pleased with my contributions, and that was a significant boost to my confidence.
+Among the many experiences at Yuvabe, [Project 365](https://www.youtube.com/watch?v=yz2ksYMFzT8\&t=128s) and the [Auroville Marathon](https://www.instagram.com/p/C5LzTCUhO1D/) stand out. In Project 365, we posted content daily on Instagram and Facebook, along with publishing a blog. The daily routine of content creation and management was intense, but it taught me resilience and the ability to manage high-pressure tasks effectively. Krishna Mckenzie was pleased with my contributions, and that was a significant boost to my confidence.
 
-![](/images/blogs/9153b2_f0d46d03c3d04582b38a1f1e60d8acb1~mv2.avif)
+![](/images/blogs/9153b2_f0d46d03c3d04582b38a1f1e60d8acb1~mv2.avif#lg-center)
 
 The 14th[ Auroville Marathon](https://www.instagram.com/aurovillemarathon/) was another highlight. I began by managing their social media and ended up overseeing the volunteer management for the entire event. Coordinating over 300 volunteers and promoting the event digitally with my team was challenging but immensely rewarding.
 
@@ -47,7 +47,7 @@ The 14th[ Auroville Marathon](https://www.instagram.com/aurovillemarathon/) was 
 
 One of my recent favourite roles has been participating in and facilitating the Bridge program, which aims to up-skill bio-region youth. Speaking for two hours with only a brief break was a new experience for me, but it has been incredibly educational and fulfilling.
 
-![](/images/blogs/9153b2_969b23f1e1024a29913f95087e73e922~mv2.avif)
+![](/images/blogs/9153b2_969b23f1e1024a29913f95087e73e922~mv2.avif#md-left)
 
 #### Signing off
 

@@ -13,6 +13,7 @@ interface BlogPost {
   excerpt: string;
   featuredImage?: string;
   category?: string[];
+  imagePosition?: string;
 }
 
 const POSTS_PER_PAGE = 9;
@@ -27,11 +28,9 @@ const predefinedCategories = [
   "partnerships",
 ];
 
-export default async function BlogsPage(
-  props: {
-    searchParams: Promise<{ [key: string]: string | undefined }>;
-  }
-) {
+export default async function BlogsPage(props: {
+  searchParams: Promise<{ [key: string]: string | undefined }>;
+}) {
   const searchParams = await props.searchParams;
   const page = parseInt(searchParams.page || "1", 10);
   const category = searchParams.category;
@@ -51,12 +50,13 @@ export default async function BlogsPage(
         datePublished: data.datePublished || "Unknown date",
         excerpt: data.excerpt || "",
         featuredImage: data.featuredImage,
+        imagePosition: data.imagePosition || "center", // Default if not provided
         category: data.category || [],
       };
     });
 
   const filteredPosts =
-    category && category !== "all-categories"
+    category && category !== "all-posts"
       ? allPosts.filter(
           (post) =>
             Array.isArray(post.category) && post.category.includes(category)
@@ -85,27 +85,27 @@ export default async function BlogsPage(
   const uniqueSortedCategories = predefinedCategories.filter((cat) =>
     categoriesSet.has(cat)
   );
-  const categories = ["all-categories", ...uniqueSortedCategories];
+  const categories = ["all-posts", ...uniqueSortedCategories];
 
   const formatCategory = (cat: string) =>
     cat.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 
   return (
-    <main>
+    <>
       <div className="bg-color py-32">
-        <div className="max-w-[1028px] flex flex-col m-auto  px-5 xl:px-0">
+        <div className="max-w-[1240px] flex flex-col m-auto  px-5 xl:px-0">
           {/* Category Filter */}
-          <div className="flex flex-wrap gap-3 mb-10 z-10">
+          <div className="flex flex-wrap gap-4 mb-8 md:mb-16 lg:mb-32 z-10 mx-auto">
             {categories.map((cat) => {
-              const isActive = (category || "all-categories") === cat;
+              const isActive = (category || "all-posts") === cat;
               return (
                 <Link
                   key={cat}
                   href={`/stories/blogs?category=${cat}`}
-                  className={`px-4 py-2 rounded-full text-sm font-medium border capitalize ${
+                  className={`px-4 py-2 rounded-[30px] text-[16px] font-medium capitalize font-primary ${
                     isActive
                       ? "bg-[#592AC7] text-white"
-                      : "bg-white text-[#592AC7] border-[#592AC7]"
+                      : "bg-[#F1F1F1] text-black"
                   }`}
                 >
                   {formatCategory(cat)}
@@ -115,10 +115,10 @@ export default async function BlogsPage(
           </div>
 
           {/* Blog Cards */}
-          <div className="flex flex-wrap justify-start gap-x-6 gap-y-16 blog-list-block relative">
+          <div className="max-w-[1028px] m-auto flex flex-wrap justify-start gap-x-6 gap-y-16 blog-list-block relative">
             {currentPosts.map((post) => {
               const displayCategory = Array.isArray(post.category)
-                ? category && category !== "all-categories"
+                ? category && category !== "all-posts"
                   ? post.category.find((c) => c === category) ??
                     post.category[0]
                   : predefinedCategories.find((c) =>
@@ -141,12 +141,15 @@ export default async function BlogsPage(
                         alt={post.title}
                         width={247.7}
                         height={163.02}
-                        className="border-radius-1240 blog-list-image w-full mb-[22.5px] h-64 max-h-64 object-cover"
+                        className="border-radius-1240 blog-list-image w-full mb-[22.5px] h-64 max-h-64 object-cover xl:w-[247.7px] xl:h-[163.02px]"
+                        style={{
+                          objectPosition: post.imagePosition || "center",
+                        }}
                       />
                     )}
                     <div className="flex flex-col gap-y-[7.19px]">
                       {displayCategory && (
-                        <div className="px-3 py-1 rounded-full text-xs font-semibold bg-[#EEEFFB] text-[#592AC7] w-fit mb-2 capitalize">
+                        <div className="px-[15.06px] py-[7.53px] rounded-[28.24px] text-[15.06px] font-semibold bg-[#592AC7] text-white group-hover:text-[#592AC7] group-hover:bg-white w-fit mb-5 capitalize">
                           {formatCategory(displayCategory)}
                         </div>
                       )}
@@ -162,6 +165,15 @@ export default async function BlogsPage(
                 </div>
               );
             })}
+
+            {Array.from({ length: POSTS_PER_PAGE - currentPosts.length }).map(
+              (_, i) => (
+                <div
+                  key={`placeholder-${i}`}
+                  className="invisible flex flex-col items-start p-10 gap-[22.59px] w-full sm:w-[48%] xl:[flex-basis:calc(33.333%-16px)] min-h-[450px]"
+                ></div>
+              )
+            )}
 
             {/* SVG Background Shapes */}
             <div className="svgs">
@@ -204,7 +216,7 @@ export default async function BlogsPage(
                 viewBox="0 0 234 262"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute lg:bottom-[-10%] bottom-[-5%] left-[-2%] scale-50 xl:scale-100"
+                className="absolute lg:bottom-[-2%] xl:bottom-0 bottom-0 left-[-2%] scale-50 lg:scale-100"
               >
                 <path
                   d="M233.362 0.140296L221.129 261.443L0.950294 120.197L233.362 0.140296Z"
@@ -226,28 +238,138 @@ export default async function BlogsPage(
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex justify-center gap-2 mt-16">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                <Link
-                  key={p}
-                  href={`/stories/blogs?page=${p}${
-                    category && category !== "all-categories"
-                      ? `&category=${category}`
-                      : ""
-                  }`}
-                  className={`px-4 py-2 rounded-md border text-sm ${
-                    p === page
-                      ? "bg-[#592AC7] text-white"
-                      : "bg-white text-[#592AC7] border-[#592AC7]"
-                  }`}
+            <div className="flex justify-center items-center gap-6 md:gap-12 lg:gap-24 mt-2 md:mt-12 xl:mt-4">
+              {/* Previous Page */}
+              <Link
+                href={
+                  page > 1
+                    ? `/stories/blogs?page=${page - 1}${
+                        category && category !== "all-categories"
+                          ? `&category=${category}`
+                          : ""
+                      }`
+                    : "#"
+                }
+                className={page === 1 ? "pointer-events-none opacity-50" : ""}
+                aria-disabled={page === 1}
+              >
+                <svg
+                  width="63"
+                  height="63"
+                  viewBox="0 0 63 63"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  {p}
-                </Link>
-              ))}
+                  <circle
+                    cx="31"
+                    cy="31"
+                    r="31"
+                    transform="matrix(-1 0 0 1 62.3203 0.0644531)"
+                    fill={page === 1 ? "#D9D9D9" : "#592AC7"}
+                  />
+                  <path
+                    d="M37.9062 19.1055L24.7251 31.1701L37.9062 43.0267"
+                    stroke={page === 1 ? "black" : "white"}
+                    strokeWidth="3.5942"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+
+              {/* Next Page */}
+              <Link
+                href={
+                  page < totalPages
+                    ? `/stories/blogs?page=${page + 1}${
+                        category && category !== "all-categories"
+                          ? `&category=${category}`
+                          : ""
+                      }`
+                    : "#"
+                }
+                className={
+                  page === totalPages ? "pointer-events-none opacity-50" : ""
+                }
+                aria-disabled={page === totalPages}
+              >
+                <svg
+                  width="63"
+                  height="63"
+                  viewBox="0 0 63 63"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="31.9766"
+                    cy="31.0645"
+                    r="31"
+                    fill={page === totalPages ? "#D9D9D9" : "#592AC7"}
+                  />
+                  <path
+                    d="M25.3906 19.1055L38.5717 31.1701L25.3906 43.0267"
+                    stroke={page === totalPages ? "black" : "white"}
+                    strokeWidth="3.5942"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
             </div>
           )}
         </div>
       </div>
-    </main>
+      {/* Form */}
+
+      <div className="bg-white py-[128px]">
+        <div className="max-w-[1240px] flex flex-row m-auto justify-between gap-10 flex-wrap xl:flex-nowrap px-5">
+          {/* Left Form */}
+
+          <div className="flex flex-col gap-10 xl:w-[44%] w-full">
+            <h2 className="font-primary text-[40px] font-normal">
+              For more inspiring stories, subscribe to{" "}
+              <strong>
+                YUVABEAT,
+                <br />
+              </strong>
+              Yuvabe's monthly newsletter
+            </h2>
+
+            <form
+              action=""
+              className="flex flex-row gap-x-[18.58px] flex-wrap md:flex-nowrap gap-y-4"
+            >
+              <input
+                type="text"
+                name="email"
+                id=""
+                placeholder="Enter Your Email"
+                className="rounded-[25.92px] bg-[#F1F1F1] py-[15.48px] px-[34.05px] font-primary text-[13.93px] font-normal leading-[150%] placeholder-black w-full xl:w-[67%]"
+              />
+
+              <button
+                type="submit"
+                value=""
+                className="rounded-[25.92px] py-[15.48px] px-10  font-primary text-[13.93px] font-semibold leading-[150%] bg-[#592AC7] text-white w-full xl:w-1/3"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          {/* Right Image*/}
+
+          <div className="xl:w-[54%] flex xl:justify-end w-full justify-center">
+            <img
+              src="\images\blogs\Lady-typing.png"
+              alt=""
+              width={644.39}
+              height={382.01}
+              className="scale-100 xl:scale-75"
+            />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

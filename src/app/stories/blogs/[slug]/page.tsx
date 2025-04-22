@@ -88,8 +88,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { frontmatter, content } = post;
 
   return (
-    <div className="bg-color py-32">
-      <div className="max-w-[1240px] flex flex-col m-auto gap-y-4 px-4">
+    <div className="bg-color py-32 blog-single">
+      <div className="max-w-[1240px] flex flex-col m-auto gap-y-4  px-5 md:px-8 xl:px-0">
         {/* Date & Reading Time */}
         <div className="flex flex-row gap-x-2 justify-center">
           <p className="font-secondary text-[18px]">
@@ -106,7 +106,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
 
         {/* Title */}
-        <h1 className="text-[#592AC7] text-[48px] leading-[120%] font-semibold text-center">
+        <h1 className="text-[#592AC7] text-3xl md:text-4xl lg:text-5xl leading-[120%] font-semibold text-center font-primary">
           {frontmatter.title}
         </h1>
 
