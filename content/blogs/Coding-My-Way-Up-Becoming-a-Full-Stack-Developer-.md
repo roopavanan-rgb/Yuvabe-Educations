@@ -1,5 +1,5 @@
 ---
-title: "Coding My Way Up: Becoming a Full Stack Developer"
+title: 'Coding My Way Up: Becoming a Full Stack Developer'
 isfeaturedpost: true
 featuredImage: /images/blogs/b8068d_a540e33db2d3428a961162aa66a5d1e9~mv2.jpg
 imagePosition: center 20%
@@ -28,7 +28,7 @@ Growing up, I was always fascinated by adventure and exploration. I love to trav
 
 During my undergraduate years, I befriended a peer who was skilled in both development and design. Through them, I found an unexpected interest in programming. I started building my foundation in programming, and as my interest grew, I dedicated more time to learning and applying new coding concepts. By the time I reached my master’s program, I was confidently coding in Python and creating frontend elements. I even took on the challenge of developing a website independently, which ignited my curiosity about web development.
 
-![](/images/blogs/b8068d_a540e33db2d3428a961162aa66a5d1e9~mv2.jpg#md-left)
+![Madhan Raj, programmer at Yuvabe.](/images/blogs/b8068d_a540e33db2d3428a961162aa66a5d1e9~mv2.jpg#md-left)
 
 ### Taking the First Steps
 
@@ -38,7 +38,7 @@ My initial job post-graduation was as a Graphic Designer. While it was a good st
 
 At Yuvabe, I was introduced to the Frappe framework, a new and initially daunting tool that opened doors to understanding advanced development practices. Tackling Frappe’s framework architecture was challenging, but it deepened my knowledge in frontend, backend, and even DevOps. My learning accelerated as I worked on live projects, gaining firsthand experience with ERPNext and even integrating it with WooCommerce. This project gave me invaluable insights into ERP systems and allowed me to develop a testing website with WordPress, broadening my skill set.
 
-![](/images/blogs/b8068d_6464d27fd8cd49f89a22364580bd7528~mv2.webp#lg-center)
+![Madhan Raj working on the ERP and Frappe at Yuvabe](/images/blogs/b8068d_6464d27fd8cd49f89a22364580bd7528~mv2.webp#lg-center)
 
 ### A Major Milestone
 
@@ -48,7 +48,7 @@ One of the most pivotal projects I worked on was CEBA (Common ERP Backbone for A
 
 At Yuvabe, we follow a motto: “Work, Serve, and Evolve.” While Yuvabe has equipped me with technical expertise, it has also given me opportunities to give back to the community. One of my most memorable experiences has been teaching robotics to school children. Passing on my knowledge to these young, curious minds has not only been fulfilling but has also helped me evolve personally, giving me a broader sense of purpose and impact.
 
-![](/images/blogs/b8068d_3591d46c8b0949ef94d2a2cf269dbae4~mv2.jpg#md-right)
+![Madhan teaching at Deepanam School of Auroville](/images/blogs/b8068d_3591d46c8b0949ef94d2a2cf269dbae4~mv2.jpg#md-right)
 
 ### Forging Ahead: Anticipating New Horizons
 

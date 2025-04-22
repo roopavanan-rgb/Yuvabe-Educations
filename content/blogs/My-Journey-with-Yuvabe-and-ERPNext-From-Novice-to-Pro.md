@@ -1,5 +1,5 @@
 ---
-title: "My Journey with Yuvabe and ERPNext: From Novice to Pro"
+title: 'My Journey with Yuvabe and ERPNext: From Novice to Pro'
 featuredImage: /images/blogs/4c1519_f7998d7185a54069bf60d38d8c798fca~mv2.avif
 excerpt: >-
   Yuvabe alumnus Jaganath takes us through his rapid transformation at Yuvabe;
@@ -24,7 +24,7 @@ Hi! I'm Jaganath from Pondicherry. My journey began with my uncle Ramesh introdu
 
 After my interview with Sriman, I began my role as a business analyst on January 2nd, 2023. On my very first day I was introduced to enterprise resource planning and the ERPNext software.
 
-![](/images/blogs/4c1519_f7998d7185a54069bf60d38d8c798fca~mv2.avif)
+![Jaganth at Yuvabe, Auroville](/images/blogs/4c1519_f7998d7185a54069bf60d38d8c798fca~mv2.avif#md-right)
 
 ## Learning the Ropes of ERPNext
 
@@ -32,7 +32,7 @@ As a fresh graduate, I of course had no idea what was ERPNext. Over the next thr
 
 This hands-on experience allowed me to face clients confidently, provide them training, and understand their perspectives on our products. It was a steep learning curve, with problem-solving alongside diverse people and mentors.
 
-![](/images/blogs/4c1519_02c1ef8604ce4ccc916803ec3a608569~mv2.avif)
+![Jaganath along with the ERP team at Yuvabe, Auroville](/images/blogs/4c1519_02c1ef8604ce4ccc916803ec3a608569~mv2.avif#lg-center)
 
 Optimizing Processes: ERPNext for Auroville's Units
 
@@ -42,7 +42,7 @@ One of my most memorable moments at Yuvabe was during those late-night sessions 
 
 ## A Journey of Discovery, Collaboration, and Team Bonding
 
-![](/images/blogs/4c1519_b5a66582c52348d28806f7f956c05eba~mv2.avif)
+![Jaganath, working on Auroville's Svaram's ERP system](/images/blogs/4c1519_b5a66582c52348d28806f7f956c05eba~mv2.avif#md-left)
 
 For this project, our team embarked on the discovery process, going across Auroville, understanding each unit's workflows. We explored various environments, interacted with different people, and sampled diverse foods!—experiences that I believe couldn't be matched elsewhere.
 
@@ -58,7 +58,7 @@ In the end, despite facing numerous struggles and disappointments, we learned ex
 
 My journey with Yuvabe was not just about professional growth; it was also about service. I volunteered in the community solar kitchen along with facilitating STEAM classes at Deepanam. Yuvabe’s Work. Serve. Evolve philosophy resonates deeply with me, as it emphasises not only professional excellence and community service but also continuous personal growth.
 
-![](/images/blogs/4c1519_252b154f5cf145279dc260a8d5b3b88a~mv2.avif)
+![Jaganath at STEAM Fest, Auroville](/images/blogs/4c1519_252b154f5cf145279dc260a8d5b3b88a~mv2.avif#md-right)
 
 ## Gratitude and Looking Ahead
 

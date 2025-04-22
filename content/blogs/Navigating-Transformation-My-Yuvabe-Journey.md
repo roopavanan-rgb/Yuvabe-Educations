@@ -1,5 +1,5 @@
 ---
-title: "Navigating Transformation: My Yuvabe Journey"
+title: 'Navigating Transformation: My Yuvabe Journey'
 featuredImage: /images/blogs/9153b2_b292c10912fa4828a7aa33ff4fed99e0~mv2.avif
 excerpt: >-
   A heartfelt account of a Yuvabe alumni where he talks about discovering his
@@ -19,7 +19,7 @@ tags:
 
 A heartfelt account of a Yuvabe alumni where he talks about discovering his passion, overcoming adversity, and thriving in a supportive workspace.
 
-![](/images/blogs/9153b2_b292c10912fa4828a7aa33ff4fed99e0~mv2.avif)
+![Photo of Yuvabe alumini Balamurgan](/images/blogs/9153b2_b292c10912fa4828a7aa33ff4fed99e0~mv2.avif#lg-center)
 
 Let me introduce myself: I am Balamurugan. My journey with Yuvabe as an ERPNext Consultant has been nothing short of transformative.
 
@@ -27,7 +27,7 @@ Before joining Yuvabe, I spent nearly five years in hardware sales, navigating t
 
 The onset of the COVID-19 pandemic brought unprecedented chaos, affecting me personally as I battled the virus and spent a harrowing week in isolation. It was a wake-up call that prompted me to reassess my priorities and eventually led to my decision to leave Chennai and return home.
 
-![](/images/blogs/9153b2_03810be36ad140b5aa4c52851c9d0084~mv2.avif)
+![Yuvabe alumini Balamurugan at his work desk](/images/blogs/9153b2_03810be36ad140b5aa4c52851c9d0084~mv2.avif#md-right)
 
 However, fate had other plans. On my journey back, I narrowly escaped a car accident unscathed, reaffirming my resolve to find a career that fulfilled me.
 
@@ -39,7 +39,7 @@ Time flew by as I immersed myself in projects and tasks, and within two years, I
 
 Yuvabe's ethos of "WORK SERVE EVOLVE" resonated deeply with me. Beyond professional growth, I engaged in community service initiatives like beach cleanups and Mataram, further enriching my experience.
 
-![](/images/blogs/9153b2_2f242708d8044af591792499bf2c0250~mv2.avif)
+![Yuvabe alumini Balamurugan and others at a beach cleanup](/images/blogs/9153b2_2f242708d8044af591792499bf2c0250~mv2.avif#lg-center)
 
 The workplace environment at Yuvabe was not just conducive to productivity but also prioritised holistic well-being. Personal challenges melted away in the comfort of a customised workspace, and regular fireside sessions and workshops provided invaluable insights into emotional management and personal development.
 

@@ -141,6 +141,7 @@ export default async function BlogsPage(props: {
                         alt={post.title}
                         width={247.7}
                         height={163.02}
+                        unoptimized
                         className="border-radius-1240 blog-list-image w-full mb-[22.5px] h-64 max-h-64 object-cover xl:w-[247.7px] xl:h-[163.02px]"
                         style={{
                           objectPosition: post.imagePosition || "center",
@@ -153,7 +154,7 @@ export default async function BlogsPage(props: {
                           {formatCategory(displayCategory)}
                         </div>
                       )}
-                      <h2 className="font-primary font-semibold leading-[24.45px] text-[18.83px] group-hover:text-white">
+                      <h2 className="font-primary font-semibold leading-[24.45px] text-[18.83px] group-hover:text-white line-clamp-3">
                         {post.title}
                       </h2>
                       <p
@@ -259,6 +260,7 @@ export default async function BlogsPage(props: {
                   viewBox="0 0 63 63"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="scale-50 md:scale-75 lg:scale-100"
                 >
                   <circle
                     cx="31"
@@ -299,6 +301,7 @@ export default async function BlogsPage(props: {
                   viewBox="0 0 63 63"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="scale-50 md:scale-75 lg:scale-100"
                 >
                   <circle
                     cx="31.9766"
@@ -321,12 +324,12 @@ export default async function BlogsPage(props: {
       </div>
       {/* Form */}
 
-      <div className="bg-white py-[128px]">
+      {/* <div className="bg-white py-[128px]">
         <div className="max-w-[1240px] flex flex-row m-auto justify-between gap-10 flex-wrap xl:flex-nowrap px-5">
-          {/* Left Form */}
+          Left Form
 
           <div className="flex flex-col gap-10 xl:w-[44%] w-full">
-            <h2 className="font-primary text-[40px] font-normal">
+            <h2 className="font-primary text-3xl md:text-4xl lg:text-[40px] font-normal">
               For more inspiring stories, subscribe to{" "}
               <strong>
                 YUVABEAT,
@@ -357,7 +360,7 @@ export default async function BlogsPage(props: {
             </form>
           </div>
 
-          {/* Right Image*/}
+          Right Image
 
           <div className="xl:w-[54%] flex xl:justify-end w-full justify-center">
             <img
@@ -369,7 +372,7 @@ export default async function BlogsPage(props: {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
