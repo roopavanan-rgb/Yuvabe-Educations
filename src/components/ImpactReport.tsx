@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ImpactReport() {
   return (
-    <div className="container mx-auto px-6 lg:px-12 py-16 overflow-hidden">
+    <div className="container mx-auto px-6 lg:px-12 py-24 overflow-hidden">
       {/* Title - Centered */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}

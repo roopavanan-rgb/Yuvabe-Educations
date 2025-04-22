@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function TransformationJourney() {
   return (
-    <section className="flex flex-col items-center justify-center px-6 md:px-16 py-12 bg-[#FDF8EE]">
+    <section className="flex flex-col items-center justify-center px-6 md:px-16 py-24 bg-[#FDF8EE]">
       <h2 className="text-2xl md:text-[48px] lg:text-[64px] font-semibold font-primary text-black mb-24 text-center">
         Transformation Journey
       </h2>

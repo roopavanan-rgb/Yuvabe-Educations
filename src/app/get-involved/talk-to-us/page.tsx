@@ -71,7 +71,7 @@ export default function TalkToUsPage() {
             </motion.h1>
 
             <motion.p
-              className="mt-6 text-gray-600 text-[18px] font-secondary max-w-lg mx-auto lg:mx-0"
+              className="mt-6 text-[#000000] text-[18px] font-secondary max-w-lg mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
@@ -105,7 +105,7 @@ export default function TalkToUsPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-[#592AC7] py-16 px-4">
+      <section className="bg-[#592AC7] py-24 px-4">
         <div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-18">
           {/* Google Map */}
           <motion.div

@@ -96,13 +96,13 @@ const page = () => {
         </div>
       </section>
 
-      <section className="relative bg-white text-black py-16 px-6 md:px-12 lg:px-20">
+      <section className="relative bg-white text-black py-24 px-6 md:px-12 lg:px-20">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl md:text-4xl lg:text-[64px] font-semibold font-primary  text-center mb-12"
+          className="text-2xl md:text-4xl lg:text-[48px] font-semibold font-primary  text-center mb-12"
         >
           Enabling Educational Empowerment
         </motion.h2>
@@ -165,13 +165,13 @@ const page = () => {
         </div>
       </section>
 
-      <section className="bg-[#FEF9EC] text-black py-16 px-6 md:px-12 lg:px-20">
+      <section className="bg-[#FEF9EC] text-black py-24 px-6 md:px-12 lg:px-20">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-4xl lg:text-[64px] font-semibold font-primary text-center mb-4"
+          className="text-3xl md:text-4xl lg:text-[48px] font-semibold font-primary text-center mb-4"
         >
           Other Community Initiatives
         </motion.h2>
@@ -230,7 +230,7 @@ const page = () => {
         </motion.div>
       </section>
 
-      <section className="relative bg-[#5F2DC6] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+      <section className="relative bg-[#5F2DC6] text-white py-24 px-6 md:px-12 lg:px-20 overflow-hidden">
         {/* Background GIF */}
         <div className="absolute inset-0 flex justify-center items-center  ">
           <Image
@@ -248,7 +248,7 @@ const page = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl md:text-3xl lg:text-[64px] font-primary font-semibold text-center relative z-10"
+          className="text-2xl md:text-3xl lg:text-[40px] font-primary font-semibold text-center relative z-10"
         >
           Read more about our community <br /> activities in and around
           Auroville

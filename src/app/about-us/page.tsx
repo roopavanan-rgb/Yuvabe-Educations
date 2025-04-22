@@ -71,7 +71,7 @@ const AboutUs = () => {
     <div className="lg:min-w-[400px] bg-[#FFFFFF] text-[#000000]">
       <div className="max-w-[1240px] m-auto">
         {/* Hero Section */}
-        <section className="py-8 md:py-16 text-center px-4 md:px-0">
+        <section className="py-14 md:py-18 lg:py-24 text-center px-4 md:px-0">
           <motion.h1
             className="text-4xl md:text-6xl font-primary font-semibold text-[#592AC7]"
             initial={{ opacity: 0, y: 20 }}
@@ -135,7 +135,7 @@ const AboutUs = () => {
 
           {/* Description */}
           <motion.p
-            className="mt-6 text-lg md:text-xl text-[#000000] font-secondary"
+            className="mt-10 text-lg md:text-xl text-[#000000] font-secondary"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -242,7 +242,7 @@ const AboutUs = () => {
         <div className="flex flex-wrap justify-center gap-6 mt-8 px-4 md:px-8">
           {/* Card 1 */}
           <motion.div
-            className="bg-white shadow-md rounded-xl p-6 w-full sm:w-[280px] min-h-[250px] flex flex-col lg:items-start text-start items-center justify-center"
+            className="bg-gray-50 shadow-xl rounded-xl p-6 w-full sm:w-[280px] min-h-[250px] flex flex-col lg:items-start text-start items-center justify-center"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -264,7 +264,7 @@ const AboutUs = () => {
 
           {/* Card 2 */}
           <motion.div
-            className="bg-white shadow-md rounded-xl p-6 w-full sm:w-[280px] min-h-[250px] flex flex-col lg:items-start text-start items-center justify-center"
+            className="bg-gray-50 shadow-xl rounded-xl p-6 w-full sm:w-[280px] min-h-[250px] flex flex-col lg:items-start text-start items-center justify-center"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
@@ -287,7 +287,7 @@ const AboutUs = () => {
 
           {/* Card 3 */}
           <motion.div
-            className="bg-white shadow-md rounded-xl p-6 w-full sm:w-[280px] min-h-[250px] flex flex-col lg:items-start text-start items-center justify-center"
+            className="bg-gray-50 shadow-xl rounded-xl p-6 w-full sm:w-[280px] min-h-[250px] flex flex-col lg:items-start text-start items-center justify-center"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
@@ -310,7 +310,7 @@ const AboutUs = () => {
       </div>
 
       {/* Evolve Program */}
-      <section className="py-8 md:py-16 bg-[#FFF9EA] mt-24 px-4 md:px-24 text-center">
+      <section className="py-12 md:py-24 bg-[#FFF9EA] mt-24 px-4 md:px-24 text-center">
         <div className="max-w-[1240px] m-auto">
           {/* Title */}
           <motion.h2
@@ -432,7 +432,7 @@ const AboutUs = () => {
       </section>
 
       {/* Our Values Section */}
-      <section className="py-8 md:py-16 text-center  px-5 md:px-8 xl:px-0 overflow-hidden">
+      <section className="py-12 md:py-24 text-center  px-5 md:px-8 xl:px-0 overflow-hidden">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -472,7 +472,7 @@ const AboutUs = () => {
       <section
         id="our-impact"
         ref={impactSectionRef}
-        className="bg-[#592AC7] text-[#FFFFFF] py-8 md:py-16 text-center  px-5 md:px-8 xl:px-0 lg:scroll-mt-14"
+        className="bg-[#592AC7] text-[#FFFFFF] py-12 md:py-24 text-center  px-5 md:px-8 xl:px-0 lg:scroll-mt-14"
       >
         <div className="max-w-[1240px] m-auto">
           <motion.h2
@@ -545,7 +545,7 @@ const AboutUs = () => {
       </section>
 
       {/* SDGs Cards Section */}
-      <section className="py-8 md:py-16 bg-[#FEF8EE] text-center  px-5 md:px-8 xl:px-0">
+      <section className="py-12 md:py-24 bg-[#FEF8EE] text-center  px-5 md:px-8 xl:px-0">
         <motion.p
           className="text-[#000000] font-secondary mb-8"
           initial={{ opacity: 0, y: 50 }}
@@ -579,7 +579,7 @@ const AboutUs = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-8 md:py-16 text-center px-5 md:px-8 xl:px-0">
+      <section className="py-12 md:py-24 text-center px-5 md:px-8 xl:px-0">
         <h2 className="text-4xl md:text-5xl font-primary font-semibold mb-12">
           Testimonials
         </h2>
@@ -617,7 +617,7 @@ const AboutUs = () => {
       </section>
 
       {/* Support Cards Section */}
-      <section className="py-8 md:py-16 bg-[#FFF9EA] text-center  px-5 md:px-8 xl:px-0">
+      <section className="py-12 md:py-20 bg-[#FFF9EA] text-center  px-5 md:px-8 xl:px-0">
         <div className="max-w-[1240px] m-auto">
           <h2 className="text-4xl font-primary font-semibold mb-18">
             There are many ways in which you too can <br /> support the cause of
@@ -718,10 +718,10 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="max-w-2xl text-center md:text-left"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-[64px] font-primary font-semibold mb-6 text-center lg:text-left">
+            <h2 className="text-3xl md:text-5xl lg:text-[64px] font-primary font-semibold mb-6 text-center lg:text-left pl-16">
               Founding Partners
             </h2>
-            <p className="font-secondary text-[#FFFFFF] leading-[30px] text-center lg:text-left">
+            <p className="font-secondary text-[#FFFFFF] leading-[30px] text-center lg:text-left pl-16">
               Our unique partnership model with{" "}
               <strong>our founding partner Quilt.AI</strong> demonstrates how a
               global entity can support and empower a rural organisation,
@@ -750,7 +750,7 @@ const AboutUs = () => {
       {/* Image Section */}
 
       {/* What Is Quilt.AI Section */}
-      <section className="py-8 md:py-16 px-4 md:px-20 text-center bg-white">
+      <section className="py-12 md:py-24 px-12 md:px-48 text-center bg-white">
         <div className="max-w-[1240px] m-auto">
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 flex-wrap lg:flex-nowrap">
             {/* Text Content */}
@@ -794,8 +794,8 @@ const AboutUs = () => {
       </section>
 
       {/* Quilt Section */}
-      <section className="py-8 md:py-16 bg-[#FFF9EA] flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-6">
-        <div className="max-w-[1240px] m-auto flex flex-row justify-center lg:justify-between items-center flex-wrap lg:flex-nowrap gap-y-8 md:gap-y-16 gap-x-8">
+      <section className="py-8 md:py-16 bg-[#FFF9EA] flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-12 md:px-18">
+        <div className="max-w-[1240px] m-auto flex flex-row justify-center lg:justify-between items-center flex-wrap lg:flex-nowrap gap-y-8 md:gap-y-16 gap-x-48">
           {/* Image Container */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -861,7 +861,7 @@ const AboutUs = () => {
       </section>
 
       {/* Quilt.AI Info Section */}
-      <section className="bg-[#592AC7] text-[#FFFFFF] py-8 md:py-12 px-4 md:px-20">
+      <section className="bg-[#592AC7] text-[#FFFFFF] py-12 md:py-24 px-4 md:px-20">
         <div className="max-w-[1240px] m-auto">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8 flex-wrap lg:flex-nowrap justify-items-center">
             {/* Left Side - Text Content */}
@@ -918,7 +918,7 @@ const AboutUs = () => {
       </section>
 
       {/*Testimonials last*/}
-      <section className="py-8 md:py-12 px-4 md:px-6">
+      <section className="py-12 md:py-24 px-4 md:px-6">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -1010,9 +1010,9 @@ const AboutUs = () => {
       </section>
 
       {/* Together we worked with */}
-      <section className="bg-[#FFF9EA] py-8 md:py-10 px-4 md:px-6">
+      <section className="bg-[#FFF9EA] py-12 md:py-18 px-4 md:px-24">
         <div className="max-w-[1240px] m-auto">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-items-center">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-48 items-center justify-items-center">
             {/* Left Side - Text Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}

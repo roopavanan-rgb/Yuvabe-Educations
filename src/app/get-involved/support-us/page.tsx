@@ -56,7 +56,7 @@ export default function SupportUs() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-primary text-[#592Ac7] leading-snug">
             Support Us
           </h1>
-          <p className="mt-4 text-gray-700 font-secondary text-base sm:text-lg max-w-md sm:max-w-lg lg:max-w-xl">
+          <p className="mt-4 text-[#000000] font-secondary text-base sm:text-lg max-w-md sm:max-w-lg lg:max-w-xl">
             You have the power to fuel a program that’s more than just
             upskilling! Be part of something bigger, where growth isn’t just
             personal; it’s collective. Let’s build the future together!
@@ -91,11 +91,11 @@ export default function SupportUs() {
       </section>
 
       {/* Support Section */}
-      <section className="py-16 bg-[#FBF6EF] text-center">
-        <h2 className="text-xl md:text-4xl lg:text-[64px] font-semibold font-primary text-black mb-12">
+      <section className="py-24 bg-[#FBF6EF] text-center">
+        <h2 className="text-xl md:text-4xl lg:text-[48px] font-semibold font-primary text-black mb-12">
           Your contribution will help us support
         </h2>
-        <div className="flex flex-col md:flex-row justify-center gap-6 px-4 md:px-8 lg:px-12">
+        <div className="flex flex-col md:flex-row justify-center gap-6 py-4 px-4 md:px-8 lg:px-12">
           {cards.map((card, index) => (
             <motion.div
               key={index}
@@ -129,13 +129,13 @@ export default function SupportUs() {
       </section>
 
       {/* AVI-USA */}
-      <section className="flex flex-col items-center justify-center text-center py-16 bg-white">
+      <section className="flex flex-col items-center justify-center text-center py-24 bg-white">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-xl md:text-[40px] font-regular font-primary text-gray-800"
+          className="text-xl md:text-[40px] font-regular font-primary text-[#592AC7]"
         >
           We are grateful to AVI-USA for all their guidance and support
         </motion.h2>
@@ -161,7 +161,7 @@ export default function SupportUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="text-lg md:text-[40px] font-regular font-primary text-gray-700 max-w-6xl"
+          className="text-lg md:text-[40px] font-regular font-primary text-[#000000] max-w-6xl"
         >
           A big thank you to all our donors and sponsors who have been
           generously supporting us in our journey.

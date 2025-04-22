@@ -80,7 +80,7 @@ const page = () => {
       </section>
 
       {/* talks, workshops & health */}
-      <section className="relative bg-[#FDF7EB] py-24 px-6 lg:px-16 ">
+      <section className="relative bg-[#FDF7EB] pt-[120px] pb-[164px] px-6 lg:px-16 ">
         <div className="relative container max-w=[1240px] space-y-12 mx-auto items-center justify-center z-10 hidden lg:block ">
           {/* Expert Talks */}
           <motion.div
@@ -101,7 +101,7 @@ const page = () => {
               <h3 className="text-[24px] md:text-[48px] font-semibold font-primary text-[#592AC7] mx-2 md:mx-0 ">
                 Expert Talks
               </h3>
-              <p className="text-gray-600 text-[18px] mt-4 mx-2 md:mx-0 font-secondary font-normal">
+              <p className="text-[#000000] text-[18px] mt-4 mx-2 md:mx-0 font-secondary font-normal">
                 Auroville is a thriving laboratory of social and environmental
                 initiatives. We invite experts based in Auroville, who have come
                 from all over the world, from different walks of life, working
@@ -124,7 +124,7 @@ const page = () => {
               <h3 className="text-[24px] md:text-[48px] text-end md:text-start font-primary font-semibold text-[#592AC7]">
                 Workshops
               </h3>
-              <p className="text-gray-600 mt-4 text-end md:text-start font-secondary font-normal">
+              <p className="text-[#000000] mt-4 text-end md:text-start font-secondary font-normal">
                 By engaging in practical workshops, our team is able to discover
                 and grow not just as professionals but as people. These
                 workshops are an important aspect of our work towards our core
@@ -161,7 +161,7 @@ const page = () => {
               <h3 className="text-[24px] md:text-[48px] font-semibold font-primary text-[#592AC7] mx-2 md:mx-0">
                 Integral Health
               </h3>
-              <p className="text-gray-600 text-[18px] mt-4 mx-2 md:mx-0 font-secondary font-normal">
+              <p className="text-[#000000] text-[18px] mt-4 mx-2 md:mx-0 font-secondary font-normal">
                 By taking different approaches, we aspire to keep our youth
                 focused on health. From weekly cycling trips to yoga classes, as
                 well as collaborating with the community’s primary mental health
@@ -193,7 +193,7 @@ const page = () => {
                 <h3 className="text-[24px] md:text-[32px] font-semibold font-primary text-[#592AC7]">
                   Expert Talks
                 </h3>
-                <p className="text-gray-600 text-[16px] mt-4 font-secondary">
+                <p className="text-[#000000] text-[16px] mt-4 font-secondary">
                   Auroville is a thriving laboratory of social and environmental
                   initiatives. Experts from around the world share their
                   experience with our youth.
@@ -218,7 +218,7 @@ const page = () => {
                 <h3 className="text-[24px] md:text-[32px] font-semibold font-primary text-[#592AC7]">
                   Workshops
                 </h3>
-                <p className="text-gray-600 text-[16px] mt-4 font-secondary">
+                <p className="text-[#000000] text-[16px] mt-4 font-secondary">
                   Engaging in hands-on workshops allows our team to grow both
                   personally and professionally.
                 </p>
@@ -242,7 +242,7 @@ const page = () => {
                 <h3 className="text-[24px] md:text-[32px] font-semibold font-primary text-[#592AC7]">
                   Integral Health
                 </h3>
-                <p className="text-gray-600 text-[16px] mt-4 font-secondary">
+                <p className="text-[#000000] text-[16px] mt-4 font-secondary">
                   Through cycling, yoga, and mental health initiatives, we
                   support our youth’s holistic wellbeing.
                 </p>
@@ -311,7 +311,7 @@ const page = () => {
       </section>
 
       {/* Blogs */}
-      <section className="relative bg-[#5F2DC6] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+      <section className="relative bg-[#5F2DC6] text-white py-24 px-6 md:px-12 lg:px-20 overflow-hidden">
         {/* Background GIF */}
         <div className="absolute inset-0 flex justify-center items-center  ">
           <Image
@@ -329,9 +329,9 @@ const page = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl md:text-3xl lg:text-[64px] font-semibold font-primary text-center relative z-10"
+          className="text-2xl md:text-3xl lg:text-[40px] font-semibold font-primary text-center relative z-10"
         >
-          Read more about our team activities and workshops on Yuvabe blog
+          Read more about our team activities and workshops on<br/> Yuvabe blog
         </motion.h2>
 
         {/* Blog Cards */}

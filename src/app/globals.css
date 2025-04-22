@@ -22,10 +22,10 @@
   }
 
   /* Overflow Hidden */
-  html,
+  /* html,
   body {
     overflow-x: hidden;
-  }
+  } */
 
   .calendar-day {
     width: 32px;

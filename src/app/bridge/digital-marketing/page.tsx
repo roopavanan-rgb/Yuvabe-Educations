@@ -18,7 +18,7 @@ import { WhyChoose } from "@/components/dm/WhyChoose";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-x-hidden">
       <Hero />
       <AboutCourse />
       <ModulesSlider />
