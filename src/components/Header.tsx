@@ -124,7 +124,7 @@ const Header = () => {
     {
       label: "Our Stories",
       links: [
-        { name: "Blogs", path: "/stories/blogs" },
+        { name: "Blogs", path: "/stories/blog" },
         { name: "Newsletter", path: "/stories/newsletters" },
         {
           name: "Impact Report",

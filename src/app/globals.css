@@ -21,10 +21,12 @@
     gap: 6px;
   }
 
-  /*   Overflow Hidden */
-  /* html,body{
-   overflow-x: hidden;
-    } */
+  /* Overflow Hidden */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .calendar-day {
     width: 32px;
     height: 32px;
@@ -173,4 +175,113 @@
   -webkit-text-fill-color: transparent;
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
   opacity: 0.5;
+}
+
+article img {
+  border-radius:
+    20px;
+}
+
+article a {
+  color: #592AC7;
+  text-decoration: underline;
+}
+
+img[src$="#sm-left"],
+img[src$="#sm-right"],
+img[src$="#sm-center"] {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+}
+
+img[src$="#md-left"],
+img[src$="#md-right"],
+img[src$="#md-center"] {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px
+}
+
+img[src$="#lg-left"],
+img[src$="#lg-right"],
+img[src$="#lg-center"] {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px
+}
+
+@media (min-width: 768px) {
+
+  /* === sm (Small) === */
+  img[src$="#sm-left"] {
+    width: 150px;
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+  }
+
+  img[src$="#sm-right"] {
+    width: 150px;
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+  }
+
+  img[src$="#sm-center"] {
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    clear: both;
+  }
+
+  /* === md (Medium) === */
+  img[src$="#md-left"] {
+    width: 300px;
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+  }
+
+  img[src$="#md-right"] {
+    width: 300px;
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+  }
+
+  img[src$="#md-center"] {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    clear: both;
+  }
+
+  /* === lg (Large) === */
+  img[src$="#lg-left"] {
+    max-width: 600px;
+    width: 100%;
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+  }
+
+  img[src$="#lg-right"] {
+    max-width: 600px;
+    width: 100%;
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+  }
+
+  img[src$="#lg-center"] {
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    clear: both;
+  }
 }

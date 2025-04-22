@@ -18,7 +18,7 @@ const teamMembers = [
 
 export function OurTeam() {
   return (
-    <section className="w-full py-12 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 bg-[#140F20] text-white overflow-x-hidden">
+    <section className="w-full py-12 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 bg-[#140F20] text-white overflow-hidden">
       {/* Title */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-raleway font-semibold text-center text-[#FFCA2D] mb-4">
         Our Team

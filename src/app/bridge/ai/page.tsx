@@ -13,7 +13,7 @@ import HowToApply from "@/components/ai/HowToApply"
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-background  text-white">
+    <main className="relative min-h-screen bg-background  text-white overflow-hidden">
       <HeroSection />
       <WhatForYou />
       <WhatYouLearn/>

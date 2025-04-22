@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function AboutCourse() {
   return (
-    <section className="w-full flex justify-center py-8 bg-[#140F20] text-white overflow-x-hidden">
+    <section className="w-full flex justify-center py-8 bg-[#140F20] text-white overflow-hidden">
       <div className="absolute -left-60 -bottom-30 blur-3xl w-96 h-96 rounded-full bg-[#FFA6A6] opacity-15"></div>
 
       <motion.div

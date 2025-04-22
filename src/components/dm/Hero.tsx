@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-  <section className="relative w-full min-h-[80vh] bg-[#140F20] flex flex-col justify-center items-center text-center text-white overflow-x-hidden">
+  <section className="relative w-full min-h-[80vh] bg-[#140F20] flex flex-col justify-center items-center text-center text-white overflow-hidden">
   {/* Background Blur */}
   <div className="absolute -top-32 left-1/2 -translate-x-1/2 blur-3xl w-96 h-96 rounded-full bg-gradient-to-br from-[#976346] to-[#AF7E4F] opacity-20 z-0"></div>
 

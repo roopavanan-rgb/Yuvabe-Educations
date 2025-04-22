@@ -5,7 +5,7 @@ export function Outcomes() {
   return (
     <section className="py-16 px-4 bg-[#0C2F47] text-white overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-16 md:gap-32">
-      
+
         {/* Abstract Image (Left Side) */}
         <div className="flex-shrink-0 w-[200px] sm:w-[250px] md:w-[300px] h-auto flex justify-center md:justify-start">
           <Image

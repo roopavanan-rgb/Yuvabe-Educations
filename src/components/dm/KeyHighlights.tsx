@@ -37,7 +37,7 @@ const highlights = [
 
 export function KeyHighlights() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-white overflow-x-hidden">
+    <section className="w-full py-12 bg-[#140F20] text-white overflow-hidden">
       {/* Title */}
       <h2 className="text-3xl font-semibold font-raleway text-center text-[#FFCA2D] mb-12 mt-12">
         Key Highlights

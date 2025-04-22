@@ -5,10 +5,10 @@ export function ProgramOutcome() {
   return (
     <section className="py-16 px-4 bg-[#0C2F47] text-white overflow-hidden relative">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative">
-        
+
         {/* Card Container */}
         <div className="relative bg-[#0C2F47] p-12 md:p-16 rounded-3xl border border-[#58AEE9] shadow-lg w-full max-w-5xl overflow-hidden z-10">
-          
+
           {/* Background Rings - Positioned Bottom Left with Fading Effect */}
           <div className="absolute inset-0 pointer-events-none opacity-50">
             {[
@@ -42,8 +42,8 @@ export function ProgramOutcome() {
 
           {/* Program Description */}
           <p className="relative text-lg md:text-xl font-raleway font-semibold leading-relaxed text-white z-10">
-            "By the end of the program, you would have built an end-to-end application using Python technologies, 
-            learnt how to interface, integrate and fine-tune Large Language Models and Computer Vision Models, 
+            "By the end of the program, you would have built an end-to-end application using Python technologies,
+            learnt how to interface, integrate and fine-tune Large Language Models and Computer Vision Models,
             and completed your real-world capstone project."
           </p>
         </div>

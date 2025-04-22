@@ -29,7 +29,7 @@ export function WhatYouLearn() {
 
           {/* Timeline with Vertical Lines, Balls, and Content */}
           <div className="relative flex justify-between w-full max-w-5xl mx-auto mt-8">
-          <div className="absolute -right-60 bottom-12 blur-3xl w-96 h-96 rounded-full bg-[#3991BD] opacity-20"></div>
+            <div className="absolute -right-90 bottom-12 blur-3xl w-96 h-96 rounded-full bg-[#3991BD] opacity-20"></div>
 
             {/* Month 1 */}
             <div className="relative flex items-center w-1/3 flex-col">
