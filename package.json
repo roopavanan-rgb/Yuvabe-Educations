@@ -36,12 +36,7 @@
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.5",
     "tailwind-merge": "^3.0.2",
-<<<<<<< HEAD
-    "use-debounce": "^10.0.4"
-=======
-    "tailwindcss-animate": "^1.0.7",
-    "tinacms": "^2.7.5"
->>>>>>> e12d45b1fd005f2d6c25f926c9f3c9cfa8bb702b
+ 
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
