@@ -26,7 +26,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2025",
     description:
       "The past two months at YUVABeat were filled with meaningful moments, from igniting young minds to celebrating community spirit. Highlights included the 4th STEAM Fest, where families, students, and educators came together for a day of playful learning and collaboration.",
-    imageUrl: "../images/newsletters/steamfest-2025.jpeg",
+    imageUrl: "/images/newsletters/steamfest-2025.jpeg",
     linkUrl:
       "https://mailchi.mp/dd3683237f14/steaming-with-possibilities-6747887",
   },
@@ -38,7 +38,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2025",
     description:
       "As we step into the new year, we’re excited to share the latest updates from our team. From the launch of our latest AI-focused full-stack development Bridge Program to the formation of Yuvabe Studios, there’s much to look forward to this year.",
-    imageUrl: "../images/newsletters/news15.jpg",
+    imageUrl: "/images/newsletters/news15.jpg",
     linkUrl:
       "https://mailchi.mp/8dc7cf398728/embracing-fresh-beginnings-6746879",
   },
@@ -50,7 +50,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2024",
     description:
       "Thanksgiving reminds us to reflect on this year of growth, achievements, and the challenges that shaped us; Grateful for a successful Bridge Program, our growing alumni network, and as always the support of our donors!",
-    imageUrl: "../images/newsletters/news14.jpg",
+    imageUrl: "/images/newsletters/news14.jpg",
     linkUrl:
       "https://mailchi.mp/f1543f4e282e/happy-thanksgiving-from-yuvabe-6745300",
   },
@@ -62,7 +62,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2024",
     description:
       "August marks International Youth Day! We dedicate this issue of YuvaBeat to all our incredible youth who are shaping their own paths and leaving an indelible impact on both themselves and the world.!",
-    imageUrl: "../images/newsletters/news13.jpg",
+    imageUrl: "/images/newsletters/news13.jpg",
     linkUrl:
       "https://mailchi.mp/82fec867498a/celebrating-international-youth-day-6743897",
   },
@@ -74,7 +74,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2024",
     description:
       "We now have a brand new AI projects team! This month also marks the completion of our one year commitment to serve in Auroville's community kitchen, followed by a monsoon trip to Munnar!",
-    imageUrl: "../images/newsletters/news12.jpg",
+    imageUrl: "/images/newsletters/news12.jpg",
     linkUrl:
       "https://mailchi.mp/44151d0a0511/back-to-nature-back-to-life-6742830",
   },
@@ -86,7 +86,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2024",
     description:
       "This year, we’ve harnessed the potent power of storytelling to enhance the STEAM program! Plus, Bangalore-based STEM organization Playto has been training the full-time STEAM staff in robotics education.",
-    imageUrl: "../images/newsletters/news11.jpg",
+    imageUrl: "/images/newsletters/news11.jpg",
     linkUrl:
       "https://mailchi.mp/5ead4943b59d/back-to-nature-back-to-life-6733204",
   },
@@ -98,7 +98,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2024",
     description:
       "Introducing Yuvabe Bridge Program! A program to help skill and nurture youth (18-24 yrs), who are in the process of completing their education and looking for employment opportunities",
-    imageUrl: "../images/newsletters/news10.jpg",
+    imageUrl: "/images/newsletters/news10.jpg",
     linkUrl:
       "https://mailchi.mp/aba66041c1a8/back-to-nature-back-to-life-6719640",
   },
@@ -110,7 +110,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2024",
     description:
       "Yuvabe turns 3! A small team that began the journey 3 years ago today is a family of 50+ young adults and mentors. We extend our gratitude to all those who have been part of this journey",
-    imageUrl: "../images/newsletters/news9.jpg",
+    imageUrl: "/images/newsletters/news9.jpg",
     linkUrl:
       "https://mailchi.mp/ee2e05089af6/back-to-nature-back-to-life-6687320",
   },
@@ -122,7 +122,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2023",
     description:
       "It's truly heartening to witness the convergence of friendships forged in school, college, and beyond, uniting for a common cause — to support this meaningful project. Your generous gift helps the children across the Auroville Bio-region get access to STEAM education.",
-    imageUrl: "../images/newsletters/news8.png",
+    imageUrl: "/images/newsletters/news8.png",
     linkUrl: "https://mailchi.mp/eded9a2c220b/heres-what-you-helped-us-achieve",
   },
   {
@@ -133,7 +133,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2023",
     description:
       "As we gear up for the final quarter of 2023, we're filled with gratitude for the incredible journey we've shared together. This Thanksgiving, we want to express our sincere appreciation for your unwavering support, which has been instrumental in all our achievements this year.",
-    imageUrl: "../images/newsletters/news7.jpg",
+    imageUrl: "/images/newsletters/news7.jpg",
     linkUrl: "https://mailchi.mp/1b393619c84a/thankful-for-you-6648416",
   },
   {
@@ -144,7 +144,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2023",
     description:
       "Yuvabe co-founder Sriman Kota met with the team of AVI-USA as well as other friends of Auroville on a recent trip to Boston! It was an excellent occasion to present our ongoing STEAM program and explore fundraising strategies to expand its reach to a broader audience of children in the area!",
-    imageUrl: "../images/newsletters/news6.jpg",
+    imageUrl: "/images/newsletters/news6.jpg",
     linkUrl:
       "https://mailchi.mp/bd9165189f41/back-to-nature-back-to-life-6667088",
   },
@@ -156,7 +156,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2023",
     description:
       "Working in close proximity with nature is one of the biggest gifts of living in Auroville. Our team enjoys the privilege of collaborating with organic food and afforestation projects, as well as relish team outings amidst the enchanting landscapes of the East Coast.",
-    imageUrl: "../images/newsletters/news5.jpg",
+    imageUrl: "/images/newsletters/news5.jpg",
     linkUrl:
       "https://mailchi.mp/50f62d06cd80/back-to-nature-back-to-life-6657656",
   },
@@ -168,7 +168,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2023",
     description:
       "For over 50 years , the Auroville ecosystem has been a fertile ground for experiential learning. At Yuvabe too, our continued effort is to work with this spirit of unending education, and learn and evolve as an organization, as individuals, and as a community.",
-    imageUrl: "../images/newsletters/news4.jpg",
+    imageUrl: "/images/newsletters/news4.jpg",
     linkUrl:
       "https://mailchi.mp/2f9c37453d4c/work-serve-and-evolve-we-do-it-all-6269059",
   },
@@ -180,7 +180,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2023",
     description:
       "It was two years ago, when we started our journey with Quilt.AI. After successfully working virtually with their counterparts in the Singapore office for 2 years, our team got an opportunity to realize their dream - an international trip to Singapore!",
-    imageUrl: "../images/newsletters/news3.jpg",
+    imageUrl: "/images/newsletters/news3.jpg",
     linkUrl:
       "https://mailchi.mp/a7e021a36dd8/work-serve-and-evolve-we-do-it-all-6263695",
   },
@@ -192,7 +192,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2023",
     description:
       "At Yuvabe, we always strive to create a space for holistic development of the youth. With this intention, we have an active, ongoing collaboration with Maatram, the primary mental health unit of Auroville. Most recently, our association with Maatram led us to create a street play.",
-    imageUrl: "../images/newsletters/news2.jpg",
+    imageUrl: "/images/newsletters/news2.jpg",
     linkUrl:
       "https://mailchi.mp/bc5ea91a5a86/work-serve-and-evolve-we-do-it-all-6257655",
   },
@@ -204,7 +204,7 @@ const newslettersData: NewsletterItem[] = [
     year: "2022",
     description:
       "The past few years have been a humbling adventure as we shifted from our mainstream corporate lives to live in Auroville, and found ways that come more from our heart space, to engage in this community.",
-    imageUrl: "../images/newsletters/news1.jpg",
+    imageUrl: "/images/newsletters/news1.jpg",
     linkUrl: "https://mailchi.mp/yuvabe/work-serve-and-evolve-we-do-it-all",
   },
 ];

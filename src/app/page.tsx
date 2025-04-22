@@ -157,8 +157,8 @@ export default function Home() {
             <Image
               src="/images/home/hero.webp"
               alt="Group working on laptop"
-              width={200}
-              height={200}
+              width={850}
+              height={830}
               priority
               className="w-full h-auto object-contain top-12 right-6 md:top-10 md:right-18 lg:top-12 lg:right-16 relative z-0"
             />
