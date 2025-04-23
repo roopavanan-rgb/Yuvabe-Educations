@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import FeaturedPosts from "@/components/FeaturedPosts";
 
 // Define types for blog post metadata
 interface BlogPost {
@@ -92,7 +93,8 @@ export default async function BlogsPage(props: {
 
   return (
     <>
-      <div className="bg-color py-32">
+      <FeaturedPosts></FeaturedPosts>
+      <div className="bg-color pb-16 xl:pb-20 md:pb-18 xl:pt-0 pt-0 md:pt-0 overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto  px-5 xl:px-0">
           {/* Category Filter */}
           <div className="flex flex-wrap gap-4 mb-8 md:mb-16 lg:mb-32 z-10 mx-auto">

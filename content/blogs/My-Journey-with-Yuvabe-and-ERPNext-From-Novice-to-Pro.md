@@ -1,5 +1,6 @@
 ---
 title: 'My Journey with Yuvabe and ERPNext: From Novice to Pro'
+isfeaturedpost: true
 featuredImage: /images/blogs/4c1519_f7998d7185a54069bf60d38d8c798fca~mv2.avif
 excerpt: >-
   Yuvabe alumnus Jaganath takes us through his rapid transformation at Yuvabe;

@@ -88,7 +88,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { frontmatter, content } = post;
 
   return (
-    <div className="bg-color py-32 blog-single">
+    <div className="bg-color py-32 blog-single overflow-hidden">
       <div className="max-w-[1240px] flex flex-col m-auto gap-y-4  px-5 md:px-8 xl:px-0">
         {/* Date & Reading Time */}
         <div className="flex flex-row gap-x-2 justify-center">

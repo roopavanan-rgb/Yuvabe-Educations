@@ -1,5 +1,6 @@
 ---
 title: 'Milestones and Memories: My Journey at Yuvabe'
+isfeaturedpost: true
 featuredImage: /images/blogs/4c1519_893cf6708d4f477a8c3e018dc8daf6bf~mv2.png
 excerpt: >-
   Ajay Kumar  takes us through his transformative journey as a Tech Analyst at

@@ -1,5 +1,6 @@
 ---
 title: 'Navigating Transformation: My Yuvabe Journey'
+isfeaturedpost: false
 featuredImage: /images/blogs/9153b2_b292c10912fa4828a7aa33ff4fed99e0~mv2.avif
 excerpt: >-
   A heartfelt account of a Yuvabe alumni where he talks about discovering his
