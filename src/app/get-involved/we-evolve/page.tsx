@@ -349,7 +349,7 @@ const page = () => {
             <Link key={post.slug} href={`/stories/blogs/${post.slug}`}>
             <motion.div
               key={index}
-              className="bg-white text-black rounded-[20px] shadow-lg overflow-hidden p-4 transition-transform duration-300 hover:scale-105"
+              className="bg-white text-black rounded-[20px] h-[400px] shadow-lg overflow-hidden p-4 transition-transform duration-300 hover:scale-105"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -366,8 +366,8 @@ const page = () => {
 
               {/* Blog Content */}
               <div className="mt-4">
-                <h3 className="text-lg font-bold">{post.title}</h3>
-                <p className="text-sm mt-2">{post.description}</p>
+                <h3 className="text-lg font-semibold font-primary">{post.title}</h3>
+                <p className="text-md font-secondary mt-2">{post.description}</p>
               </div>
             </motion.div>
             </Link>
