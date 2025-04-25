@@ -588,7 +588,7 @@ export default function Bridge() {
               <div className="flex flex-row gap-x-[14px] gap-y-8 lg:absolute lg:bottom-0 z-10 xl:min-w-[1220px] lg:flex-nowrap flex-wrap mt-[-100px] md:mt-[-200px] lg:mt-0">
                 {[
                   {
-                    href: "/bridge/program-calendar",
+                    href: "/bridge/bridge-program",
                     border: "border-[#9688C0]",
                     bg: "bg-[#F4F3F9]",
                     imgSrc: "/images/bridge/calendar.svg",

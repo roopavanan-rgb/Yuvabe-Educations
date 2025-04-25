@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Player = dynamic(
   () => import("@lottiefiles/react-lottie-player").then(mod => mod.Player),
@@ -13,18 +14,21 @@ const Player = dynamic(
 
 const blogPosts = [
   {
+    slug: "Navigating-Transformation-My-Yuvabe-Journey",
     image: "/images/journey.webp",
     title: "Navigating Transformation: My Yuvabe Journey",
     description:
       "A heartfelt account of a Yuvabe alumni where he talks about discovering his passion, overcoming adversity..."
   },
   {
+    slug: "How-I-became-a-UX-Designer",
     image: "/images/sagar.webp",
     title: "How I became a UX Designer",
     description:
       "Yuvabe team member Sagar writes about his journey of growing into the role of a designer. .."
   },
   {
+    slug: "A-peek-into-Integral-Yoga-with-Manoj-Pavithran",
     image: "/images/yoga.webp",
     title: "A peek into Integral Yoga with Manoj Pavithran",
     description:
@@ -342,6 +346,7 @@ const page = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {blogPosts.map((post, index) => (
+            <Link key={post.slug} href={`/stories/blogs/${post.slug}`}>
             <motion.div
               key={index}
               className="bg-white text-black rounded-[20px] shadow-lg overflow-hidden p-4 transition-transform duration-300 hover:scale-105"
@@ -365,6 +370,7 @@ const page = () => {
                 <p className="text-sm mt-2">{post.description}</p>
               </div>
             </motion.div>
+            </Link>
           ))}
         </motion.div>
 
@@ -375,12 +381,12 @@ const page = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <a
-            href="#"
+          <Link
+            href="/stories/blogs?category=we-evolve"
             className="inline-block bg-white text-[#5F2DC6] font-bold py-3 px-6 rounded-full shadow-md hover:bg-gray-200 transition"
           >
             Visit our Blog
-          </a>
+          </Link>
         </motion.div>
       </section>
     </main>
