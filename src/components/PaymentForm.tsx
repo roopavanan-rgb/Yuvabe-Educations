@@ -22,7 +22,7 @@ export default function DonationForm() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center  bg-[#fdf6ec] px-4 py-24 gap-8">
+    <div id="donation-form" className="flex flex-col md:flex-row justify-center items-center  bg-[#fdf6ec] px-4 py-24 gap-8">
       {/* Donate from India */}
       <motion.div
         className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg w-full max-w-[584px] md:max-w-[400px] lg:max-w-[584px]  border border-gray-200 flex flex-col justify-center"
