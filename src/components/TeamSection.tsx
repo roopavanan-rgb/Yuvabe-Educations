@@ -4,7 +4,6 @@ import Image from "next/image";
 
 const teamMembers = [
   { id: 1, name: "Shalini kumar", role: "Sustainability Lead Facilitator", image: "/images/team/shalini.jpg" },
-  { id: 2, name: "Sanjeevani", role: "Evolve Facilitator", image: "/images/team/sanjeevani.heic" },
   { id: 3, name: "Ashwini Bakshi", role: "Inner Growth Facilitator", image: "/images/team/ashwini.jpg" },
   { id: 4, name: "Lucas Dengal", role: "Expert in Health, Hygiene and Nutrient Cycle", image: "/images/team/lucas.jpeg" },
   { id: 5, name: "Joss Brook", role: "Auroville Pioneer, Pitchandikulam Forests", image: "/images/team/joss.jpg" },
