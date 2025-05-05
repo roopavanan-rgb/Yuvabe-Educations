@@ -14,6 +14,7 @@ const teamMembers = [
   { id: 10, name: "Rahul Palekar", role: "Circular Economy Expert", image: "/images/team/rahul.jpg" },
   { id: 11, name: "Ujjay Mohan", role: "Impact Catalyst ESG Expert", image: "/images/team/ujjay.jpg" },
   { id: 12, name: "Rithika", role: "Social Impact Expert", image: "/images/team/rithika.jpg" },
+  { id: 2, name: "Athulya P C", role: "Carbon Accounting Expert", image: "/images/team/athulya.jpeg" },
   { id: 13, name: "Vijai Krishnaraj", role: "Water Expert, Auroville ", image: "/images/team/vijai.jpg" },
 ];
 
