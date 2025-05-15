@@ -139,8 +139,15 @@ export default function TalkToUsPage() {
 
             <form
               action="https://api.web3forms.com/submit"
+              method="POST"
               className="flex flex-col gap-4"
             >
+               <input
+                type="hidden"
+                name="access_key"
+                value="b46383fd-39fb-4a3c-80a3-eae125be6ead"
+              />
+              
               <motion.input
                 type="text"
                 name="name"
