@@ -13,12 +13,8 @@ import {
   Users,
   CheckCircle
 } from "lucide-react";
-import bgImage from "/public/images/bg.png";
 import FaqSection from "@/components/FaqSection";
-import hand from "/public/images/hand.png";
-import studyImage from "/public/images/fee.png";
 import TeamSection from "@/components/TeamSection";
-import Footer from "@/components/Footer";
 import InfiniteSlider from "@/components/InfiniteSlider";
 import KeyHighlights from "@/components/KeyHighlights";
 import FooterSus from "@/components/FooterSus";
@@ -45,8 +41,6 @@ const audience = [
     description: "About creating a positive environmental and social impact."
   }
 ];
-
-
 
 const features = [
   {
@@ -174,22 +168,19 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="relative flex flex-col items-center justify-center bg-[#1B360F] text-white text-center  pt-12 overflow-hidden">
-        {/* Background Text */}
-        
-
+      <section className="relative flex flex-col items-center justify-center bg-[#1B360F] text-white text-center pt-12 pb-24  overflow-hidden">
         {/* About the Course */}
         <motion.div
-          className="relative border border-[#90C645] rounded-[40px] p-6 md:p-10 w-full max-w-5xl h-auto px-4 md:px-6 lg:px-8"
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          className="relative z-10 border border-[#90C645] rounded-[40px] w-full max-w-5xl px-4 md:px-12 py-6 md:py-10"
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#90C645]">
             About The Course
           </h2>
-          <p className="mt-4 text-base sm:text-lg md:text-xl">
+          <p className="mt-4 text-sm sm:text-base md:text-lg leading-relaxed">
             Unlock a comprehensive understanding of sustainability with our
             3-month, in-person 'Corporate Sustainability' course at Auroville,
             Tamil Nadu.
@@ -198,9 +189,9 @@ export default function Home() {
 
         {/* 9 Immersive Modules */}
         <motion.h2
-          className="text-xl sm:text-2xl md:text-5xl font-bold text-[#90C645] pt-12 pb-4"
-          whileInView={{ opacity: 1, y: 0 }}
+          className="pt-12 pb-4 text-lg sm:text-2xl md:text-4xl font-bold text-[#90C645] z-10"
           initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           viewport={{ once: true }}
         >
@@ -208,9 +199,9 @@ export default function Home() {
         </motion.h2>
 
         <motion.p
-          className="mt-2 max-w-3xl text-base sm:text-lg md:text-xl"
-          whileInView={{ opacity: 1, y: 0 }}
+          className="z-10 mt-2 max-w-3xl text-sm sm:text-base md:text-lg leading-relaxed px-4"
           initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
           viewport={{ once: true }}
         >
@@ -219,9 +210,15 @@ export default function Home() {
           in your career and beyond.
         </motion.p>
 
-        <InfiniteSlider />
+        {/* Slider */}
+        <div className="z-10 w-full mt-12">
+          <InfiniteSlider />
+        </div>
+
+        {/* Background Text */}
         <motion.h2
-          className="absolute bottom-[-10%] left-1/2 transform -translate-x-1/2 text-[60px] md:text-[140px] font-extrabold text-white opacity-10 whitespace-nowrap"
+          className="absolute bottom-[-8%] left-1/2 transform -translate-x-1/2 text-[40px] sm:text-[60px] md:text-[120px] font-extrabold text-white opacity-10 whitespace-nowrap pointer-events-none"
+          initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
@@ -414,31 +411,29 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src={bgImage}
+            src="/images/bg.png"
             alt="Forest Background"
-            layout="fill"
-            objectFit="cover"
-            className="brightness-75"
+            fill
+            className="object-cover brightness-75"
           />
         </div>
 
-        {/* Content Wrapper */}
+        {/* Content */}
         <div className="max-w-6xl mx-auto text-center">
-          {/* Title */}
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-[#A0E75A]"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#A0E75A]"
           >
             Who Should Join?
           </motion.h2>
-          <p className="text-lg text-white mt-2">
+          <p className="text-base sm:text-lg text-white mt-2">
             This course is designed for:
           </p>
 
-          {/* Grid of Cards */}
+          {/* Responsive Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 place-items-center">
             {audience.map((item, index) => (
               <motion.div
@@ -447,11 +442,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-start gap-3 p-6 bg-[#92d82f38] bg-opacity-15 backdrop-blur-md border border-[#90C645] rounded-2xl shadow-lg text-left text-white w-full sm:w-[90%] md:w-[421px] h-auto"
+                className="flex flex-col items-start gap-3 p-5 sm:p-6 bg-[#92d82f38] bg-opacity-15 backdrop-blur-md border border-[#90C645] rounded-2xl shadow-lg text-left text-white w-full max-w-sm"
               >
                 <span className="text-3xl">{item.icon}</span>
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="text-sm">{item.description}</p>
+                <h3 className="text-base sm:text-lg font-semibold">
+                  {item.title}
+                </h3>
+                <p className="text-sm sm:text-base">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -473,11 +470,11 @@ export default function Home() {
           {/* Image on the left */}
           <div className="md:w-1/3">
             <Image
-              src={hand}
+              src="/images/hand.png"
               alt="Plant Growing in Hands"
               width={300}
               height={300}
-              className="mx-auto"
+              className="mx-auto relative flex bottom-8"
             />
           </div>
 
@@ -532,8 +529,13 @@ export default function Home() {
 
         {/* Centered Image */}
         <div className="mt-4 flex justify-center">
-          <div className="relative w-[300px] md:w-[650px] h-[400px] rounded-xl ">
-            <Image src={studyImage} alt="Students Studying" />
+          <div className="relative w-[900px] md:w-[650px]  rounded-xl ">
+            <Image
+              src="/images/fee.png"
+              width={700}
+              height={700}
+              alt="Students Studying"
+            />
           </div>
         </div>
 
@@ -738,7 +740,7 @@ export default function Home() {
       <TeamSection />
 
       {/* Get started */}
-      <section className="flex justify-center py-12">
+      <section className="flex justify-center py-12 px-">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
