@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -14,47 +15,55 @@ const KeyHighlights = () => {
   return (
     <section className="py-16 bg-gradient-to-b from-green-50 to-white text-center">
       {/* Title */}
-      <h2 className="text-6xl font-semibold text-[#90C465] mb-10">Key Highlights</h2>
+      <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold text-[#90C465] mb-10">
+        Key Highlights
+      </h2>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-center">
-        {/* Left Side Highlights */}
-        <div className="space-y-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto items-center px-4">
+        {/* Left Side */}
+        <div className="flex flex-col items-center space-y-6">
           {highlights.slice(0, 3).map((text, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-[#90C645] bg-opacity-25 border border-1 border-[#90C645] p-4 rounded-lg shadow-md text-black text-left w-[320px] h-[90px]"
+              className="w-full max-w-[320px] bg-[#90C645]/25 border border-[#90C645] p-4 rounded-xl shadow-md text-black text-left min-h-[90px]"
             >
               {text}
             </motion.div>
           ))}
         </div>
 
-        {/* Center Image */}
+        {/* Center Image & Highlight */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col items-center"
+          className="flex flex-col items-center gap-6"
         >
-          <Image src="/images/plant.png" alt="Growing Plant" width={300} height={300} />
-          <p className="  bg-[#90C645] bg-opacity-25 border border-1 border-[#90C645] p-4 rounded-lg shadow-md text-black text-left w-[320px] h-[90px] z-50">
+          <Image
+            src="/images/plant.png"
+            alt="Growing Plant"
+            width={300}
+            height={300}
+            className="w-[200px] sm:w-[250px] md:w-[300px]"
+          />
+          <div className="w-full max-w-[320px] bg-[#90C645]/25 border border-[#90C645] p-4 rounded-xl shadow-md text-black text-left min-h-[90px]">
             Grow with Yuvabe’s signature Evolve Program.
-          </p>
+          </div>
         </motion.div>
 
-        {/* Right Side Highlights */}
-        <div className="space-y-10">
+        {/* Right Side */}
+        <div className="flex flex-col items-center space-y-6">
           {highlights.slice(3, 6).map((text, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-[#90C645] bg-opacity-25 border border-1 border-[#90C645] p-3 rounded-lg shadow-md text-black text-left w-[320px] h-[90px]"
+              className="w-full max-w-[320px] bg-[#90C645]/25 border border-[#90C645] p-4 rounded-xl shadow-md text-black text-left min-h-[90px]"
             >
               {text}
             </motion.div>
