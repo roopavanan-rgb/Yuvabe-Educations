@@ -13,33 +13,35 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-[#90C645] rounded-lg overflow-hidden">
+    <div className="border border-[#90C645] rounded-lg overflow-hidden transition-all duration-300">
       {/* Question */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full text-left px-6 py-4 flex justify-between items-center 
-                   bg-[#90C645] bg-opacity-25 hover:bg-[#D4EDB5] transition"
+                   bg-[#90C645]/25 hover:bg-[#D4EDB5] transition"
       >
         <span className="text-lg font-semibold text-gray-900">{question}</span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0.25, ease: "easeInOut" }}
         >
           <Plus className="text-gray-700" />
         </motion.span>
       </button>
 
-      {/* Answer - Animated Slide Down */}
-      <AnimatePresence>
+      {/* Animated Answer */}
+      <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="px-6 py-4 bg-white text-gray-700 text-left"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            style={{ overflow: "hidden" }}
           >
-            {answer}
+            <div className="px-6 py-4 bg-white text-gray-700 text-left">
+              {answer}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
