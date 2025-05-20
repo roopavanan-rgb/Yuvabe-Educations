@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const steps = [
   {
     number: "01",
     title: "Online Application:",
-    description: ["Complete the application form."],
+    description: ["Complete the application form."]
   },
   {
     number: "02",
@@ -14,17 +15,17 @@ const steps = [
     description: [
       "Shortlisted candidates will be",
       "notified and will have to come in",
-      "for an interview and aptitude test.",
-    ],
+      "for an interview and aptitude test."
+    ]
   },
   {
     number: "03",
     title: "Confirmation:",
     description: [
       "Secure your spot with the payment",
-      "after you clear your screening.",
-    ],
-  },
+      "after you clear your screening."
+    ]
+  }
 ];
 
 export function EnrollmentProcess() {
@@ -39,7 +40,7 @@ export function EnrollmentProcess() {
       </h2>
 
       {/* Steps Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 px-4 sm:px-6 md:px-8 lg:px-24 z-10 relative">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 md:gap-16 px-4 sm:px-6 md:px-8 lg:px-24 z-10 relative">
         {steps.map((step, index) => (
           <motion.div
             key={index}
@@ -47,13 +48,14 @@ export function EnrollmentProcess() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="text-left max-w-sm w-full"
+            className="w-full max-w-sm text-center md:text-left"
           >
-            {/* Gradient Number */}
             <h3 className="text-6xl sm:text-7xl md:text-8xl font-bold bg-[linear-gradient(0deg,_rgba(20,15,32,1)_0%,_rgba(255,202,45,1)_100%)] bg-clip-text text-transparent">
               {step.number}
             </h3>
-            <h4 className="text-lg sm:text-xl font-semibold mt-2 ml-1">{step.title}</h4>
+            <h4 className="text-lg sm:text-xl font-semibold mt-2">
+              {step.title}
+            </h4>
 
             {/* Description lines */}
             {step.description.map((line, idx) => (
@@ -74,34 +76,29 @@ export function EnrollmentProcess() {
           Join the Digital Marketing program today!
         </h3>
         <p className="text-[#E8AC35] font-sans font-semibold mt-4 text-sm sm:text-base">
-          Take the first step toward your career in Digital Marketing. Register today and secure your spot!
+          Take the first step toward your career in Digital Marketing. Register
+          today and secure your spot!
         </p>
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-          <button
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLSfJDp1CsV4wBiD0MJ6oOiJqjZgyNzITEwFiRhxPDRl3m5ghtQ/viewform",
-                "_blank"
-              )
-            }
-            className="bg-[#FFCA2D] text-black px-6 md:px-8 py-2 rounded-2xl font-semibold hover:bg-yellow-500 transition"
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfJDp1CsV4wBiD0MJ6oOiJqjZgyNzITEwFiRhxPDRl3m5ghtQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#FFCA2D] text-black px-6 md:px-8 py-2 rounded-2xl font-semibold hover:bg-yellow-500 transition text-center"
           >
             Apply Now
-          </button>
+          </Link>
 
-          <button
-            onClick={() =>
-              window.open(
-                "https://www.yuvabe.com/_files/ugd/173e7b_bfd064d78d6f44f8b632efc8d85b7d4c.pdf",
-                "_blank"
-              )
-            }
-            className="border border-[#E8AC35] text-[#FFCA2D] px-6 md:px-8 py-2 rounded-2xl font-semibold hover:bg-yellow-400 hover:text-black transition"
+          <Link
+            href="https://www.yuvabe.com/_files/ugd/173e7b_bfd064d78d6f44f8b632efc8d85b7d4c.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-[#E8AC35] text-[#FFCA2D] px-6 md:px-8 py-2 rounded-2xl font-semibold hover:bg-yellow-400 hover:text-black transition text-center"
           >
             Download Brochure
-          </button>
+          </Link>
         </div>
       </div>
     </section>
