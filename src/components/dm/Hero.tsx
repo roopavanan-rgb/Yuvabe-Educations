@@ -62,7 +62,7 @@ export default function Hero() {
           marketing, and more.
         </p>
         {/* CTA Buttons */}
-        import Link from "next/link";
+     
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6 sm:gap-8">
           <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLSfJDp1CsV4wBiD0MJ6oOiJqjZgyNzITEwFiRhxPDRl3m5ghtQ/viewform"
