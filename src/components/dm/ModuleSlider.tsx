@@ -34,19 +34,19 @@ export function ModulesSlider() {
     pauseOnHover: false,
     responsive: [
       {
-        breakpoint: 1280, // large desktops
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 1024, // tablets
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 640, // mobile
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
         },
@@ -55,18 +55,20 @@ export function ModulesSlider() {
   };
 
   return (
-    <section className="w-full py-12 bg-[#140F20] overflow-hidden">
-      {/* Background circle */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-20 blur-3xl w-72 h-72 rounded-full bg-[#FFA6A6] opacity-15 z-0"></div>
+    <section className="w-full py-12 bg-[#140F20] text-white overflow-hidden relative">
+      {/* Background Blur */}
+      <div className="absolute left-1/2 -translate-x-1/2 -bottom-20 blur-3xl w-72 h-72 rounded-full bg-[#FFA6A6] opacity-15 z-0"></div>
 
-      <h2 className="text-3xl sm:text-4xl text-center font-raleway font-semibold text-[#FFCA2D] mb-16 z-10 relative">
+      {/* Title */}
+      <h2 className="text-2xl sm:text-3xl md:text-4xl text-center font-raleway font-semibold text-[#FFCA2D] mb-16 z-10 relative">
         12 Immersive Modules
       </h2>
 
-      <div className="px-4 sm:px-8 md:px-12 lg:px-20 relative z-10">
+      {/* Full-Width Slider */}
+      <div className="w-full relative z-10">
         <Slider {...settings}>
           {modules.map((module, index) => (
-            <div key={index} className="px-2">
+            <div key={index} className="px-3 sm:px-4">
               <ModuleCard
                 title={module.title}
                 description={module.description}
