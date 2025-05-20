@@ -19,27 +19,28 @@ const courseFeesAndScholarships = [
   {
     title: "Payment Options",
     points: [
-        "Payment Plan: Easy installment plans.",
-        "Payment Options: Cash, UPI & Bank Transfer.",
-        "Contact: Email at bridge@yuvabe.com or call +91 9677604467.",
-        
+      "Payment Plan: Easy installment plans.",
+      "Payment Options: Cash, UPI & Bank Transfer.",
+      "Contact: Email at bridge@yuvabe.com or call +91 9677604467.",
     ],
   },
 ];
 
 export function CourseFeesAndScholarships() {
   return (
-    <section className="w-full py-12 bg-[#140F20] text-white overflow-hidden">
-      
+    <section className="relative w-full py-16 bg-[#140F20] text-white overflow-hidden">
+      {/* Background Glows */}
+      <div className="absolute right-10 top-32 blur-3xl w-[400px] h-[400px] rounded-full bg-[linear-gradient(90deg,_rgba(123,34,191,1)_0%,_rgba(80,72,185,1)_52%,_rgba(28,103,131,1)_100%)] opacity-10 z-0"></div>
+
+      <div className="absolute right-0 bottom-10 translate-x-[30%] blur-3xl w-[500px] h-[500px] bg-[linear-gradient(90deg,_rgba(151,99,70,1)_50%,_rgba(151,99,70,0.85)_100%)] opacity-10 rounded-[2rem] z-0"></div>
+
       {/* Title */}
-      <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-2">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#FFCA2D] mb-12 z-10 relative">
         Course Fees and Scholarships
       </h2>
-      <div className="w-[80px] h-[80px] translate-x-96 translate-y-40 blur-3xl bg-[linear-gradient(90deg,_rgba(123,34,191,1)_0%,_rgba(80,72,185,1)_52%,_rgba(28,103,131,1)_100%)]"></div>
-      <div className="absolute text-3xl translate-x-[1200px] translate-y-48 opacity-10 blur-3xl w-[500px] h-[500px] border rounded-4xl bg-[linear-gradient(90deg,_rgba(151,99,70,1)_50%,_rgba(151,99,70,0.8487044475993523)_100%)]"></div>
 
-      {/* Vertical Alignment: Flex Column */}
-      <div className="flex flex-col gap-6 px-6 max-w-3xl mx-auto">
+      {/* Content Blocks */}
+      <div className="relative z-10 flex flex-col gap-8 px-6 sm:px-8 max-w-3xl mx-auto">
         {courseFeesAndScholarships.map((item, index) => (
           <motion.div
             key={index}
@@ -47,20 +48,20 @@ export function CourseFeesAndScholarships() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="relative p-6 bg-transparent rounded-lg"
+            className="relative p-6 bg-[#1f1b2b] rounded-2xl border border-[#FFCA2D]/20 shadow-md"
           >
-            {/* White div above the heading */}
+            {/* Decorative Line */}
             <div className="absolute top-4 left-6 w-10 h-[3px] bg-white rounded-2xl"></div>
 
-            {/* Heading */}
-            <h3 className="text-lg font-semibold text-[#FFFFFF]">{item.title}</h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-4">
+              {item.title}
+            </h3>
 
-            {/* Bullet Points */}
-            <ul className="mt-4 space-y-2">
+            <ul className="space-y-2 pl-4">
               {item.points.map((point, idx) => (
-                <li key={idx} className="flex items-start gap-4 text-[#FFFFFF]">
-                   <span className="text-[#FFCA2D] text-xl">●</span>
-                  {point}
+                <li key={idx} className="flex items-start gap-3 text-sm sm:text-base leading-relaxed">
+                  <span className="text-[#FFCA2D] text-lg mt-1">●</span>
+                  <span>{point}</span>
                 </li>
               ))}
             </ul>
