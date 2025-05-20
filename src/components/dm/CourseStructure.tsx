@@ -25,12 +25,12 @@ export function CourseStructure() {
   return (
     <section className="w-full py-12 bg-[#140F20] text-white overflow-hidden">
       {/* Title */}
-      <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#FFCA2D] mb-10">
         Course Structure
       </h2>
 
-      {/* Course Details Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-4xl mx-auto">
+      {/* Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 max-w-5xl mx-auto">
         {courseDetails.map((item, index) => (
           <motion.div
             key={index}
@@ -38,29 +38,24 @@ export function CourseStructure() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="relative p-6 bg-transparent rounded-lg"
+            className="relative p-6 bg-transparent rounded-lg text-center md:text-left mx-auto"
           >
-            <div className="absolute top-0 left-6 w-12 h-[3px] bg-white"></div>
-            
+            {/* Decorative Bar */}
+            <div className="absolute top-0 left-1/2 md:left-6 -translate-x-1/2 md:translate-x-0 w-12 h-[3px] bg-white"></div>
+
             {/* Icon + Title */}
-            <div className="flex items-center gap-2">
-              <Image
-                src={item.icon}
-                alt={item.title}
-                width={24}
-                height={24}
-              />
-              <h3 className="text-lg font-semibold text-[#FFFFFF]">
-                {item.title}
-              </h3>
+            <div className="flex items-center justify-center md:justify-start gap-2 mt-2">
+              <Image src={item.icon} alt={item.title} width={24} height={24} />
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
             </div>
 
             {/* Description */}
-            <p className="text-[#FFFFFF] mt-2 max-w-[150px] leading-relaxed">{item.description}</p>
+            <p className="mt-2 text-sm sm:text-base leading-relaxed max-w-xs mx-auto md:mx-0 text-white">
+              {item.description}
+            </p>
           </motion.div>
         ))}
       </div>
     </section>
   );
 }
-
