@@ -3,6 +3,7 @@
 :root {
   --font-primary: Poppins, sans-serif;
   --font-secondary: Nunito Sans, sans-serif;
+  --font-open-sans: Open Sans, sans-serif;
 }
 
 .font-primary {
@@ -11,6 +12,10 @@
 
 .font-secondary {
   font-family: var(--font-secondary);
+}
+
+.font-open-sans {
+  font-family: var(--font-open-sans);
 }
 
 
@@ -284,4 +289,15 @@ img[src$="#lg-center"] {
     margin-bottom: 1rem;
     clear: both;
   }
+}
+
+.custom-glass {
+  background: rgba(96, 129, 208, 0.05);
+  backdrop-filter: blur(50px);
+}
+
+.custom-glass-border {
+  position: relative;
+  border-radius: 30px;
+  border-color: #6081D0;
 }

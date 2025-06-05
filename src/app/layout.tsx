@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Poppins, Nunito_Sans } from "next/font/google";
+import { Poppins, Nunito_Sans, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,6 +12,12 @@ const poppins = Poppins({
 });
 
 const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-secondary",
+});
+
+const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-secondary",
@@ -45,8 +51,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-         {/* ✅ FundraiseUp Installation Script */}
-         <Script
+        {/* ✅ FundraiseUp Installation Script */}
+        <Script
           id="fundraiseup-installation"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
@@ -64,7 +70,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${poppins.variable} ${nunitoSans.variable} antialiased`}>
+      <body
+        className={`${poppins.variable} ${nunitoSans.variable} antialiased`}
+      >
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
