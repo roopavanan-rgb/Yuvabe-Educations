@@ -12,7 +12,7 @@ export default function design() {
       <section className="bg-gradient-to-b from-[#3416D8] to-[#6081D0] pb-16 xl:pb-32 md:pb-24 xl:pt-40 pt-16 md:pt-40 relative overflow-hidden">
         <motion.div
           className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10"
-          initial={{ opacity: 0, x: 25 }}
+          initial={{ opacity: 0, x: -25 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -64,24 +64,46 @@ export default function design() {
             </Link>
           </div>
         </motion.div>
-        {/* Image */}
-        <Image
-          src="/images/3d-design/Group 47.png"
-          alt="Bridge Image"
-          width={474.14}
-          height={456.82}
-          className="absolute top-[-2%] md:top-[-10%] right-[-5%] h-[400px] md:h-[500px] lg:h-[550px] object-cover z-1"
-        />
+        {/* Image Wrapper */}
+        <motion.div
+          className="absolute top-[70%] md:top-[-10%] right-[-5%] z-1"
+          initial={{ opacity: 0, x: 25 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Image
+            src="/images/3d-design/Group 47.png"
+            alt="Bridge Image"
+            width={474.14}
+            height={456.82}
+            className="h-[400px] md:h-[500px] lg:h-[550px] object-cover"
+          />
+        </motion.div>
+        {/* Blur Effects */}
+        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
       {/* Why This Course */}
       <section className="bg-white pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24 relative overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10">
           {/* Translucent Box */}
-          <div className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10 ">
-            <h2 className="font-bold font-open-sans leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center">
+          <motion.div
+            className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }} // Ensure the animation only runs once when in view
+          >
+            <motion.h2
+              className="font-bold font-open-sans leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               Why this Course?
-            </h2>
+            </motion.h2>
             <div className="md:text-center">
               <ul className="list-disc list-inside md:text-left md:inline-block">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
@@ -114,7 +136,7 @@ export default function design() {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* Image */}
         <Image
@@ -170,25 +192,48 @@ export default function design() {
             </p>
           </motion.div>
         </div>
-        {/* Image */}
-        <Image
-          src="/images/3d-design/Firefly_High-resolution.png"
-          alt="Bridge Image"
-          width={478}
-          height={526}
-          unoptimized
-          className="absolute bottom-[-5%] md:bottom-[-5%] right-[-5%] max-w-[30%] md:max-w-[40%] xl:max-w-full object-cover z-1"
-        />
+        {/* Image Wrapper */}
+        <motion.div
+          className="absolute bottom-[-5%] md:bottom-[-5%] right-[-50%] md:right-[-5%] z-1"
+          initial={{ opacity: 0, x: 100 }} // Start 50px to the right of its normal position
+          whileInView={{ opacity: 1, x: 0 }} // Animate to its original position
+          transition={{ duration: 0.8 }} // Duration of the animation
+          viewport={{ once: true }} // Trigger only once when the image is in view
+        >
+          <Image
+            src="/images/3d-design/Firefly_High-resolution.png"
+            alt="Bridge Image"
+            width={478}
+            height={526}
+            unoptimized
+            className="max-w-[30%] md:max-w-[50%] lg:max-w-full object-cover"
+          />
+        </motion.div>
+        {/* Blur Effects */}
+        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
       {/* What You'll Learn */}
       <section className="bg-white pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24 relative overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10">
           {/* Translucent Box */}
-          <div className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10 ">
-            <h2 className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center">
+          <motion.div
+            className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }} // Ensure the animation only runs once when in view
+          >
+            <motion.h2
+              className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               What You'll Learn
-            </h2>
+            </motion.h2>
             <p className="font-open-sans  md:text-[18px] text-[14px] text-black text-center">
               Over 12 weeks, you'll go from ideas to :
             </p>
@@ -216,7 +261,7 @@ export default function design() {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* Image */}
         <Image
@@ -233,7 +278,14 @@ export default function design() {
       <section className="bg-gradient-to-b from-[#3416D8] to-[#6081D0] pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-40 relative overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10">
           {/* Text */}
-          <div className="flex flex-col gap-y-6">
+          <motion.div
+            className="flex flex-col gap-y-6"
+            initial={{ opacity: 0, x: -25 }} // Start with opacity 0 and slide in from the left
+            animate={{ opacity: 1, x: 0 }} // End state: fully visible and at original position
+            transition={{ duration: 0.8 }} // Duration of animation
+            whileInView={{ opacity: 1, x: 0 }} // Animation trigger when in view
+            viewport={{ once: true }} // Ensure the animation only runs once when in view
+          >
             <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 text-center z-10">
               Course Schedule, Format, and Fees
             </h2>
@@ -270,35 +322,71 @@ export default function design() {
                 Rs. 9000 (Rs 3000 per month)
               </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
         {/* Image */}
-        <Image
-          src="/images/3d-design/3d-07.png"
-          alt="Bridge Image"
-          width={368}
-          height={373}
-          unoptimized
+        {/* First Image (animate from left) */}
+        <motion.div
           className="absolute top-[-5%] md:top-[-5%] left-[-25%] xl:left-[-15%] md:left-[-20%] max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
-        />
-        <Image
-          src="/images/3d-design/3d-05.png"
-          alt="Bridge Image"
-          width={447.26}
-          height={484.25}
-          unoptimized
+          initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from left
+          animate={{ opacity: 1, x: 0 }} // End at original position with full opacity
+          transition={{ duration: 0.8 }}
+          whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
+          viewport={{ once: true }} // Trigger once
+        >
+          <Image
+            src="/images/3d-design/3d-07.png"
+            alt="First Image"
+            width={368}
+            height={373}
+            unoptimized
+            className="object-cover"
+          />
+        </motion.div>
+
+        {/* Second Image (animate from right) */}
+        <motion.div
           className="absolute xl:top-[30%] top-[40%] xl:right-[15%] right-0 max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
-        />
+          initial={{ opacity: 0, x: 100 }} // Start with opacity 0 and slide from right
+          animate={{ opacity: 1, x: 0 }} // End at original position with full opacity
+          transition={{ duration: 0.8 }}
+          whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
+          viewport={{ once: true }} // Trigger once
+        >
+          <Image
+            src="/images/3d-design/3d-05.png"
+            alt="Second Image"
+            width={447.26}
+            height={484.25}
+            unoptimized
+            className="object-cover"
+          />
+        </motion.div>
+        {/* Blur Effects */}
+        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
       {/* What Makes This Programme Different */}
       <section className="bg-white pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24 relative overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10">
           {/* Translucent Box */}
-          <div className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10 ">
-            <h2 className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center">
+          <motion.div
+            className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }} // Trigger the animation only once when the element comes into view
+          >
+            <motion.h2
+              className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               What Makes This Programme Different
-            </h2>
+            </motion.h2>
 
             <div className="md:text-center">
               <ul className="list-disc list-inside md:text-left md:inline-block">
@@ -342,7 +430,7 @@ export default function design() {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* Image */}
         <Image
@@ -356,9 +444,16 @@ export default function design() {
 
       {/* Where This Can Take You */}
       <section className="bg-gradient-to-b from-[#3416D8] to-[#6081D0] pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-40 relative overflow-hidden">
-        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10">
+        <motion.div
+          className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10"
+          initial={{ opacity: 0, x: -25 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }} // Trigger the animation only once when the element comes into view
+        >
           {/* Text */}
-          <div className="flex flex-col gap-y-6">
+          <div className="flex flex-col gap-y-6 z-10">
             <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 text-center z-10">
               Where This Can Take You
             </h2>
@@ -392,7 +487,7 @@ export default function design() {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
         {/* Image */}
         <Image
           src="/images/3d-design/3d-06.png"
@@ -402,6 +497,9 @@ export default function design() {
           unoptimized
           className="absolute xl:top-[30%] top-[40%] xl:right-[-4%] right-0 max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
         />
+        {/* Blur Effects */}
+        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
       {/* What Makes This Programme Different */}
@@ -409,9 +507,15 @@ export default function design() {
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10">
           {/* Enrollment Process */}
           <div className="flex flex-col gap-y-6">
-            <h2 className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center">
+            <motion.h2
+              className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               Enrolment Process
-            </h2>
+            </motion.h2>
             {/* Text */}
             <div>
               <ol className="list-inside md:text-left list-decimal">
@@ -425,7 +529,13 @@ export default function design() {
               </ol>
             </div>
             {/* Buttons */}
-            <div className="flex flex-row justify-center gap-8 flex-wrap md:flex-nowrap z-10">
+            <motion.div
+              className="flex flex-row justify-center gap-8 flex-wrap md:flex-nowrap z-10"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               {/* Apply Now */}
               <Link
                 href={
@@ -451,13 +561,24 @@ export default function design() {
                   </p>
                 </div>
               </Link>
-            </div>
+            </motion.div>
           </div>
           {/* Translucent Box / FAQs */}
-          <div className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10 ">
-            <h2 className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center">
+          <motion.div
+            className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <motion.h2
+              className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               FAQs
-            </h2>
+            </motion.h2>
             <div className="md:text-center">
               <ul className="list-disc list-inside md:text-left md:inline-block">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
@@ -507,13 +628,24 @@ export default function design() {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
 
           {/* Translucent Box / A Collaboration You Can Trust */}
-          <div className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10 ">
-            <h2 className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center">
+          <motion.div
+            className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <motion.h2
+              className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               A Collaboration You Can Trust
-            </h2>
+            </motion.h2>
             <div>
               <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                 <span className="font-bold">3DPD</span>
@@ -555,7 +687,7 @@ export default function design() {
                 height={79}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* Image */}
         <Image
@@ -578,9 +710,15 @@ export default function design() {
 
       {/* Meet Your Instructors */}
       <section className="bg-gradient-to-b from-[#3416D8] to-[#6081D0] pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-40 relative overflow-hidden">
-        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10">
+        <motion.div
+          className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10"
+          initial={{ opacity: 0, x: -25 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }} // Trigger the animation only once when the element comes into view
+        >
           {/* Text */}
-          <div className="flex flex-col gap-y-6">
+          <div className="flex flex-col gap-y-6 z-10">
             <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl text-center z-10">
               Meet Your Instructors
             </h2>
@@ -647,19 +785,34 @@ export default function design() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
+        {/* Blur Effects */}
+        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
       {/*Apply Now & Start Building */}
       <section className="custom-glass pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24 relative overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-4 md:gap-y-6 lg:gap-y-6 z-10">
-          <h2 className="font-bold font-open-sans leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center">
+          <motion.h2
+            className="font-bold font-open-sans leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Apply Now & Start Building
-          </h2>
-          <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center max-w-[695px] m-auto">
+          </motion.h2>
+          <motion.p
+            className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center max-w-[695px] m-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             If you're ready to turn your design ideas into real, manufacturable
             products, this is your launchpad.
-          </p>
+          </motion.p>
           {/* Buttons */}
           <div className="flex flex-row justify-center gap-8 flex-wrap md:flex-nowrap z-10">
             {/* Apply Now */}
@@ -694,19 +847,34 @@ export default function design() {
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-16 z-10">
           {/* Text */}
           <div className="flex flex-col gap-y-6">
-            <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 text-center z-10">
+            <motion.h2
+              className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl mb-2 md:mb-3 lg:mb-4 text-center z-10"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
               Contact Us
-            </h2>
-            <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white text-center  z-10">
+            </motion.h2>
+            <motion.p
+              className="font-open-sans font-normal md:text-[18px] text-[14px] text-white text-center z-10"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
               For any questions, reach out to our team directly at
               bridge@yuvabe.com / +91 9677604467
-            </p>
+            </motion.p>
           </div>
           {/* Social Media */}
           <div className="flex flex-col gap-y-6">
-            <h2 className="font-open-sans text-white font-bold xl:text-2xl md:text-[20px] text-[18px]  mb-2 md:mb-3 lg:mb-4 text-center z-10">
+            <motion.h2
+              className="font-open-sans text-white font-bold xl:text-2xl md:text-[20px] text-[18px] mb-2 md:mb-3 lg:mb-4 text-center z-10"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 1 }}
+            >
               Follow us on Social Media
-            </h2>
+            </motion.h2>
             <div className="flex flex-row gap-x-12 justify-center flex-wrap gap-y-6 z-10">
               <Link href={"https://x.com/yuvabeauroville"} target="_blank">
                 <svg
@@ -773,7 +941,7 @@ export default function design() {
               </Link>
             </div>
           </div>
-          <div className="flex flex-row gap-x-24 justify-center flex-wrap gap-y-6 items-center">
+          <div className="flex flex-row gap-x-24 justify-center flex-wrap gap-y-6 items-center z-10">
             <Link href={"https://www.yuvabe.com/"} target="_blank">
               <Image
                 src="/images/3d-design/3d-15.png"
@@ -795,22 +963,40 @@ export default function design() {
           </div>
         </div>
         {/* Image */}
-        <Image
-          src="/images/3d-design/3d-16.png"
-          alt="Bridge Image"
-          width={368}
-          height={373}
-          unoptimized
-          className="absolute top-[25%] md:top-[25%] left-[-16%] xl:left-0 md:left-0 max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1 "
-        />
-        <Image
-          src="/images/3d-design/3d-17.png"
-          alt="Bridge Image"
-          width={447.26}
-          height={484.25}
-          unoptimized
+        {/* Top Image: Animate from left */}
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="absolute top-[25%] md:top-[25%] left-[-16%] xl:left-0 md:left-0 max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
+        >
+          <Image
+            src="/images/3d-design/3d-16.png"
+            alt="Bridge Image"
+            width={368}
+            height={373}
+            unoptimized
+          />
+        </motion.div>
+
+        {/* Bottom Image: Animate from right */}
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
           className="absolute xl:top-0 top-0 md:right-0 right-[-12%] max-w-[50%] md:max-w-[25%] xl:max-w-[15%] object-cover z-1"
-        />
+        >
+          <Image
+            src="/images/3d-design/3d-17.png"
+            alt="Bridge Image"
+            width={447.26}
+            height={484.25}
+            unoptimized
+          />
+        </motion.div>
+        {/* Blur Effects */}
+        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
     </>
   );
