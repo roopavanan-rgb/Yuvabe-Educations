@@ -11,7 +11,6 @@ import Button from "@/components/ui/Button";
 import { useRouter, usePathname } from "next/navigation";
 import { pageData } from "../data/pageData";
 
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -117,6 +116,7 @@ const Header = () => {
         // { name: "UI/UX", path: "/bridge/ui-ux" },
         { name: "AI", path: "/bridge/ai" },
         { name: "Corporate Sustainability", path: "/bridge/sustainability" },
+        { name: "3D Product Design", path: "/bridge/3d-design" },
         // { name: "Market Research", path: "/bridge/market-research" },
         // { name: "Workshop", path: "/bridge/workshop" },
       ],
@@ -159,7 +159,9 @@ const Header = () => {
               style={{ width: "auto", height: "auto" }}
             />
           </Link>
-          <h2 className="Font-primary font-semibold text-[16px] mt-2 ">Yuvabe Education</h2>
+          <h2 className="Font-primary font-semibold text-[16px] mt-2 ">
+            Yuvabe Education
+          </h2>
         </div>
 
         {/* Mobile Menu Controls */}

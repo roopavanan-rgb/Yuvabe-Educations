@@ -29,12 +29,12 @@ export default function design() {
               A hands-on course by
               <span className="font-bold">Yuvabe Education Bridge Program</span>
               in collaboration with 3DPD, pioneers in 3D printing and product
-              innovation in India.<br></br> Master modern product design skills
-              from the comfort of your home. The Program in 3D Product Design
-              offers live online training in CAD modeling, design thinking, and
-              digital prototyping using the industry-standard tool Fusion 360.
-              Learn from experienced mentors, collaborate with peers, and
-              industry experts — all online.
+              innovation in India. <br /> <br /> Master modern product design
+              skills from the comfort of your home. The Program in 3D Product
+              Design offers live online training in CAD modeling, design
+              thinking, and digital prototyping using the industry-standard tool
+              Fusion 360. Learn from experienced mentors, collaborate with
+              peers, and industry experts — all online.
             </p>
           </div>
 
@@ -281,8 +281,8 @@ export default function design() {
           <motion.div
             className="flex flex-col gap-y-6"
             initial={{ opacity: 0, x: -25 }} // Start with opacity 0 and slide in from the left
-            transition={{ duration: 0.8 }} // Duration of animation
             whileInView={{ opacity: 1, x: 0 }} // Animation trigger when in view
+            transition={{ duration: 0.8 }} // Duration of animation
             viewport={{ once: true }} // Ensure the animation only runs once when in view
           >
             <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 text-center z-10">
@@ -327,10 +327,10 @@ export default function design() {
         {/* First Image (animate from left) */}
         <motion.div
           className="absolute top-[-5%] md:top-[-5%] left-[-25%] xl:left-[-15%] md:left-[-20%] max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
-          initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from left
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from the left
           whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
-          viewport={{ once: true }} // Trigger once
+          transition={{ duration: 0.8 }} // Duration of animation
+          viewport={{ once: true }} // Ensure the animation only runs once when in view
         >
           <Image
             src="/images/3d-design/3d-07.png"
@@ -345,10 +345,10 @@ export default function design() {
         {/* Second Image (animate from right) */}
         <motion.div
           className="absolute xl:top-[30%] top-[40%] xl:right-[15%] right-0 max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
-          initial={{ opacity: 0, x: 100 }} // Start with opacity 0 and slide from right
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, x: 100 }} // Start with opacity 0 and slide from the left
           whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
-          viewport={{ once: true }} // Trigger once
+          transition={{ duration: 0.8 }} // Duration of animation
+          viewport={{ once: true }} // Ensure the animation only runs once when in view
         >
           <Image
             src="/images/3d-design/3d-05.png"
@@ -443,10 +443,10 @@ export default function design() {
       <section className="bg-gradient-to-b from-[#3416D8] to-[#6081D0] pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-40 relative overflow-hidden">
         <motion.div
           className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10"
-          initial={{ opacity: 0, x: -25 }}
-          transition={{ duration: 0.8 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }} // Trigger the animation only once when the element comes into view
+          initial={{ opacity: 0, x: -25 }} // Start with opacity 0 and slide from the left
+          whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
+          transition={{ duration: 0.8 }} // Duration of animation
+          viewport={{ once: true }} // Trigger only once when the element comes into view
         >
           {/* Text */}
           <div className="flex flex-col gap-y-6 z-10">
@@ -485,14 +485,22 @@ export default function design() {
           </div>
         </motion.div>
         {/* Image */}
-        <Image
-          src="/images/3d-design/3d-06.png"
-          alt="Bridge Image"
-          width={511.7}
-          height={419.2}
-          unoptimized
+        <motion.div
+          initial={{ opacity: 0, x: 100 }} // Start with opacity 0 and slide from the left
+          whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
+          transition={{ duration: 0.8 }} // Duration of animation
+          viewport={{ once: true }} // Ensure the animation only runs once when in view
           className="absolute xl:top-[30%] top-[40%] xl:right-[-4%] right-0 max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
-        />
+        >
+          <Image
+            src="/images/3d-design/3d-06.png"
+            alt="Bridge Image"
+            width={511.7}
+            height={419.2}
+            unoptimized
+            className="object-cover"
+          />
+        </motion.div>
         {/* Blur Effects */}
         <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
         <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
@@ -565,6 +573,7 @@ export default function design() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
           >
             <motion.h2
               className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
@@ -632,6 +641,7 @@ export default function design() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
           >
             <motion.h2
               className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
@@ -644,7 +654,7 @@ export default function design() {
             </motion.h2>
             <div>
               <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                <span className="font-bold">3DPD</span>
+                <span className="font-bold">3DPD </span>
                 is India's largest integrated 3D printing bureau, pioneering
                 rapid prototyping and additive manufacturing since 2000. With
                 over two decades of experience, they offer end-to-end solutions
@@ -653,6 +663,8 @@ export default function design() {
                 machining, and metal casting, making them a trusted partner for
                 innovation and precision.
               </p>
+              <br />
+              <br />
               <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                 <span className="font-bold">Yuvabe Education </span>
                 is a purpose-driven learning platform based in Auroville.
@@ -662,6 +674,8 @@ export default function design() {
                 with personal growth, preparing learners to thrive in a dynamic
                 world.
               </p>
+              <br />
+              <br />
               <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                 Together, Yuvabe Education and 3DPD bridge the gap between
                 education and industry, providing learners with the tools and
@@ -708,10 +722,10 @@ export default function design() {
       <section className="bg-gradient-to-b from-[#3416D8] to-[#6081D0] pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-40 relative overflow-hidden">
         <motion.div
           className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10"
-          initial={{ opacity: 0, x: -25 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }} // Trigger the animation only once when the element comes into view
+          initial={{ opacity: 0, x: -25 }} // Start with opacity 0 and slide from the left
+          whileInView={{ opacity: 1, x: 0 }} // Trigger animation when the element comes into view
+          transition={{ duration: 0.8 }} // Duration of animation
+          viewport={{ once: true }} // Trigger only once when the element comes into view
         >
           {/* Text */}
           <div className="flex flex-col gap-y-6 z-10">
@@ -845,17 +859,19 @@ export default function design() {
           <div className="flex flex-col gap-y-6">
             <motion.h2
               className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl mb-2 md:mb-3 lg:mb-4 text-center z-10"
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from the left
+              whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
+              transition={{ duration: 1 }} // Duration of 1 second for the animation
+              viewport={{ once: true }} // Trigger the animation only once when the element comes into view
             >
               Contact Us
             </motion.h2>
             <motion.p
               className="font-open-sans font-normal md:text-[18px] text-[14px] text-white text-center z-10"
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from the left
+              whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
+              transition={{ duration: 1 }} // Duration of 1 second for the animation
+              viewport={{ once: true }} // Trigger the animation only once when the element comes into view
             >
               For any questions, reach out to our team directly at
               bridge@yuvabe.com / +91 9677604467
@@ -865,13 +881,20 @@ export default function design() {
           <div className="flex flex-col gap-y-6">
             <motion.h2
               className="font-open-sans text-white font-bold xl:text-2xl md:text-[20px] text-[18px] mb-2 md:mb-3 lg:mb-4 text-center z-10"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 1 }}
+              initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from the left
+              whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
+              transition={{ duration: 1 }} // Duration of 1 second for the animation
+              viewport={{ once: true }} // Trigger the animation only once when the element comes into view
             >
               Follow us on Social Media
             </motion.h2>
-            <div className="flex flex-row gap-x-12 justify-center flex-wrap gap-y-6 z-10">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from the left
+              whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
+              transition={{ duration: 1 }} // Duration of 1 second for the animation
+              viewport={{ once: true }} // Trigger the animation only once when the element comes into view
+              className="flex flex-row gap-x-12 justify-center flex-wrap gap-y-6 z-10"
+            >
               <Link href={"https://x.com/yuvabeauroville"} target="_blank">
                 <svg
                   width="41"
@@ -935,9 +958,15 @@ export default function design() {
                   />
                 </svg>
               </Link>
-            </div>
+            </motion.div>
           </div>
-          <div className="flex flex-row gap-x-24 justify-center flex-wrap gap-y-6 items-center z-10">
+          <motion.div
+            className="flex flex-row gap-x-24 justify-center flex-wrap gap-y-6 items-center z-10"
+            initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from the left
+            whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
+            transition={{ duration: 1 }} // Duration of 1 second for the animation
+            viewport={{ once: true }} // Trigger the animation only once when the element comes into view
+          >
             <Link href={"https://www.yuvabe.com/"} target="_blank">
               <Image
                 src="/images/3d-design/3d-15.png"
@@ -956,14 +985,15 @@ export default function design() {
                 className="z-10"
               />
             </Link>
-          </div>
+          </motion.div>
         </div>
         {/* Image */}
         {/* Top Image: Animate from left */}
         <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from the left
+          whileInView={{ opacity: 1, x: 0 }} // Animate to full opacity and original position when in view
+          transition={{ duration: 1, delay: 0.3 }} // 1-second duration with a 0.3-second delay
+          viewport={{ once: true }} // Trigger only once when the element comes into view
           className="absolute top-[25%] md:top-[25%] left-[-16%] xl:left-0 md:left-0 max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
         >
           <Image
@@ -977,9 +1007,10 @@ export default function design() {
 
         {/* Bottom Image: Animate from right */}
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          initial={{ opacity: 0, x: 100 }} // Start with opacity 0 and slide from the left
+          whileInView={{ opacity: 1, x: 0 }} // Animate to full opacity and original position when in view
+          transition={{ duration: 1, delay: 0.3 }} // 1-second duration with a 0.3-second delay
+          viewport={{ once: true }} // Trigger only once when the element comes into view
           className="absolute xl:top-0 top-0 md:right-0 right-[-12%] max-w-[50%] md:max-w-[25%] xl:max-w-[15%] object-cover z-1"
         >
           <Image

@@ -248,7 +248,7 @@ export default function Bridge_Program_Calendar() {
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex flex-row bg-[#FDEDE9] py-[43px]  rounded-[15px] border-2 border-[#F04E26] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
+                className="flex flex-row bg-[#3518d816] py-[43px]  rounded-[15px] border-2 border-[#3518D8] min-h-[219px] flex-wrap xl:flex-nowrap justify-center bridge-program-item"
               >
                 <div className="flex flex-row justify-between gap-x-16 gap-y-16 flex-wrap lg:flex-nowrap px-[24px]">
                   {/* Left */}
@@ -269,8 +269,8 @@ export default function Bridge_Program_Calendar() {
                         <path
                           id="color-path"
                           d="M20.2344 37.5938C29.8994 37.5938 37.7344 29.7587 37.7344 20.0938C37.7344 10.4288 29.8994 2.59375 20.2344 2.59375C10.5694 2.59375 2.73438 10.4288 2.73438 20.0938C2.73438 29.7587 10.5694 37.5938 20.2344 37.5938Z"
-                          fill="#F04E26"
-                          stroke="#F04E26"
+                          fill="#3518D8"
+                          stroke="#3518D8"
                           stroke-width="1.97012"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -302,20 +302,14 @@ export default function Bridge_Program_Calendar() {
                     <p className="font-primary font-semi-bold leading-[120%] text-2xl text-black">
                       This course is scheduled to start
                       <br />
-                      <span className="font-black">From April 2025</span>
+                      <span className="font-black">From June 2025</span>
                     </p>
                   </div>
                   {/* Right */}
                   <div className="flex flex-col justify-center  max-w-full lg:max-w-[142px]">
                     {/* Know More Button */}
-                    <Link
-                      href="#"
-                      target="_blank"
-                      style={{
-                        pointerEvents: "none",
-                      }}
-                    >
-                      <div className="bg-[#F04E26] py-2 px-4 w-[142px] rounded-[8px]">
+                    <Link href="/bridge/3d-design" target="_blank">
+                      <div className="bg-[#3518D8] py-2 px-4 w-[142px] rounded-[8px]">
                         <p className="font-secondary font-semibold text-white text-[16px] leading-[30px] text-center">
                           Know More
                         </p>
