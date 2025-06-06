@@ -281,7 +281,6 @@ export default function design() {
           <motion.div
             className="flex flex-col gap-y-6"
             initial={{ opacity: 0, x: -25 }} // Start with opacity 0 and slide in from the left
-            animate={{ opacity: 1, x: 0 }} // End state: fully visible and at original position
             transition={{ duration: 0.8 }} // Duration of animation
             whileInView={{ opacity: 1, x: 0 }} // Animation trigger when in view
             viewport={{ once: true }} // Ensure the animation only runs once when in view
@@ -329,7 +328,6 @@ export default function design() {
         <motion.div
           className="absolute top-[-5%] md:top-[-5%] left-[-25%] xl:left-[-15%] md:left-[-20%] max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
           initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from left
-          animate={{ opacity: 1, x: 0 }} // End at original position with full opacity
           transition={{ duration: 0.8 }}
           whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
           viewport={{ once: true }} // Trigger once
@@ -348,7 +346,6 @@ export default function design() {
         <motion.div
           className="absolute xl:top-[30%] top-[40%] xl:right-[15%] right-0 max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
           initial={{ opacity: 0, x: 100 }} // Start with opacity 0 and slide from right
-          animate={{ opacity: 1, x: 0 }} // End at original position with full opacity
           transition={{ duration: 0.8 }}
           whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
           viewport={{ once: true }} // Trigger once
