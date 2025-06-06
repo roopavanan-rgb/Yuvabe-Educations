@@ -444,7 +444,6 @@ export default function design() {
         <motion.div
           className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10"
           initial={{ opacity: 0, x: -25 }}
-          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }} // Trigger the animation only once when the element comes into view
