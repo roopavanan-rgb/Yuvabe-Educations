@@ -18,14 +18,14 @@ export default function design() {
         >
           {/* Text */}
           <div className="flex flex-col gap-y-6">
-            <h1 className="font-open-sans text-white font-extrabold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 max-w-[800px] z-10">
+            <h1 className="font-open-sans text-white font-extrabold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 max-w-[800px] z-10 text-center lg:text-left">
               Transform Your Future with 3D Design - Online Programme
             </h1>
-            <p className="font-open-sans text-white font-bold   md:text-xl text-[16px] z-10">
+            <p className="font-open-sans text-white font-bold   md:text-xl text-[16px] z-10 text-center lg:text-left">
               A 12-Week Online Industry-Oriented Learning Journey | Live Classes
               | Starts 23 June 2025
             </p>
-            <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] max-w-[1065px] z-10">
+            <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] max-w-[1065px] z-10 text-center lg:text-left">
               A hands-on course by
               <span className="font-bold">Yuvabe Education Bridge Program</span>
               in collaboration with 3DPD, pioneers in 3D printing and product
@@ -104,8 +104,8 @@ export default function design() {
             >
               Why this Course?
             </motion.h2>
-            <div className="md:text-center">
-              <ul className="list-disc list-inside md:text-left md:inline-block">
+            <div className="lg:text-center">
+              <ul className="list-disc list-inside lg:text-left md:inline-block">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                   <span className="font-bold">Live Online Sessions</span> – Join
                   interactive classes from anywhere in the world.
@@ -160,13 +160,13 @@ export default function design() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 text-center z-10">
+            <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 z-10 text-center lg:text-left">
               Who Should Apply?
             </h2>
-            <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] max-w-[1065px] z-10">
+            <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] max-w-[1065px] z-10 text-center lg:text-left">
               This course is designed for:
             </p>
-            <ul className="list-disc list-inside md:text-left md:inline-block z-10">
+            <ul className="list-disc list-inside lg:text-left md:inline-block z-10">
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Students & Graduates</span> –
                 Engineering, design, architecture, or any creative background
@@ -234,27 +234,31 @@ export default function design() {
             >
               What You'll Learn
             </motion.h2>
-            <p className="font-open-sans  md:text-[18px] text-[14px] text-black text-center">
+            <p className="font-open-sans  md:text-[18px] text-[14px] text-black text-center lg:text-left">
               Over 12 weeks, you'll go from ideas to :
             </p>
-            <div className="md:text-center">
-              <ul className="list-disc list-inside md:text-left md:inline-block">
+            <div>
+              <ul className="list-disc list-inside lg:text-left md:inline-block">
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
                   Understand product design fundamentals, including
                   forces,materials, and structural behavior.
                 </li>
+                <br />
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
                   Perform manual calculations to analyze and improve real-world
                   design concepts.
                 </li>
+                <br />
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
                   Select appropriate materials based on design
                   needs,performance, and sustainability.
                 </li>
+                <br />
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
                   Create 3D digital models and assemblies using Autodesk Fusion
                   360.
                 </li>
+                <br />
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
                   Apply your learning to complete a full design project—from
                   concept to digital prototype.
@@ -285,10 +289,10 @@ export default function design() {
             transition={{ duration: 0.8 }} // Duration of animation
             viewport={{ once: true }} // Ensure the animation only runs once when in view
           >
-            <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 text-center z-10">
+            <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 lg:text-left text-center z-10">
               Course Schedule, Format, and Fees
             </h2>
-            <ul className="list-disc list-inside md:text-left md:inline-block z-10">
+            <ul className="list-disc list-inside lg:text-left md:inline-block z-10">
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Duration:</span> 12 Weeks
               </li>
@@ -327,7 +331,7 @@ export default function design() {
         {/* First Image (animate from left) */}
         <motion.div
           className="absolute top-[-5%] md:top-[-5%] left-[-25%] xl:left-[-15%] md:left-[-20%] max-w-[50%] md:max-w-[60%] xl:max-w-full object-cover z-1"
-          initial={{ opacity: 0, x: -100 }} // Start with opacity 0 and slide from the left
+          initial={{ opacity: 0, x: -50 }} // Start with opacity 0 and slide from the left
           whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
           transition={{ duration: 0.8 }} // Duration of animation
           viewport={{ once: true }} // Ensure the animation only runs once when in view
@@ -386,7 +390,7 @@ export default function design() {
             </motion.h2>
 
             <div className="md:text-center">
-              <ul className="list-disc list-inside md:text-left md:inline-block">
+              <ul className="list-disc list-inside lg:text-left md:inline-block">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                   <span className="font-bold">
                     Paid Internships for Top Performers
@@ -450,33 +454,33 @@ export default function design() {
         >
           {/* Text */}
           <div className="flex flex-col gap-y-6 z-10">
-            <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 text-center z-10">
+            <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 text-center lg:text-left z-10">
               Where This Can Take You
             </h2>
-            <p className="font-open-sans font-bold  md:text-xl text-[16px] text-white">
+            <p className="font-open-sans font-bold  md:text-xl text-[16px] text-white text-center lg:text-left">
               By the end of the course, you’ll be able to:
             </p>
-            <ul className="list-disc list-inside md:text-left md:inline-block z-10">
+            <ul className="list-disc list-inside lg:text-left md:inline-block z-10">
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 Work with design studios or engineering teams on product
                 development and 3D modeling.
               </li>
-              <br /> <br />
+              <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 Join manufacturing Industries to support design and production
                 processes.
               </li>
-              <br /> <br />
+              <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 Collaborate with startups or innovation labs on early-stage
                 product concepts.
               </li>
-              <br /> <br />
+              <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 Offer freelance CAD and 3D design services to clients across
                 industries.
               </li>
-              <br /> <br />
+              <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 Start your own business in product design, prototyping, or
                 digital design services.
@@ -522,12 +526,12 @@ export default function design() {
             </motion.h2>
             {/* Text */}
             <div>
-              <ol className="list-inside md:text-left list-decimal">
-                <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
+              <ol className="list-inside lg:text-left list-none">
+                <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center">
                   <span className="font-bold">Apply Online</span>
                 </li>
-                <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                  <span className="font-bold">Pay & Confirm Enrollment</span>
+                <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center">
+                  <span className="font-bold">Pay & Confirm Enrollment </span>
                   Limited Seats — Only 30 Spots Per Batch!
                 </li>
               </ol>
@@ -584,8 +588,8 @@ export default function design() {
             >
               FAQs
             </motion.h2>
-            <div className="md:text-center">
-              <ul className="list-disc list-inside md:text-left md:inline-block">
+            <div>
+              <ul className="list-none list-inside text-center lg:text-left md:inline-block">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                   <span className="font-bold">
                     Is the course beginner-friendly?
@@ -653,7 +657,7 @@ export default function design() {
               A Collaboration You Can Trust
             </motion.h2>
             <div>
-              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
+              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center lg:text-left">
                 <span className="font-bold">3DPD </span>
                 is India's largest integrated 3D printing bureau, pioneering
                 rapid prototyping and additive manufacturing since 2000. With
@@ -664,8 +668,8 @@ export default function design() {
                 innovation and precision.
               </p>
               <br />
-              <br />
-              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
+              <br className="hidden md:block" />
+              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center lg:text-left">
                 <span className="font-bold">Yuvabe Education </span>
                 is a purpose-driven learning platform based in Auroville.
                 Through its Bridge Programme, Yuvabe empowers young adults with
@@ -675,8 +679,8 @@ export default function design() {
                 world.
               </p>
               <br />
-              <br />
-              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
+              <br className="hidden md:block" />
+              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center lg:text-left">
                 Together, Yuvabe Education and 3DPD bridge the gap between
                 education and industry, providing learners with the tools and
                 mentorship needed to excel in the fields of product design and
@@ -705,7 +709,7 @@ export default function design() {
           alt="Bridge Image"
           width={1137.39}
           height={1079}
-          className="absolute top-[10%] lg:top-[20%] right-0 lg:right-[-15%] h-[45%] md:h-[50%] lg:h-[65%] xl:h-[75%] object-cover z-1"
+          className="absolute top-[15%] md:top-[20%] right-0 lg:right-[-15%] h-[45%] md:h-[50%] lg:h-[65%] xl:h-full w-auto object-cover z-1"
           unoptimized
         />
         <Image
@@ -732,13 +736,13 @@ export default function design() {
             <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl text-center z-10">
               Meet Your Instructors
             </h2>
-            <p className="font-open-sans font-bold  lg:text-2xl text-[18px] md:text-[20px] text-white mb-4 md:mb-8 lg:mb-10">
+            <p className="font-open-sans font-bold  lg:text-2xl text-[18px] md:text-[20px] text-white mb-4 md:mb-8 lg:mb-10 text-center">
               Your mentors are experienced product designers, CAD experts, and
               industry professionals passionate about teaching and innovation.
             </p>
             {/* Instructors */}
             <div className="flex flex-col gap-8 md:gap-12 lg:gap-16">
-              <div className="flex flex-row gap-x-12 flex-wrap xl:flex-nowrap">
+              <div className="flex flex-row gap-x-12 gap-y-8 flex-wrap xl:flex-nowrap">
                 <Image
                   src="/images/3d-design/3d-14.png"
                   alt="Bridge Image"
@@ -748,10 +752,10 @@ export default function design() {
                   className="object-cover m-auto"
                 />
                 <div>
-                  <h3 className="font-open-sans text-white font-bold lg:text-2xl text-[18px] md:text-[20px] mb-2 md:mb-3 lg:mb-4">
+                  <h3 className="font-open-sans text-white font-bold lg:text-2xl text-[18px] md:text-[20px] mb-2 md:mb-3 lg:mb-4 text-center lg:text-left">
                     Dinagaran
                   </h3>
-                  <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] ">
+                  <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] text-center lg:text-left">
                     Dinagaran is the Head of the STEAM program at Yuvabe,
                     Auroville. He holds an M.Tech in Electrical. Drives,
                     controls, and brings over a decade of experience in hands-on
@@ -764,7 +768,7 @@ export default function design() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-x-12 flex-wrap xl:flex-nowrap">
+              <div className="flex flex-row gap-x-12 gap-y-8 flex-wrap xl:flex-nowrap">
                 <Image
                   src="/images/3d-design/3d-13.png"
                   alt="Bridge Image"
@@ -774,10 +778,10 @@ export default function design() {
                   className="object-cover m-auto"
                 />
                 <div>
-                  <h3 className="font-open-sans text-white font-bold lg:text-2xl text-[18px] md:text-[20px] mb-2 md:mb-3 lg:mb-4">
+                  <h3 className="font-open-sans text-white font-bold lg:text-2xl text-[18px] md:text-[20px] mb-2 md:mb-3 lg:mb-4 text-center lg:text-left">
                     Siddharth Baskaran
                   </h3>
-                  <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] ">
+                  <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] text-center lg:text-left">
                     Siddharth Baskaran is the Assistant Manager - Design at 3D
                     Product Development Pvt. Ltd. (3DPD), a leading provider of
                     rapid prototyping and low-volume manufacturing services in

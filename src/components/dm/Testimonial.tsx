@@ -36,9 +36,8 @@ export function StudentTestimonial() {
             “
           </div>
           <p className="font-sans font-semibold text-[#DFDFDF] text-base sm:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id elit
-            eget justo iaculis tempus. Sed efficitur mauris nec leo ultrices,
-            quis lacinia ipsum mattis.
+            I was able to learn from basic to advanced digital marketing skills
+            in just 3 months, with Yuvabe’s neat beginner-friendly practices.
           </p>
           <p className="text-[#FFCA2D] font-semibold mt-3">- Karthi</p>
         </motion.div>
