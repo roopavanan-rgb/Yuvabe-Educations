@@ -235,8 +235,8 @@ const NewsletterBlock = ({ newsletter }: { newsletter: NewsletterItem }) => (
           src={newsletter.imageUrl}
           alt=""
           className="h-full rounded-t-[20px] rounded-tl-[20px] w-full z-10 object-cover"
-          width={347}
-          height={326}
+          width={532.52}
+          height={500}
         />
         {/* Title */}
         <div className="flex flex-col gap-x-2 py-6 px-3 items-center md:items-stretch">

@@ -316,3 +316,10 @@ img[src$="#lg-center"] {
   border-radius: 35px;
   border-color: #ffffff66;
 }
+
+.bg-clip-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
