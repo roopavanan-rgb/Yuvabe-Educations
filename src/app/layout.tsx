@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Poppins, Nunito_Sans, Open_Sans } from "next/font/google";
+import { Poppins, Nunito_Sans, Open_Sans, Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -20,7 +20,13 @@ const nunitoSans = Nunito_Sans({
 const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  variable: "--font-secondary",
+  variable: "--font-open-sans",
+});
+
+const albertsans = Albert_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-albert",
 });
 
 export const metadata: Metadata = {

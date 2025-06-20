@@ -19,6 +19,18 @@ interface NewsletterItem {
 // Array of newsletter data
 const newslettersData: NewsletterItem[] = [
   {
+    id: 17,
+    title: "YUVABEAT",
+    subtitle: "Agents of Change - Part 1",
+    month: "June",
+    year: "2025",
+    description:
+      "At Yuvabe, youth leadership isn’t just taught—it’s lived. Every project, every conversation, every seed planted is part of a bigger story. This newsletter is a glimpse into how your support is sparking purpose, leadership, and hope in youth across the Villupuram district of Tamil Nadu.",
+    imageUrl: "/images/newsletters/news17.webp",
+    linkUrl:
+      "https://us13.campaign-archive.com/?u=877629c188f9de17e6e6b4bc6&id=d01bbf567b",
+  },
+  {
     id: 16,
     title: "YUVABEAT",
     subtitle: "STEAMing with Possibilities!",
