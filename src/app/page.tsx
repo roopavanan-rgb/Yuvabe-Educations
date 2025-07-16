@@ -525,9 +525,9 @@ export default function Home() {
               <div className="md:w-3/4 space-y-4 text-left">
                 <h3 className="text-[36px] font-semibold font-primary">Work</h3>
                 <p className="text-[#000000] font-secondary font-normal  text-[18px] mb-6 text-wrap">
-                  To nurture a generation of self-aware, skilled, and
-                  purpose-driven individuals who contribute meaningfully to the
-                  world, guided by inner exploration and outward impact.
+                  Work comprises higher order skilling and project work in
+                  predetermined areas such as AI Full stack, Digital Marketing,
+                  Sustainability.
                 </p>
                 <Button href="/about-us">Read more</Button>
               </div>
@@ -555,9 +555,9 @@ export default function Home() {
                   Serve
                 </h3>
                 <p className="text-[#000000] font-secondary font-normal  text-[18px] mb-6 z-10">
-                  To nurture a generation of self-aware, skilled, and
-                  purpose-driven individuals who contribute meaningfully to the
-                  world, guided by inner exploration and outward impact.
+                  Serve is the commitment to give back to the community through
+                  various social programs and projects supporting Auroville
+                  units.
                 </p>
                 <Button href="/get-involved/we-serve">Read more</Button>
               </div>
@@ -595,9 +595,9 @@ export default function Home() {
                   Evolve
                 </h3>
                 <p className="text-[#000000] font-secondary font-normal text-[18px] mb-6">
-                  To nurture a generation of self-aware, skilled, and
-                  purpose-driven individuals who contribute meaningfully to the
-                  world, guided by inner exploration and outward impact.
+                  Evolve incorporates self-growth through transformative
+                  activities that lead to better decision-making, self-
+                  compassion, overcoming fear, dealing with challenges and more.
                 </p>
                 <Button href="/get-involved/we-evolve">Read more</Button>
               </div>

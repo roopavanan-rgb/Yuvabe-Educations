@@ -899,7 +899,10 @@ export default function design() {
               viewport={{ once: true }} // Trigger the animation only once when the element comes into view
               className="flex flex-row gap-x-12 justify-center flex-wrap gap-y-6 z-10"
             >
-              <Link href={"https://x.com/yuvabeauroville"} target="_blank">
+              <Link
+                href={"https://www.linkedin.com/company/yuvabe/"}
+                target="_blank"
+              >
                 <svg
                   width="41"
                   height="40"
@@ -940,10 +943,7 @@ export default function design() {
                   />
                 </svg>
               </Link>
-              <Link
-                href={"https://www.linkedin.com/company/yuvabe/"}
-                target="_blank"
-              >
+              <Link href={"https://x.com/yuvabeauroville"} target="_blank">
                 <svg
                   width="39"
                   height="40"

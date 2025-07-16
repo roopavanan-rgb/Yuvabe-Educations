@@ -323,3 +323,15 @@ img[src$="#lg-center"] {
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
+
+.course-struc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  /* Length of the border */
+  border-top: 5px solid #F48F38;
+  /* Top border with color */
+  border-radius: 30px;
+}
