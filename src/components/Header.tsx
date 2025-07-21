@@ -24,6 +24,10 @@ const Header = () => {
   const router = useRouter();
   const pathname = usePathname();
 
+  const [openMobileSubmenus, setOpenMobileSubmenus] = useState<{
+    [key: string]: boolean;
+  }>({});
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 640);
@@ -50,6 +54,13 @@ const Header = () => {
     if (!menuOpen && isMobile) {
       setShowSearch(false);
     }
+  };
+
+  const toggleMobileSubmenu = (label: string) => {
+    setOpenMobileSubmenus((prev) => ({
+      ...prev,
+      [label]: !prev[label],
+    }));
   };
 
   const toggleSearch = () => {
@@ -99,26 +110,24 @@ const Header = () => {
 
   const navLinks = [
     {
-      label: "STEAM",
+      label: "Programs",
       links: [
-        { name: "About Steam", path: "/steam/about-steam" },
-        { name: "Program Calendar", path: "/steam/program-calendar" },
-        // { name: "Auroville Program", path: "/steam/auroville-program" },
-        // { name: "Visitor Program", path: "/steam/visitor-program" },
-      ],
-    },
-    {
-      label: "Bridge",
-      links: [
-        { name: "About Bridge", path: "/bridge/about" },
-        { name: "Program Calendar", path: "/bridge/bridge-program" },
-        { name: "Digital Marketing", path: "/bridge/digital-marketing" },
-        // { name: "UI/UX", path: "/bridge/ui-ux" },
-        { name: "AI", path: "/bridge/ai" },
-        { name: "Corporate Sustainability", path: "/bridge/sustainability" },
-        { name: "3D Product Design", path: "/bridge/3d-design" },
-        // { name: "Market Research", path: "/bridge/market-research" },
-        // { name: "Workshop", path: "/bridge/workshop" },
+        { name: "Steam", path: "/steam" },
+        {
+          name: "Bridge",
+          path: "/bridge",
+          sublinks: [
+            { name: "Digital Marketing", path: "/bridge/digital-marketing" },
+            { name: "AI", path: "/bridge/ai" },
+            {
+              name: "Corporate Sustainability",
+              path: "/bridge/sustainability",
+            },
+            { name: "3D Product Design", path: "/bridge/3d-design" },
+            { name: "UI-UX", path: "/bridge/ui-ux" },
+          ],
+        },
+        { name: "Yuvabe Studios", path: "https://yuvabestudios.com/" },
       ],
     },
     {
@@ -249,18 +258,49 @@ const Header = () => {
                     className="absolute left-0 mt-2 w-48 bg-white shadow-lg p-2 rounded-md z-10"
                   >
                     {menu.links.map((link, i) => (
-                      <li key={i}>
+                      <li key={i} className="relative">
+                        {/* First-level item with peer */}
                         <Link
                           href={link.path}
                           onClick={closeDropdown}
-                          className={`block py-2 px-4 rounded-md ${
+                          className={`peer flex justify-between items-center py-2 px-4 rounded-md transition duration-300 ${
                             isActive(link.path)
                               ? "bg-[#592AC7]/10 text-[#592AC7]"
                               : "hover:bg-gray-100 hover:text-[#592AC7]"
-                          } transition duration-300`}
+                          }`}
                         >
                           {link.name}
+                          {link.sublinks && (
+                            <span className="ml-2 text-sm">&#9656;</span>
+                          )}
                         </Link>
+
+                        {/* Second-level submenu - visible only when this link is hovered */}
+                        {link.sublinks && (
+                          <ul
+                            className="absolute top-0 left-full ml-1 mt-0 w-48 bg-white shadow-lg p-2 rounded-md z-20
+        invisible opacity-0
+        peer-hover:visible peer-hover:opacity-100
+        hover:visible hover:opacity-100
+        transition-opacity duration-200"
+                          >
+                            {link.sublinks.map((sublink, j) => (
+                              <li key={j}>
+                                <Link
+                                  href={sublink.path}
+                                  onClick={closeDropdown}
+                                  className={`block py-2 px-4 rounded-md transition duration-300 ${
+                                    isActive(sublink.path)
+                                      ? "bg-[#592AC7]/10 text-[#592AC7]"
+                                      : "hover:bg-gray-100 hover:text-[#592AC7]"
+                                  }`}
+                                >
+                                  {sublink.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </li>
                     ))}
                   </motion.ul>
@@ -376,6 +416,7 @@ const Header = () => {
 
             {navLinks.map((menu, index) => (
               <div key={index} className="flex flex-col">
+                {/* Top-level menu toggle button */}
                 <button
                   onClick={() => handleDropdownOpen(menu.label)}
                   className={`flex items-center justify-between w-full text-left px-4 py-2 rounded-md transition duration-300 ${
@@ -391,6 +432,8 @@ const Header = () => {
                     }`}
                   />
                 </button>
+
+                {/* First-level submenu */}
                 <AnimatePresence>
                   {openDropdown === menu.label && (
                     <motion.ul
@@ -400,18 +443,56 @@ const Header = () => {
                       className="ml-4 mt-1 space-y-1"
                     >
                       {menu.links.map((link, i) => (
-                        <li key={i}>
-                          <Link
-                            href={link.path}
-                            onClick={closeMobileMenu}
-                            className={`block px-4 py-2 rounded-md transition duration-300 ${
-                              isActive(link.path)
-                                ? "bg-[#592AC7]/10 text-[#592AC7]"
-                                : "hover:bg-gray-100 hover:text-[#592AC7]"
-                            }`}
-                          >
-                            {link.name}
-                          </Link>
+                        <li key={i} className="flex flex-col">
+                          <div className="flex justify-between items-center">
+                            <Link
+                              href={link.path}
+                              onClick={closeMobileMenu}
+                              className={`block px-4 py-2 rounded-md transition duration-300 ${
+                                isActive(link.path)
+                                  ? "bg-[#592AC7]/10 text-[#592AC7]"
+                                  : "hover:bg-gray-100 hover:text-[#592AC7]"
+                              }`}
+                            >
+                              {link.name}
+                            </Link>
+
+                            {/* Show toggle arrow if sublinks exist */}
+                            {link.sublinks && (
+                              <button
+                                onClick={() => toggleMobileSubmenu(link.name)}
+                                className={`px-2 focus:outline-none ${
+                                  openMobileSubmenus[link.name]
+                                    ? "rotate-180"
+                                    : ""
+                                } transition-transform duration-300`}
+                                aria-label={`Toggle submenu for ${link.name}`}
+                              >
+                                <IoMdArrowDropdown size={20} />
+                              </button>
+                            )}
+                          </div>
+
+                          {/* Second-level submenu (expandable) */}
+                          {link.sublinks && openMobileSubmenus[link.name] && (
+                            <ul className="ml-6 mt-1 space-y-1">
+                              {link.sublinks.map((sublink, j) => (
+                                <li key={j}>
+                                  <Link
+                                    href={sublink.path}
+                                    onClick={closeMobileMenu}
+                                    className={`block px-4 py-2 rounded-md transition duration-300 ${
+                                      isActive(sublink.path)
+                                        ? "bg-[#592AC7]/10 text-[#592AC7]"
+                                        : "hover:bg-gray-100 hover:text-[#592AC7]"
+                                    }`}
+                                  >
+                                    {sublink.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </li>
                       ))}
                     </motion.ul>
@@ -419,6 +500,7 @@ const Header = () => {
                 </AnimatePresence>
               </div>
             ))}
+
             <div className="px-4 pt-2">
               <Button
                 href="/donate"

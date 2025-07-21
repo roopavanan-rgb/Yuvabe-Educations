@@ -76,10 +76,10 @@ export default function Bridge() {
               </p>
             </motion.div>
             {/* Text & Video */}
-            <div className="flex flex-row gap-y-8 md:gap-y-16 lg:flex-wrap xl:gap-x-[106px]">
+            <div className="flex flex-row gap-y-8 md:gap-y-16 lg:flex-wrap xl:gap-x-[106px] lg:justify-between">
               {/* Text */}
               <motion.div
-                className="w-full lg:w-[45%] flex flex-col justify-between"
+                className="w-full lg:w-[35%] flex flex-col justify-between"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -104,10 +104,11 @@ export default function Bridge() {
               </motion.div>
               {/* Video */}
               <motion.div
-                className="max-w-full lg:w-[45%]"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
+                className="max-w-full lg:w-[50%]"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
               >
                 <iframe
                   width="100%"
@@ -118,6 +119,7 @@ export default function Bridge() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   // referrerpolicy="strict-origin-when-cross-origin"
                   // allowfullscreen
+                  className="rounded-[20px]"
                 ></iframe>
               </motion.div>
             </div>
@@ -322,7 +324,7 @@ export default function Bridge() {
                   opportunities.
                 </p>
                 <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-3">
-                  Yuvabe’s Bridge Program tackles this challenge by offering
+                  Yuvabe’s Bridge Program tackles this challenge by offering{" "}
                   <span className="text-[#592AC7] font-bold">
                     100% scholarships to women, removing the “if” and “how” from
                     a woman’s decision to learn,
@@ -484,7 +486,7 @@ export default function Bridge() {
 
       {/* Graduates speak */}
       <section className="bg-[#FFCA2D] pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24 ">
-        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 relative">
+        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0">
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -499,7 +501,7 @@ export default function Bridge() {
               disableOnInteraction: false,
             }}
             speed={4000}
-            className="w-full"
+            className="w-full relative"
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index} className="bg-[#FFCA2D]">
@@ -566,54 +568,54 @@ export default function Bridge() {
                 </div>
               </SwiperSlide>
             ))}
+            {/* Custom Navigation */}
+            <div className="flex flex-row justify-center xl:justify-between gap-x-5 xl:gap-x-0 mt-6 xl:mt-0 xl:absolute xl:left-0 xl:top-1/2 transform xl:-translate-y-1/2 z-10 w-full items-center">
+              <div className="swiper-button-prev-b cursor-pointer z-10">
+                <svg
+                  width="62"
+                  height="62"
+                  viewBox="0 0 62 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="md:scale-100 scale-75"
+                >
+                  <circle
+                    cx="31"
+                    cy="31"
+                    r="31"
+                    transform="rotate(180 31 31)"
+                    fill="#592AC7"
+                  />
+                  <path
+                    d="M37.5859 42.959L24.4048 30.8943L37.5859 19.0377"
+                    stroke="white"
+                    stroke-width="3.5942"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div className="swiper-button-next-b cursor-pointer z-10">
+                <svg
+                  width="62"
+                  height="62"
+                  viewBox="0 0 62 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="md:scale-100 scale-75"
+                >
+                  <circle cx="31" cy="31" r="31" fill="#592AC7" />
+                  <path
+                    d="M24.4141 19.041L37.5952 31.1057L24.4141 42.9623"
+                    stroke="white"
+                    stroke-width="3.5942"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
           </Swiper>
-          {/* Custom Navigation */}
-          <div>
-            <div className="swiper-button-prev-b absolute bottom-[-5%] md:bottom-[-10%] left-1/3 xl:top-1/2 xl:left-0 transform xl:-translate-y-1/2 cursor-pointer z-10">
-              <svg
-                width="62"
-                height="62"
-                viewBox="0 0 62 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="md:scale-100 scale-75"
-              >
-                <circle
-                  cx="31"
-                  cy="31"
-                  r="31"
-                  transform="rotate(180 31 31)"
-                  fill="#592AC7"
-                />
-                <path
-                  d="M37.5859 42.959L24.4048 30.8943L37.5859 19.0377"
-                  stroke="white"
-                  stroke-width="3.5942"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="swiper-button-next-b absolute bottom-[-8%] md:bottom-[-14%] right-1/3 xl:top-1/2 xl:right-0 transform -translate-y-1/2 cursor-pointer z-10">
-              <svg
-                width="62"
-                height="62"
-                viewBox="0 0 62 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="md:scale-100 scale-75"
-              >
-                <circle cx="31" cy="31" r="31" fill="#592AC7" />
-                <path
-                  d="M24.4141 19.041L37.5952 31.1057L24.4141 42.9623"
-                  stroke="white"
-                  stroke-width="3.5942"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -705,13 +707,25 @@ export default function Bridge() {
       {/* Donation */}
       <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-8 md:gap-y-16">
-          <h2 className="text-white text-[40px]  md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
+          <motion.h2
+            className="text-white text-[40px]  md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             Your Support Matters!
-          </h2>
+          </motion.h2>
           {/* Donate From.... */}
           <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap py-0 ">
             {/* Donate from India */}
-            <div className="flex flex-col gap-y-16 w-full lg:w-1/2">
+            <motion.div
+              className="flex flex-col gap-y-16 w-full lg:w-1/2"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               {/* Text */}
               <div className="flex flex-col gap-y-6">
                 <p className="font-secondary font-bold text-[18px] md:text-2xl leading-[30px] text-white  text-center lg:text-left">
@@ -762,14 +776,15 @@ export default function Bridge() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* Donate from Abroad */}
             <div className="w-full lg:w-1/2">
               <motion.div
                 className="bg-white p-8 rounded-[30px] md:rounded-[50px] shadow-lg border border-gray-200 w-full lg:max-w-[584px] h-auto flex flex-col justify-between items-center gap-y-8 m-auto"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
               >
                 <h2 className="text-[32px] md:text-[40x] font-semibold text-[#592Ac7] text-center font-primary">
                   Donate from Anywhere
@@ -780,9 +795,15 @@ export default function Bridge() {
               </motion.div>
             </div>
           </div>
-          <p className="font-secondary font-extrabold text-[#FFCA2D] text-[18px] md:text-[30px] lg:text-[36px] leading-[28px] md:leading-[30px] text-center">
+          <motion.p
+            className="font-secondary font-extrabold text-[#FFCA2D] text-[18px] md:text-[30px] lg:text-[36px] leading-[28px] md:leading-[30px] text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             Let’s empower one youth at a time and gift them a better future!
-          </p>
+          </motion.p>
         </div>
       </div>
     </main>

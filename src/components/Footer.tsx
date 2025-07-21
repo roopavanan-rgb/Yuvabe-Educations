@@ -29,7 +29,9 @@ const Footer = () => {
             className="w-20"
           />
           <h2 className="font-primary font-semibold mt-2">Yuvabe Education</h2>
-          <p className="font-secondary text-[12px]">A social initiative by Yuvabe, Auroville Foundation</p>
+          <p className="font-secondary text-[12px]">
+            A social initiative by Yuvabe, Auroville Foundation
+          </p>
           <div className="mt-6 space-y-6 text-gray-700">
             <p className="flex items-center space-x-2">
               <IoMailSharp className="text-lg text-black" />
@@ -117,7 +119,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-700">
               <li>
                 <Link
-                  href="/steam/about-steam"
+                  href="/steam"
                   className="font-regular font-primary hover:underline"
                 >
                   STEAM Program
@@ -125,7 +127,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/bridge/about"
+                  href="/bridge"
                   className="font-regular font-primary hover:underline"
                 >
                   Bridge Program

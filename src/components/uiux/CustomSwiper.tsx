@@ -132,7 +132,7 @@ const CustomSwiper = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex justify-center gap-6 pt-6 lg:hidden">
+      <div className="flex justify-center gap-6 pt-6 xl:hidden">
         <button className="swiper-button-prev-custom cursor-pointer">
           <svg
             width="79"

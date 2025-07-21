@@ -192,7 +192,7 @@ export default function uiux() {
             </p>
             <p className="font-secondary md:text-[18px] text-[16px] text-[#020406] leading-9 text-center md:text-left">
               <span className="font-bold">Duration:</span> 12 Weeks
-              <span className="font-bold"> | Start Date:</span> May, 2025.{" "}
+              <span className="font-bold"> | Start Date:</span> August, 2025.{" "}
               <br />
               <span className="font-bold">Learning Mode:</span> In-person,
               classroom sessions <br />
