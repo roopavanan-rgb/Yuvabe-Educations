@@ -47,6 +47,37 @@ export const metadata: Metadata = {
     icon: "/images/favicon.ico",
     apple: "/favicon.ico",
   },
+  // Add Google Search Console site verification
+  other: {
+    "google-site-verification: googleb0aa260c71911102.html"
+  },
+  openGraph: {
+    title: "Yuvabe Education - Empowering Future Leaders",
+    description:
+      "Join Yuvabe Education and unlock your potential through transformative learning experiences. Empowering change for a sustainable future.",
+    url: "https://yuvabeeducation.com",
+    siteName: "Yuvabe Education",
+    images: [
+      {
+        url: "https://yuvabeeducation.com/images/foot.png",
+        height: 630,
+        alt: "Yuvabe Education - Empowering Future Leaders",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@YuvabeAuroville",
+    title: "Yuvabe Education - Empowering Future Leaders",
+    description:
+      "Join Yuvabe Education and unlock your potential through transformative learning experiences.",
+    images: ["https://yuvabeeducation.com/images/foot.png"],
+  },
+  alternates: {
+    canonical: "https://yuvabeeducation.com",
+  },
 };
 
 export default function RootLayout({
