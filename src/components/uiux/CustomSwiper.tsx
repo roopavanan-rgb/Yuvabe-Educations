@@ -96,10 +96,10 @@ const CustomSwiper = () => {
         }}
         modules={[Navigation, Autoplay]}
         autoplay={{
-          delay: 5500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
-        speed={4000}
+        speed={2500}
         className="relative w-full"
       >
         {slidesData.map((slide, index) => (

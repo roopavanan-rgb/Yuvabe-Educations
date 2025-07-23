@@ -137,17 +137,17 @@ const AboutUs = () => {
 
           {/* Description */}
           <motion.p
-            className="md:mx-auto mt-10 md:mt-24 lg:mt-32 text-3xl md:text-4xl lg:text-5xl text-[#F9A91E] font-primary font-semibold leading-normal md:max-w-9/12"
+            className="md:mx-auto mt-16 mb-8 md:mt-24 md:mb-8 lg:mt-32 lg:mb-16 text-2xl md:text-3xl lg:text-[40px] text-[#592AC7] font-secondary font-bold leading-normal md:max-w-9/12 relative max-w-[40ch] mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           >
-            "The ignited minds of the youth are the most powerful resource on
-            earth."
+            The ignited minds of the youth are the most powerful resource on
+            earth.
             <br />
             <motion.span
-              className="block mt-4"
+              className="block mt-4 font-semibold text-black text-[18px] md:text-xl lg:text-[32px]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -155,6 +155,35 @@ const AboutUs = () => {
             >
               – Dr. APJ Abdul Kalam
             </motion.span>
+            {/* SVG Quotes */}
+            {/* Left */}
+            <svg
+              width="72"
+              height="57"
+              viewBox="0 0 72 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute top-[-52px] md:-top-16 -left-4 scale-50 lg:scale-100"
+            >
+              <path
+                d="M55.6406 56.15C51.4406 56.15 47.7906 54.65 44.6906 51.65C41.6906 48.65 40.1906 44.75 40.1906 39.95C40.1906 36.75 41.0406 33.05 42.7406 28.85C44.4406 24.55 47.2906 20 51.2906 15.2C55.2906 10.4 60.6906 5.59999 67.4906 0.799996L71.0906 13.85C69.1906 16.35 67.3906 18.9 65.6906 21.5C64.0906 24 62.8406 26.4 61.9406 28.7L70.6406 41.75C70.6406 43.95 69.9906 46.2 68.6906 48.5C67.4906 50.7 65.7906 52.55 63.5906 54.05C61.3906 55.45 58.7406 56.15 55.6406 56.15ZM16.3406 56.15C12.1406 56.15 8.49063 54.65 5.39063 51.65C2.39063 48.65 0.890626 44.75 0.890626 39.95C0.890626 36.75 1.74063 33.05 3.44063 28.85C5.14063 24.55 7.99063 20 11.9906 15.2C15.9906 10.4 21.3906 5.59999 28.1906 0.799996L31.7906 13.85C29.8906 16.35 28.0906 18.9 26.3906 21.5C24.7906 24 23.5406 26.4 22.6406 28.7L31.3406 41.75C31.3406 43.95 30.6906 46.2 29.3906 48.5C28.1906 50.7 26.4906 52.55 24.2906 54.05C22.0906 55.45 19.4406 56.15 16.3406 56.15Z"
+                fill="#FFCA2D"
+              />
+            </svg>
+            {/* Right */}
+            <svg
+              width="72"
+              height="57"
+              viewBox="0 0 72 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute bottom-[-52px] md:-bottom-16 -right-4 scale-50 lg:scale-100"
+            >
+              <path
+                d="M43.7701 56.15L40.1701 43.1C42.1701 40.6 43.9701 38.1 45.5701 35.6C47.1701 33 48.4201 30.55 49.3201 28.25L40.6201 15.2C40.6201 12.9 41.2201 10.65 42.4201 8.45C43.7201 6.24999 45.4701 4.44999 47.6701 3.04999C49.9701 1.55 52.6201 0.799996 55.6201 0.799996C59.8201 0.799996 63.4201 2.3 66.4201 5.29999C69.5201 8.3 71.0701 12.2 71.0701 17C71.0701 20.2 70.2201 23.95 68.5201 28.25C66.8201 32.45 63.9701 36.95 59.9701 41.75C55.9701 46.55 50.5701 51.35 43.7701 56.15ZM4.47012 56.15L0.870117 43.1C2.87012 40.6 4.67012 38.1 6.27012 35.6C7.87012 33 9.12012 30.55 10.0201 28.25L1.32012 15.2C1.32012 12.9 1.92012 10.65 3.12012 8.45C4.42012 6.24999 6.17012 4.44999 8.37012 3.04999C10.6701 1.55 13.3201 0.799996 16.3201 0.799996C20.5201 0.799996 24.1201 2.3 27.1201 5.29999C30.2201 8.3 31.7701 12.2 31.7701 17C31.7701 20.2 30.9201 23.95 29.2201 28.25C27.5201 32.45 24.6701 36.95 20.6701 41.75C16.6701 46.55 11.2701 51.35 4.47012 56.15Z"
+                fill="#FFCA2D"
+              />
+            </svg>
           </motion.p>
           {/* Geometric Shapes with Motion Effects */}
           <div>

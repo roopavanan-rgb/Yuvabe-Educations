@@ -520,8 +520,21 @@ export default function Bridge() {
                         alt="Bridge Image"
                         width={431}
                         height={446}
-                        className="w-[80%] lg:w-full max-w-[431px] z-10 object-contain"
+                        className="w-[80%] lg:w-full max-w-[431px] z-10 object-contain relative"
                       />
+                      <svg
+                        width="112"
+                        height="92"
+                        viewBox="0 0 112 92"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="scale-50 lg:scale-100 absolute top-3.5 lg:top-11 right-0 z-10"
+                      >
+                        <path
+                          d="M0.509434 91.0917V60.5783C0.509434 53.0838 1.40164 46.1246 3.18605 39.7007C4.97046 33.0984 7.82551 26.6746 11.7512 20.4291C15.6769 14.0053 20.9409 7.49216 27.5432 0.889852L45.7442 15.0759C41.1047 19.7154 37.3575 24.0872 34.5024 28.1913C31.6474 32.2954 29.5061 36.4888 28.0785 40.7714C26.8295 44.8755 26.2049 49.3365 26.2049 54.1544L15.7661 42.3774H50.0268V91.0917H0.509434ZM62.0715 91.0917V60.5783C62.0715 53.0838 62.9637 46.1246 64.7481 39.7007C66.5325 33.0984 69.3876 26.6746 73.3133 20.4291C77.239 14.0053 82.503 7.49216 89.1053 0.889852L107.306 15.0759C102.667 19.7154 98.9196 24.0872 96.0645 28.1913C93.2094 32.2954 91.0682 36.4888 89.6406 40.7714C88.3916 44.8755 87.767 49.3365 87.767 54.1544L77.3282 42.3774H111.589V91.0917H62.0715Z"
+                          fill="#592AC7"
+                        />
+                      </svg>
                     </motion.div>
 
                     {/* Testimonial Content */}
@@ -533,7 +546,7 @@ export default function Bridge() {
                       viewport={{ once: true }}
                     >
                       <motion.h2
-                        className="text-black text-[32px] md:text-[40px] lg:text-5xl leading-[120%] font-semibold text-center font-primary"
+                        className="text-[#592AC7] text-[32px] md:text-[40px] lg:text-6xl leading-[120%] font-semibold font-primary text-center lg:text-left"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -542,25 +555,11 @@ export default function Bridge() {
                         Graduates Speak
                       </motion.h2>
 
-                      <svg
-                        width="98"
-                        height="79"
-                        viewBox="0 0 98 79"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="m-auto mt-4 md:mt-6 lg:mt-9 md:scale-100 scale-75"
-                      >
-                        <path
-                          d="M38.2227 78.498H0.0146484V42.4873C0.0146484 29.8734 3.14779 20.1077 9.41406 13.1904C15.7617 6.27311 25.3646 2.12272 38.2227 0.739258V14.7773C31.3053 16.1608 26.2191 18.765 22.9639 22.5898C19.79 26.3333 18.1217 31.7044 17.959 38.7031H38.2227V78.498ZM97.5488 78.498H59.2188V42.4873C59.2188 29.8734 62.3926 20.1077 68.7402 13.1904C75.0879 6.27311 84.6908 2.12272 97.5488 0.739258V14.7773C90.5501 16.1608 85.4639 18.7243 82.29 22.4678C79.1162 26.2113 77.4479 31.623 77.2852 38.7031H97.5488V78.498Z"
-                          fill="white"
-                        />
-                      </svg>
-
-                      <p className="font-secondary font-normal text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] text-center mt-4 md:mt-6 lg:mt-9">
+                      <p className="font-secondary font-normal text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] mt-4 md:mt-6 lg:mt-9 text-center lg:text-left">
                         {testimonial.testimonial}
                       </p>
 
-                      <p className="font-secondary text-[#592AC7] font-semibold text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] text-center mt-4 lg:mt-8">
+                      <p className="font-secondary text-[#592AC7] font-semibold text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] mt-4 lg:mt-8 text-center lg:text-left">
                         {testimonial.name}
                       </p>
                     </motion.div>

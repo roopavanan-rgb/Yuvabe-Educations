@@ -146,7 +146,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-700">
               <li>
                 <Link
-                  href="/blogs"
+                  href="/stories/blogs"
                   className="font-regular font-primary hover:underline"
                 >
                   Blogs

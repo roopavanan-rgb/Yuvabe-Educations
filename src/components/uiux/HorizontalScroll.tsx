@@ -107,7 +107,7 @@ const HorizontalScroll = () => {
       scrollTrigger: {
         trigger: container,
         start: "top-=70",
-        end: () => `+=${container.scrollWidth}`,
+        end: () => `+=${container.scrollWidth / 2}`,
         pin: true,
         scrub: 1,
         snap: 1 / (slides.length - 1),
@@ -121,9 +121,9 @@ const HorizontalScroll = () => {
 
             // Smooth transition of opacity
             if (!isInViewport) {
-              gsap.to(slide, { opacity: 0, duration: 0.5, ease: "power2.out" });
+              gsap.to(slide, { opacity: 0, duration: 0.2, ease: "power2.out" });
             } else {
-              gsap.to(slide, { opacity: 1, duration: 0.5, ease: "power2.out" });
+              gsap.to(slide, { opacity: 1, duration: 0.2, ease: "power2.out" });
             }
           });
         },
