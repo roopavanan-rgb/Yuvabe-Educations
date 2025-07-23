@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     "Join Yuvabe Education and unlock your potential through transformative learning experiences. Empowering change for a sustainable future.",
   keywords: [
     "Yuvabe Education",
-    "Sustainability",
     "Bridge Program",
     "Youth Empowerment",
     "Education",
@@ -48,8 +47,9 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   // Add Google Search Console site verification
+
   other: {
-    "google-site-verification: googleb0aa260c71911102.html"
+    "google-site-verification": "b0aa260c71911102",
   },
   openGraph: {
     title: "Yuvabe Education - Empowering Future Leaders",
