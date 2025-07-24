@@ -47,9 +47,8 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   // Add Google Search Console site verification
-
   other: {
-    "google-site-verification": "b0aa260c71911102",
+    "google-site-verification": "NDtl3SzbQjQ7OGsJoA1I1kXuRJvFDMq0G2jQCbGikZE",
   },
   openGraph: {
     title: "Yuvabe Education - Empowering Future Leaders",
@@ -79,6 +78,7 @@ export const metadata: Metadata = {
     canonical: "https://yuvabeeducation.com",
   },
 };
+
 
 export default function RootLayout({
   children,
