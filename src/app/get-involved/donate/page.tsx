@@ -5,8 +5,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import PaymentForm from "@/components/PaymentForm";
+import Link from "next/link";
 
-export default function SupportUs() {
+export default function Donate() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -54,7 +55,7 @@ export default function SupportUs() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-primary text-[#592Ac7] leading-snug">
-            Support Us
+            Donate
           </h1>
           <p className="mt-4 text-[#000000] font-secondary text-base sm:text-lg max-w-md sm:max-w-lg lg:max-w-xl">
             You have the power to fuel a program that’s more than just
@@ -125,6 +126,24 @@ export default function SupportUs() {
             </motion.div>
           ))}
         </div>
+        <p className="mt-8 md:mt-12 lg:mt-24 text-[#000000] font-secondary text-base sm:text-lg  m-auto lg:max-w-6xl px-4 md:px-8 lg:px-12">
+          Yuvabe Education is a registered trust under the Societies
+          Registration Act 1950 (Rule-),The Foreign Contribution Regulation Act
+          (FCRA) 2001,12A and 80G section of Income Tax Act,1961.
+          <br />
+          <br />
+          Yuvabe Education also has CSR1 Certification to accept CSR funds from
+          corporates.
+          <br />
+          <br />
+          For any queries, please reach out to us via email :{" "}
+          <Link
+            href="mailto:donation@yuvabe.com"
+            className="text-[#592Ac7] underline"
+          >
+            donation@yuvabe.com
+          </Link>
+        </p>
         <PaymentForm />
       </section>
 

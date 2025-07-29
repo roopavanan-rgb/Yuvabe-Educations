@@ -146,9 +146,9 @@ const Header = () => {
       links: [
         { name: "We Serve", path: "/get-involved/we-serve" },
         { name: "We Evolve", path: "/get-involved/we-evolve" },
-        { name: "Support Us", path: "/get-involved/support-us" },
+        { name: "Donate", path: "/get-involved/donate" },
         { name: "Join Us", path: "/get-involved/join-us" },
-        { name: "Talk to Us", path: "/get-involved/talk-to-us" },
+        { name: "Connect With Us", path: "/get-involved/connect-with-us" },
       ],
     },
   ];
@@ -337,7 +337,7 @@ const Header = () => {
             )}
           </div>
           <Button
-            href="/get-involved/support-us"
+            href="/get-involved/donate"
             className="hover:bg-[#592AC7]/90 transition duration-300"
           >
             Donate

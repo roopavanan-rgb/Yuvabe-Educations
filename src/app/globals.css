@@ -126,6 +126,12 @@
   list-style-position: inside;
 }
 
+.blog li>ul {
+  list-style: circle;
+  margin-left: 12px;
+  list-style-position: inside;
+}
+
 .blog>ul>li:nth-child(1) {
   margin-top: 20px;
 }
@@ -162,7 +168,11 @@
   line-height: 120%;
   font-size: 32px;
   color: black;
-  margin-top: 20px;
+  margin-top: clamp(2rem, 1.9891rem + 1.3043vw, 3rem);
+}
+
+.blog a {
+  color: #592AC7;
 }
 
 .stroke-text-yellow {

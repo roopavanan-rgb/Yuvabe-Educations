@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
-export default function TalkToUsPage() {
+export default function ConnectWithUsPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -67,7 +68,7 @@ export default function TalkToUsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Talk to us
+              Connect With Us
             </motion.h1>
 
             <motion.p
@@ -142,12 +143,12 @@ export default function TalkToUsPage() {
               method="POST"
               className="flex flex-col gap-4"
             >
-               <input
+              <input
                 type="hidden"
                 name="access_key"
                 value="b46383fd-39fb-4a3c-80a3-eae125be6ead"
               />
-              
+
               <motion.input
                 type="text"
                 name="name"
@@ -190,6 +191,16 @@ export default function TalkToUsPage() {
             </form>
           </motion.div>
         </div>
+        <p className="mt-8 md:mt-12 lg:mt-24 text-white font-secondary text-base sm:text-lg  m-auto lg:max-w-8xl  px-4 md:px-8 lg:px-12 text-center">
+          Yuvabe Education has CSR1 Certification to accept CSR funds from
+          corporates.
+          <br />
+          <br />
+          For any queries, please reach out to us via email :{" "}
+          <Link href="mailto:donation@yuvabe.com" className="underline">
+            donation@yuvabe.com
+          </Link>
+        </p>
       </section>
     </>
   );
