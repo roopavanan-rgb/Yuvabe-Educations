@@ -25,14 +25,14 @@ export default function Donate() {
       bgShape: "bg-[#F8A91E]",
       link: "/bridge/about",
     },
-    {
-      title: "Emotional Resilience",
-      image: "/images/getinvolved/img2.svg",
-      description:
-        "Your donation will help us create an ecosystem of support for the youth, that comprises experts in integral health, counselling, coaching and more.",
-      bgShape: "bg-[#592AC7]",
-      link: "/programs/emotional-resilience",
-    },
+    // {
+    //   title: "Emotional Resilience",
+    //   image: "/images/getinvolved/img2.svg",
+    //   description:
+    //     "Your donation will help us create an ecosystem of support for the youth, that comprises experts in integral health, counselling, coaching and more.",
+    //   bgShape: "bg-[#592AC7]",
+    //   link: "/programs/emotional-resilience",
+    // },
     {
       title: "STEAM Program",
       image: "/images/getinvolved/img3.svg",
@@ -96,7 +96,7 @@ export default function Donate() {
         <h2 className="text-xl md:text-4xl lg:text-[48px] font-semibold font-primary text-black mb-12">
           Your contribution will help us support
         </h2>
-        <div className="flex flex-col md:flex-row justify-center gap-6 py-4 px-4 md:px-8 lg:px-12">
+        <div className="flex flex-row flex-wrap md:flex-row justify-center gap-6 py-4 px-4 md:px-8 lg:px-12">
           {cards.map((card, index) => (
             <motion.div
               key={index}
