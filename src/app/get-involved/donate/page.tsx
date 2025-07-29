@@ -23,7 +23,7 @@ export default function Donate() {
       description:
         "Your contribution will help us provide our young adults with an infrastructure, including tools and materials needed for their learning and growth.",
       bgShape: "bg-[#F8A91E]",
-      link: "/bridge/about",
+      link: "/bridge",
     },
     // {
     //   title: "Emotional Resilience",
@@ -39,7 +39,7 @@ export default function Donate() {
       description:
         "Your gift for our unique educational offering will help cover expenses for a dedicated space for STEAM Lab, teacher support, and project materials.",
       bgShape: "bg-[#33BED4]",
-      link: "/steam/about-steam",
+      link: "/steam",
     },
   ];
 
