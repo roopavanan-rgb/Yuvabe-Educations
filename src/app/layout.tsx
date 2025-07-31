@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Poppins, Nunito_Sans, Open_Sans, Albert_Sans } from "next/font/google";
+import { Poppins, Nunito_Sans, } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,22 +17,12 @@ const nunitoSans = Nunito_Sans({
   variable: "--font-secondary",
 });
 
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-open-sans",
-});
 
-const albertsans = Albert_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-albert",
-});
 
 export const metadata: Metadata = {
-  title: "Yuvabe Education - Empowering Future Leaders",
+  title: "Yuvabe Education",
   description:
-    "Join Yuvabe Education and unlock your potential through transformative learning experiences. Empowering change for a sustainable future.",
+    "Empowering future leaders through transformative learning experiences.",
   keywords: [
     "Yuvabe Education",
     "Bridge Program",
@@ -46,21 +36,19 @@ export const metadata: Metadata = {
     icon: "/images/favicon.ico",
     apple: "/favicon.ico",
   },
-  // Add Google Search Console site verification
   other: {
     "google-site-verification": "NDtl3SzbQjQ7OGsJoA1I1kXuRJvFDMq0G2jQCbGikZE",
   },
   openGraph: {
-    title: "Yuvabe Education - Empowering Future Leaders",
-    description:
-      "Join Yuvabe Education and unlock your potential through transformative learning experiences. Empowering change for a sustainable future.",
+    title: "Yuvabe Education",
+    description: "Empowering future leaders through education.",
     url: "https://yuvabeeducation.com",
     siteName: "Yuvabe Education",
     images: [
       {
         url: "https://yuvabeeducation.com/images/foot.png",
         height: 630,
-        alt: "Yuvabe Education - Empowering Future Leaders",
+        alt: "Yuvabe Education Logo",
       },
     ],
     locale: "en_US",
@@ -69,15 +57,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@YuvabeAuroville",
-    title: "Yuvabe Education - Empowering Future Leaders",
-    description:
-      "Join Yuvabe Education and unlock your potential through transformative learning experiences.",
+    title: "Yuvabe Education",
+    description: "Empowering future leaders through education.",
     images: ["https://yuvabeeducation.com/images/foot.png"],
   },
   alternates: {
     canonical: "https://yuvabeeducation.com",
   },
 };
+
 
 
 export default function RootLayout({
