@@ -4,6 +4,8 @@ import { Poppins, Nunito_Sans, } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Analytics from "./analytics"; 
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -76,6 +78,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Tag Manager */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-DSS59F58D1"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DSS59F58D1');
+          `}
+        </Script>
+
         {/* ✅ FundraiseUp Installation Script */}
         <Script
           id="fundraiseup-installation"
@@ -101,6 +117,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <Analytics/>
       </body>
     </html>
   );
