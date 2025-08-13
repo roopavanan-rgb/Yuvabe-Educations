@@ -503,7 +503,7 @@ const Header = () => {
 
             <div className="px-4 pt-2">
               <Button
-                href="/donate"
+                href="https://yuvabeeducation.com/get-involved/donate"
                 className="w-full hover:bg-[#592AC7]/90 transition duration-300"
               >
                 Donate
