@@ -158,7 +158,7 @@ const page = () => {
 
             {/* Button */}
             <motion.a
-              href="/get-involved/support-us"
+              href="https://yuvabeeducation.com/get-involved/donate"
               className="bg-[#592AC7] text-white font-semibold font-primary py-3 px-6 rounded-lg shadow-md inline-block "
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
