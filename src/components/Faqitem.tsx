@@ -40,7 +40,7 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
             style={{ overflow: "hidden" }}
           >
             <div className="px-6 py-4 bg-white text-gray-700 text-left">
-              {answer}
+              <div dangerouslySetInnerHTML={{ __html: answer }} />
             </div>
           </motion.div>
         )}

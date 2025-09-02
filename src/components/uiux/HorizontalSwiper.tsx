@@ -106,7 +106,7 @@ export default function HorizontalSwiper() {
         }}
         modules={[Navigation, Autoplay]}
         autoplay={{
-          delay: 5000, // Time between slides (in ms)
+          delay: 3500, // Time between slides (in ms)
           disableOnInteraction: false, // Keeps autoplay even after user interaction
           pauseOnMouseEnter: true,
         }}

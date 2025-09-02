@@ -192,7 +192,7 @@ export default function uiux() {
             </p>
             <p className="font-secondary md:text-[18px] text-[16px] text-[#020406] leading-9 text-center md:text-left">
               <span className="font-bold">Duration:</span> 12 Weeks
-              <span className="font-bold"> | Start Date:</span> August, 2025.{" "}
+              <span className="font-bold"> | Start Date:</span> September, 2025.{" "}
               <br />
               <span className="font-bold">Learning Mode:</span> In-person,
               classroom sessions <br />
@@ -228,13 +228,13 @@ export default function uiux() {
       <section className="bg-white pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24 relative overflow-hidden">
         <div className="flex flex-col m-auto px-5 md:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 xl:gap-y-16 z-10 items-center relative">
           <motion.h2
-            className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold text-3xl md:text-5xl lg:text-8xl xl:text-[115px]"
+            className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold lg:text-[64px] md:text-4xl text-3xl"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
           >
-            12 Immersive Module
+            12 Immersive Modules
           </motion.h2>
           <HorizontalSwiper />
         </div>
@@ -249,7 +249,7 @@ export default function uiux() {
           {/* Heading */}
           <div>
             <motion.h2
-              className="font-albert-sans leading-[130%] text-center text-white font-bold text-3xl md:text-5xl lg:text-8xl xl:text-[115px]"
+              className="font-albert-sans leading-[130%] text-center text-white font-bold lg:text-[64px] md:text-4xl text-3xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -281,7 +281,7 @@ export default function uiux() {
           {/* Heading */}
           <div>
             <motion.h2
-              className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold text-3xl md:text-5xl lg:text-8xl xl:text-[115px]"
+              className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold lg:text-[64px] md:text-4xl text-3xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -432,7 +432,7 @@ export default function uiux() {
           {/* Heading */}
           <div>
             <motion.h2
-              className="font-albert-sans leading-[130%] text-center text-white font-bold text-3xl md:text-5xl lg:text-8xl xl:text-[115px]"
+              className="font-albert-sans leading-[130%] text-center text-white font-bold lg:text-[64px] md:text-4xl text-3xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -604,7 +604,7 @@ export default function uiux() {
           {/* Heading */}
           <div>
             <motion.h2
-              className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold text-3xl md:text-5xl lg:text-8xl xl:text-[115px]"
+              className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold lg:text-[64px] md:text-4xl text-3xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -694,7 +694,7 @@ export default function uiux() {
           {/* Heading */}
           <div>
             <motion.h2
-              className="font-albert-sans leading-[130%] text-center text-white font-bold text-3xl md:text-5xl lg:text-8xl xl:text-[115px]"
+              className="font-albert-sans leading-[130%] text-center text-white font-bold lg:text-[64px] md:text-4xl text-3xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -770,7 +770,7 @@ export default function uiux() {
           {/* Heading */}
           <div>
             <motion.h2
-              className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold text-3xl md:text-5xl lg:text-8xl xl:text-[115px]"
+              className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold lg:text-[64px] md:text-4xl text-3xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -847,7 +847,7 @@ export default function uiux() {
           {/* Heading */}
           <div>
             <motion.h2
-              className="font-albert-sans leading-[130%] text-center text-white font-bold text-3xl md:text-5xl lg:text-8xl xl:text-[115px]"
+              className="font-albert-sans leading-[130%] text-center text-white font-bold lg:text-[64px] md:text-4xl text-3xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -936,7 +936,7 @@ export default function uiux() {
           {/* Heading */}
           <div className="z-10">
             <motion.h2
-              className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold text-3xl md:text-5xl lg:text-8xl xl:text-[115px]"
+              className="font-albert-sans leading-[130%] text-center bg-[linear-gradient(180deg,_#FFE7D3_-6.84%,_#EE8A33_90.74%)] bg-clip-text text-transparent font-bold lg:text-[64px] md:text-4xl text-3xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}

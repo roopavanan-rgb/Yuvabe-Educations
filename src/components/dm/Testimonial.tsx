@@ -66,19 +66,14 @@ export function StudentTestimonial() {
                 "_blank"
               )
             }
-            className="bg-[#FFCA2D] text-black text-sm px-5 md:px-6 py-2 rounded-2xl font-semibold hover:bg-yellow-500 transition"
+            className="bg-[#FFCA2D] text-black text-sm px-5 md:px-6 py-2 rounded-2xl font-semibold hover:bg-yellow-500 transition cursor-pointer"
           >
             Apply Now
           </button>
 
           <button
-            onClick={() =>
-              window.open(
-                "https://www.yuvabe.com/_files/ugd/173e7b_bfd064d78d6f44f8b632efc8d85b7d4c.pdf",
-                "_blank"
-              )
-            }
-            className="border border-[#E8AC35] text-[#FFCA2D] text-sm px-5 md:px-6 py-2 rounded-2xl font-semibold hover:bg-yellow-400 hover:text-black transition"
+            onClick={() => window.open("/docs/DM Brochure.pdf", "_blank")}
+            className="border border-[#E8AC35] text-[#FFCA2D] text-sm px-5 md:px-6 py-2 rounded-2xl font-semibold hover:bg-yellow-400 hover:text-black transition cursor-pointer"
           >
             Download Brochure
           </button>

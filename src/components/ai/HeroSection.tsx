@@ -21,16 +21,24 @@ export function HeroSection() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-raleway text-white mb-2 text-left">
             Kickstart Your AI First Full Stack Development Journey:
           </h2>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-raleway text-white text-left">3-Month Internship at Yuvabe Education's Bridge Program</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-raleway text-white text-left">
+            3-Month Internship at Yuvabe Education's Bridge Program
+          </h1>
 
           <p className="text-base md:text-lg font-sans font-bold text-white mt-6 text-left">
-            Gain hands-on experience and master the skills to thrive in Applied AI and Machine Learning. Apply today!
+            Gain hands-on experience and master the skills to thrive in Applied
+            AI and Machine Learning. Apply today!
           </p>
           <div className="flex flex-wrap gap-8 mt-10">
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-[#58AEE9]"
-              onClick={() => window.open("https://docs.google.com/forms/d/1je4Sg2PuywkvdQj2B-g7hEAFPy3wapcVlitbeff8IPY/viewform?edit_requested=true", "_blank")}
+              className="bg-white text-black hover:bg-[#58AEE9] cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/1je4Sg2PuywkvdQj2B-g7hEAFPy3wapcVlitbeff8IPY/viewform?edit_requested=true",
+                  "_blank"
+                )
+              }
             >
               APPLY NOW
             </Button>
@@ -38,8 +46,10 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="gap-2 border-white bg-[#0C2F47] hover:bg-blue-950"
-              onClick={() => window.open("https://www.yuvabe.com/_files/ugd/92aaf3_255bf92fe9ee43929a2fb1dc40ced226.pdf", "_blank")}
+              className="gap-2 border-white bg-[#0C2F47] hover:bg-blue-950 cursor-pointer"
+              onClick={() =>
+                window.open("/docs/AI Brochure_1.pdf", "_blank")
+              }
             >
               DOWNLOAD BROCHURE
             </Button>
@@ -50,13 +60,5 @@ export function HeroSection() {
       {/* Background Gradient */}
       <div className="absolute text-5xl -top-40 -right-40 opacity-40 blur-2xl border-none w-[500px] h-[500px] border rounded-full bg-gradient-to-r from-[#3991BD] to-blue-300"></div>
     </section>
-
-
-
-
   );
 }
-
-
-
-

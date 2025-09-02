@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Poppins, Nunito_Sans, } from "next/font/google";
+import { Poppins, Nunito_Sans, Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Analytics from "./analytics"; 
-
+import Analytics from "./analytics";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,7 +18,11 @@ const nunitoSans = Nunito_Sans({
   variable: "--font-secondary",
 });
 
-
+const albertsans = Albert_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-albert",
+});
 
 export const metadata: Metadata = {
   title: "Yuvabe Education",
@@ -68,8 +71,6 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export default function RootLayout({
   children,
 }: {
@@ -117,7 +118,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <Analytics/>
+        <Analytics />
       </body>
     </html>
   );

@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     title: "Online Application:",
-    description: ["Complete the application form."]
+    description: ["Complete the application form."],
   },
   {
     number: "02",
@@ -15,17 +15,17 @@ const steps = [
     description: [
       "Shortlisted candidates will be",
       "notified and will have to come in",
-      "for an interview and aptitude test."
-    ]
+      "for an interview and aptitude test.",
+    ],
   },
   {
     number: "03",
     title: "Confirmation:",
     description: [
       "Secure your spot with the payment",
-      "after you clear your screening."
-    ]
-  }
+      "after you clear your screening.",
+    ],
+  },
 ];
 
 export function EnrollmentProcess() {
@@ -92,7 +92,7 @@ export function EnrollmentProcess() {
           </Link>
 
           <Link
-            href="https://www.yuvabe.com/_files/ugd/173e7b_bfd064d78d6f44f8b632efc8d85b7d4c.pdf"
+            href="/docs/DM Brochure.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-[#E8AC35] text-[#FFCA2D] px-6 md:px-8 py-2 rounded-2xl font-semibold hover:bg-yellow-400 hover:text-black transition text-center"

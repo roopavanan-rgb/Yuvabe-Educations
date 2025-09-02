@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/Button";
 import {
   Calendar,
@@ -11,7 +12,7 @@ import {
   Briefcase,
   Building,
   Users,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 import FaqSection from "@/components/FaqSection";
 import TeamSection from "@/components/TeamSection";
@@ -23,23 +24,23 @@ const audience = [
   {
     icon: <GraduationCap className="w-8 h-8 text-[#A0E75A]" />,
     title: "Students and Recent Graduates",
-    description: "Eager to build a career in sustainability."
+    description: "Eager to build a career in sustainability.",
   },
   {
     icon: <Briefcase className="w-8 h-8 text-[#A0E75A]" />,
     title: "Aspiring Professionals",
-    description: "Transitioning to sustainability careers and roles."
+    description: "Transitioning to sustainability careers and roles.",
   },
   {
     icon: <Building className="w-8 h-8 text-[#A0E75A]" />,
     title: "Corporate Leaders",
-    description: "Integrating sustainability into business strategies."
+    description: "Integrating sustainability into business strategies.",
   },
   {
     icon: <Users className="w-8 h-8 text-[#A0E75A]" />,
     title: "Passionate Changemakers",
-    description: "About creating a positive environmental and social impact."
-  }
+    description: "About creating a positive environmental and social impact.",
+  },
 ];
 
 const features = [
@@ -47,74 +48,74 @@ const features = [
     title: "For All Levels",
     description:
       "Whether you're a student, a professional transitioning to sustainability roles, or someone passionate about creating impact, this course is tailored for you.",
-    image: "/images/img1.png"
+    image: "/images/img1.png",
   },
   {
     title: "Practical Learning",
     description:
       "Gain actionable skills in GHG accounting, circular economy, ESG frameworks, and decarbonization strategies.",
-    image: "/images/img2.png"
+    image: "/images/img2.png",
   },
   {
     title: "Real World Impact",
     description:
       "Engage in live projects and capstone presentations to apply your learning to real-life challenges.",
-    image: "/images/img3.png"
-  }
+    image: "/images/img3.png",
+  },
 ];
 
 const learnings = [
   {
     number: "01",
-    text: "Develop your sustainability skills with our comprehensive course. Learn key concepts, global trends, and best practices."
+    text: "Develop your sustainability skills with our comprehensive course. Learn key concepts, global trends, and best practices.",
   },
   {
     number: "02",
-    text: "Understand GHG accounting, ESG frameworks, and reporting to make informed decisions."
+    text: "Understand GHG accounting, ESG frameworks, and reporting to make informed decisions.",
   },
   {
     number: "03",
-    text: "Apply circular economy principles to reduce waste and drive innovation."
+    text: "Apply circular economy principles to reduce waste and drive innovation.",
   },
   {
     number: "04",
-    text: "Develop skills to design, implement, and evaluate impactful projects."
+    text: "Develop skills to design, implement, and evaluate impactful projects.",
   },
   {
     number: "05",
-    text: "Communicate solutions effectively to diverse stakeholders."
-  }
+    text: "Communicate solutions effectively to diverse stakeholders.",
+  },
 ];
 
 const left = [
   {
     title: "Leadership Training",
     description:
-      "Gain insights into leadership essentials such as focus, discipline, time management, and people skills, guided by a professional coach. Techniques like meditation and journaling will be incorporated to foster self-awareness and personal growth."
+      "Gain insights into leadership essentials such as focus, discipline, time management, and people skills, guided by a professional coach. Techniques like meditation and journaling will be incorporated to foster self-awareness and personal growth.",
   },
   {
     title: "English Communication",
     description:
-      "Specialized training for those looking to enhance their English speaking, reading, and writing skills."
+      "Specialized training for those looking to enhance their English speaking, reading, and writing skills.",
   },
   {
     title: "Resume Building",
     description:
-      "Learn how to create a professional, standout resume tailored to your career goals."
-  }
+      "Learn how to create a professional, standout resume tailored to your career goals.",
+  },
 ];
 
 const softSkills = [
   {
     title: "Communication & Presentation",
     description:
-      "Develop effective communication techniques and impactful presentation skills to convey your ideas confidently."
+      "Develop effective communication techniques and impactful presentation skills to convey your ideas confidently.",
   },
   {
     title: "Teamwork",
     description:
-      "Understand the dynamics of collaboration, fostering teamwork to achieve shared goals effectively."
-  }
+      "Understand the dynamics of collaboration, fostering teamwork to achieve shared goals effectively.",
+  },
 ];
 
 export default function Home() {
@@ -164,7 +165,34 @@ export default function Home() {
         </motion.p>
 
         {/* Buttons */}
-        <Button />
+        {/* Centered Button */}
+        <div className="flex justify-center mt-6">
+          <div className="mt-2">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="mt-6 flex flex-col sm:flex-row gap-6"
+            >
+              <Link
+                href={"https://forms.gle/PejXZ8KLpAG5rvsk8"}
+                target="_blank"
+              >
+                <button className="px-6 py-3 bg-[#90C645] text-white rounded-full font-semibold   w-full sm:w-[230px] cursor-pointer">
+                  APPLY NOW
+                </button>
+              </Link>
+              <Link
+                href={"/docs/yuvabe Sustainability Brochure.pdf"}
+                target="_blank"
+              >
+                <button className="px-6 py-3 border border-[#90C645] text-[#90C645] rounded-lg font-semibold  w-full sm:w-auto cursor-pointer">
+                  DOWNLOAD BROCHURE
+                </button>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* About Section */}
@@ -305,7 +333,7 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl md:text-3xl lg:text-6xl font-bold text-[#90C645]"
+          className="text-2xl md:text-3xl lg:text-6xl font-bold text-[#90C645] text-center"
         >
           What You'll Learn:
         </motion.h2>
@@ -314,7 +342,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-2 text-lg md:text-xl text-gray-300"
+          className="mt-2 text-lg md:text-xl text-gray-300 text-center"
         >
           At the end of this course, you'll be able to
         </motion.p>
@@ -365,7 +393,31 @@ export default function Home() {
 
         {/* Centered Button */}
         <div className="flex justify-center mt-6">
-          <Button />
+          <div className="mt-2">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="mt-6 flex flex-col sm:flex-row gap-6"
+            >
+              <Link
+                href={"https://forms.gle/PejXZ8KLpAG5rvsk8"}
+                target="_blank"
+              >
+                <button className="px-6 py-3 bg-[#90C645] text-white rounded-full font-semibold   w-full sm:w-[230px] cursor-pointer">
+                  APPLY NOW
+                </button>
+              </Link>
+              <Link
+                href={"/docs/yuvabe Sustainability Brochure.pdf"}
+                target="_blank"
+              >
+                <button className="px-6 py-3 border border-[#90C645] text-[#90C645] rounded-lg font-semibold  w-full sm:w-auto cursor-pointer">
+                  DOWNLOAD BROCHURE
+                </button>
+              </Link>
+            </motion.div>
+          </div>
         </div>
 
         {/* Course Structure Box */}
@@ -670,14 +722,16 @@ export default function Home() {
         </motion.p>
 
         {/* Apply Now Button */}
-        <motion.button
-          className="mt-4 bg-[#79A441] text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-[#6D923A] transition-all"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-        >
-          Apply Now
-        </motion.button>
+        <Link href={"https://forms.gle/PejXZ8KLpAG5rvsk8"} target="_blank">
+          <motion.button
+            className="mt-4 bg-[#79A441] text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-[#6D923A] transition-all cursor-pointer"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
+          >
+            Apply Now
+          </motion.button>
+        </Link>
       </section>
 
       {/* Post Opportunities */}
@@ -707,16 +761,16 @@ export default function Home() {
           {[
             {
               id: "01",
-              text: "Paid internships (3-6 months) for the top 5 students at Yuvabe."
+              text: "Paid internships (3-6 months) for the top 5 students at Yuvabe.",
             },
             {
               id: "02",
-              text: "Access to an alumni network for ongoing learning and collaboration."
+              text: "Access to an alumni network for ongoing learning and collaboration.",
             },
             {
               id: "03",
-              text: "Opportunities for advanced courses and certifications."
-            }
+              text: "Opportunities for advanced courses and certifications.",
+            },
           ].map((item, index) => (
             <motion.div
               key={item.id}
@@ -766,7 +820,34 @@ export default function Home() {
             Register today and secure your spot!
           </motion.p>
           <div className="flex justify-center gap-4">
-            <Button />
+            {/* Centered Button */}
+            <div className="flex justify-center mt-6">
+              <div className="mt-2">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                  className="mt-6 flex flex-col sm:flex-row gap-6"
+                >
+                  <Link
+                    href={"https://forms.gle/PejXZ8KLpAG5rvsk8"}
+                    target="_blank"
+                  >
+                    <button className="px-6 py-3 bg-[#90C645] text-white rounded-full font-semibold   w-full sm:w-[230px] cursor-pointer">
+                      APPLY NOW
+                    </button>
+                  </Link>
+                  <Link
+                    href={"/docs/yuvabe Sustainability Brochure.pdf"}
+                    target="_blank"
+                  >
+                    <button className="px-6 py-3 border border-[#90C645] text-[#90C645] rounded-lg font-semibold  w-full sm:w-auto cursor-pointer">
+                      DOWNLOAD BROCHURE
+                    </button>
+                  </Link>
+                </motion.div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </section>

@@ -62,7 +62,7 @@ export default function Hero() {
           marketing, and more.
         </p>
         {/* CTA Buttons */}
-     
+
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6 sm:gap-8">
           <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLSfJDp1CsV4wBiD0MJ6oOiJqjZgyNzITEwFiRhxPDRl3m5ghtQ/viewform"
@@ -74,7 +74,7 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="https://www.yuvabe.com/_files/ugd/173e7b_bfd064d78d6f44f8b632efc8d85b7d4c.pdf"
+            href="/docs/DM Brochure.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-[#E8AC35] text-[#FFCA2D] px-6 md:px-8 py-2 rounded-2xl font-semibold hover:bg-yellow-400 hover:text-black transition text-center"
