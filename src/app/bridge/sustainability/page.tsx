@@ -160,8 +160,7 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.3 }}
           className="mt-4 text-base sm:text-lg md:text-xl"
         >
-          Launching 17 February 2025 | Empowering Change for a Sustainable
-          Future
+          Launching September 2025 | Empowering Change for a Sustainable Future
         </motion.p>
 
         {/* Buttons */}
@@ -175,7 +174,7 @@ export default function Home() {
               className="mt-6 flex flex-col sm:flex-row gap-6"
             >
               <Link
-                href={"https://forms.gle/PejXZ8KLpAG5rvsk8"}
+                href={"https://forms.gle/kXTTjSCYvBMRNa7z9"}
                 target="_blank"
               >
                 <button className="px-6 py-3 bg-[#90C645] text-white rounded-full font-semibold   w-full sm:w-[230px] cursor-pointer">
@@ -401,7 +400,7 @@ export default function Home() {
               className="mt-6 flex flex-col sm:flex-row gap-6"
             >
               <Link
-                href={"https://forms.gle/PejXZ8KLpAG5rvsk8"}
+                href={"https://forms.gle/kXTTjSCYvBMRNa7z9"}
                 target="_blank"
               >
                 <button className="px-6 py-3 bg-[#90C645] text-white rounded-full font-semibold   w-full sm:w-[230px] cursor-pointer">
@@ -438,7 +437,7 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <Calendar className="text-[#90C645] w-8 h-8" />
               <p className="mt-2 font-semibold">Duration</p>
-              <p className="text-sm">17th February, 2025 - 9th May 2025.</p>
+              <p className="text-sm">From September 2025 onwards</p>
             </div>
 
             {/* Schedule */}
@@ -576,7 +575,7 @@ export default function Home() {
       <section className="py-16 px-6 bg-[#1B360F] text-white relative">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-[#90C645] text-center">
-          Course Fees & Scholarships
+          Course Fees
         </h2>
 
         {/* Centered Image */}
@@ -597,34 +596,19 @@ export default function Home() {
           <div className="bg-[#92d82f38] bg-opacity-15 backdrop-blur-lg border border-[#90C645] rounded-2xl p-6">
             <h3 className="text-lg font-bold text-[#90C645]">Course Fee</h3>
             <p>
-              <strong>Course fee:</strong> ₹15,000/-
+              <strong>Course fee:</strong> Completely Free
             </p>
             <p>
-              <strong>Early Bird Discount:</strong> 10% off if registered by
-              February 07, 2025.
-            </p>
-          </div>
-
-          {/* Scholarships Card */}
-          <div className="bg-[#92d82f38] bg-opacity-15 backdrop-blur-lg border border-[#90C645] rounded-2xl p-6 ">
-            <h3 className="text-lg font-bold text-[#90C645]">Scholarships</h3>
-            <p>
-              <strong>Scholarships:</strong> Need-based scholarships.
-            </p>
-            <p>
-              <strong>Women Education:</strong> 100% scholarships for 5 eligible
-              women from the bioregion are available.
+              <strong>Refundable Deposit:</strong> ₹3,500 (Paid at time of
+              enrollment , will be refunded after course completion)
             </p>
           </div>
 
           {/* Payment Options Card (Full Width) */}
-          <div className="bg-[#92d82f38] bg-opacity-15 backdrop-blur-lg border border-[#90C645] rounded-2xl p-6  md:col-span-2">
+          <div className="bg-[#92d82f38] bg-opacity-15 backdrop-blur-lg border border-[#90C645] rounded-2xl p-6 ">
             <h3 className="text-lg font-bold text-[#A1D06E]">
               Payment Options
             </h3>
-            <p>
-              <strong>Payment Plan:</strong> Easy installment plans.
-            </p>
             <p>
               <strong>Payment Options:</strong> Cash, UPI, Bank Transfer.
             </p>
@@ -664,7 +648,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <strong>Online Application:</strong> Complete the application form
-            before February 10, 2025.
+            before September 15, 2025.
           </motion.div>
 
           {/* Plus Icon */}
@@ -705,8 +689,8 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
-            <strong>Confirmation:</strong> Secure your spot with the payment
-            after you clear your screening.
+            <strong>Confirmation:</strong> Secure your spot by paying the
+            deposit amount after you clear your screening.
           </motion.div>
         </div>
 
@@ -718,11 +702,10 @@ export default function Home() {
           transition={{ duration: 1.2, delay: 1.2 }}
         >
           Only <span className="text-[#79A441]">15 Seats</span> left, Enroll now
-          at Rs 15000/-
         </motion.p>
 
         {/* Apply Now Button */}
-        <Link href={"https://forms.gle/PejXZ8KLpAG5rvsk8"} target="_blank">
+        <Link href={"https://forms.gle/kXTTjSCYvBMRNa7z9"} target="_blank">
           <motion.button
             className="mt-4 bg-[#79A441] text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-[#6D923A] transition-all cursor-pointer"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -761,7 +744,7 @@ export default function Home() {
           {[
             {
               id: "01",
-              text: "Paid internships (3-6 months) for the top 5 students at Yuvabe.",
+              text: "Paid internships (3-6 months) for the top performing students at Yuvabe.",
             },
             {
               id: "02",
@@ -830,7 +813,7 @@ export default function Home() {
                   className="mt-6 flex flex-col sm:flex-row gap-6"
                 >
                   <Link
-                    href={"https://forms.gle/PejXZ8KLpAG5rvsk8"}
+                    href={"https://forms.gle/kXTTjSCYvBMRNa7z9"}
                     target="_blank"
                   >
                     <button className="px-6 py-3 bg-[#90C645] text-white rounded-full font-semibold   w-full sm:w-[230px] cursor-pointer">

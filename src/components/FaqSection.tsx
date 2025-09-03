@@ -49,11 +49,6 @@ const faqs = [
     answer: "In person class room sessions.",
   },
   {
-    question: "Are there any scholarships available?",
-    answer:
-      "There are 5 scholarship seats available for women candidate from the bio-region.",
-  },
-  {
     question: "How will I receive the certificate (digital, or printed)?",
     answer: "Printed",
   },
@@ -76,7 +71,7 @@ const faqs = [
     question:
       "What is the refund policy if I decide to withdraw from the course?",
     answer:
-      "Your fees will not be refunded after the commencement of your course.",
+      "Your deposit amount will not be refunded after the commencement of your course.",
   },
   {
     question: "What qualifications or experience do the instructors have?",
@@ -96,11 +91,6 @@ const faqs = [
   {
     question: "Will I gain access to a network of professionals or alumni?",
     answer: "You will be part of the Yuvabe Alumni group.",
-  },
-  {
-    question: "Do you offer group discounts for organizations or institutions?",
-    answer:
-      "Yes. Please call/email us for further information.</br> Email: bridge@yuvabe.com  </br> Mobile: 9677604467 (9am - 5pm)",
   },
   {
     question: "What is the student support Offered By Yuvabe?",

@@ -7,7 +7,7 @@ const KeyHighlights = () => {
     "In-person sessions with industry experts.",
     "Immersive learning in Auroville's unique, sustainable ecosystem.",
     "Hands-on projects and real-world case studies.",
-    "Paid (3-6 months) Internships with Yuvabe for the top 5 students of the course.",
+    "Paid (3-6 months) Internships with Yuvabe for the top performing students of the course.",
     "Certification recognized by universities and employers.",
     "Affordable and inclusive, with scholarships available.",
   ];

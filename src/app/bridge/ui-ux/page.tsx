@@ -203,8 +203,9 @@ export default function uiux() {
               Certification recognised by employers and universities <br />
               <span className="font-bold">Expert Guidance: </span>Learn directly
               from experienced UI/UX professionals
-              <br /> <span className="font-bold">Paid Internship: </span>Top 3
-              students will receive a 3-month paid internship with Yuvabe
+              <br /> <span className="font-bold">Paid Internship: </span>Top
+              performing students will receive a 3-month paid internship with
+              Yuvabe
             </p>
             <p className="font-secondary md:text-[18px] text-[16px] text-[#020406] leading-9 text-center md:text-left">
               This full-time program blends theoretical foundations with
@@ -700,7 +701,7 @@ export default function uiux() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Course Fees & Scholarships
+              Course Fees
             </motion.h2>
           </div>
           {/* Box */}
@@ -712,18 +713,14 @@ export default function uiux() {
             viewport={{ once: true }}
           >
             {/* Left Text */}
-            <div className="lg:max-w-[547px] z-10">
-              <p className="font-secondary md:text-[18px] text-[16px] text-[#020406] leading-9 text-center md:text-left">
-                <span className="font-bold">Standard Fee:</span> ₹15,000. <br />
-                <span className="font-bold">
-                  Special Fee for Bioregion/Auroville Residents:{" "}
-                </span>
-                ₹7,000 <br /> <span className="font-bold">Scholarships: </span>
-                Need-based and merit-based scholarships available. <br />
-                <span className="font-bold">Special Scholarships:</span> 100%
-                scholarships for 5 eligible women from the bioregion. <br />
-                <span className="font-bold">Payment Plans:</span> Flexible
-                installment options. <br />
+            <div className="lg:min-w-[457px] z-10 flex flex-col justify-center w-full">
+              <p className="font-secondary md:text-[18px] text-[16px] text-[#020406] leading-9 text-center lg:text-left w-full">
+                <span className="font-bold">Course Fee:</span> Completely Free .{" "}
+                <br />
+                <span className="font-bold">Refundable Deposit:</span> ₹3,500
+                (Paid at time of enrollment , will be refunded after course
+                completion)
+                <br />
                 <span className="font-bold">Payment Methods:</span> Cash, Bank
                 Transfer, GPay.
                 <br /> <span className="font-bold">Contact: </span>
@@ -833,7 +830,7 @@ export default function uiux() {
                   Confirmation
                 </h6>
                 <p className="font-secondary font-normal md:text-[18px] text-[16px] text-black leading-9 text-center md:text-left">
-                  Secure your spot by completing the payment
+                  Secure your spot by paying the deposit amount.
                 </p>
               </div>
             </div>
@@ -1038,8 +1035,8 @@ export default function uiux() {
                 What is the refund policy if I decide to withdraw from the
                 course? <br />
                 <span className="font-normal">
-                  Your fees will not be refunded after the commencement of your
-                  course.
+                  Your deposit amount will not be refunded after the
+                  commencement of your course.
                 </span>
               </motion.li>
             </ol>
