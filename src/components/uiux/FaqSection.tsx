@@ -57,11 +57,6 @@ const faqs = [
     question: "Will there be live sessions, or is the course self-paced?",
     answer: "In-person classroom sessions.",
   },
-  {
-    question: "Are there any scholarships available?",
-    answer:
-      "There are 5 scholarship seats available for women candidates from the bio-region.",
-  },
 ];
 
 export default function FaqSection() {
