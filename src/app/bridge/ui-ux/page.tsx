@@ -110,28 +110,28 @@ export default function uiux() {
               UI/UX Design Launchpad.
             </p>
             {/* Buttons */}
-            <div className="flex flex-row gap-6 justify-center lg:justify-start flex-wrap">
+            <div className="flex flex-row gap-6 justify-center lg:justify-start flex-wrap ">
               {/* Apply Now */}
-              <Link
+              {/* <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdh8oX44utivqxskIw5l78wbAxc5z1vRuK58I6IBXCA9rxJ5w/viewform"
                 target="_blank"
-                className="min-w-[194px] max-w-64 md:max-w-full"
+                className="min-w-[194px] max-w-64 md:max-w-full pointer-events-none"
               >
                 <div className="bg-[#F48F38] border-1 border-black py-2.5 px-6 rounded-[94px]">
                   <p className="font-albert-sans text-[14px] md:text-[16px] leading-normal text-white text-center">
                     Apply Now
                   </p>
                 </div>
-              </Link>
+              </Link> */}
               {/* Download Brochure */}
               <Link
                 href={"../docs/UIUX Brouchure.pdf"}
                 target="_blank"
-                className="min-w-[194px]  max-w-64 md:max-w-full"
+                className="min-w-[194px]  max-w-64 md:max-w-full pointer-events-none"
               >
                 <div className="bg-transparent border-1 border-black py-2.5 px-6 rounded-[94px]">
                   <p className="font-albert-sans text-[14px] md:text-[16px] leading-normal text-center">
-                    Download Brochure
+                    Registrations Closed
                   </p>
                 </div>
               </Link>
@@ -1192,28 +1192,28 @@ export default function uiux() {
               today and secure your spot!
             </p>
             {/* Buttons */}
-            <div className="flex flex-row gap-6 justify-center flex-wrap mt-2">
+            <div className="flex flex-row gap-6 justify-center lg:justify-center flex-wrap ">
               {/* Apply Now */}
-              <Link
+              {/* <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdh8oX44utivqxskIw5l78wbAxc5z1vRuK58I6IBXCA9rxJ5w/viewform"
                 target="_blank"
-                className="min-w-[194px] max-w-64 md:max-w-49"
+                className="min-w-[194px] max-w-64 md:max-w-full pointer-events-none"
               >
                 <div className="bg-[#F48F38] border-1 border-black py-2.5 px-6 rounded-[94px]">
                   <p className="font-albert-sans text-[14px] md:text-[16px] leading-normal text-white text-center">
                     Apply Now
                   </p>
                 </div>
-              </Link>
+              </Link> */}
               {/* Download Brochure */}
               <Link
                 href={"../docs/UIUX Brouchure.pdf"}
                 target="_blank"
-                className="min-w-[194px]  max-w-64  md:max-w-49"
+                className="min-w-[194px]  max-w-64 md:max-w-full pointer-events-none"
               >
                 <div className="bg-transparent border-1 border-black py-2.5 px-6 rounded-[94px]">
                   <p className="font-albert-sans text-[14px] md:text-[16px] leading-normal text-center">
-                    Download Brochure
+                    Registrations Closed
                   </p>
                 </div>
               </Link>

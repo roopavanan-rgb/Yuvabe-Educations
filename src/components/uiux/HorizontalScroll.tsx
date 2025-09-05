@@ -121,7 +121,11 @@ const HorizontalScroll = () => {
 
             // Smooth transition of opacity
             if (!isInViewport) {
-              gsap.to(slide, { opacity: 0, duration: 0.2, ease: "power2.out" });
+              gsap.to(slide, {
+                opacity: 0,
+                duration: 0.2,
+                ease: "expo.out",
+              });
             } else {
               gsap.to(slide, { opacity: 1, duration: 0.2, ease: "power2.out" });
             }
@@ -164,7 +168,7 @@ const HorizontalScroll = () => {
                 alt={slide.alt}
                 width={570}
                 height={578}
-                className="object-cover w-full max-w-md lg:max-w-[40vw] lg:w-[570px] m-auto"
+                className="object-cover w-full max-w-md lg:max-w-[40vw] lg:w-[485px] m-auto"
               />
             </div>
           </div>

@@ -125,7 +125,7 @@ const CustomSwiper = () => {
                   alt={slide.alt}
                   width={569}
                   height={578}
-                  className="object-cover w-full max-w-md lg:max-w-[40vw] lg:w-[570px] m-auto"
+                  className="object-cover w-full max-w-md lg:max-w-[40vw] lg:w-[425px] m-auto"
                 />
               </div>
             </motion.div>
