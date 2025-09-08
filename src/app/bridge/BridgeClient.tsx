@@ -703,7 +703,8 @@ export default function Bridge() {
 
       {/* Add Impact Report from Homepage */}
       {/* Donation */}
-      <div className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
+      <div   id="donate"
+ className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-8 md:gap-y-16">
           <motion.h2
             className="text-white text-[40px]  md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"
