@@ -19,6 +19,18 @@ interface NewsletterItem {
 // Array of newsletter data
 const newslettersData: NewsletterItem[] = [
   {
+    id: 18,
+    title: "YUVABEAT",
+    subtitle: "Agents of Change - Part II",
+    month: "September",
+    year: "2025",
+    description:
+      "Over the past couple of months, some of us at Yuvabe have been reflecting on what leadership truly means. Is it just a title, or is it an ongoing journey—one made up of small, everyday steps to show up for ourselves and for others?",
+    imageUrl: "/images/newsletters/news-18.jpg",
+    linkUrl:
+      "https://us13.campaign-archive.com/?u=877629c188f9de17e6e6b4bc6&id=707ec43e22",
+  },
+  {
     id: 17,
     title: "YUVABEAT",
     subtitle: "Agents of Change - Part 1",
