@@ -3,19 +3,85 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const teamMembers = [
-  { id: 1, name: "Shalini kumar", role: "Sustainability Lead Facilitator", image: "/images/team/shalini.jpg" },
-  { id: 3, name: "Ashwini Bakshi", role: "Inner Growth Facilitator", image: "/images/team/ashwini.jpg" },
-  { id: 4, name: "Lucas Dengal", role: "Expert in Health, Hygiene and Nutrient Cycle", image: "/images/team/lucas.jpeg" },
-  { id: 5, name: "Joss Brook", role: "Auroville Pioneer, Pitchandikulam Forests", image: "/images/team/joss.jpg" },
-  { id: 6, name: "Rishi Kapoor", role: " Expertise in Solar Energy", image: "/images/team/rishi.jpg" },
-  { id: 7, name: "Anshul", role: "Expertise in Soil Science and Agroecology", image: "/images/team/anshul.png" },
-  { id: 8, name: "Thara Jasmine", role: "Sustainability Content Analyst", image: "/images/team/thara.jpg" },
-  { id: 9, name: "Amila Suman", role: "Sustainability Content Analyst", image: "/images/team/amila.jpeg" },
-  { id: 10, name: "Rahul Palekar", role: "Circular Economy Expert", image: "/images/team/rahul.jpg" },
-  { id: 11, name: "Ujjay Mohan", role: "Impact Catalyst ESG Expert", image: "/images/team/ujjay.jpg" },
-  { id: 12, name: "Rithika", role: "Social Impact Expert", image: "/images/team/rithika.jpg" },
-  { id: 2, name: "Athulya P C", role: "Carbon Accounting Expert", image: "/images/team/athulya.jpeg" },
-  { id: 13, name: "Vijai Krishnaraj", role: "Water Expert, Auroville ", image: "/images/team/vijai.jpg" },
+  {
+    id: 1,
+    name: "Shalini kumar",
+    role: "Sustainability Lead Facilitator",
+    image: "/images/team/shalini.jpg",
+  },
+  {
+    id: 3,
+    name: "Ashwini Bakshi",
+    role: "Inner Growth Facilitator",
+    image: "/images/team/ashwini.jpg",
+  },
+  {
+    id: 4,
+    name: "Lucas Dengal",
+    role: "Expert in Health, Hygiene and Nutrient Cycle",
+    image: "/images/team/lucas.jpeg",
+  },
+  {
+    id: 5,
+    name: "Joss Brook",
+    role: "Auroville Pioneer, Pitchandikulam Forests",
+    image: "/images/team/joss.jpg",
+  },
+  {
+    id: 6,
+    name: "Rishi Kapoor",
+    role: " Expertise in Solar Energy",
+    image: "/images/team/rishi.jpg",
+  },
+  {
+    id: 7,
+    name: "Anshul",
+    role: "Expertise in Soil Science and Agroecology",
+    image: "/images/team/anshul.png",
+  },
+  {
+    id: 8,
+    name: "Thara Jasmine",
+    role: "Sustainability Content Analyst",
+    image: "/images/team/thara.jpg",
+  },
+  {
+    id: 9,
+    name: "Amila Suman",
+    role: "Sustainability Content Analyst",
+    image: "/images/team/amila.jpeg",
+  },
+  {
+    id: 10,
+    name: "Rahul Palekar",
+    role: "Circular Economy Expert",
+    image: "/images/team/rahul.jpg",
+  },
+  {
+    id: 11,
+    name: "Ujjay Mohan",
+    role: "Impact Catalyst ESG Expert",
+    image: "/images/team/ujjay.jpg",
+  },
+  {
+    id: 12,
+    name: "Rithika",
+    role: "Social Impact Expert",
+    image: "/images/team/rithika.jpg",
+  },
+  // { id: 2, name: "Athulya P C", role: "Carbon Accounting Expert", image: "/images/team/athulya.jpeg" },
+  {
+    id: 14,
+    name: "Devana",
+    role: "Impact Catalyst - Team Lead",
+    image: "/images/team/devana.jpg",
+  },
+  {
+    id: 13,
+    name: "Vijai Krishnaraj",
+    role: "Water Expert, Auroville ",
+    image: "/images/team/vijai.jpg",
+  },
 ];
 
 const TeamSection = () => {
@@ -43,7 +109,9 @@ const TeamSection = () => {
 
               {/* Gradient Overlay */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1B360F] to-transparent p-4 text-center">
-                <h3 className="text-white text-lg font-semibold">{member.name}</h3>
+                <h3 className="text-white text-lg font-semibold">
+                  {member.name}
+                </h3>
                 <p className="text-white text-sm">{member.role}</p>
               </div>
             </motion.div>

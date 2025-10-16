@@ -185,7 +185,7 @@ export default function Home() {
                 href={"/docs/yuvabe Sustainability Brochure.pdf"}
                 target="_blank"
               >
-                <button className="px-6 py-3 border border-[#90C645] text-[#90C645] rounded-lg font-semibold  w-full sm:w-auto cursor-pointer">
+                <button className="px-6 py-3 border border-[#90C645] text-[#90C645] rounded-full font-semibold  w-full sm:w-auto cursor-pointer">
                   DOWNLOAD BROCHURE
                 </button>
               </Link>
@@ -411,7 +411,7 @@ export default function Home() {
                 href={"/docs/yuvabe Sustainability Brochure.pdf"}
                 target="_blank"
               >
-                <button className="px-6 py-3 border border-[#90C645] text-[#90C645] rounded-lg font-semibold  w-full sm:w-auto cursor-pointer">
+                <button className="px-6 py-3 border border-[#90C645] text-[#90C645] rounded-full font-semibold  w-full sm:w-auto cursor-pointer">
                   DOWNLOAD BROCHURE
                 </button>
               </Link>
@@ -824,7 +824,7 @@ export default function Home() {
                     href={"/docs/yuvabe Sustainability Brochure.pdf"}
                     target="_blank"
                   >
-                    <button className="px-6 py-3 border border-[#90C645] text-[#90C645] rounded-lg font-semibold  w-full sm:w-auto cursor-pointer">
+                    <button className="px-6 py-3 border border-[#90C645] text-[#90C645] rounded-full font-semibold  w-full sm:w-auto cursor-pointer">
                       DOWNLOAD BROCHURE
                     </button>
                   </Link>
