@@ -6,10 +6,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 
-
 const AboutUs = () => {
-  
-  
   const impactSectionRef = useRef(null);
   const [youthCount, setYouthCount] = useState(0);
   const [hoursCount, setHoursCount] = useState(0);
@@ -71,10 +68,7 @@ const AboutUs = () => {
     return () => cancelAnimationFrame(animationFrame);
   }, [isVisible]);
 
-  
-
   return (
-    
     <div className="lg:min-w-[400px] bg-[#FFFFFF] text-[#000000]">
       <div className="max-w-[1240px] m-auto">
         {/* Hero Section */}
@@ -110,7 +104,7 @@ const AboutUs = () => {
         </section>
 
         {/* Hear from Our Team Section */}
-        <section className="py-8 md:py-16  px-5 md:px-8 xl:px-0 lg: text-center relative">
+        <section className="py-8 md:py-16  px-5 md:px-8 xl:px-0 lg: text-center relative overflow-hidden">
           {/* Heading */}
           <motion.h2
             className="text-2xl md:text-3xl font-semibold font-primary relative z-10"

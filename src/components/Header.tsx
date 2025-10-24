@@ -10,6 +10,7 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { useRouter, usePathname } from "next/navigation";
 import { pageData } from "../data/pageData";
+import path from "path";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -149,9 +150,41 @@ const Header = () => {
         { name: "Donate", path: "/get-involved/donate" },
         { name: "Join Us", path: "/get-involved/join-us" },
         { name: "Connect With Us", path: "/get-involved/connect-with-us" },
+        {
+          name: "Start Your Own Fundraiser",
+          path: "/get-involved/donate#startyourownfundraiser",
+        },
       ],
     },
   ];
+
+  const handleKeyDown = (
+    event: React.KeyboardEvent,
+    label: string,
+    hasSublinks: boolean
+  ) => {
+    if (event.key === "ArrowDown") {
+      // Navigate down to the next link
+      const nextElement = document.getElementById(label + "-next");
+      if (nextElement) nextElement.focus();
+    }
+
+    if (event.key === "ArrowUp") {
+      // Navigate up to the previous link
+      const prevElement = document.getElementById(label + "-prev");
+      if (prevElement) prevElement.focus();
+    }
+
+    if (event.key === "ArrowRight" && hasSublinks) {
+      // Open submenu on ArrowRight
+      setOpenDropdown(label);
+    }
+
+    if (event.key === "ArrowLeft") {
+      // Close submenu on ArrowLeft
+      setOpenDropdown(null);
+    }
+  };
 
   return (
     <header className="bg-white/95 shadow-lg shadow-gray-300 w-full px-3 sm:px-6 md:px-10 lg:px-14 xl:px-18 top-0 left-0 z-50 backdrop-blur-lg sticky">
@@ -210,6 +243,7 @@ const Header = () => {
             <Link
               href="/"
               onClick={closeDropdown}
+              tabIndex={0}
               className={`hover:text-[#592AC7] transition duration-300 py-2 px-1 block border-b-2 ${
                 isActive("/")
                   ? "text-[#592AC7] border-[#592AC7]"
@@ -222,6 +256,7 @@ const Header = () => {
           <li>
             <Link
               href="/about-us"
+              tabIndex={0}
               onClick={closeDropdown}
               className={`hover:text-[#592AC7] transition duration-300 py-2 px-1 block border-b-2 ${
                 isActive("/about-us")
@@ -241,6 +276,14 @@ const Header = () => {
               onMouseLeave={closeDropdown}
             >
               <button
+                tabIndex={0} // Make it focusable
+                aria-haspopup="true" // Indicate that it has a dropdown
+                aria-expanded={openDropdown === menu.label ? "true" : "false"}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    handleDropdownOpen(menu.label);
+                  }
+                }}
                 className={`flex items-center whitespace-nowrap py-2 px-1 border-b-2 transition duration-300 ${
                   isDropdownActive(menu.links)
                     ? "text-[#592AC7] border-[#592AC7]"
@@ -263,6 +306,7 @@ const Header = () => {
                         <Link
                           href={link.path}
                           onClick={closeDropdown}
+                          tabIndex={0}
                           className={`peer flex justify-between items-center py-2 px-4 rounded-md transition duration-300 ${
                             isActive(link.path)
                               ? "bg-[#592AC7]/10 text-[#592AC7]"
@@ -289,6 +333,16 @@ const Header = () => {
                                 <Link
                                   href={sublink.path}
                                   onClick={closeDropdown}
+                                  tabIndex={0}
+                                  onKeyDown={(e) => {
+                                    if (
+                                      e.key === "Enter" ||
+                                      e.key === "ArrowRight"
+                                    ) {
+                                      closeDropdown();
+                                      router.push(link.path);
+                                    }
+                                  }}
                                   className={`block py-2 px-4 rounded-md transition duration-300 ${
                                     isActive(sublink.path)
                                       ? "bg-[#592AC7]/10 text-[#592AC7]"
@@ -394,6 +448,7 @@ const Header = () => {
             <Link
               href="/"
               onClick={closeMobileMenu}
+              tabIndex={0}
               className={`px-4 py-2 rounded-md transition duration-300 ${
                 isActive("/")
                   ? "bg-[#592AC7]/10 text-[#592AC7]"
@@ -405,6 +460,7 @@ const Header = () => {
             <Link
               href="/about-us"
               onClick={closeMobileMenu}
+              tabIndex={0}
               className={`px-4 py-2 rounded-md transition duration-300 ${
                 isActive("/about-us")
                   ? "bg-[#592AC7]/10 text-[#592AC7]"
@@ -419,6 +475,9 @@ const Header = () => {
                 {/* Top-level menu toggle button */}
                 <button
                   onClick={() => handleDropdownOpen(menu.label)}
+                  tabIndex={0} // Make it focusable
+                  aria-haspopup="true"
+                  aria-expanded={openDropdown === menu.label ? "true" : "false"}
                   className={`flex items-center justify-between w-full text-left px-4 py-2 rounded-md transition duration-300 ${
                     isDropdownActive(menu.links)
                       ? "bg-[#592AC7]/10 text-[#592AC7]"
@@ -448,6 +507,7 @@ const Header = () => {
                             <Link
                               href={link.path}
                               onClick={closeMobileMenu}
+                              tabIndex={0}
                               className={`block px-4 py-2 rounded-md transition duration-300 ${
                                 isActive(link.path)
                                   ? "bg-[#592AC7]/10 text-[#592AC7]"
@@ -481,6 +541,7 @@ const Header = () => {
                                   <Link
                                     href={sublink.path}
                                     onClick={closeMobileMenu}
+                                    tabIndex={0}
                                     className={`block px-4 py-2 rounded-md transition duration-300 ${
                                       isActive(sublink.path)
                                         ? "bg-[#592AC7]/10 text-[#592AC7]"
