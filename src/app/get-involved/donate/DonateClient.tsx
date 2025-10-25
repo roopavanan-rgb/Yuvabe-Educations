@@ -4,32 +4,17 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { X } from "lucide-react";
 import PaymentForm from "@/components/PaymentForm";
 import Link from "next/link";
 
 export default function Donate() {
   const [isClient, setIsClient] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
   if (!isClient) return null;
-
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
-
-  // Handle closing the modal when clicking outside
-  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Cast e.target to HTMLDivElement to access 'id' property
-    const target = e.target as HTMLDivElement;
-
-    if (target.id === "modal-overlay") {
-      closeModal();
-    }
-  };
 
   const cards = [
     {
@@ -38,7 +23,7 @@ export default function Donate() {
       description:
         "Your contribution will help us provide our young adults with an infrastructure, including tools and materials needed for their learning and growth.",
       bgShape: "bg-[#F8A91E]",
-      link: "https://aviusa.org/aviusapartners/yuvabe-bridge-program/",
+      link: "/bridge",
     },
     // {
     //   title: "Emotional Resilience",
@@ -54,15 +39,15 @@ export default function Donate() {
       description:
         "Your gift for our unique educational offering will help cover expenses for a dedicated space for STEAM Lab, teacher support, and project materials.",
       bgShape: "bg-[#33BED4]",
-      link: "https://aviusa.org/aviusapartners/yuvabe-steam-program/",
+      link: "/steam",
     },
   ];
 
   return (
     <main className="overflow-x-hidden">
       {/* Hero Section */}
-      {/*      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
-        /~ Left Side - Centered Text ~/
+      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
+        {/* Left Side - Centered Text */}
         <motion.div
           className="flex flex-col lg:justify-start lg:items-start lg:text-left justify-center items-center text-center lg:pl-20 pl-0 "
           initial={{ opacity: 0 }}
@@ -77,62 +62,6 @@ export default function Donate() {
             upskilling! Be part of something bigger, where growth isn’t just
             personal; it’s collective. Let’s build the future together!
           </p>
-        </motion.div>
-
-        /~ Right Side - Image ~/
-        <motion.div
-          className="w-full lg:w-1/2 flex justify-center md:justify-end mt-12 md:mt-0 relative"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="relative w-full ">
-            /~ Floating Shape ~/
-            <motion.div
-              className="absolute top-12 right-10 w-10 h-10 md:w-20 md:h-20 bg-[#33BED4]  z-10"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            />
-
-            /~ Image ~/
-            <Image
-              src="/images/getinvolved/support.png"
-              alt="Group working on laptop"
-              width={900}
-              height={600}
-              className="w-full h-auto left-8 top-12 md:left-20 md:top-15 lg:left-18 lg:top-15 relative "
-            />
-          </div>
-        </motion.div>
-      </section>*/}
-
-      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
-        {/* Left Side - Centered Text */}
-        <motion.div
-          className="flex flex-col lg:justify-start lg:items-start lg:text-left justify-center items-center text-center lg:pl-20 pl-0 "
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-primary text-[#592Ac7] leading-snug">
-            Double Your Impact <br /> This December
-          </h1>
-          <p className="mt-4 text-[#000000] font-secondary text-base sm:text-lg max-w-md sm:max-w-lg lg:max-w-xl">
-            From December 1 – 31, 2025 every rupee or dollar you donate will be
-            matched by our partners at AVI-USA, doubling the support that
-            reaches young learners through Yuvabe’s Bridge and STEAM Programs.
-            <br />
-            <br />
-            Your contribution this month helps provide scholarships, creative
-            learning tools, and mentorship — building pathways for
-            purpose-driven education and real opportunities for growth.
-          </p>
-          <Link
-            href="https://donate.auroville.org/"
-            className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 w-2/3 lg:w-2/3 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5] mt-4"
-          >
-            Donate Now — Your Gift Will Be Matched
-          </Link>
         </motion.div>
 
         {/* Right Side - Image */}
@@ -164,38 +93,37 @@ export default function Donate() {
 
       {/* Support Section */}
       <section className="py-24 bg-[#FBF6EF] text-center">
-        <h2 className="text-xl md:text-[40px] font-semibold font-primary text-black mb-12">
-          Please choose where you’d like your <br /> contribution to create an
-          impact
+        <h2 className="text-xl md:text-4xl lg:text-[48px] font-semibold font-primary text-black mb-12">
+          Your contribution will help us support
         </h2>
         <div className="flex flex-row flex-wrap md:flex-row justify-center gap-6 py-4 px-4 md:px-8 lg:px-12">
           {cards.map((card, index) => (
-            <Link href={card.link}>
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="relative w-full sm:w-[300px] md:w-[254px] lg:w-[500px] h-[500px] md:h-[447px] lg:h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group"
-              >
-                <h3 className="text-[16px] font-semibold font-primary mb-4 z-10 text-center">
-                  {card.title}
-                </h3>
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              className="relative w-full sm:w-[300px] md:w-[254px] lg:w-[327px] h-[500px] md:h-[447px] lg:h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group"
+            >
+              <h3 className="text-[16px] font-semibold font-primary mb-4 z-10 text-center">
+                {card.title}
+              </h3>
 
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  width={278}
-                  height={261}
-                  className="w-[278px] h-[261px] md:w-[207px] md:h-[195px] lg:w-[378px] lg:h-[261px] rounded-lg object-cover z-10"
-                />
-                <p className="text-sm mt-2 z-10 text-center leading-4.5">
-                  {card.description}
-                </p>
+              <Image
+                src={card.image}
+                alt={card.title}
+                width={278}
+                height={261}
+                className="w-[278px] h-[261px] md:w-[207px] md:h-[195px] lg:w-[278px] lg:h-[261px] rounded-lg object-cover z-10"
+              />
+              <p className="text-sm mt-2 z-10 text-center leading-4.5">
+                {card.description}
+              </p>
 
-                <motion.div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7] self-end mt-6">
+              <a href={card.link} className="absolute bottom-6 right-6">
+                <motion.div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7]">
                   <ArrowUpRight size={24} />
                 </motion.div>
-              </motion.div>
-            </Link>
+              </a>
+            </motion.div>
           ))}
         </div>
         <p className="mt-8 md:mt-12 lg:mt-24 text-[#000000] font-secondary text-base sm:text-lg  m-auto lg:max-w-6xl px-4 md:px-8 lg:px-12">
@@ -217,96 +145,6 @@ export default function Donate() {
           </Link>
         </p>
         <PaymentForm />
-      </section>
-
-      {/* Become a Fundraising Champion */}
-      <section
-        className="flex flex-col items-center justify-center text-center py-24 bg-white scroll-mt-30 lg:scroll-mt-30"
-        id="startyourownfundraiser"
-      >
-        <h2 className="text-xl md:text-4xl lg:text-[48px] font-semibold font-primary text-[#592Ac7] mb-12">
-          Become a Fundraising Champion
-        </h2>
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            openModal(); // Open the modal
-          }}
-          className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5] w-fit cursor-pointer"
-        >
-          Start your own fundraiser
-        </button>
-
-        {/* Modal */}
-        {isOpen && (
-          <div
-            id="modal-overlay"
-            className="fixed inset-0 z-10 bg-transparent bg-opacity-50 flex justify-center items-center backdrop-blur-xs mt-28"
-            onClick={handleOutsideClick} // Close modal if clicked outside
-          >
-            <div className="relative bg-transparent p-6 rounded-lg w-full max-w-xl lg:max-w-2xl">
-              {/* Close Button */}
-              <button
-                className="flex justify-end w-full text-gray-500 hover:text-gray-700 cursor-pointer"
-                onClick={closeModal}
-              >
-                <X size={24} /> {/* Close icon */}
-              </button>
-
-              <div className="flex flex-row flex-nowrap md:flex-row justify-center gap-6 py-4 px-4 md:px-8 lg:px-12 mt-2">
-                {/* First Card */}
-                <Link href="https://give.aviusa.org/-/XGJWXUWA">
-                  <div className="relative w-full sm:w-[200px] md:w-[250px] lg:w-[300px] h-full md:h-[447px] lg:h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group">
-                    <h3 className="text-[16px] font-semibold font-primary mb-4 z-10 text-center">
-                      Bridge Program
-                    </h3>
-                    <Image
-                      src="/images/getinvolved/img1.svg"
-                      alt="Bridge Program"
-                      width={278}
-                      height={261}
-                      className="w-[278px] h-[261px] md:w-[207px] md:h-[195px] lg:w-[378px] lg:h-[261px] rounded-lg object-cover z-10 hidden md:block"
-                    />
-                    <p className="text-sm mt-2 z-10 text-center leading-4.5 hidden md:block">
-                      Your contribution will help us provide our young adults
-                      with an infrastructure, including tools and materials
-                      needed for their learning and growth.
-                    </p>
-
-                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7] sm:self-end sm:mt-6 scale-75 sm:scale-100">
-                      <ArrowUpRight size={24} />
-                    </div>
-                  </div>
-                </Link>
-
-                {/* Second Card */}
-                <Link href="https://give.aviusa.org/-/XLQTFBNA">
-                  <div className="relative w-full sm:w-[200px] md:w-[250px] lg:w-[300px] h-full md:h-[447px] lg:h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group">
-                    <h3 className="text-[16px] font-semibold font-primary mb-4 z-10 text-center">
-                      STEAM Program
-                    </h3>
-                    <Image
-                      src="/images/getinvolved/img3.svg"
-                      alt="STEAM Program"
-                      width={278}
-                      height={261}
-                      className="w-[278px] h-[261px] md:w-[207px] md:h-[195px] lg:w-[378px] lg:h-[261px] rounded-lg object-cover z-10 hidden md:block"
-                    />
-                    <p className="text-sm mt-2 z-10 text-center leading-4.5 hidden md:block">
-                      Your gift for our unique educational offering will help
-                      cover expenses for a dedicated space for STEAM Lab,
-                      teacher support, and project materials.
-                    </p>
-
-                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7] sm:self-end sm:mt-6 scale-75 sm:scale-100">
-                      <ArrowUpRight size={24} />
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
       </section>
 
       {/* AVI-USA */}

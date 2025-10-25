@@ -22,10 +22,7 @@ export default function DonationForm() {
   }, []);
 
   return (
-    <div
-      id="donation-form"
-      className="flex flex-col md:flex-row justify-center items-center bg-[#fdf6ec] px-4 py-24 gap-8 scroll-mt-12 lg:scroll-mt-18"
-    >
+    <div id="donation-form" className="flex flex-col md:flex-row justify-center items-center bg-[#fdf6ec] px-4 py-24 gap-8 scroll-mt-12 lg:scroll-mt-18">
       {/* Donate from India */}
       <motion.div
         className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg w-full max-w-[584px] md:max-w-[400px] lg:max-w-[584px]  border border-gray-200 flex flex-col justify-center"
@@ -81,7 +78,7 @@ export default function DonationForm() {
 
       {/* Donate from Anywhere */}
       <motion.div
-        className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] md:max-w-[400px] lg:max-w-[550px]  flex flex-col justify-start"
+        className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] md:max-w-[400px] lg:max-w-[550px]  h-[650px] flex flex-col justify-start"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
