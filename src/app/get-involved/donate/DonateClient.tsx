@@ -129,7 +129,7 @@ export default function Donate() {
           </p>
           <Link
             href="https://donate.auroville.org/"
-            className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 w-2/3 lg:w-2/3 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5] mt-4"
+            className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 w-2/3 lg:w-2/3 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5] mt-6"
           >
             Donate Now — Your Gift Will Be Matched
           </Link>
@@ -220,97 +220,156 @@ export default function Donate() {
       </section>
 
       {/* Become a Fundraising Champion */}
-      <section
-        className="flex flex-col items-center justify-center text-center py-24 bg-white scroll-mt-30 lg:scroll-mt-30"
+      <motion.section
+        className="flex flex-col items-center justify-center text-center py-24 bg-white scroll-mt-30 lg:scroll-mt-30 gap-y-6 md:gap-y-12 lg:gap-y-16 px-4 md:px-8 lg:px-12"
         id="startyourownfundraiser"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
       >
-        <h2 className="text-xl md:text-4xl lg:text-[48px] font-semibold font-primary text-[#592Ac7] mb-12">
-          Become a Fundraising Champion
+        <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-primary text-[#592Ac7] leading-none text-center">
+          Fundraise with Yuvabe
         </h2>
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            openModal(); // Open the modal
-          }}
-          className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5] w-fit cursor-pointer"
-        >
-          Start your own fundraiser
-        </button>
-
-        {/* Modal */}
-        {isOpen && (
-          <div
-            id="modal-overlay"
-            className="fixed inset-0 z-10 bg-transparent bg-opacity-50 flex justify-center items-center backdrop-blur-xs mt-28"
-            onClick={handleOutsideClick} // Close modal if clicked outside
+        <div className="flex flex-col gap-y-4 md:gap-y-6">
+          <h3 className="text-xl md:text-[40px] font-semibold font-primary text-black text-center">
+            Become a Champion for Youth <br /> Empowerment
+          </h3>
+          <p className="text-[#000000] font-secondary text-base sm:text-lg list-decimal text-center max-w-[80ch]">
+            Ignite a ripple of change in your network and create real
+            opportunities for young people in Auroville and nearby villages. You
+            can do more than donate — you can inspire others. By starting a{" "}
+            <b>peer-to-peer fundraising campaign,</b> you help support learning,
+            creativity, and livelihoods for youth.
+          </p>
+        </div>
+        <div className="flex flex-col gap-y-6 rounded-[50px]  px-8 md:px-12 lg:px-18 py-8 md:py-12 lg:py-16 shadow-[8px_8px_43px_rgba(0,_0,_0,_0.1)] max-w-[1028px] items-center">
+          <h4 className="text-xl md:text-[40px] font-semibold font-primary text-black text-center">
+            It's simple:
+          </h4>
+          <ol className="text-[#000000] font-secondary text-base sm:text-lg font-bold list-decimal text-left">
+            <li>
+              Choose a cause{" "}
+              <span className="font-normal">
+                — Scholarships, STEAM Labs, or Bridge Programs.
+              </span>
+            </li>
+            <li>
+              Set a goal{" "}
+              <span className="font-normal">
+                — Decide how much you’d like to raise.
+              </span>
+            </li>
+            <li>
+              Share your story{" "}
+              <span className="font-normal">
+                — Rally friends, family, or colleagues to contribute.
+              </span>
+            </li>
+          </ol>
+          <p className="text-[#000000] font-secondary text-base sm:text-lg text-center">
+            We’ll support you with campaign updates and materials so you can
+            focus on spreading the word. Every rupee raised supports real change
+            — from digital literacy to creative leadership.
+          </p>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              openModal(); // Open the modal
+            }}
+            className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5] w-fit cursor-pointer self-center"
           >
-            <div className="relative bg-transparent p-6 rounded-lg w-full max-w-xl lg:max-w-2xl">
-              {/* Close Button */}
-              <button
-                className="flex justify-end w-full text-gray-500 hover:text-gray-700 cursor-pointer"
-                onClick={closeModal}
-              >
-                <X size={24} /> {/* Close icon */}
-              </button>
+            Start your campaign
+          </button>
 
-              <div className="flex flex-row flex-nowrap md:flex-row justify-center gap-6 py-4 px-4 md:px-8 lg:px-12 mt-2">
-                {/* First Card */}
-                <Link href="https://give.aviusa.org/-/XGJWXUWA">
-                  <div className="relative w-full sm:w-[200px] md:w-[250px] lg:w-[300px] h-full md:h-[447px] lg:h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group">
-                    <h3 className="text-[16px] font-semibold font-primary mb-4 z-10 text-center">
-                      Bridge Program
-                    </h3>
-                    <Image
-                      src="/images/getinvolved/img1.svg"
-                      alt="Bridge Program"
-                      width={278}
-                      height={261}
-                      className="w-[278px] h-[261px] md:w-[207px] md:h-[195px] lg:w-[378px] lg:h-[261px] rounded-lg object-cover z-10 hidden md:block"
-                    />
-                    <p className="text-sm mt-2 z-10 text-center leading-4.5 hidden md:block">
-                      Your contribution will help us provide our young adults
-                      with an infrastructure, including tools and materials
-                      needed for their learning and growth.
-                    </p>
+          {/* Modal */}
+          {isOpen && (
+            <div
+              id="modal-overlay"
+              className="fixed inset-0 z-10 bg-[#000000bd] flex justify-center items-center backdrop-blur-xs mt-28"
+              onClick={handleOutsideClick} // Close modal if clicked outside
+            >
+              <div className="relative bg-[#FFF9EA] p-6 lg:p-12 rounded-2xl w-11/12 lg:w-full max-w-xl lg:max-w-4xl">
+                {/* Close Button */}
+                <button
+                  className="flex justify-end w-full text-gray-500 hover:text-gray-700 cursor-pointer"
+                  onClick={closeModal}
+                >
+                  <X size={24} /> {/* Close icon */}
+                </button>
 
-                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7] sm:self-end sm:mt-6 scale-75 sm:scale-100">
-                      <ArrowUpRight size={24} />
+                <h4 className="text-xl md:text-2xl font-semibold font-primary text-black max-w-[35ch] m-auto">
+                  Select a program to launch your peer-to-peer fundraising
+                  campaign
+                </h4>
+
+                <div className="flex flex-row flex-nowrap md:flex-row justify-center gap-6 py-4 px-4 md:px-8 lg:px-12 mt-2">
+                  {/* First Card */}
+                  <Link href="https://give.aviusa.org/-/XGJWXUWA">
+                    <div className="relative w-full sm:w-[200px] md:w-[250px] lg:w-[300px] h-full md:h-[447px] lg:h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group">
+                      <h3 className="text-[16px] font-semibold font-primary mb-4 z-10 text-center">
+                        Bridge Program
+                      </h3>
+                      <Image
+                        src="/images/getinvolved/DSC02014.webp"
+                        alt="Bridge Program"
+                        unoptimized
+                        width={278}
+                        height={261}
+                        className="w-[278px] h-[261px] md:w-[207px] md:h-[195px] lg:w-[378px] lg:h-[261px] rounded-lg object-cover z-10 hidden md:block"
+                      />
+                      <p className="text-sm mt-2 z-10 text-center leading-4.5 hidden md:block">
+                        Your contribution will help us provide our young adults
+                        with an infrastructure, including tools and materials
+                        needed for their learning and growth.
+                      </p>
+
+                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7] sm:self-end sm:mt-6 scale-75 sm:scale-100">
+                        <ArrowUpRight size={24} />
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
 
-                {/* Second Card */}
-                <Link href="https://give.aviusa.org/-/XLQTFBNA">
-                  <div className="relative w-full sm:w-[200px] md:w-[250px] lg:w-[300px] h-full md:h-[447px] lg:h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group">
-                    <h3 className="text-[16px] font-semibold font-primary mb-4 z-10 text-center">
-                      STEAM Program
-                    </h3>
-                    <Image
-                      src="/images/getinvolved/img3.svg"
-                      alt="STEAM Program"
-                      width={278}
-                      height={261}
-                      className="w-[278px] h-[261px] md:w-[207px] md:h-[195px] lg:w-[378px] lg:h-[261px] rounded-lg object-cover z-10 hidden md:block"
-                    />
-                    <p className="text-sm mt-2 z-10 text-center leading-4.5 hidden md:block">
-                      Your gift for our unique educational offering will help
-                      cover expenses for a dedicated space for STEAM Lab,
-                      teacher support, and project materials.
-                    </p>
+                  {/* Second Card */}
+                  <Link href="https://give.aviusa.org/-/XLQTFBNA">
+                    <div className="relative w-full sm:w-[200px] md:w-[250px] lg:w-[300px] h-full md:h-[447px] lg:h-[500px] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300 hover:bg-[#592AC7] hover:text-white group">
+                      <h3 className="text-[16px] font-semibold font-primary mb-4 z-10 text-center">
+                        STEAM Program
+                      </h3>
+                      <Image
+                        src="/images/getinvolved/STREAM.webp"
+                        alt="STEAM Program"
+                        width={278}
+                        height={261}
+                        className="w-[278px] h-[261px] md:w-[207px] md:h-[195px] lg:w-[378px] lg:h-[261px] rounded-lg object-cover z-10 hidden md:block object-top"
+                      />
+                      <p className="text-sm mt-2 z-10 text-center leading-4.5 hidden md:block">
+                        Your gift for our unique educational offering will help
+                        cover expenses for a dedicated space for STEAM Lab,
+                        teacher support, and project materials.
+                      </p>
 
-                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7] sm:self-end sm:mt-6 scale-75 sm:scale-100">
-                      <ArrowUpRight size={24} />
+                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#592AC7] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#592AC7] sm:self-end sm:mt-6 scale-75 sm:scale-100">
+                        <ArrowUpRight size={24} />
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        )}
-      </section>
+          )}
+        </div>
+        <p className="text-[#000000] font-secondary text-xl md:text-2xl text-center max-w-[54ch]">
+          Together, let’s{" "}
+          <b>
+            expand access, build confidence, and empower the next generation to
+            Work. Serve. Evolve.
+          </b>
+        </p>
+      </motion.section>
 
       {/* AVI-USA */}
-      <section className="flex flex-col items-center justify-center text-center py-24 bg-white">
+      <section className="flex flex-col items-center justify-center text-center py-24 bg-[#FFF9EA] px-4 md:px-8 lg:px-12">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
