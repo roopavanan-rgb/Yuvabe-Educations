@@ -148,12 +148,12 @@ const Header = () => {
         { name: "We Serve", path: "/get-involved/we-serve" },
         { name: "We Evolve", path: "/get-involved/we-evolve" },
         { name: "Donate", path: "/get-involved/donate" },
-        { name: "Join Us", path: "/get-involved/join-us" },
-        { name: "Connect With Us", path: "/get-involved/connect-with-us" },
         {
           name: "Start Your Own Fundraiser",
           path: "/get-involved/donate#startyourownfundraiser",
         },
+        { name: "Join Us", path: "/get-involved/join-us" },
+        { name: "Connect With Us", path: "/get-involved/connect-with-us" },
       ],
     },
   ];
