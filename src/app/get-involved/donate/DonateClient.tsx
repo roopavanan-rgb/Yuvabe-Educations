@@ -13,6 +13,23 @@ export default function Donate() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    const path = window.location.hash;
+    if (path && path.includes("#")) {
+      // Delay the scroll to ensure everything is rendered first
+      setTimeout(() => {
+        const el = document.getElementById(path.replace("#", ""));
+        if (el) {
+          // Ensure the element is in the viewport with native scroll behavior
+          el.scrollIntoView({
+            behavior: "smooth", // Use native smooth scrolling
+            block: "start", // Align the element to the top of the viewport
+          });
+        }
+      }, 1000); // Delay to ensure the page has time to render
+    }
+  }, []);
+
+  useEffect(() => {
     setIsClient(true);
   }, []);
 

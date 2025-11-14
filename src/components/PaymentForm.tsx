@@ -24,7 +24,7 @@ export default function DonationForm() {
   return (
     <div
       id="donation-form"
-      className="flex flex-col md:flex-row justify-center  bg-[#fdf6ec] px-4 py-24 gap-8 scroll-mt-12 lg:scroll-mt-18"
+      className="flex flex-col md:flex-row justify-center items-center  bg-[#fdf6ec] px-4 py-24 gap-8 scroll-mt-12 lg:scroll-mt-18"
     >
       {/* Donate from India */}
       <motion.div
@@ -90,7 +90,7 @@ export default function DonationForm() {
           Donate from Anywhere
         </h2>
 
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex-1 flex items-center justify-center min-h-144">
           {/* Replace this placeholder with actual widget if needed */}
           <a
             href="#XJLHERLT"
