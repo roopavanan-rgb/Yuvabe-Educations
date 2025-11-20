@@ -234,24 +234,27 @@ export default function Home() {
               className="w-full lg:w-1/2 text-left mt-6 lg:mt-0 px-6"
             >
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-3 sm:mb-4 font-primary text-center md:text-center lg:text-start">
-                Yuvabe Education: Unleashing Potential Through Holistic Growth
+                Empowering Rural Youth Through Education
               </h3>
               <p className="text-gray-700 text-[14px] sm:text-[18px] mb-3 sm:mb-4 text-center md:text-center lg:text-start leading-7">
-                At Yuvabe Education in Auroville, we believe in the immense
-                potential innate in every individual, especially the youth. The
-                challenge lies not in capability but in providing access to the
-                right resources to unlock this potential. Our mission is to
-                provide young adults, the future of our society, and lifelong
-                learners with a transformative platform that fosters
-                self-awareness, growth, and empowerment.
+                At Yuvabe Education, we believe every young adult carries
+                extraordinary potential; what many lack is access. In the
+                Villupuram district (Tamil Nadu) , young people often face
+                barriers to the skills, exposure, and support needed to grow,
+                especially as many are the first generation of learners in their
+                families. Our programs bridge this gap through technical
+                training, digital literacy, career readiness, and guided
+                self-awareness that build both competence and confidence.
               </p>
               <p className="text-gray-700 text-[14px] sm:text-[18px] text-center md:text-center lg:text-start leading-7">
-                Yuvabe Education was born out of a deep commitment to empowering
-                individuals. We start with external growth areas like acquiring
-                technical and career skills and evolve toward inward
-                exploration, where true potential lies. Our holistic approach
-                emphasizes not just professional success but also personal
-                fulfillment and happiness.
+                We place intentional focus on young women, knowing that when one
+                woman gains access, she becomes a catalyst for generational
+                uplift — strengthening household income, inspiring younger
+                siblings, and shifting community attitudes toward education. By
+                turning access into agency, Yuvabe Education empowers youth,
+                especially women, to rise and create meaningful change. Our
+                holistic approach nurtures not only professional success but
+                also personal fulfillment, dignity, and purpose.
               </p>
             </motion.div>
 
@@ -333,19 +336,24 @@ export default function Home() {
             </h2>
             <ul className="list-disc list-inside text-gray-700 space-y-4 leading-7 md:leading-8 text-[14px] sm:text-[18px] font-secondary font-regular">
               <li>
-                <strong>The STEAM Program (ages 7-14):</strong> Building a
-                strong foundation in Science, Technology, Engineering, Arts, and
-                Math, inspiring curiosity and critical thinking in young minds.
+                <strong>The STEAM Program (ages 7-14):</strong> Hands-on
+                science, technology, engineering, arts, and math that spark
+                curiosity and confidence, giving first-generation learners early
+                exposure and opening pathways to possibilities they may never
+                have imagined.
               </li>
               <li>
-                <strong>The Bridge Program (ages 20+):</strong> A launchpad for
-                young adults, focused on skill-building, career readiness, and
-                self-discovery.
+                <strong>The Bridge Program (ages 20+):</strong> A transformative
+                journey building future-ready skills, workplace confidence, and
+                inner clarity for young adults, especially first-generation
+                women, empowering them to seize opportunities and become
+                catalysts of progress for their families and communities.
               </li>
             </ul>
             <p className="text-gray-700 mt-6 text-[14px] sm:text-[18px] text-center lg:text-left">
-              We plant the seeds of growth at an early age and nurture them
-              throughout life’s journey.
+              Together, these programs nurture growth from early childhood into
+              young adulthood, turning access into opportunity and opportunity
+              into empowered lives shaped with clarity and dignity.
             </p>
           </motion.div>
         </div>
@@ -366,29 +374,35 @@ export default function Home() {
               Join Us in This Mission
             </h2>
             <p className="text-[#000000] leading-7 text-sm  md:text-[18px] text-justify font-secondary font-normal">
-              For those who feel called to support this initiative, your love
-              and blessings can make dreams come true for the talented youth of
-              Auroville and its surrounding villages.
+              Your support can open doors for first-generation learners who
+              simply need access to the right opportunities. With your
+              encouragement, young people from Auroville and the Villupuram
+              district (Tamil Nadu) can gain the skills, confidence, and clarity
+              to transform their lives and uplift their families.
             </p>
             <p className="text-[#000000] leading-7 text-sm  md:text-[18px] text-justify font-secondary font-normal">
-              We've come this far thanks to the generosity of people like you.
-              Together, we can continue to create opportunities and help young
-              learners realize their true potential.
+              We have come this far through the kindness of people who believed
+              in their potential. You can be part of the next chapter.
             </p>
-            <p className="text-[#000000] leading-7 text-sm  md:text-[18px] mb-6 md:mb-10 text-justify font-secondary font-normal">
-              Click here to learn how you can contribute and join us on this
-              journey.
+            <p className="text-[#000000] leading-7 text-sm  md:text-[18px] mb-6 md:mb-10 text-justify font-secondary font-bold">
+              <Link
+                href={"/get-involved/donate"}
+                className="text-blue-500 cursor-pointer"
+              >
+                Click here
+              </Link>{" "}
+              to support a first-generation learner from rural Tamil Nadu.
             </p>
 
             {/* Button */}
-            <motion.a
+            {/* <motion.a
               href="/get-involved/join-us"
               className="mt-6 mx-auto lg:ml-0 block sm:inline-block px-6 py-3 text-white bg-[#592AC7] rounded-lg shadow-md hover:bg-white hover:text-[#592ac7] transition w-fit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Know More
-            </motion.a>
+            </motion.a> */}
           </motion.div>
 
           {/* Right: Image Content */}

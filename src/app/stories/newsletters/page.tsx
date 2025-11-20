@@ -19,6 +19,17 @@ interface NewsletterItem {
 // Array of newsletter data
 const newslettersData: NewsletterItem[] = [
   {
+    id: 17,
+    title: "YUVABEAT",
+    subtitle: "Gratitude in Motion",
+    month: "November",
+    year: "2025",
+    description:
+      "As we pause in gratitude this season, we’re reminded that grace flows through unseen hands and kind hearts that help us rise. Each one of you has been that angel for someone at Yuvabe, helping a young adult find courage, purpose, and possibility.",
+    imageUrl: "/images/newsletters/news-19.webp",
+    linkUrl: "http://eepurl.com/jsiyjw",
+  },
+  {
     id: 18,
     title: "YUVABEAT",
     subtitle: "Agents of Change - Part II",
