@@ -145,7 +145,7 @@ export default function Donate() {
             purpose-driven education and real opportunities for growth.
           </p>
           <Link
-            href="https://donate.auroville.org/"
+            href="#contribute-program"
             className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 w-2/3 lg:w-2/3 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5] mt-6"
           >
             Donate Now — Your Gift Will Be Matched
@@ -180,7 +180,10 @@ export default function Donate() {
       </section>
 
       {/* Support Section */}
-      <section className="py-24 bg-[#FBF6EF] text-center">
+      <section
+        className="py-24 bg-[#FBF6EF] text-center scroll-mt-30 lg:scroll-mt-30"
+        id="contribute-program"
+      >
         <h2 className="text-xl md:text-[40px] font-semibold font-primary text-black mb-12">
           Please choose where you’d like your <br /> contribution to create an
           impact
