@@ -21,61 +21,6 @@ export default function JDS() {
                 {/* Job Listings */}
                 <div className="flex flex-col gap-y-8 md:gap-y-16 lg:gap-y-32">
                   {/* Individual Listings */}
-                  {/* Lead Facilitator – 3D Design & Printing */}
-                  <motion.div
-                    className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
-                    initial={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                  >
-                    <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
-                      Lead Facilitator  |<span> 2-3 years exp</span>
-                    </h3>
-                    <p className="font-secondary font-normal text-black text-[18px] leading-[30px]  text-center line-clamp-2">
-                      We&apos;re looking for a creative and hands-on 3D-design professional who loves to teach. As <strong>Lead Facilitator – 3D Design & Printing</strong> ,
-                      you will guide a diverse group of learners through the processes of modelling, printing, post-processing,
-                      and presenting physical prototypes. This is a full-time, on-site role where you&apos;ll lead workshops,
-                      mentor student projects, and help build strong maker-portfolios. If you believe 3D printing is more
-                      than tech—it&apos;s an empowerment tool—this role is for you.
-                    </p>
-                    {/* Read More Button */}
-                    <Link href="join-us/lead-facilitator-3d-design-printing">
-                      <div className="bg-[#592AC7] py-[18px] px-8 w-[142px] rounded-[15px] mt-2">
-                        <p className="font-primary font-semibold text-white text-[14px] leading-[150%]">
-                          Read More
-                        </p>
-                      </div>
-                    </Link>
-                  </motion.div>
-
-                  {/* AI Full Stack Development */}
-                  <motion.div
-                    className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
-                    initial={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                  >
-                    <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
-                      Lead Facilitator  |<span> 2-3 years exp</span>
-                    </h3>
-                    <p className="font-secondary font-normal text-black text-[18px] leading-[30px]  text-center line-clamp-2">
-                      We&apos;re looking for a passionate developer-educator who thrives at the intersection of full-stack web development and AI/ML.
-                      As <strong>Lead Facilitator – AI Full Stack Development</strong>, you will guide young learners through designing,
-                      building and deploying intelligent web applications. This is a full-time, on-site role where you&apos;ll
-                      lead live-coding sessions, mentor capstone development projects, and help students build portfolio-ready
-                      AI-driven apps. If you believe coding and AI can unlock potential and purpose—this role is for you.                    </p>
-                    {/* Read More Button */}
-                    <Link href="join-us/lead-facilitator-ai-full-stack-development">
-                      <div className="bg-[#592AC7] py-[18px] px-8 w-[142px] rounded-[15px] mt-2">
-                        <p className="font-primary font-semibold text-white text-[14px] leading-[150%]">
-                          Read More
-                        </p>
-                      </div>
-                    </Link>
-                  </motion.div>
-
                   {/* Job 1 */}
                   <motion.div
                     className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
