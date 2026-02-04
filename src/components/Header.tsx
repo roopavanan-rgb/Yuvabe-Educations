@@ -90,10 +90,9 @@ const Header = () => {
 
   // Handle search result click
   const handleResultClick = (path: string) => {
-    setSearchQuery(""); // Clear search input
-    setFilteredResults([]); // Hide search results
-    setShowSearch(false); // Close search on mobile
-    router.push(path); // Navigate to selected page
+    setSearchQuery(""); 
+    setShowSearch(false); 
+    router.push(path); 
   };
 
   const handleDropdownOpen = (menu: string | null) => {
@@ -118,6 +117,10 @@ const Header = () => {
           name: "Bridge",
           path: "/bridge",
           sublinks: [
+            {
+              name: "Advanced Design Workshop",
+              path: "/bridge/advanced-design-workshop",
+            },
             { name: "Digital Marketing", path: "/bridge/digital-marketing" },
             { name: "AI", path: "/bridge/ai" },
             {
