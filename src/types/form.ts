@@ -1,6 +1,6 @@
 export interface FormData {
   fullName: string;
-  email: string;       
+  // email: string;       
   phone: string;
   linkedin: string;
 

@@ -54,13 +54,13 @@ export default function StepOne({
           onChange={(v) => update({ fullName: v })}
         />
 
-        <Input
+        {/* <Input
           label="Email Address"
           type="email"
           required
           helper="We’ll send your confirmation here"
           onChange={(v) => update({ email: v })}
-        />
+        /> */}
 
         <Input
           label="Phone Number"

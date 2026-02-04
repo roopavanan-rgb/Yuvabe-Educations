@@ -7,7 +7,7 @@ import { FormData } from "../types/form";
 
 const initialData: FormData = {
   fullName: "",
-  email: "",
+  // email: "",
   phone: "",
   linkedin: "",
 
