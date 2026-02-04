@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ProgramFilterTabs from "@/components/ProgramFilterTabs";
 import ProgramCard from "@/components/ProgramCard";
 import ProgramCalendar from "@/components/ProgramCalendar";
+import { Program, FilterType } from "@/types/programs";
 import { programsData } from "@/data/programData";
 import { cn } from "@/lib/utils";
 
