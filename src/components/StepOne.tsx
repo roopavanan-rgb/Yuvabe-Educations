@@ -224,7 +224,9 @@ function Input({
 }) {
   return (
     <motion.div
-      whileFocusWithin={{ scale: 1.01 }}
+      animate={{ scale: 1 }}
+      onFocus={() => {}}
+      whileFocus={{ scale: 1.01 }}
       transition={{ duration: 0.15 }}
       className="flex flex-col gap-1"
     >
@@ -257,7 +259,8 @@ function Textarea({
 }) {
   return (
     <motion.div
-      whileFocusWithin={{ scale: 1.01 }}
+      tabIndex={-1}
+      whileFocus={{ scale: 1.01 }}
       transition={{ duration: 0.15 }}
       className="flex flex-col gap-1"
     >
