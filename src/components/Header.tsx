@@ -81,8 +81,8 @@ const Header = () => {
         (page) =>
           page.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           page.keywords.some((keyword) =>
-            keyword.toLowerCase().includes(searchQuery.toLowerCase())
-          )
+            keyword.toLowerCase().includes(searchQuery.toLowerCase()),
+          ),
       );
       setFilteredResults(results);
     }
@@ -90,9 +90,9 @@ const Header = () => {
 
   // Handle search result click
   const handleResultClick = (path: string) => {
-    setSearchQuery(""); 
-    setShowSearch(false); 
-    router.push(path); 
+    setSearchQuery("");
+    setShowSearch(false);
+    router.push(path);
   };
 
   const handleDropdownOpen = (menu: string | null) => {
@@ -164,7 +164,7 @@ const Header = () => {
   const handleKeyDown = (
     event: React.KeyboardEvent,
     label: string,
-    hasSublinks: boolean
+    hasSublinks: boolean,
   ) => {
     if (event.key === "ArrowDown") {
       // Navigate down to the next link
