@@ -967,7 +967,7 @@ export default function Hero() {
 
       {/* Footer */}
       <section className="bg-[linear-gradient(135deg, rgba(106, 78, 218, 0.05) 0%, rgba(106, 78, 218, 0) 50%, rgba(249, 158, 31, 0.05) 100%)] px-6 py-20">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-2xl text-center">
           {/* Overline */}
           <motion.p
             variants={fadeUp}
@@ -986,7 +986,7 @@ export default function Hero() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="mb-4 text-3xl font-semibold text-black md:text-5xl font-primary"
+            className="mb-4 text-3xl font-semibold text-black md:text-5xl font-primary leading-tight"
           >
             Ready to Design Solutions That{" "}
             <span className="bg-gradient-to-l from-[#F99E1F] to-[#6A4EDA] bg-clip-text text-transparent">

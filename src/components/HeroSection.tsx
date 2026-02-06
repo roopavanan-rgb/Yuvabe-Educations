@@ -32,7 +32,7 @@ export default function HeroSection() {
           </p>
 
           <p className="text-2xl bg-gradient-to-r from-[#8c52ff] via-[#ff914d] to-[#ff914d] bg-clip-text text-transparent font-bold font-secondary">
-            Learn. Design. Validate. Pitch.
+            Book Your Seat Now!
           </p>
 
           {/* <div className="flex flex-row space-x-4 items-center">
@@ -50,86 +50,50 @@ export default function HeroSection() {
 
         <div className="space-y-4 text-gray-700 leading-relaxed text-lg font-secondary">
           <p>
-            <strong>Problem to Pitch</strong> by{" "}
-            <strong>Yuvabe Education</strong> is a five-day, hands-on{" "}
-            <strong>Advanced Design Thinking</strong> workshop where
-            participants work on real-world problems and transform them into
-            well-validated digital solutions—while also developing the
-            confidence and clarity to pitch their ideas to the right audience.
-          </p>
-
-          <p>
-            This immersive experience is guided by an industry-mentored
-            facilitation team bringing together deep expertise in UX research,
-            systems thinking, enterprise design, and cognitive science. The
-            workshop is facilitated by practitioners who actively work with
-            global organisations and complex real-world contexts:
+            Problem to Pitch by <strong>Yuvabe Education</strong> is a five-day,
+            hands-on Design Thinking workshop where participants dive into
+            real-world problems and transform them into well-validated digital
+            solutions—while also developing the{" "}
+            <strong>skills to confidently pitch their ideas </strong> to the
+            right audience.
           </p>
 
           <ul className="space-y-4 text-gray-700 leading-relaxed text-lg list-disc pl-6">
             <li>
-              <strong>Vinoth</strong>, Senior UX Researcher at{" "}
-              <strong>Cisco</strong> (formerly IBM), brings a strong
-              mixed-methods research approach rooted in human psychology and
-              behavioural insight.
+              This is a highly interactive experience, so participants are
+              required to <strong>bring a laptop</strong>.
             </li>
 
             <li>
-              <strong>Supriya</strong>, System Designer at{" "}
-              <strong>Chargebee</strong>, is known for translating complex
-              systems—across digital platforms, workflows, and organisational
-              contexts—into clear, actionable design decisions.
+              Sessions will be conducted primarily in English, with additional
+              facilitation support available in{" "}
+              <strong>Tamil, Hindi, Gujarati, Odiya, and Marathi</strong>.
             </li>
 
             <li>
-              <strong>Ganesh</strong>, Senior UX Designer at{" "}
-              <strong>Incedo</strong>, has hands-on experience leading
-              cross-functional teams and delivering large-scale enterprise
-              products used by millions of users.
+              Please ensure you have{" "}
+              <strong>active accounts on Miro and Figma</strong>
+              before the workshop begins, as these tools will be used
+              throughout.
             </li>
 
             <li>
-              <strong>Chirag</strong>, Design Strategist and Enterprise UX
-              Practitioner at <strong>CBRE</strong>, blends design thinking with
-              cognitive science, MVP development, and go-to-market strategy.
+              If you’re bringing a specific problem or context, be ready to
+              <strong>engage relevant users on Day 3 (11th March)</strong> to
+              gather feedback and refine your solution.
             </li>
           </ul>
 
           <p>
-            Together, they create a learning environment that mirrors how real
-            design teams think, collaborate, validate, and deliver—grounded in
-            reflection, feedback, and real-world practice rather than theory
-            alone.
+            Get ready to learn, collaborate, and create solutions that not only
+            work—but that you can confidently pitch and bring to life!
           </p>
 
           <p>
-            This is a highly interactive workshop, and participants are required
-            to bring a laptop. Sessions will be conducted primarily in English,
-            with additional facilitation support available in{" "}
-            <strong>Tamil, Hindi, Gujarati, Odiya, </strong> and
-            <strong> Marathi</strong> ensuring an inclusive learning experience.
-          </p>
-
-          <p>
-            Participants are expected to have active <strong>Miro</strong> and{" "}
-            <strong>Figma</strong> accounts, as these tools will be used
-            extensively throughout the workshop. If you are bringing a specific
-            problem or context, please be prepared to engage relevant users on{" "}
-            <strong>Day 3 (11th March)</strong> to gather feedback and refine
-            your solution through real validation.
-          </p>
-
-          <p>
-            Get ready to learn deeply, collaborate meaningfully, and create
-            solutions that don’t just work—but that you can confidently pitch
-            and bring to life.
-          </p>
-
-          <p className="font-medium text-black">
-            Please take a moment to fill out the{" "}
-            <strong>registration form </strong> below to share your interest in
-            participating. We look forward to welcoming you to{" "}
-            <strong>Problem to Pitch</strong> in Auroville.
+            Please take a moment to{" "}
+            <strong>fill out this registration form</strong> to share your
+            interest in participating. Thank you, and we hope to see you at the
+            workshop!
           </p>
         </div>
 

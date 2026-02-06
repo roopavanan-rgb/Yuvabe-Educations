@@ -14,7 +14,7 @@ const facilitators = [
   },
   {
     name: "Vinoth Raja",
-    role: "Senior UX Researcher, Cisco (Previously: IBM)",
+    role: "Senior UX Researcher, Cisco",
     image: "/images/vinothraja.png",
     linkedin: "https://linkedin.com/in/vinoth",
     bio: "Vinoth’s UX research practice is rooted in a mixed-methods approach, combining qualitative and quantitative research for deeper insight. What sets him apart is his ability to blend ancient Indian knowledge systems with human psychology, resulting in context-aware, actionable research insights that guide better design decisions.",
