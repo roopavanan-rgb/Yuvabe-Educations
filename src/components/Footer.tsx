@@ -57,13 +57,13 @@ const Footer = () => {
           </div>
           {/* Social Icons */}
           <div className="flex space-x-4 mt-12 text-[#592AC7]">
-            <Link href="https://www.instagram.com/yuvabe.auroville/">
+            <Link href="https://www.instagram.com/yuvabe.education/">
               <FaInstagram
                 size={24}
                 className="hover:text-gray-600 transition"
               />
             </Link>
-            <Link href="https://www.facebook.com/yuvabe.auroville">
+            <Link href=" https://www.facebook.com/yuvabe.education">
               <FaFacebookF
                 size={24}
                 className="hover:text-gray-600 transition"
@@ -75,7 +75,7 @@ const Footer = () => {
                 className="hover:text-gray-600 transition"
               />
             </Link>
-            <Link href="https://www.linkedin.com/company/yuvabe/">
+            <Link href="https://www.linkedin.com/company/yuvabeeducation/">
               <FaLinkedinIn
                 size={24}
                 className="hover:text-gray-600 transition"

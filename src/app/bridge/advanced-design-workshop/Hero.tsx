@@ -426,48 +426,53 @@ export default function Hero() {
 
           {/* Cards */}
           <motion.div
-            custom={0.3}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid gap-6 sm:grid-cols-2"
-          >
-            {cards.map((card, i) => {
-              const Icon = card.icon;
+  custom={0.3}
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  className="grid gap-6 sm:grid-cols-2 items-stretch"
+>
+  {cards.map((card, i) => {
+    const Icon = card.icon;
 
-              return (
-                <div
-                  key={i}
-                  className="
-        rounded-xl
-        bg-gradient-to-l
-        from-[#F99E1F]
-        to-[#6A4EDA]
-        p-[1px]
-      "
-                >
-                  <div
-                    className="
-          flex
-          items-start
-          gap-4
-          rounded-[12px]
-          bg-[#F7F5EF]
-          p-5
-          text-left
+    return (
+      <div
+        key={i}
+        className="
+          h-full
+          rounded-xl
+          bg-gradient-to-l
+          from-[#F99E1F]
+          to-[#6A4EDA]
+          p-[1px]
         "
-                  >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-100 text-[#6A4EDA] p-2">
-                      <Icon size={20} strokeWidth={2} />
-                    </div>
+      >
+        <div
+          className="
+            h-full
+            flex
+            items-start
+            gap-4
+            rounded-[12px]
+            bg-[#F7F5EF]
+            p-5
+            text-left
+          "
+        >
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-[#6A4EDA] p-2">
+            <Icon size={20} strokeWidth={2} />
+          </div>
 
-                    <p className="text-gray-700 text-lg">{card.text}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </motion.div>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            {card.text}
+          </p>
+        </div>
+      </div>
+    );
+  })}
+</motion.div>
+
 
           {/* Important Note */}
           <motion.div
@@ -498,6 +503,7 @@ export default function Hero() {
           </motion.div>
         </div>
       </section>
+      
       <section className="relative bg-[#FBFBF8] px-6 pb-24">
         <CurriculumTimeline />
       </section>
@@ -761,11 +767,36 @@ export default function Hero() {
           </div>
 
           {/* Steps */}
-          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+          <div
+            className="
+    grid
+    gap-6
+    grid-cols-1
+    sm:grid-cols-2
+    lg:flex
+    lg:items-center
+    lg:justify-between
+  "
+          >
             {steps.map((item, index) => (
-              <div key={index} className="flex items-center">
+              <div key={index} className="flex items-center justify-center">
                 {/* Card */}
-                <div className="flex w-[260px] flex-col items-center rounded-xl bg-[#F2EFE9] p-6 text-center border border-[#E5E3DC]">
+                <div
+                  className="
+        flex
+        w-full
+        sm:max-w-[280px]
+        lg:w-[260px]
+        flex-col
+        items-center
+        rounded-xl
+        bg-[#F2EFE9]
+        p-6
+        text-center
+        border
+        border-[#E5E3DC]
+      "
+                >
                   {/* Step badge */}
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#F99E1F] to-[#6A4EDA] text-lg font-semibold text-white">
                     {item.step}
@@ -782,7 +813,7 @@ export default function Hero() {
 
                 {/* Arrow (desktop only) */}
                 {index < steps.length - 1 && (
-                  <ArrowRight className="mx-6 hidden text-gray-400 md:block" />
+                  <ArrowRight className="mx-6 hidden lg:block text-gray-400" />
                 )}
               </div>
             ))}

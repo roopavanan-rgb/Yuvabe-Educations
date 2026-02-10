@@ -1,17 +1,17 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 
-const bounceIn = {
+const bounceIn: Variants = {
   hidden: { scale: 0.5, opacity: 0 },
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { type: "spring", stiffness: 120, damping: 10 },
+    transition: { type: "spring" as const, stiffness: 120, damping: 10 },
   },
 };
 
@@ -182,7 +182,7 @@ export default function Bridge() {
                     young adults are the catalysts of social change,
                   </span>
                   with the potential to drive socioeconomic, political,
-                  environmental, and technological developments. 
+                  environmental, and technological developments.
                 </p>
               </motion.div>
             </div>
@@ -329,7 +329,7 @@ export default function Bridge() {
                     a woman’s decision to learn,
                   </span>
                   opening pathways to work, income, and leadership—without
-                  leaving their communities. 
+                  leaving their communities.
                 </p>
                 <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-3">
                   When rural women gain digital literacy and begin to earn
@@ -703,8 +703,8 @@ export default function Bridge() {
 
       {/* Add Impact Report from Homepage */}
       {/* Donation */}
-      <div   id="donate"
- className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
+      <div id="donate"
+        className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-8 md:gap-y-16">
           <motion.h2
             className="text-white text-[40px]  md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"

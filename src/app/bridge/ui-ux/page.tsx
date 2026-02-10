@@ -314,7 +314,7 @@ export default function uiux() {
             transition={{
               visible: {
                 transition: {
-                  staggerChildren: 0.5, // Stagger delay between each block
+                  staggerChildren: 0.5,
                 },
               },
             }}
@@ -753,7 +753,7 @@ export default function uiux() {
               alt="Bridge Image"
               width={338.14}
               height={338.14}
-              // className="absolute bottom-[-4%] lg:bottom-[-5%] lg:right-[3%] z-1"
+            // className="absolute bottom-[-4%] lg:bottom-[-5%] lg:right-[3%] z-1"
             />
           </motion.div>
           {/* Blur Effects */}
@@ -1131,7 +1131,7 @@ export default function uiux() {
                 Do you offer group discounts for organisations or institutions?{" "}
                 <br />
                 <span className="font-normal">
-                  Yes. Please call/email us for further information. 
+                  Yes. Please call/email us for further information.
                   <br />
                   <Link href={"mailto:bridge@yuvabe.com"}>
                     Email: bridge@yuvabe.com
@@ -1231,7 +1231,7 @@ export default function uiux() {
               alt="Bridge Image"
               width={478}
               height={478}
-              // className="absolute bottom-[-4%] lg:bottom-[-10%] lg:left-[-5%] z-1 max-w-87 lg:max-w-full"
+            // className="absolute bottom-[-4%] lg:bottom-[-10%] lg:left-[-5%] z-1 max-w-87 lg:max-w-full"
             />
           </motion.div>
         </div>

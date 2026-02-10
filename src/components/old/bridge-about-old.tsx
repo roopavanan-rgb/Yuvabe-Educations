@@ -8,7 +8,7 @@ const bounceIn = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { type: "spring", stiffness: 120, damping: 10 },
+    transition: { type: "spring" as const, stiffness: 120, damping: 10 },
   },
 };
 
@@ -273,34 +273,34 @@ export default function Bridge() {
                 className="lg:w-[55%]"
               >
                 <p className="font-secondary font-medium text-black text-[18px] leading-[30px]  text-center lg:text-left">
-                  The 
+                  The
                   <span className="text-[#592AC7] font-bold">
-                    Bridge Program is a 3-6 month program 
+                    Bridge Program is a 3-6 month program
                   </span>
                   that will provide introductory training in predetermined areas
                   such as Digital Marketing, Market Research and Analytics,
                   Sustainability Assessment and Artificial Intelligence. The
                   program is aimed at young adults who are in the process of
                   completing their education and looking for employment
-                  opportunities. 
+                  opportunities.
                   <br />
                   <br /> The goal is to
                   <span className="text-[#592AC7] font-bold">
-                    &nbsp;facilitate a project based learning environment 
+                    &nbsp;facilitate a project based learning environment
                   </span>
-                   that provides them with an opportunity to explore new-age
+                  that provides them with an opportunity to explore new-age
                   skills, and empowering tools to thrive in a rapidly changing
                   world while upholding the principles of holistic development
                   and unity. <br />
                   <br />
                   Through
                   <span className="text-[#592AC7] font-bold">
-                     Yuvabe’s Work-Serve-Evolve philosophy
+                    Yuvabe’s Work-Serve-Evolve philosophy
                   </span>
                   , the aim is to go beyond an upskilling program and
                   incorporate the service-to-community mindset and focus on
                   self-growth, thereby bolstering holistic personality
-                  development. 
+                  development.
                 </p>
               </motion.div>
               <motion.div
