@@ -667,7 +667,16 @@ export default function Hero() {
             {/* Early Bird */}
             <div className="relative rounded-2xl border border-[#6A4EDA] bg-[#FBFBF8] p-8">
               {/* Badge */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 rounded-t-2xl w-[350px] sm:w-[325px] md:w-[282px] bg-[#6A4EDA] px-8 py-1 text-xs font-semibold text-white text-center">
+              <div className=" absolute
+      top-0
+      inset-x-0
+      rounded-t-2xl
+      bg-[#6A4EDA]
+      py-1
+      text-center
+      text-xs
+      font-semibold
+      text-white">
                 Best Value
               </div>
 
