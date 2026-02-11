@@ -325,7 +325,7 @@ const Header = () => {
                         {/* Second-level submenu - visible only when this link is hovered */}
                         {link.sublinks && (
                           <ul
-                            className="absolute top-0 left-full ml-1 mt-0 w-48 bg-white shadow-lg p-2 rounded-md z-20
+                            className="absolute top-0 left-full mt-0 w-48 bg-white shadow-lg p-2 rounded-md z-20
         invisible opacity-0
         peer-hover:visible peer-hover:opacity-100
         hover:visible hover:opacity-100

@@ -1,69 +1,134 @@
 "use client";
 
-import { useState } from "react";
-import clsx from "clsx";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef } from "react";
 
-interface SliderSettings {
-  speed?: number; // in seconds
-  pauseOnHover?: boolean;
-  direction?: "left" | "right";
-}
+const modules = [
+  { id: "01", title: "Environmental Science and Conservation" },
+  { id: "02", title: "Sustainable Development and Policy Frameworks" },
+  { id: "03", title: "Climate Science" },
+  { id: "04", title: "GHG Accounting and Carbon Footprinting" },
+  { id: "05", title: "Renewable Energy Systems" },
+  { id: "06", title: "Water Resource Management" },
+  { id: "07", title: "Waste Management and Circular Economy" },
+  { id: "08", title: "Sustainable Architecture" },
+  { id: "09", title: "Community Engagement and Social Innovation" },
+];
 
-const InfiniteSlider = ({
-  speed = 10,
-  pauseOnHover = true,
-  direction = "left",
-}: SliderSettings) => {
-  const modules = [
-    { id: "01", text: "Environmental Science and Conservation" },
-    { id: "02", text: "Sustainable Development and Policy Frameworks" },
-    { id: "03", text: "Climate Science" },
-    { id: "04", text: "GHG Accounting and Carbon Footprinting" },
-    { id: "05", text: "Renewable Energy Systems" },
-    { id: "06", text: "Water Resource Management" },
-    { id: "07", text: "Waste Management and Circular Economy" },
-    { id: "08", text: "Sustainable Architecture" },
-    { id: "09", text: "Community Engagement and Social Innovation" },
-  ];
+const TOTAL_ITEMS = modules.length;
 
-  const duplicatedModules = [...modules, ...modules];
+export default function CurriculumTimeline() {
+  const timelineRef = useRef<HTMLDivElement>(null);
 
-  const animationStyle = {
-    animation: `${direction === "left" ? "slideLeft" : "slideRight"} ${speed}s linear infinite`,
-  };
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start center", "end center"],
+  });
+
+  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  const getThreshold = (index: number) => index / (TOTAL_ITEMS - 1);
 
   return (
-    <div
-      className={clsx(
-        "relative w-full overflow-hidden py-6 bg-[#1B360F]",
-        pauseOnHover && "group"
-      )}
-    >
-      <div
-        className={clsx(
-          "flex gap-5 my-4",
-          pauseOnHover && "group-hover:[animation-play-state:paused]"
-        )}
-        style={animationStyle}
-      >
-        {duplicatedModules.map((module, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 min-w-[240px] sm:min-w-[220px] md:min-w-[250px] lg:min-w-[270px] h-[140px] sm:h-[130px] md:h-[150px] lg:h-[160px]
-                       p-4 bg-opacity-30 bg-[#2D5019] border border-[#90C645] rounded-[25px]
-                       flex flex-col justify-start items-start"
-          >
-            <h2 className="text-xl sm:text-lg md:text-xl lg:text-2xl font-semibold text-[#A2E64D]">
-              {module.id}
-            </h2>
-            <p className="text-sm sm:text-xs md:text-sm lg:text-base text-white mt-4 text-left leading-snug">
-              {module.text}
-            </p>
-          </div>
-        ))}
+    <div className="mx-auto max-w-6xl relative overflow-hidden py-24">
+      {/* Timeline */}
+      <div ref={timelineRef} className="relative">
+        {/* Vertical Line */}
+        <svg
+          className="absolute left-1/2 top-0 h-full w-4 -translate-x-1/2"
+          viewBox="0 0 4 1000"
+          preserveAspectRatio="none"
+        >
+          {/* Base line */}
+          <path
+            d="M2 0 V1000"
+            stroke="#4B6F44"
+            strokeWidth="2"
+            fill="none"
+          />
+
+          {/* Animated line */}
+          <motion.path
+            d="M2 0 V1000"
+            stroke="#A3E635"
+            strokeWidth="2"
+            fill="none"
+            style={{ pathLength }}
+          />
+        </svg>
+
+        <div className="space-y-20">
+          {modules.map((item, index) => {
+            const isLeft = index % 2 === 0;
+            const threshold = getThreshold(index);
+
+            const rawOpacity = useTransform(
+              scrollYProgress,
+              [threshold - 0.12, threshold - 0.02],
+              [0, 1]
+            );
+
+            const opacity = useSpring(rawOpacity, {
+              stiffness: 90,
+              damping: 20,
+            });
+
+            const dotProgress = useTransform(
+              scrollYProgress,
+              [threshold - 0.01, threshold],
+              [0, 1]
+            );
+
+            const dotColor = useTransform(
+              dotProgress,
+              [0, 1],
+              ["#6B8E5E", "#A3E635"]
+            );
+
+            return (
+              <div
+                key={item.id}
+                className={`relative flex ${
+                  isLeft ? "justify-start" : "justify-end"
+                }`}
+              >
+                {/* Dot */}
+                <motion.span
+                  style={{ backgroundColor: dotColor }}
+                  className="
+                    absolute
+                    left-1/2
+                    top-8
+                    z-10
+                    h-4
+                    w-4
+                    -translate-x-1/2
+                    rounded-full
+                    ring-4
+                    ring-[#1B360F]
+                  "
+                />
+
+                {/* Card (Fade Only) */}
+                <motion.div
+                  style={{ opacity }}
+                  className="w-full max-w-md"
+                >
+                  <div className="rounded-2xl bg-[#23491A] border border-[#90C645] p-6 shadow-lg shadow-black/20">
+                    <span className="text-xl sm:text-lg md:text-xl lg:text-2xl font-semibold text-[#A2E64D] font-primary">
+                    {item.id}
+                    </span>
+
+                    <h3 className="text-lg font-semibold text-white leading-snug mt-4 font-primary">
+                      {item.title}
+                    </h3>
+                  </div>
+                </motion.div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
-};
-
-export default InfiniteSlider;
+}
