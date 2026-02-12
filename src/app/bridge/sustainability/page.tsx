@@ -244,7 +244,7 @@ export default function Home() {
 
         {/* Background Text */}
         <motion.h2
-          className="absolute bottom-[-8%] left-1/2 transform -translate-x-1/2 text-[40px] sm:text-[60px] md:text-[120px] font-extrabold text-white opacity-10 whitespace-nowrap pointer-events-none"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-[40px] sm:text-[60px] md:text-[120px] font-extrabold text-[#90C645] opacity-100 whitespace-nowrap pointer-events-none"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.1 }}
           transition={{ duration: 1, ease: "easeOut" }}

@@ -78,8 +78,8 @@ export default function Donate() {
   return (
     <main className="overflow-x-hidden">
       {/* Hero Section */}
-      {/*      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
-        /~ Left Side - Centered Text ~/
+       <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
+        {/* Left Side - Centered Text  */}
         <motion.div
           className="flex flex-col lg:justify-start lg:items-start lg:text-left justify-center items-center text-center lg:pl-20 pl-0 "
           initial={{ opacity: 0 }}
@@ -94,6 +94,62 @@ export default function Donate() {
             upskilling! Be part of something bigger, where growth isn’t just
             personal; it’s collective. Let’s build the future together!
           </p>
+        </motion.div>
+
+        {/* Right Side - Image */}
+        <motion.div
+          className="w-full lg:w-1/2 flex justify-center md:justify-end mt-12 md:mt-0 relative"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="relative w-full ">
+             {/* Floating Shape  */}
+            <motion.div
+              className="absolute top-12 right-10 w-10 h-10 md:w-20 md:h-20 bg-[#33BED4]  z-10"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            />
+
+            {/* Image */}
+            <Image
+              src="/images/getinvolved/support.png"
+              alt="Group working on laptop"
+              width={900}
+              height={600}
+              className="w-full h-auto left-8 top-12 md:left-20 md:top-15 lg:left-18 lg:top-15 relative "
+            />
+          </div>
+        </motion.div>
+      </section>
+
+      {/*<section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
+        /~ Left Side - Centered Text ~/
+        <motion.div
+          className="flex flex-col lg:justify-start lg:items-start lg:text-left justify-center items-center text-center lg:pl-20 pl-0 "
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-primary text-[#592Ac7] leading-snug">
+            Double Your Impact <br /> This December
+          </h1>
+          <p className="mt-4 text-[#000000] font-secondary text-base sm:text-lg max-w-md sm:max-w-lg lg:max-w-xl">
+            From December 1 – 31, 2025 every rupee or dollar you donate will be
+            matched by our partners at AVI-USA, doubling the support that
+            reaches young learners through Yuvabe’s Bridge and STEAM Programs.
+            <br />
+            <br />
+            Your contribution this month helps provide scholarships, creative
+            learning tools, and mentorship — building pathways for
+            purpose-driven education and real opportunities for growth.
+          </p>
+          <Link
+            href="#contribute-program"
+            className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 w-2/3 lg:w-2/3 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5] mt-6"
+          >
+            Donate Now — Your Gift Will Be Matched
+          </Link>
         </motion.div>
 
         /~ Right Side - Image ~/
@@ -122,62 +178,6 @@ export default function Donate() {
           </div>
         </motion.div>
       </section>*/}
-
-      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
-        {/* Left Side - Centered Text */}
-        <motion.div
-          className="flex flex-col lg:justify-start lg:items-start lg:text-left justify-center items-center text-center lg:pl-20 pl-0 "
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-primary text-[#592Ac7] leading-snug">
-            Double Your Impact <br /> This December
-          </h1>
-          <p className="mt-4 text-[#000000] font-secondary text-base sm:text-lg max-w-md sm:max-w-lg lg:max-w-xl">
-            From December 1 – 31, 2025 every rupee or dollar you donate will be
-            matched by our partners at AVI-USA, doubling the support that
-            reaches young learners through Yuvabe’s Bridge and STEAM Programs.
-            <br />
-            <br />
-            Your contribution this month helps provide scholarships, creative
-            learning tools, and mentorship — building pathways for
-            purpose-driven education and real opportunities for growth.
-          </p>
-          <Link
-            href="#contribute-program"
-            className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 w-2/3 lg:w-2/3 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5] mt-6"
-          >
-            Donate Now — Your Gift Will Be Matched
-          </Link>
-        </motion.div>
-
-        {/* Right Side - Image */}
-        <motion.div
-          className="w-full lg:w-1/2 flex justify-center md:justify-end mt-12 md:mt-0 relative"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="relative w-full ">
-            {/* Floating Shape */}
-            <motion.div
-              className="absolute top-12 right-10 w-10 h-10 md:w-20 md:h-20 bg-[#33BED4]  z-10"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            />
-
-            {/* Image */}
-            <Image
-              src="/images/getinvolved/support.png"
-              alt="Group working on laptop"
-              width={900}
-              height={600}
-              className="w-full h-auto left-8 top-12 md:left-20 md:top-15 lg:left-18 lg:top-15 relative "
-            />
-          </div>
-        </motion.div>
-      </section>
 
       {/* Support Section */}
       <section

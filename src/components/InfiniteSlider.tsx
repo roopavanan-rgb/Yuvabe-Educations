@@ -57,7 +57,7 @@ export default function CurriculumTimeline() {
           />
         </svg>
 
-        <div className="space-y-20">
+        <div className="space-y-12">
           {modules.map((item, index) => {
             const isLeft = index % 2 === 0;
             const threshold = getThreshold(index);
