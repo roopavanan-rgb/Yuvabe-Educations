@@ -233,6 +233,10 @@ img[src$="#lg-center"] {
   max-width: 600px
 }
 
+.wx-task:not(.wx-split).wx-GKbcLEGA{
+  background-color: transparent !important;
+}
+
 @media (min-width: 768px) {
 
   /* === sm (Small) === */

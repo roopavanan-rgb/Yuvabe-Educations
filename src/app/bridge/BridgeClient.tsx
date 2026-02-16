@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
+import BridgeProgramCalendar from "@/components/BridgeProgramCalendar";
 
 const bounceIn: Variants = {
   hidden: { scale: 0.5, opacity: 0 },
@@ -75,7 +76,7 @@ export default function Bridge() {
               </p>
             </motion.div>
             {/* Text & Video */}
-            <div className="flex flex-row gap-y-8 md:gap-y-16 lg:flex-wrap xl:gap-x-[106px] lg:justify-between">
+            <div className="flex flex-row gap-y-8 md:gap-y-16 flex-wrap lg:flex-wrap xl:gap-x-[106px] lg:justify-between">
               {/* Text */}
               <motion.div
                 className="w-full lg:w-[35%] flex flex-col justify-between"
@@ -103,7 +104,7 @@ export default function Bridge() {
               </motion.div>
               {/* Video */}
               <motion.div
-                className="max-w-full lg:w-[50%]"
+                className="max-w-full w-full lg:w-[50%]"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -123,6 +124,7 @@ export default function Bridge() {
               </motion.div>
             </div>
           </div>
+            {/* <BridgeProgramCalendar/> */}
         </div>
       </div>
 
