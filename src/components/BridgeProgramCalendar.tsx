@@ -266,29 +266,38 @@ export default function BridgeProgramCalendar() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <div className="relative flex bg-gray-100 p-3 rounded-[15px] items-center hover:shadow-md transition duration-300">
-        <svg
-          stroke="currentColor"
-          fill="none"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          className="text-gray-500"
-          height="1em"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-        <input
+      <div
+        style={{
+          padding: "1rem",
+          display: "flex",
+          gap: "10px",
+          borderBottom: "1px solid #ddd",
+        }}
+      >
+        <div className="relative flex bg-gray-100 p-3 rounded-[15px] items-center transition duration-300">
+          <svg
+            stroke="currentColor"
+            fill="none"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="text-gray-500"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
           placeholder="Search..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="bg-transparent outline-none w-32 md:w-40 lg:w-48 xl:w-full"
           style={{ padding: "5px 10px", borderRadius: "4px" }}
         />
+        </div>
+        
         <select value={zoom} onChange={(e) => setZoom(e.target.value as any)}>
           <option value="month">Month</option>
           <option value="week">Week</option>
