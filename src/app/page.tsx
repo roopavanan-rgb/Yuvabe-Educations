@@ -464,15 +464,33 @@ export default function Home() {
             <h2 className="text-[36px] font-primary font-semibold mt-14">
               Our Mission
             </h2>
-            <p className="text-[18px] font-secondary">
-              To equip individuals with future-ready skills while nurturing
-              self-awareness and a strong sense of purpose. Through our
-              Work-Serve-Evolve model, we support holistic development by
-              blending hands-on learning, community engagement, and personal
-              growth. We believe that learning is a lifelong journey, and that
-              with the right support, anyone at any age can grow, evolve, and
-              create a meaningful impact in the world.
+                 <p className="text-[18px] font-secondary">
+              Through Yuvabe Education, we aim to:
+
+
+
+
+
+
             </p>
+            <ul className="list-disc pl-5 space-y-2 text-[18px] font-secondary font-normal text-left">
+              <li>
+                Equip individuals with futuristic skills for career success.
+              </li>
+              <li>
+                Foster self-awareness and inner exploration to uncover true
+                purpose.
+              </li>
+              <li>
+                Support holistic development through our unique
+                Work-Serve-Evolve model.
+              </li>
+              <li>
+                Provide access to opportunities for lifelong learning,
+                emphasizing that age is just a number when it comes to personal
+                growth.
+              </li>
+            </ul>
           </motion.div>
           {/* Right: Image Section */}
           <motion.div
