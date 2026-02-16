@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -28,7 +29,7 @@ import CurriculumTimeline from "@/components/CurriculumTimeline";
 import FacilitatorsSection from "@/components/FacilitatorsSection";
 import FAQSection from "@/components/workshop/FAQSection";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 12 },
   visible: (delay = 0) => ({
     opacity: 1,

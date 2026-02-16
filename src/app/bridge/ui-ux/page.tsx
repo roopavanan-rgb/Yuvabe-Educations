@@ -1,11 +1,21 @@
 "use client";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import FaqSection from "@/components/uiux/FaqSection";
 import CustomSwiper from "@/components/uiux/CustomSwiper";
 import HorizontalSwiper from "@/components/uiux/HorizontalSwiper";
 import HorizontalScroll from "@/components/uiux/HorizontalScroll";
+
+const container: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
 
 // Define slide data array
 const slidesData = [
@@ -307,17 +317,10 @@ export default function uiux() {
           {/* Blocks */}
           <motion.div
             className="flex flex-col gap-y-6 md:gap-y-12 lg:gap-y-12 xl:gap-y-16 z-10"
-            initial="hidden"
-            animate="visible"
-            whileInView="visible" // Trigger animation when in view
-            viewport={{ once: true, amount: 0.45 }} // Trigger when 25% of the block is in view
-            transition={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.5,
-                },
-              },
-            }}
+            variants={container}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.45 }}
           >
             {/* Individual Blocks */}
             {/* Block 1 */}
