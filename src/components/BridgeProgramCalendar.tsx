@@ -266,7 +266,7 @@ export default function BridgeProgramCalendar() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <div className="relative flex bg-gray-100 p-3 rounded-[15px] items-center hover:shadow-md transition duration-300">
+      <div className="relative flex bg-gray-100 p-3 rounded-[15px] items-center">
         <svg
           stroke="currentColor"
           fill="none"
