@@ -23,7 +23,7 @@ export default function design() {
             </h1>
             <p className="font-open-sans text-white font-bold   md:text-xl text-[16px] z-10 text-center lg:text-left">
               A 12-Week Online Industry-Oriented Learning Journey | Live Classes
-              | Starts 23 June 2025
+              | Launching March 2026
             </p>
             <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] max-w-[1065px] z-10 text-center lg:text-left">
               A hands-on course by
@@ -39,11 +39,11 @@ export default function design() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-row justify-center gap-8 flex-wrap md:flex-nowrap z-10">
+          <div className="flex flex-row justify-start gap-8 flex-wrap md:flex-nowrap z-10">
             {/* Apply Now */}
             <Link
               href={
-                "https://docs.google.com/forms/d/e/1FAIpQLSdEkEj-Bj6KfXoJNAwFNUPpxiOQM2bANS-kfXcdRoXBNNf1gg/viewform"
+                "https://forms.gle/kPdDvDWuoC2BYDJAA"
               }
               target="_blank"
             >
@@ -296,34 +296,34 @@ export default function design() {
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Duration:</span> 12 Weeks
               </li>
-              <br />
-              <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+             
+              {/* <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Format:</span> 100% Live Online
-              </li>
+              </li> */}
               <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
-                <span className="font-bold">Schedule: </span> Monday to Thursday
+                <span className="font-bold">Schedule: </span> Monday to Friday
               </li>
               <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Class Time:</span>
-                5:00 PM to 7:00 PM (IST)
+                9:00 AM to 5:00 PM (IST)
               </li>
-              <br />
-              <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+            
+              {/* <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Location:</span>
                 Anywhere you are, just bring a laptop and Wi-Fi
-              </li>
-              <br />
-              <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+              </li> */}
+        
+              {/* <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Registration Fee:</span>
                 Rs. 500
-              </li>
-              <br />
-              <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+              </li> */}
+           
+              {/* <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Course Fee:</span>
                 Rs. 9000 (Rs 3000 per month)
-              </li>
+              </li> */}
             </ul>
           </motion.div>
         </div>
@@ -547,7 +547,7 @@ export default function design() {
               {/* Apply Now */}
               <Link
                 href={
-                  "https://docs.google.com/forms/d/e/1FAIpQLSdEkEj-Bj6KfXoJNAwFNUPpxiOQM2bANS-kfXcdRoXBNNf1gg/viewform"
+                  "https://forms.gle/kPdDvDWuoC2BYDJAA"
                 }
                 target="_blank"
               >
@@ -573,7 +573,7 @@ export default function design() {
           </div>
           {/* Translucent Box / FAQs */}
           <motion.div
-            className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10"
+            className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10 justify-center items-center "
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -589,7 +589,7 @@ export default function design() {
               FAQs
             </motion.h2>
             <div>
-              <ul className="list-none list-inside text-center lg:text-left md:inline-block">
+              <ul className="list-none list-inside text-center  md:inline-block">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                   <span className="font-bold">
                     Is the course beginner-friendly?
@@ -657,7 +657,7 @@ export default function design() {
               A Collaboration You Can Trust
             </motion.h2>
             <div>
-              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center lg:text-left">
+              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center ">
                 <span className="font-bold">3DPD </span>
                 is India's largest integrated 3D printing bureau, pioneering
                 rapid prototyping and additive manufacturing since 2000. With
@@ -669,7 +669,7 @@ export default function design() {
               </p>
               <br />
               <br className="hidden md:block" />
-              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center lg:text-left">
+              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center ">
                 <span className="font-bold">Yuvabe Education </span>
                 is a purpose-driven learning platform based in Auroville.
                 Through its Bridge Programme, Yuvabe empowers young adults with
@@ -680,7 +680,7 @@ export default function design() {
               </p>
               <br />
               <br className="hidden md:block" />
-              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center lg:text-left">
+              <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center ">
                 Together, Yuvabe Education and 3DPD bridge the gap between
                 education and industry, providing learners with the tools and
                 mentorship needed to excel in the fields of product design and
@@ -832,7 +832,7 @@ export default function design() {
             {/* Apply Now */}
             <Link
               href={
-                "https://docs.google.com/forms/d/e/1FAIpQLSdEkEj-Bj6KfXoJNAwFNUPpxiOQM2bANS-kfXcdRoXBNNf1gg/viewform"
+                "https://forms.gle/kPdDvDWuoC2BYDJAA"
               }
               target="_blank"
             >
