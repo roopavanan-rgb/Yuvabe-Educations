@@ -589,7 +589,7 @@ export default function design() {
               FAQs
             </motion.h2>
             <div>
-              <ul className="list-none list-inside text-center  md:inline-block">
+              <ul className="list-none list-inside text-center md:inline-block">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                   <span className="font-bold">
                     Is the course beginner-friendly?
