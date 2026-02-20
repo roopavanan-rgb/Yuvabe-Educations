@@ -14,6 +14,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ImArrowUpRight2 } from "react-icons/im";
 import Link from "next/link";
+import MottoSection from "@/components/MottoSection";
 
 const logos = [
   "/images/clientlogo/deep.webp",
@@ -464,14 +465,8 @@ export default function Home() {
             <h2 className="text-[36px] font-primary font-semibold mt-14">
               Our Mission
             </h2>
-                 <p className="text-[18px] font-secondary">
+            <p className="text-[18px] font-secondary">
               Through Yuvabe Education, we aim to:
-
-
-
-
-
-
             </p>
             <ul className="list-disc pl-5 space-y-2 text-[18px] font-secondary font-normal text-left">
               <li>
@@ -515,140 +510,7 @@ export default function Home() {
       </section>
 
       {/* Work, serve & evolve */}
-      <section className="bg-white py-[120px] px-6 min-h-screen flex items-center justify-center relative">
-        <div className="container max-w-[1140px] mx-auto text-center relative">
-          <h2 className="text-4xl font-semibold font-primary lg:text-[64px] text-[48px]">
-            Our Motto
-          </h2>
-
-          {/* Centered Zig-Zag Line Image */}
-          <div className="absolute top-3/5 left-3/5 transform -translate-x-4/5 -translate-y-1/2 z-[0] hidden md:block">
-            <Image
-              src="/images/home/plane2.gif"
-              alt="Paper Plane"
-              width={900}
-              height={900}
-              priority
-            />
-          </div>
-
-          <div className="relative z-10 space-y-28 mt-16">
-            {/* Work Section */}
-            <motion.div
-              initial={{ opacity: 0 }} // Only fade in
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="flex flex-col md:flex-row items-center gap-16"
-            >
-              <div className="md:w-3/4 space-y-4 text-left">
-                <h3 className="text-[36px] font-semibold font-primary">Work</h3>
-                <p className="text-[#000000] font-secondary font-normal  text-[18px] mb-6 text-wrap">
-                  Work comprises higher order skilling and project work in
-                  predetermined areas such as AI Full stack, Digital Marketing,
-                  Sustainability.
-                </p>
-                <Button href="/about-us">Read more</Button>
-              </div>
-              <div className="md:w-1/2 flex justify-center">
-                <Image
-                  src="/images/home/arjun.png"
-                  alt="Work"
-                  width={600}
-                  height={600}
-                  priority
-                />
-              </div>
-            </motion.div>
-
-            {/* Serve Section */}
-            <motion.div
-              initial={{ opacity: 0 }} // Only fade-in
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
-              className="flex flex-col md:flex-row-reverse items-center gap-18"
-            >
-              <div className="md:w-3/4 space-y-4 text-left ml-auto z-10 ">
-                <h3 className="text-[36px] font-semibold font-primary z-10">
-                  Serve
-                </h3>
-                <p className="text-[#000000] font-secondary font-normal  text-[18px] mb-6 z-10">
-                  Serve is the commitment to give back to the community through
-                  various social programs and projects supporting Auroville
-                  units.
-                </p>
-                <Button href="/get-involved/we-serve">Read more</Button>
-              </div>
-              <div className="md:w-1/2 flex justify-center relative">
-                <motion.div
-                  className="absolute top-20 left-10 md:top-5 md:left-5 lg:top-20 lg:left-10 w-20 h-20 bg-[#33BED4] rounded-full"
-                  animate={{ y: [0, -10, 0] }} // This keeps bouncing
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                  }}
-                />
-                <Image
-                  src="/images/home/hema.png"
-                  alt="Serve"
-                  width={800}
-                  height={800}
-                  priority
-                />
-              </div>
-            </motion.div>
-
-            {/* Evolve Section */}
-            <motion.div
-              initial={{ opacity: 0 }} // Only fade-in
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1.5 }}
-              className="flex flex-col md:flex-row items-center gap-16"
-            >
-              <div className="md:w-1/2 space-y-4 text-left">
-                <h3 className="text-[36px] font-semibold font-primary">
-                  Evolve
-                </h3>
-                <p className="text-[#000000] font-secondary font-normal text-[18px] mb-6">
-                  Evolve incorporates self-growth through transformative
-                  activities that lead to better decision-making, self-
-                  compassion, overcoming fear, dealing with challenges and more.
-                </p>
-                <Button href="/get-involved/we-evolve">Read more</Button>
-              </div>
-              <div className="w-full md:w-1/2 flex justify-center relative">
-                <div className="relative w-full max-w-lg">
-                  <Image
-                    src="/images/home/priya.png"
-                    alt="Evolve"
-                    width={800}
-                    height={800}
-                    className="w-full h-auto object-contain"
-                    priority
-                  />
-                </div>
-                <motion.div
-                  className="absolute bottom-20 right-5 md:bottom-10 md:right-20 lg:bottom-50 w-0 h-0 rotate-10
-    border-l-[30px] sm:border-l-[40px] md:border-l-[46px] 
-    border-r-[30px] sm:border-r-[40px] md:border-r-[46px] 
-    border-b-[60px] sm:border-b-[75px] md:border-b-[82px] border-transparent 
-    border-b-[#F8A91E] z-10"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                ></motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <MottoSection />
 
       <Timeline />
       <ImpactReport />

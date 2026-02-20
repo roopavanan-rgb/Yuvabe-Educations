@@ -173,7 +173,7 @@ export const newslettersData: NewsletterItem[] = [
     description:
       "We're filled with gratitude for the incredible journey we've shared.",
     imageUrl: "/images/newsletters/news7.jpg",
-    linkUrl: "https://mailchi.mp/1b393619c84a/thankful-for-you-6648416",
+    linkUrl: "https://mailchi.mp/57834145d09d/happy-thanksgiving-from-yuvabe",
   },
   {
     id: 6,
