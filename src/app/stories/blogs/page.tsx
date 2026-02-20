@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import FeaturedPosts from "@/components/FeaturedPosts";
+import BlogCategoryFilter from "@/components/BlogCategoryFilter";
 
 // Define types for blog post metadata
 interface BlogPost {
@@ -60,7 +61,7 @@ export default async function BlogsPage(props: {
     category && category !== "all-posts"
       ? allPosts.filter(
           (post) =>
-            Array.isArray(post.category) && post.category.includes(category)
+            Array.isArray(post.category) && post.category.includes(category),
         )
       : allPosts;
 
@@ -75,16 +76,16 @@ export default async function BlogsPage(props: {
 
   const currentPosts = sortedPosts.slice(
     (page - 1) * POSTS_PER_PAGE,
-    page * POSTS_PER_PAGE
+    page * POSTS_PER_PAGE,
   );
 
   const categoriesSet = new Set<string>();
   allPosts.forEach((post) =>
-    post.category?.forEach((cat: string) => categoriesSet.add(cat))
+    post.category?.forEach((cat: string) => categoriesSet.add(cat)),
   );
 
   const uniqueSortedCategories = predefinedCategories.filter((cat) =>
-    categoriesSet.has(cat)
+    categoriesSet.has(cat),
   );
   const categories = ["all-posts", ...uniqueSortedCategories];
 
@@ -97,23 +98,11 @@ export default async function BlogsPage(props: {
       <div className="bg-color pb-16 xl:pb-20 md:pb-18 xl:pt-0 pt-0 md:pt-0 overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto  px-5 xl:px-0">
           {/* Category Filter */}
-          <div className="flex flex-wrap gap-4 mb-8 md:mb-16 lg:mb-32 z-10 mx-auto">
-            {categories.map((cat) => {
-              const isActive = (category || "all-posts") === cat;
-              return (
-                <Link
-                  key={cat}
-                  href={`/stories/blogs?category=${cat}`}
-                  className={`px-4 py-2 rounded-[30px] text-[16px] font-medium capitalize font-primary ${
-                    isActive
-                      ? "bg-[#592AC7] text-white"
-                      : "bg-[#F1F1F1] text-black"
-                  }`}
-                >
-                  {formatCategory(cat)}
-                </Link>
-              );
-            })}
+          <div className="mb-8 md:mb-16 lg:mb-32">
+            <BlogCategoryFilter
+              categories={categories}
+              activeCategory={category}
+            />
           </div>
 
           {/* Blog Cards */}
@@ -124,7 +113,7 @@ export default async function BlogsPage(props: {
                   ? post.category.find((c) => c === category) ??
                     post.category[0]
                   : predefinedCategories.find((c) =>
-                      post.category?.includes(c)
+                      post.category?.includes(c),
                     ) ?? post.category?.[0]
                 : null;
 
@@ -175,7 +164,7 @@ export default async function BlogsPage(props: {
                   key={`placeholder-${i}`}
                   className="invisible flex flex-col items-start p-10 gap-[22.59px] w-full sm:w-[48%] xl:[flex-basis:calc(33.333%-16px)] min-h-[450px]"
                 ></div>
-              )
+              ),
             )}
 
             {/* SVG Background Shapes */}
