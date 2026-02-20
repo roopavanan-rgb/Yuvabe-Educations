@@ -19,7 +19,19 @@ interface NewsletterItem {
 // Array of newsletter data
 const newslettersData: NewsletterItem[] = [
   {
-    id: 17,
+    id: 20,
+    title: "YUVABEAT",
+    subtitle: "Love and Women: Building Enduring Impact",
+    month: "February",
+    year: "2026",
+    description:
+      "As we move through the weeks leading to Valentine’s Day and International Women’s Day, we reflect on two forces that quietly shape lasting change: love and women.",
+    imageUrl: "/images/newsletters/news20.jpg",
+    linkUrl:
+      "https://us13.campaign-archive.com/?u=877629c188f9de17e6e6b4bc6&id=a275165496",
+  },
+  {
+    id: 19,
     title: "YUVABEAT",
     subtitle: "Gratitude in Motion",
     month: "November",
