@@ -10,7 +10,7 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ monthData }) => {
   const daysOfWeek = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-lg flex flex-col h-full min-h-[300px]">
+    <div className="bg-white rounded-2xl p-6 shadow-lg flex flex-col h-full min-h-75">
       <h3 className="text-center text-xl font-semibold text-[#592AC7] mb-2">
         {monthData.month}
       </h3>
@@ -21,7 +21,7 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ monthData }) => {
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-2 flex-grow text-center text-sm">
+      <div className="grid grid-cols-7 gap-2 grow text-center text-sm">
         {monthData.days.map((day, idx) => (
           <div
             key={idx}

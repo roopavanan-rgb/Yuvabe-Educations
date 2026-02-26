@@ -5,7 +5,8 @@ import { motion, Variants } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
-import BridgeProgramCalendar from "@/components/BridgeProgramCalendar";
+import ProgramCalendar from "@/components/ProgramCalendarFinal";
+import { BridgePrograms } from "@/data/BridgeProgramData";
 
 const bounceIn: Variants = {
   hidden: { scale: 0.5, opacity: 0 },
@@ -124,8 +125,11 @@ export default function Bridge() {
               </motion.div>
             </div>
           </div>
-            {/* <BridgeProgramCalendar/> */}
         </div>
+        {/*  /~ Bridge Calendar ~/
+        <div className="space-y-4 container mx-auto py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
+          <ProgramCalendar programs={BridgePrograms} />
+        </div>*/}
       </div>
 
       {/* Rural youth, Rising Potential */}
@@ -476,7 +480,7 @@ export default function Bridge() {
                           </div>
                         </Link>
                       </motion.div>
-                    )
+                    ),
                   )}
                 </div>
               </motion.div>
@@ -705,8 +709,7 @@ export default function Bridge() {
 
       {/* Add Impact Report from Homepage */}
       {/* Donation */}
-      <div id="donate"
-        className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
+      <div id="donate" className="bg-[#592AC7] py-16 lg:py-32 md:py-24">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-8 md:gap-y-16">
           <motion.h2
             className="text-white text-[40px]  md:text-[40px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary"

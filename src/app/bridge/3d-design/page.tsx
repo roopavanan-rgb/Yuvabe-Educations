@@ -18,50 +18,48 @@ export default function design() {
         >
           {/* Text */}
           <div className="flex flex-col gap-y-6">
-            <h1 className="font-open-sans text-white font-extrabold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 max-w-[800px] z-10 text-center lg:text-left">
-              Transform Your Future with 3D Design - Online Programme
+            <h1 className="font-open-sans text-white font-extrabold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 max-w-200 z-10 text-center lg:text-left">
+              Turn Ideas Into Real Products - 3D Product Design Programme
             </h1>
             <p className="font-open-sans text-white font-bold   md:text-xl text-[16px] z-10 text-center lg:text-left">
-              A 12-Week Online Industry-Oriented Learning Journey | Live Classes
-              | Launching March 2026
+              A 12-Week Online Industry-Oriented Learning Journey |<br />{" "}
+              Hands-On Learning | Starts March 2026
             </p>
-            <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] max-w-[1065px] z-10 text-center lg:text-left">
-              A hands-on course by
-              <span className="font-bold">Yuvabe Education Bridge Program</span>
-              in collaboration with 3DPD, pioneers in 3D printing and product
-              innovation in India. <br /> <br /> Master modern product design
-              skills from the comfort of your home. The Program in 3D Product
-              Design offers live online training in CAD modeling, design
-              thinking, and digital prototyping using the industry-standard tool
-              Fusion 360. Learn from experienced mentors, collaborate with
-              peers, and industry experts — all online.
+            <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] max-w-[950px] z-10 text-center lg:text-left">
+              An innovative 3D product design program by Yuvabe Education Bridge
+              Programme, led by an award-winning Industrial Design expert.{" "}
+              <br /> <br />
+              Master modern product design through immersive, hands-on training
+              in our Makers Space. From design thinking and CAD modeling in
+              Fusion 360 to mechanisms, prototyping, and 3D printing — you'll
+              work with real tools and materials, not just theory.
+              <br /> <br />
+              Collaborate with mentors, learn alongside peers, and build actual
+              products. Every week, you move closer to turning your ideas into a
+              finished prototype — in a structured, industry-focused environment
+              built for results.
             </p>
           </div>
 
           {/* Buttons */}
           <div className="flex flex-row justify-start gap-8 flex-wrap md:flex-nowrap z-10">
             {/* Apply Now */}
-            <Link
-              href={
-                "https://forms.gle/kPdDvDWuoC2BYDJAA"
-              }
-              target="_blank"
-            >
-              <div className="bg-white px-9 py-[12px] md:py-[18.5px] rounded-4xl w-2xs">
+            <Link href={"https://forms.gle/kPdDvDWuoC2BYDJAA"} target="_blank">
+              <div className="bg-white px-9 py-3 md:py-[18.5px] rounded-4xl w-2xs">
                 <p className="font-open-sans font-bold md:text-xl text-[14px] md:text-[16px] text-[#3518D8] text-center">
                   Apply Now
                 </p>
               </div>
             </Link>
 
-            {/* Download Brochure */}
+            {/* /~ Download Brochure ~/
             <Link href={"../docs/3D Printing Brochure New.pdf"} target="_blank">
-              <div className="bg-transparent px-9 py-[12px] md:py-[18.5px] rounded-4xl border-white border-2 w-2xs">
+              <div className="bg-transparent px-9 py-3 md:py-[18.5px] rounded-4xl border-white border-2 w-2xs">
                 <p className="font-open-sans font-bold  md:text-xl text-[14px] md:text-[16px] text-white text-center">
                   Download Brochure
                 </p>
               </div>
-            </Link>
+            </Link>*/}
           </div>
         </motion.div>
         {/* Image Wrapper */}
@@ -76,11 +74,11 @@ export default function design() {
             alt="Bridge Image"
             width={474.14}
             height={456.82}
-            className="h-[400px] md:h-[500px] lg:h-[550px] object-cover"
+            className="h-100 md:h-125 lg:h-[550px] object-cover"
           />
         </motion.div>
         {/* Blur Effects */}
-        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-122 h-122 left-0 top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
         <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
@@ -93,7 +91,7 @@ export default function design() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            viewport={{ once: true }} // Ensure the animation only runs once when in view
+            viewport={{ once: true }}
           >
             <motion.h2
               className="font-bold font-open-sans leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
@@ -107,32 +105,41 @@ export default function design() {
             <div className="lg:text-center">
               <ul className="list-disc list-inside lg:text-left md:inline-block">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                  <span className="font-bold">Live Online Sessions</span> – Join
-                  interactive classes from anywhere in the world.
+                  <span className="font-bold">
+                    Hands-On, In-Person Learning{" "}
+                  </span>{" "}
+                  – Classroom-based training in a fully equipped lab. No passive
+                  lectures — just real work.
                 </li>
+                <br />
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                  <span className="font-bold">Mentorship from Experts</span> –
-                  Get trained by working designers and engineers.
-                </li>
+                  <span className="font-bold">Industry Expert Mentorship</span>{" "}
+                  – Learn directly from seasoned designers and engineers who've
+                  built real products.
+                </li>{" "}
+                <br />
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                  <span className="font-bold">Hands-On Projects</span> – Work on
-                  real product design challenges with group feedback.
-                </li>
+                  <span className="font-bold">Idea to Printed Product</span> –
+                  Experience the complete journey: concept → 3D model →
+                  prototype → final printed product.
+                </li>{" "}
+                <br />
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                  <span className="font-bold"> Software Skills</span> – Learn
-                  and practice Fusion 360, the industry-preferred CAD tool.
-                </li>
+                  <span className="font-bold">Real-World Projects</span> –
+                  Tackle practical design challenges with hands-on expert
+                  feedback at every stage.
+                </li>{" "}
+                <br />
+                <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
+                  <span className="font-bold">Fusion 360 Training</span> –
+                  Master the industry-standard CAD tool used across
+                  manufacturing and product development.
+                </li>{" "}
+                <br />
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                   <span className="font-bold">Portfolio & Certification</span> –
-                  Build a design portfolio and earn a recognized certificate.
-                </li>
-                <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                  <span className="font-bold">Evening Classes</span> –
-                  Convenient timing for students and working professionals.
-                </li>
-                <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                  <span className="font-bold">Global Access</span> – Learn from
-                  anywhere — no travel, no relocation, just results.
+                  Graduate with real products in your portfolio and an
+                  industry-recognised certificate.
                 </li>
               </ul>
             </div>
@@ -164,31 +171,34 @@ export default function design() {
               Who Should Apply?
             </h2>
             <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] max-w-[1065px] z-10 text-center lg:text-left">
-              This course is designed for:
+              This course is built for curious minds and problem-solvers:
             </p>
             <ul className="list-disc list-inside lg:text-left md:inline-block z-10">
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Students & Graduates</span> –
-                Engineering, design, architecture, or any creative background
+                Engineering, design, architecture, or any educational background
               </li>
+              <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Makers & DIYers</span> – Hobbyists
-                and tinkerers looking to level up with structured training
+                ready to take their skills to a structured, professional level
               </li>
+              <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Entrepreneurs & Innovators</span> –
-                Build your product concept before prototyping
+                Validate and prototype your product idea before going to market
               </li>
+              <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">
                   Professionals & Career Switchers
                 </span>
-                – Transition into the growing design industry tool.
+                – Step confidently into the fast-growing design industry
               </li>
             </ul>
             <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] max-w-[1065px] z-10">
-              If you’ve got a maker’s mindset and a willingness to learn, this
-              is for you.
+              If you have a maker's mindset and the drive to learn — this
+              programme is for you.
             </p>
           </motion.div>
         </div>
@@ -210,7 +220,7 @@ export default function design() {
           />
         </motion.div>
         {/* Blur Effects */}
-        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-122 h-122 left-0 top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
         <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
@@ -235,33 +245,36 @@ export default function design() {
               What You'll Learn
             </motion.h2>
             <p className="font-open-sans  md:text-[18px] text-[14px] text-black text-center lg:text-left">
-              Over 12 weeks, you'll go from ideas to :
+              In 12 weeks, you'll go from idea to finished prototype:
             </p>
             <div>
               <ul className="list-disc list-inside lg:text-left md:inline-block">
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
-                  Understand product design fundamentals, including
-                  forces,materials, and structural behavior.
+                  Grasp core product design principles — mechanisms, components,
+                  and manufacturability
                 </li>
                 <br />
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
-                  Perform manual calculations to analyze and improve real-world
-                  design concepts.
+                  Spot real-world problems and develop practical, user-centered
+                  solutions
                 </li>
                 <br />
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
-                  Select appropriate materials based on design
-                  needs,performance, and sustainability.
+                  Gain hands-on skills using tools, standard components, and
+                  workshop practices
                 </li>
                 <br />
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
-                  Create 3D digital models and assemblies using Autodesk Fusion
-                  360.
+                  Build 3D models and assemblies using Autodesk Fusion 360
                 </li>
                 <br />
                 <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
-                  Apply your learning to complete a full design project—from
-                  concept to digital prototype.
+                  Optimise designs for manufacturing and 3D printing
+                </li>
+                <br />
+                <li className="font-open-sans font-bold  md:text-[18px] text-[14px] text-black">
+                  Complete a full product development cycle — from concept to
+                  prototype
                 </li>
               </ul>
             </div>
@@ -290,36 +303,53 @@ export default function design() {
             viewport={{ once: true }} // Ensure the animation only runs once when in view
           >
             <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl  mb-2 md:mb-3 lg:mb-4 lg:text-left text-center z-10">
-              Course Schedule, Format, and Fees
+              Course Format, Schedule & Fees
             </h2>
             <ul className="list-disc list-inside lg:text-left md:inline-block z-10">
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
-                <span className="font-bold">Duration:</span> 12 Weeks
+                <span className="font-bold">Location:</span> Yuvabe Campus,
+                Auroville
               </li>
-             
+              <br />
+              <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+                <span className="font-bold">Hours:</span> 9 AM – 5 PM | Monday
+                to Friday
+              </li>
               {/* <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Format:</span> 100% Live Online
               </li> */}
               <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
-                <span className="font-bold">Schedule: </span> Monday to Friday
+                <span className="font-bold">Format: </span> In-person classroom
+                sessions
               </li>
               <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
-                <span className="font-bold">Class Time:</span>
-                9:00 AM to 5:00 PM (IST)
+                <span className="font-bold">Outcome: </span>
+                Industry-recognised certificate + job-ready portfolio +
+                internship support
               </li>
-            
+              <br />
+              <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+                <span className="font-bold">Fees: </span>
+                100% Free
+              </li>
+              <br />
+              <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+                <span className="font-bold">Language: </span>
+                Tamil & English
+              </li>
+
               {/* <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Location:</span>
                 Anywhere you are, just bring a laptop and Wi-Fi
               </li> */}
-        
+
               {/* <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Registration Fee:</span>
                 Rs. 500
               </li> */}
-           
+
               {/* <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 <span className="font-bold">Course Fee:</span>
                 Rs. 9000 (Rs 3000 per month)
@@ -364,7 +394,7 @@ export default function design() {
           />
         </motion.div>
         {/* Blur Effects */}
-        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-122 h-122 left-0 top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
         <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
@@ -393,41 +423,42 @@ export default function design() {
               <ul className="list-disc list-inside lg:text-left md:inline-block">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                   <span className="font-bold">
-                    Paid Internships for Top Performers
+                    Award-Winning Facilitator — Mr. Krishna Thiruvengadam
                   </span>
                   <br />
-                  The 3 best-performing and eligible students will receive paid
-                  internship opportunities.
+                  Learn directly from a nationally recognised 3D Product Design
+                  expert with deep industry experience and a hands-on mentoring
+                  style throughout the programme.
                 </li>
                 <br />
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                  <span className="font-bold">
-                    Insight into Industry Demand
-                  </span>
+                  <span className="font-bold">Inside Industry Demand</span>
                   <br />
-                  Understand the growing need for product and industrial design
-                  skills across sectors.
+                  Understand exactly why product and industrial design skills
+                  are in growing demand across sectors — and how to position
+                  yourself.
                 </li>
                 <br />
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
-                  <span className="font-bold">Job-Ready Skills</span>
+                  <span className="font-bold">Job-Ready from Day One</span>
                   <br />
-                  Build practical skills for roles like CAD Designer, Drafter,
-                  or Technician.
+                  Build practical, employer-valued skills for roles like CAD
+                  Designer, Product Designer, or Additive Manufacturing
+                  Specialist.
                 </li>
                 <br />
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                   <span className="font-bold">Alumni Community Access</span>
                   <br />
-                  Join a supportive network of learners and professionals after
-                  the course.
+                  Step into a thriving network of learners and professionals who
+                  continue to support each other beyond the course.
                 </li>
                 <br />
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black">
                   <span className="font-bold">Professional Portfolio</span>
                   <br />
-                  Complete a full design project and create a portfolio to
-                  showcase your abilities.
+                  Complete a full design project and walk away with a portfolio
+                  that speaks louder than any CV.
                 </li>
               </ul>
             </div>
@@ -463,27 +494,27 @@ export default function design() {
             <ul className="list-disc list-inside lg:text-left md:inline-block z-10">
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 Work with design studios or engineering teams on product
-                development and 3D modeling.
+                development and 3D modelling
               </li>
               <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
-                Join manufacturing Industries to support design and production
-                processes.
+                Join manufacturing industries to support design and production
+                workflows
               </li>
               <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 Collaborate with startups or innovation labs on early-stage
-                product concepts.
+                product concepts
               </li>
               <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
                 Offer freelance CAD and 3D design services to clients across
-                industries.
+                industries
               </li>
               <br />
               <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
-                Start your own business in product design, prototyping, or
-                digital design services.
+                Launch your own venture in product design, prototyping, or
+                digital design services
               </li>
             </ul>
           </div>
@@ -506,15 +537,15 @@ export default function design() {
           />
         </motion.div>
         {/* Blur Effects */}
-        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-122 h-122 left-0 top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
         <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
-      {/* What Makes This Programme Different */}
+      {/* Enrolment Process */}
       <section className="bg-white pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24 relative overflow-hidden">
-        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-12 z-10">
+        <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-6 md:gap-y-12 lg:gap-y-32 z-10">
           {/* Enrollment Process */}
-          <div className="flex flex-col gap-y-6">
+          {/* <div className="flex flex-col gap-y-6">
             <motion.h2
               className="font-bold leading-[150%] xl:text-5xl md:text-4xl text-3xl  bg-gradient-to-b from-[#3416D8] via-[#3416D8] via-[21.54%] to-[#A887F6] to-[88.46%] bg-clip-text text-transparent text-center"
               initial={{ opacity: 0, y: 30 }}
@@ -524,7 +555,7 @@ export default function design() {
             >
               Enrolment Process
             </motion.h2>
-            {/* Text */}
+            /~ Text ~/
             <div>
               <ol className="list-inside lg:text-left list-none">
                 <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center">
@@ -536,7 +567,7 @@ export default function design() {
                 </li>
               </ol>
             </div>
-            {/* Buttons */}
+            /~ Buttons ~/
             <motion.div
               className="flex flex-row justify-center gap-8 flex-wrap md:flex-nowrap z-10"
               initial={{ opacity: 0 }}
@@ -544,34 +575,32 @@ export default function design() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true }}
             >
-              {/* Apply Now */}
+              /~ Apply Now ~/
               <Link
-                href={
-                  "https://forms.gle/kPdDvDWuoC2BYDJAA"
-                }
+                href={"https://forms.gle/kPdDvDWuoC2BYDJAA"}
                 target="_blank"
               >
-                <div className="bg-[#3518D8] px-9 py-[12px] md:py-[18.5px] rounded-4xl w-2xs">
+                <div className="bg-[#3518D8] px-9 py-3 md:py-[18.5px] rounded-4xl w-2xs">
                   <p className="font-open-sans font-bold md:text-xl text-[14px] md:text-[16px] text-white text-center">
                     Apply Now
                   </p>
                 </div>
               </Link>
 
-              {/* Download Brochure */}
+              /~      /~ Download Brochure ~/
               <Link
                 href={"../docs/3D Printing Brochure New.pdf"}
                 target="_blank"
               >
-                <div className="bg-transparent px-9 py-[12px] md:py-[18.5px] rounded-4xl border-[#3518D8] border-2 w-2xs">
+                <div className="bg-transparent px-9 py-3 md:py-[18.5px] rounded-4xl border-[#3518D8] border-2 w-2xs">
                   <p className="font-open-sans font-bold  md:text-xl text-[14px] md:text-[16px] text-[#3518D8] text-center">
                     Download Brochure
                   </p>
                 </div>
-              </Link>
+              </Link>~/
             </motion.div>
-          </div>
-          {/* Translucent Box / FAQs */}
+          </div>*/}
+          {/* /~ Translucent Box / FAQs ~/
           <motion.div
             className="flex flex-col gap-y-6 py-8 md:py-12 lg:py-16 lg:px-[90px] md:px-16 px-4 custom-glass custom-glass-border border-[1.5px] z-10 justify-center items-center "
             initial={{ opacity: 0, scale: 0.9 }}
@@ -637,7 +666,7 @@ export default function design() {
                 </li>
               </ul>
             </div>
-          </motion.div>
+          </motion.div>*/}
 
           {/* Translucent Box / A Collaboration You Can Trust */}
           <motion.div
@@ -654,10 +683,19 @@ export default function design() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true }}
             >
-              A Collaboration You Can Trust
+              An Initiative You Can Trust
             </motion.h2>
             <div>
               <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center ">
+                <span className="font-bold">Yuvabe Education </span>
+                is a purpose-driven learning platform rooted in Auroville.
+                Through its <span className="font-bold">Bridge Programme</span>,
+                Yuvabe empowers young adults with practical skills, hands-on
+                experience, and a supportive community. Their holistic approach
+                blends technical training with personal growth — preparing
+                learners to thrive in a dynamic, real-world environment.
+              </p>
+              {/* <p className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center ">
                 <span className="font-bold">3DPD </span>
                 is India's largest integrated 3D printing bureau, pioneering
                 rapid prototyping and additive manufacturing since 2000. With
@@ -685,17 +723,17 @@ export default function design() {
                 education and industry, providing learners with the tools and
                 mentorship needed to excel in the fields of product design and
                 additive manufacturing.
-              </p>
+              </p> */}
             </div>
-            <div className="flex flex-row gap-10 justify-center bg-[#412FD6] p-4 md:p-5 max-w-[500px] flex-wrap m-auto rounded-4xl">
-              <Image
+            <div className="flex flex-row gap-10 justify-center p-4 md:p-5 max-w-125 flex-wrap m-auto rounded-4xl">
+              {/* <Image
                 src="/images/3d-design/3d-11.png"
                 alt="Bridge Image"
                 width={138}
                 height={79}
-              />
+              /> */}
               <Image
-                src="/images/3d-design/3d-12.png"
+                src="/images/3d-design/YB-edu-black-logo.svg"
                 alt="Bridge Image"
                 width={280}
                 height={79}
@@ -709,7 +747,7 @@ export default function design() {
           alt="Bridge Image"
           width={1137.39}
           height={1079}
-          className="absolute top-[15%] md:top-[20%] right-0 lg:right-[-15%] h-[45%] md:h-[50%] lg:h-[65%] xl:h-full w-auto object-cover z-1"
+          className="absolute top-[15%] md:top-[20%] right-0 lg:right-[-10%] h-[45%] md:h-[50%] lg:h-[65%] xl:h-full w-auto object-cover z-1"
           unoptimized
         />
         <Image
@@ -717,7 +755,7 @@ export default function design() {
           alt="Bridge Image"
           width={824.6}
           height={851}
-          className="absolute bottom-[-25%] md:bottom-[-20%] lg:bottom-[-20%] left-0 h-[75%] md:h-[75%] object-cover z-1 lg:h-[65%]"
+          className="absolute bottom-[-25%] md:bottom-[-20%] lg:bottom-[-20%] left-0 h-[75%] md:h-[75%] object-cover z-1 lg:h-[120%]"
           unoptimized
         />
       </section>
@@ -734,15 +772,15 @@ export default function design() {
           {/* Text */}
           <div className="flex flex-col gap-y-6 z-10">
             <h2 className="font-open-sans text-white font-bold xl:text-5xl md:text-4xl text-3xl text-center z-10">
-              Meet Your Instructors
+              Meet Your Instructor
             </h2>
-            <p className="font-open-sans font-bold  lg:text-2xl text-[18px] md:text-[20px] text-white mb-4 md:mb-8 lg:mb-10 text-center">
+            <p className="font-open-sans font-bold  lg:text-2xl text-[18px] md:text-[20px] text-white mb-4 md:mb-8 lg:mb-10 text-center md:max-w-10/12 m-auto">
               Your mentors are experienced product designers, CAD experts, and
               industry professionals passionate about teaching and innovation.
             </p>
             {/* Instructors */}
             <div className="flex flex-col gap-8 md:gap-12 lg:gap-16">
-              <div className="flex flex-row gap-x-12 gap-y-8 flex-wrap xl:flex-nowrap">
+              {/* <div className="flex flex-row gap-x-12 gap-y-8 flex-wrap xl:flex-nowrap">
                 <Image
                   src="/images/3d-design/3d-14.png"
                   alt="Bridge Image"
@@ -796,16 +834,101 @@ export default function design() {
                     parts.
                   </p>
                 </div>
+              </div> */}
+              <div className="flex flex-col gap-x-12 gap-y-8 flex-wrap xl:flex-nowrap">
+                <Image
+                  src="/images/3d-design/Krishna.png"
+                  alt="Bridge Image"
+                  width={183.23}
+                  height={183.23}
+                  unoptimized
+                  className="object-cover m-auto"
+                />
+                <div>
+                  <h3 className="font-open-sans text-white font-bold lg:text-2xl text-[18px] md:text-[20px] mb-2 md:mb-3 lg:mb-4 text-center lg:text-left">
+                    Mr. Krishna Thiruvengadam — Facilitator
+                  </h3>
+                  <p className="font-open-sans text-white font-normal md:text-[18px] text-[14px] text-center lg:text-left">
+                    <span className="font-bold">Krishna Thiruvengadam </span>is
+                    an award-winning impact designer, inventor, educator, and
+                    entrepreneur who builds meaningful, real-world innovations.
+                    As{" "}
+                    <span className="font-bold">
+                      CEO of dVerse Technologies at IIT Madras Research Park{" "}
+                    </span>
+                    , he leads breakthrough assistive technology solutions —
+                    earning national recognition including the{" "}
+                    <span className="font-bold">
+                      Boeing Build Award 2024 and the StartupTN TANSEED Award
+                    </span>{" "}
+                    from the Hon'ble Chief Minister of Tamil Nadu.
+                    <br />
+                    <br />
+                    Through his social initiative{" "}
+                    <span className="font-bold">dHive Labs</span>, he has
+                    empowered rural youth to design and manufacture market-ready
+                    products using local resources. His work across healthcare,
+                    public safety, and social impact has earned global
+                    recognition — including the{" "}
+                    <span className="font-bold">
+                      James Dyson Award (International Runner-Up) and the IF
+                      Design Award
+                    </span>
+                    . He also serves as Visiting Faculty at the{" "}
+                    <span className="font-bold">
+                      National Institute of Design (NID), Ahmedabad.
+                    </span>
+                  </p>
+                  <br />
+                  <br />
+                  <span className="font-open-sans font-bold  md:text-xl text-[16px] text-white text-center lg:text-left">
+                    Key Accomplishments
+                  </span>
+                  <br />
+                  <br />
+                  <ul className="list-disc list-inside lg:text-left md:inline-block">
+                    <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+                      <span className="font-bold">
+                        CEO, dVerse Technologies
+                      </span>{" "}
+                      — National Award-Winning Assistive Tech Startup
+                    </li>
+                    <br />
+                    <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+                      <span className="font-bold">Founder, dHive Labs</span> —
+                      16+ Community Innovations with Successful Market Products
+                    </li>
+                    <br />
+                    <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+                      Recipient of the{" "}
+                      <span className="font-bold">
+                        James Dyson Award & IF Design Award
+                      </span>
+                    </li>
+                    <br />
+                    <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+                      Featured in{" "}
+                      <span className="font-bold">BBC, The Guardian, NDTV</span>{" "}
+                      & other leading global media
+                    </li>
+                    <br />
+                    <li className="font-open-sans font-normal  md:text-[18px] text-[14px] text-white">
+                      Visiting Faculty at{" "}
+                      <span className="font-bold">NID Ahmedabad</span> | Mentor
+                      in Product Design & Entrepreneurship
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </motion.div>
         {/* Blur Effects */}
-        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-122 h-122 left-0 top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
         <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
 
-      {/*Apply Now & Start Building */}
+      {/*Ready to Build Something Real? */}
       <section className="custom-glass pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24 relative overflow-hidden">
         <div className="max-w-[1240px] flex flex-col m-auto px-5 md:px-8 xl:px-0 gap-y-4 md:gap-y-6 lg:gap-y-6 z-10">
           <motion.h2
@@ -815,42 +938,37 @@ export default function design() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Apply Now & Start Building
+            Ready to Build Something Real?
           </motion.h2>
           <motion.p
-            className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center max-w-[695px] m-auto"
+            className="font-open-sans font-normal  md:text-[18px] text-[14px] text-black text-center max-w-137.5 m-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             viewport={{ once: true }}
           >
-            If you're ready to turn your design ideas into real, manufacturable
-            products, this is your launchpad.
+            If you're ready to turn your design ideas into manufacturable
+            products — this is your launchpad.
           </motion.p>
           {/* Buttons */}
           <div className="flex flex-row justify-center gap-8 flex-wrap md:flex-nowrap z-10">
             {/* Apply Now */}
-            <Link
-              href={
-                "https://forms.gle/kPdDvDWuoC2BYDJAA"
-              }
-              target="_blank"
-            >
-              <div className="bg-[#3518D8] px-9 py-[12px] md:py-[18.5px] rounded-4xl w-2xs">
+            <Link href={"https://forms.gle/kPdDvDWuoC2BYDJAA"} target="_blank">
+              <div className="bg-[#3518D8] px-9 py-3 md:py-[18.5px] rounded-4xl w-2xs">
                 <p className="font-open-sans font-bold md:text-xl text-[14px] md:text-[16px] text-white text-center m-auto">
                   Apply Now
                 </p>
               </div>
             </Link>
 
-            {/* Download Brochure */}
+            {/*    /~ Download Brochure ~/
             <Link href={"../docs/3D Printing Brochure New.pdf"} target="_blank">
-              <div className="bg-transparent px-9 py-[12px] md:py-[18.5px] rounded-4xl border-[#3518D8] border-2 w-2xs">
+              <div className="bg-transparent px-9 py-3 md:py-[18.5px] rounded-4xl border-[#3518D8] border-2 w-2xs">
                 <p className="font-open-sans font-bold  md:text-xl text-[14px] md:text-[16px] text-[#3518D8] text-center">
                   Download Brochure
                 </p>
               </div>
-            </Link>
+            </Link>*/}
           </div>
         </div>
       </section>
@@ -877,8 +995,17 @@ export default function design() {
               transition={{ duration: 1 }} // Duration of 1 second for the animation
               viewport={{ once: true }} // Trigger the animation only once when the element comes into view
             >
-              For any questions, reach out to our team directly at
-              bridge@yuvabe.com / +91 9677604467
+              For any questions, reach out to our team directly at{" "}
+              <Link
+                href={"mailto:bridge@yuvabe.com"}
+                className="underline font-bold"
+              >
+                bridge@yuvabe.com
+              </Link>{" "}
+              /{" "}
+              <Link href={"tel:+91 9677604467"} className="underline font-bold">
+                +91 9677604467
+              </Link>
             </motion.p>
           </div>
           {/* Social Media */}
@@ -1026,7 +1153,7 @@ export default function design() {
           />
         </motion.div>
         {/* Blur Effects */}
-        <div className="absolute w-[488px] h-[488px] left-0 -top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
+        <div className="absolute w-122 h-122 left-0 top-0 bg-[rgba(152,0,203,0.5)] filter blur-[105.805px] scale-50 md:scale-75 lg:scale-100"></div>
         <div className="absolute w-[511.51px] h-[511.51px] right-0 bottom-0 bg-[rgba(152,0,203,0.5)] filter blur-[164.805px] scale-50 md:scale-75 lg:scale-100"></div>
       </section>
     </>

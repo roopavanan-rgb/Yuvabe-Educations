@@ -7,12 +7,14 @@ interface ProgramCardProps {
   program: Program;
   isActive: boolean;
   onClick: () => void;
+    onViewCalendar?: () => void; 
 }
 
 const ProgramCard: React.FC<ProgramCardProps> = ({
   program,
   isActive,
   onClick,
+   onViewCalendar,
 }) => {
   // Function to generate program-specific URL slug
   const getProgramSlug = (name: string): string => {
