@@ -187,9 +187,9 @@ function FileInput({ label, required = false, value, onChange }: any) {
 function BackgroundGlow() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      <div className="absolute top-[0%] left-[-10%] w-[50%] h-[50%] rounded-full bg-purple-900/20 blur-[140px]" />
+      <div className="absolute top-[0%] left-[-10%] w-[50%] h-[50%] rounded-full bg-[#002B8C]/40 blur-[140px]" />
       <div className="absolute top-[30%] right-[-10%] w-[40%] h-[60%] rounded-full bg-cyan-900/20 blur-[140px]" />
-      <div className="absolute bottom-[-10%] left-[20%] w-[60%] h-[50%] rounded-full bg-indigo-900/20 blur-[120px]" />
+      <div className="absolute bottom-[-10%] left-[20%] w-[60%] h-[50%] rounded-full bg-[#002B8C]/30 blur-[120px]" />
       <svg
         className="absolute w-full h-full opacity-[0.03]"
         xmlns="http://www.w3.org/2000/svg"
@@ -297,7 +297,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="relative bg-[#0b0f19] py-12 min-h-screen text-slate-200 overflow-hidden ">
+      <div className="relative bg-[#000B24] py-12 min-h-screen text-slate-200 overflow-hidden ">
         <BackgroundGlow />
 
         <div className="relative z-10 max-w-6xl mx-auto p-6">
@@ -308,32 +308,51 @@ export default function Page() {
             className="  p-8 md:p-12 font-secondary"
           >
             {/* Header section matching the reference structure but Dark/AI themed */}
-            <div className="mb-12 space-y-3">
-              <h1 className="text-3xl md:text-5xl font-extrabold font-primary text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 flex items-center gap-3">
-                <svg
-                  className="w-10 h-10 text-cyan-400"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 2v4a2 2 0 0 0 2 2h4M12 22v-4a2 2 0 0 0-2-2H6M2 12h4a2 2 0 0 0 2-2V6M22 12h-4a2 2 0 0 0-2 2v4" />
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="4"
-                    className="text-purple-500 fill-purple-500/20"
-                  />
-                </svg>
-                AI Product Builder Program
-              </h1>
-              <p className="text-lg text-slate-400 max-w-3xl">
-                Unlock the skills tech companies demand. Work on real-world
-                projects, collaborate with industry mentors and boost your
-                portfolio. Fill out the application form !!
-              </p>
+            <div className="mb-12 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+              <div className="space-y-3 flex-1">
+                <h1 className="text-3xl md:text-5xl leading-tight font-extrabold font-primary text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-[#697389] to-white flex items-center gap-3">
+                  <svg
+                    className="w-10 h-10 text-cyan-400"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M12 2v4a2 2 0 0 0 2 2h4M12 22v-4a2 2 0 0 0-2-2H6M2 12h4a2 2 0 0 0 2-2V6M22 12h-4a2 2 0 0 0-2 2v4" />
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="4"
+                      className="text-[#002B8C] fill-[#002B8C]/40"
+                    />
+                  </svg>
+                  AI Product Builder Program
+                </h1>
+                <p className="text-lg text-slate-400">
+                  Unlock the skills tech companies demand. Work on real-world
+                  projects, collaborate with industry mentors and boost your
+                  portfolio. Fill out the application form !!
+                </p>
+              </div>
+
+              {/* Animated AI SVG */}
+              <motion.div
+                className="w-48 h-48 md:w-70 md:h-64 flex-shrink-0"
+                animate={{ y: [0, -15, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 4,
+                  ease: "easeInOut",
+                }}
+              >
+                <img
+                  src="/images/svgs/ai.svg"
+                  alt="AI Concept"
+                  className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(0,43,140,0.6)]"
+                />
+              </motion.div>
             </div>
 
             {submitted ? (
