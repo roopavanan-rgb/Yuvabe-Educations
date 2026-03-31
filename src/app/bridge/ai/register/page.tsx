@@ -23,7 +23,7 @@ function Section({
     >
       <div className="flex items-center gap-3">
         {icon}
-        <h3 className="text-xl md:text-2xl font-bold font-primary text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+        <h3 className="text-xl md:text-2xl font-bold font-primary text-[#000B24]">
           {title}
         </h3>
       </div>
@@ -41,7 +41,7 @@ function Input({
   onChange,
 }: any) {
   return (
-    <motion.div className="flex flex-col gap-1.5 text-slate-300 focus-within:text-cyan-400 transition-colors">
+    <motion.div className="flex flex-col gap-1.5 text-slate-700 focus-within:text-[#002B8C] transition-colors">
       <label className="text-base font-semibold">
         {label} {required && <span className="text-red-500">*</span>}
       </label>
@@ -51,7 +51,7 @@ function Input({
         required={required}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="rounded-xl border border-slate-700/50 px-4 py-3 bg-slate-900/50 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500/40 transition-all shadow-inner shadow-black/20"
+        className="rounded-xl border border-slate-300 px-4 py-3 bg-white text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#002B8C]/60 focus:border-[#002B8C]/60 transition-all shadow-sm"
       />
     </motion.div>
   );
@@ -59,7 +59,7 @@ function Input({
 
 function Select({ label, options, value, onChange, required = false }: any) {
   return (
-    <div className="flex flex-col gap-1.5 text-slate-300 focus-within:text-cyan-400 transition-colors">
+    <div className="flex flex-col gap-1.5 text-slate-700 focus-within:text-[#002B8C] transition-colors">
       <label className="text-base font-semibold">
         {label} {required && <span className="text-red-500">*</span>}
       </label>
@@ -68,13 +68,13 @@ function Select({ label, options, value, onChange, required = false }: any) {
           required={required}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full rounded-xl border border-slate-700/50 px-4 py-3 appearance-none bg-slate-900/50 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500/40 transition-all shadow-inner shadow-black/20"
+          className="w-full rounded-xl border border-slate-300 px-4 py-3 appearance-none bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#002B8C]/60 focus:border-[#002B8C]/60 transition-all shadow-sm"
         >
-          <option value="" disabled className="text-slate-500 bg-slate-800">
+          <option value="" disabled className="text-slate-500 bg-white">
             Select an option
           </option>
           {options.map((opt: string) => (
-            <option key={opt} value={opt} className="bg-slate-800">
+            <option key={opt} value={opt} className="bg-white text-slate-900">
               {opt}
             </option>
           ))}
@@ -95,7 +95,7 @@ function Select({ label, options, value, onChange, required = false }: any) {
 
 function Textarea({ label, helper, required = false, value, onChange }: any) {
   return (
-    <div className="flex flex-col gap-1.5 text-slate-300 focus-within:text-cyan-400 transition-colors">
+    <div className="flex flex-col gap-1.5 text-slate-700 focus-within:text-[#002B8C] transition-colors">
       <label className="text-base font-semibold">
         {label} {required && <span className="text-red-500">*</span>}
       </label>
@@ -105,7 +105,7 @@ function Textarea({ label, helper, required = false, value, onChange }: any) {
         required={required}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="rounded-xl border border-slate-700/50 px-4 py-3 bg-slate-900/50 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500/40 transition-all shadow-inner shadow-black/20 resize-y"
+        className="rounded-xl border border-slate-300 px-4 py-3 bg-white text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#002B8C]/60 focus:border-[#002B8C]/60 transition-all shadow-sm resize-y"
       />
     </div>
   );
@@ -113,7 +113,7 @@ function Textarea({ label, helper, required = false, value, onChange }: any) {
 
 function FileInput({ label, required = false, value, onChange }: any) {
   return (
-    <div className="flex flex-col gap-1.5 text-slate-300 focus-within:text-cyan-400 transition-colors">
+    <div className="flex flex-col gap-1.5 text-slate-700 focus-within:text-[#002B8C] transition-colors">
       <label className="text-base font-semibold">
         {label} {required && <span className="text-red-500">*</span>}
       </label>
@@ -131,8 +131,8 @@ function FileInput({ label, required = false, value, onChange }: any) {
         <div
           className={`rounded-xl border-2 border-dashed px-4 py-8 text-center transition-all flex flex-col items-center justify-center gap-2 ${
             value
-              ? "border-green-500/50 bg-green-900/10"
-              : "border-slate-700 group-hover:border-cyan-500/50 bg-slate-900/30"
+              ? "border-green-500 bg-green-50"
+              : "border-slate-300 group-hover:border-[#002B8C]/50 bg-white"
           }`}
         >
           {value ? (
@@ -297,40 +297,17 @@ export default function Page() {
 
   return (
     <>
-      <div className="relative bg-[#000B24] py-12 min-h-screen text-slate-200 overflow-hidden ">
-        <BackgroundGlow />
-
-        <div className="relative z-10 max-w-7xl mx-auto p-6">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="  p-8 md:p-12 font-secondary"
-          >
-            {/* Header section matching the reference structure but Dark/AI themed */}
-            <div className="mb-12 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-              <div className="space-y-3 flex-1">
-                <h1 className="text-3xl md:text-5xl leading-tight font-extrabold font-primary text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-[#697389] to-white flex items-center gap-3">
-                  <svg
-                    className="w-10 h-10 text-cyan-400"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 2v4a2 2 0 0 0 2 2h4M12 22v-4a2 2 0 0 0-2-2H6M2 12h4a2 2 0 0 0 2-2V6M22 12h-4a2 2 0 0 0-2 2v4" />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="4"
-                      className="text-[#002B8C] fill-[#002B8C]/40"
-                    />
-                  </svg>
+      <div className="min-h-screen font-secondary bg-slate-50 flex flex-col">
+        {/* Top Hero Section */}
+        <div className="relative bg-gradient-to-r from-[#000B24] to-[#002B8C] pt-12 pb-24 overflow-hidden">
+          <BackgroundGlow />
+          <div className="relative z-10 max-w-7xl mx-auto px-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-8">
+              <div className="space-y-4 flex-1">
+                <h1 className="text-3xl md:text-5xl leading-tight font-extrabold font-primary text-white flex items-center gap-3">
                   AI Product Builder Program
                 </h1>
-                <p className="text-lg text-slate-400">
+                <p className="text-lg text-slate-300 max-w-3xl">
                   Unlock the skills tech companies demand. Work on real-world
                   projects, collaborate with industry mentors and boost your
                   portfolio. Fill out the application form !!
@@ -354,16 +331,26 @@ export default function Page() {
                 />
               </motion.div>
             </div>
+          </div>
+        </div>
 
+        {/* Form Section */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 w-full mb-20 flex-1">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className=" p-8 md:p-12 "
+          >
             {submitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="rounded-2xl border border-cyan-500/30 bg-cyan-900/20 p-10 text-center backdrop-blur-md shadow-[0_0_30px_rgba(6,182,212,0.15)]"
+                className="rounded-2xl border border-green-200 bg-green-50 p-10 text-center shadow-lg"
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
                   <svg
-                    className="w-8 h-8 text-cyan-400"
+                    className="w-8 h-8 text-green-600"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -376,10 +363,10 @@ export default function Page() {
                     />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-bold text-cyan-300">
+                <h2 className="text-2xl font-bold text-green-800 font-primary">
                   Application submitted successfully
                 </h2>
-                <p className="mt-4 text-slate-300">
+                <p className="mt-4 text-slate-600">
                   Thank you for applying. Our team will review your submission
                   and get back to you with the next steps.
                 </p>
@@ -405,7 +392,7 @@ export default function Page() {
                     });
                     setResume(null);
                   }}
-                  className="mt-8 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-3.5 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all"
+                  className="mt-8 rounded-xl bg-[#002B8C] px-8 py-3.5 text-white font-semibold shadow-lg shadow-[#002B8C]/25 hover:shadow-[#002B8C]/40 hover:-translate-y-0.5 transition-all"
                 >
                   Submit another application
                 </button>
@@ -416,7 +403,7 @@ export default function Page() {
                   title="Basic Details"
                   icon={
                     <svg
-                      className="w-6 h-6 text-purple-400"
+                      className="w-6 h-6 text-[#002B8C]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -470,7 +457,7 @@ export default function Page() {
                   title="Education & Employment"
                   icon={
                     <svg
-                      className="w-6 h-6 text-cyan-400"
+                      className="w-6 h-6 text-[#002B8C]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -556,7 +543,7 @@ export default function Page() {
                   title="Program Specifics"
                   icon={
                     <svg
-                      className="w-6 h-6 text-blue-400"
+                      className="w-6 h-6 text-[#002B8C]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -625,7 +612,7 @@ export default function Page() {
                     className={`relative overflow-hidden rounded-xl px-12 py-4 text-base tracking-wide font-bold transition-all ${
                       submitting
                         ? "bg-slate-700 cursor-not-allowed text-slate-400"
-                        : "bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]"
+                        : "bg-gradient-to-r from-[#000B24] to-[#002B8C] text-white hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]"
                     }`}
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
