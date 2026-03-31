@@ -300,7 +300,7 @@ export default function Page() {
       <div className="relative bg-[#000B24] py-12 min-h-screen text-slate-200 overflow-hidden ">
         <BackgroundGlow />
 
-        <div className="relative z-10 max-w-6xl mx-auto p-6">
+        <div className="relative z-10 max-w-7xl mx-auto p-6">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
