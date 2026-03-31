@@ -616,7 +616,7 @@ export default function Page() {
                   </div>
                 </Section>
 
-                <div className="flex justify-start pt-8">
+                <div className="flex justify-end pt-8">
                   <motion.button
                     type="submit"
                     whileHover={{ scale: 1.02 }}
