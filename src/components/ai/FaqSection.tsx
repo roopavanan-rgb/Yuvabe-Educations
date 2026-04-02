@@ -5,28 +5,28 @@ import FaqItem from "./FaqItem";
 
 const faqs = [
   {
-    question: "How does this internship differ from online courses?",
+    question: "Do I need coding experience?",
     answer:
-      "This internship provides hands-on experience, real projects, and mentorship.",
+      "Some basic exposure to code is helpful, but this is not a requirement. We profile every applicant in advance and tailor the pacing of the cohort accordingly. Curiosity and willingness to build matter more than prior experience.",
   },
   {
-    question: "What career opportunities can I expect post-internship?",
+    question: "What if I get stuck?",
     answer:
-      "You can explore roles in AI, ML, Data Science, and Software Development.",
+      "Getting stuck is part of learning here. You'll have structured support from instructors, daily feedback loops, and AI as a co-problem-solver. You're never figuring it out alone.",
   },
   {
     question: "Will I receive a certificate?",
     answer: "Yes! A certification will be provided upon successful completion.",
   },
   {
-    question: "Can I apply if I have no prior AI/ML experience?",
+    question: "What happens after the program?",
     answer:
-      "Absolutely! This program is designed for beginners as well as experienced learners.",
+      "You leave with a portfolio of 5–6 working AI tools and the ability to keep building independently. We also provide career guidance for students looking to move into product, dev, or AI-adjacent roles.",
   },
   {
-    question: "Who is eligible to apply for the AI & ML internship?",
+    question: "Is this a live, in-person program?",
     answer:
-      "Anyone with a passion for AI & ML can apply, irrespective of academic background.",
+      "Yes. The cohort format is fully in-person, based at our campus in Auroville. This collaborative, hands-on environment is core to how the program works.",
   },
   {
     question: "How does this internship differ from online courses?",
@@ -34,48 +34,34 @@ const faqs = [
       "This internship provides hands-on experience, real projects, and mentorship.",
   },
   {
-    question: "What career opportunities can I expect post-internship?",
+    question: "What is the program fee?",
     answer:
-      "You can explore roles in AI, ML, Data Science, and Software Development.",
+      "Fee details and scholarship options are shared during the application process. Limited merit-based scholarships are available.",
   },
   {
     question: "Will I receive a certificate?",
     answer: "Yes! A certification will be provided upon successful completion.",
   },
   {
-    question: "Can I apply if I have no prior AI/ML experience?",
+    question: "How is this different from an online course?",
     answer:
-      "Absolutely! This program is designed for beginners as well as experienced learners.",
-  },
-  {
-    question: "Who is eligible to apply for the AI & ML internship?",
-    answer:
-      "Anyone with a passion for AI & ML can apply, irrespective of academic background.",
+      "In every way that matters. You work on real projects, get daily feedback, collaborate with a cohort, and graduate with things you actually built — not a badge for watching videos.",
   },
 ];
 
 export default function FaqSection() {
   return (
-    <section className="py-16 px-6 bg-[#0C2F47] text-center">
+    <section className="py-16 px-6 bg-[#F2F2F2] text-center">
       <div className="absolute -right-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full  bg-[#3991BD] opacity-30"></div>
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="text-3xl md:text-4xl font-raleway font-bold text-white"
+        className="text-3xl md:text-4xl font-raleway font-bold text-[#002357]"
       >
         Interactive FAQs
       </motion.h2>
-
-      <motion.p
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
-        className="text-white font-sans font-bold mt-4"
-      >
-        Click each question to reveal the answer
-      </motion.p>
 
       {/* FAQ Items */}
       <div className="mt-8 max-w-4xl mx-auto space-y-4">

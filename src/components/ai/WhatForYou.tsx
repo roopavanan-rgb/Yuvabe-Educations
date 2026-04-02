@@ -1,25 +1,104 @@
 "use client";
-import { Card, CardContent } from "@/components/ai/ui/card";
+import { X } from "lucide-react";
+import Image from "next/image";
+import { motion, Variants } from "framer-motion";
+
+const items = [
+  "Tutorials don't stick",
+  "Coding feels overwhelming",
+  "You don't know where to start",
+  "AI tools feel powerful but unclear",
+  `"Learn Python first" paths go nowhere`,
+  "Copy-paste from ChatGPT teaches nothing",
+  "Most programs are too basic or too advanced",
+  "Overhyped promises, zero real depth",
+];
+
+// ✅ Typed variants
+const container: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const itemAnim: Variants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.4, 0, 0.2, 1], // ✅ FIXED
+    },
+  },
+};
 
 export function WhatForYou() {
   return (
-    <section className="py-16 md:py-24 flex justify-center bg-[#0C2F47]">
-      <div className="max-w-[850px] flex items-center justify-center">
-        <Card className="bg-[#0C2F47] border border-[#58AEE9] rounded-3xl w-full h-full flex items-center justify-center">
-          <CardContent className="p-6 md:p-10 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-raleway font-bold text-white mb-4">
-              What's In It For You?
-            </h2>
-            <p className="text-2xl sm:text-lg md:text-xl text-white font-sans font-bold">
-              Our 3-month AI First Full Stack Internship is designed to provide hands-on experience. You won’t just
-              learn the theory—you’ll apply it to real-world problems, gaining the kind of practical skills that make
-              you stand out to employers.
-            </p>
-          </CardContent>
-        </Card>
+    <section className="relative py-20 px-6 md:px-12 bg-[#F6F8F9] overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-y-0 right-0 w-full md:w-[60%] pointer-events-none opacity-40 md:opacity-90">
+        <Image
+          src="/assets/hand.svg"
+          alt="Hands reaching"
+          fill
+          className="object-cover object-right translate-x-1/4 md:translate-x-0"
+        />
+        <div className="absolute top-1/2 right-[20%] -translate-y-1/2 w-64 h-64 bg-[#75E2FF] opacity-20 blur-[100px] rounded-full"></div>
       </div>
-      <div className="absolute text-5xl -left-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-30"></div>
-    </section>
 
+      <div className="container mx-auto relative z-10 flex flex-col md:flex-row items-center">
+        {/* Content */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="w-full md:w-3/5 lg:w-1/2 py-10"
+        >
+          <motion.h2
+            variants={itemAnim}
+            className="text-3xl md:text-5xl font-black text-[#001B44] mb-6 tracking-tight"
+          >
+            Does this sound familiar?
+          </motion.h2>
+
+          <motion.p
+            variants={itemAnim}
+            className="text-lg md:text-xl text-slate-600 mb-10 max-w-[90%] leading-relaxed"
+          >
+            You know AI is changing everything. But actually learning it? That's
+            a different story.
+          </motion.p>
+
+          <motion.ul className="space-y-4">
+            {items.map((item, idx) => (
+              <motion.li
+                key={idx}
+                variants={itemAnim}
+                whileHover={{ x: 6 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 18,
+                }}
+                className="group flex items-center gap-4 p-3 rounded-xl transition-all duration-300 hover:bg-white/70"
+              >
+                {/* Icon */}
+                <div className="flex-shrink-0 w-[26px] h-[26px] rounded-full bg-[#001B44] flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-red-500">
+                  <X className="w-4 h-4 text-white" strokeWidth={3} />
+                </div>
+
+                {/* Text */}
+                <span className="text-base md:text-lg font-medium text-[#2A4365] transition-all duration-300 group-hover:text-[#001B44]">
+                  {item}
+                </span>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
+      </div>
+    </section>
   );
 }

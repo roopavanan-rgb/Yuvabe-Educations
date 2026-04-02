@@ -1,75 +1,140 @@
 "use client";
-import Image from "next/image";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+const timelineData = [
+  {
+    week: "Week 1",
+    title: "Run your first AI app",
+    description: "Confidence + real momentum from Day 1",
+  },
+  {
+    week: "Week 4",
+    title: "Build AI workflows",
+    description: "Automate with agents; understand the stack",
+  },
+  {
+    week: "Week 8",
+    title: "Create with your own data",
+    description: "Build tools on custom knowledge bases",
+  },
+  {
+    week: "Week 12",
+    title: "Launch your AI product",
+    description: "Ship something real. Own it.",
+  },
+];
 
 export function Instructors() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Only register ScrollTrigger on the client side
+    if (typeof window !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 75%", // Trigger when top of section hits 75% viewport depth
+            toggleActions: "play none none none",
+          },
+        });
+
+        // 1. Reveal Title
+        tl.from(".timeline-title", {
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+        });
+
+        // 2. Animate the horizontal dashed line expanding from left to right
+        tl.fromTo(
+          ".timeline-line",
+          { scaleX: 0, transformOrigin: "left center" },
+          { scaleX: 1, duration: 1.2, ease: "power2.inOut" },
+          "-=0.4",
+        );
+
+        // 3. Pop in the nodes sequentially
+        tl.from(
+          ".node-circle",
+          {
+            scale: 0,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.2,
+            ease: "back.out(1.7)",
+          },
+          "-=1.0",
+        );
+
+        // 4. Fade in the text elements fading up
+        tl.from(
+          ".timeline-text-content",
+          {
+            y: 20,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.15,
+            ease: "power2.out",
+          },
+          "-=0.8",
+        );
+      }, containerRef);
+
+      return () => ctx.revert();
+    }
+  }, []);
+
   return (
-    <section className="py-20 px-4 bg-[#0C2F47] text-white text-center overflow-hidden">
-      <div className="absolute text-5xl -right-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-60"></div>
-      <h2 className="text-2xl md:text-3xl font-bold mb-10">Our Expert Instructors</h2>
+    <section
+      ref={containerRef}
+      className="py-24  bg-[#F6F8F9] min-h-[60vh] flex flex-col items-center justify-center overflow-hidden"
+    >
+      <div className="container mx-auto max-w-[1400px]">
+        {/* Title */}
+        <h2 className="text-3xl sm:text-4xl md:text-[46px] font-primary font-bold text-[#001B44] text-center mb-20 md:mb-32 tracking-tight timeline-title">
+          Where you'll be, week by week
+        </h2>
 
-      <div className="max-w-5xl mx-auto flex flex-col gap-16 mt-16">
-        {/* Instructor 1 */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12">
-          {/* Image */}
-          <div className="flex-shrink-0">
-            <Image src="/ai-images/anu.png" alt="Anupama" width={300} height={300} />
-          </div>
-          {/* Content */}
-          <div className="text-left max-w-xl">
-            <h3 className="text-[70px] font-sans font-extrabold uppercase stroke-text-violet">
-              ANUPAMA
-            </h3>
-            <p className="text-sm md:text-base mt-4 font-normal font-sans">
-              AI/ML Expert, with over 25 years of experience architecting and delivering transformative AI/ML and digital solutions
-              for startups and large enterprises across India, Europe, Singapore, and the USA.
-            </p>
-            {/* LinkedIn Icon */}
-            <div className="mt-3">
-              <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
-            </div>
-          </div>
-        </div>
+        {/* Timeline Container */}
+        <div className="relative">
+          {/* Dashed background line connecting nodes (Desktop Only) */}
+          <div className="hidden md:block absolute top-[14px] left-[10%] right-[10%] h-0 border-t-[2.5px] border-dashed border-[#0A2540] z-0 timeline-line"></div>
 
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 blur-3xl w-96 h-96 rounded-full bg-gradient-to-r from-[#394BBD] to-[#A339BD] opacity-30 z-0"></div>
+          {/* Timeline Items */}
+          <div className="flex flex-col md:flex-row justify-between relative z-10 gap-16 md:gap-0">
+            {timelineData.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex-1 flex flex-col items-center text-center px-4"
+              >
+                {/* Visual Node */}
+                <div className="w-[30px] h-[30px] rounded-full border-[2.5px] border-[#0A2540] bg-[#F6F8F9] flex items-center justify-center mb-8 md:mb-10 relative z-10 node-circle">
+                  <div className="w-[12px] h-[12px] rounded-full bg-[#0A2540]"></div>
+                </div>
 
-
-        {/* Instructor 2 */}
-        <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-6 md:gap-12 mt-6">
-          {/* Image */}
-          <div className="flex-shrink-0">
-            <Image src="/ai-images/vimal.png" alt="Vimal" width={300} height={300} />
-          </div>
-          {/* Content */}
-          <div className="text-left max-w-xl">
-            <h3 className="text-[70px] font-sans font-extrabold uppercase stroke-text-yellow">
-              VIMAL
-            </h3>
-
-            <p className="text-sm md:text-base mt-4 font-normal font-sans">
-              AI/ML and Data Science leader with over 15 years of deep architectural expertise and full-stack innovation.
-              Proven record of driving world-class AI product development from concept through execution.
-            </p>
-            {/* LinkedIn Icon */}
-            <div className="mt-3">
-              <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
-            </div>
+                {/* Text Content */}
+                <div className="timeline-text-content flex flex-col items-center">
+                  <p className="text-[17px] text-[#4A627B] font-secondary mb-5 tracking-wide">
+                    {item.week}
+                  </p>
+                  <h3 className="text-xl md:text-[22px] font-primary font-bold text-[#001B44] mb-3 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-[15px] md:text-base font-secondary text-[#5A738A] leading-relaxed max-w-[240px]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-
-      {/* Get Ready to Build Section */}
-      <section className="py-16 px-4 bg-[#0C2F47] text-white text-center mt-24">
-        <div className="max-w-5xl mx-auto">
-          <div className="absolute text-5xl -left-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-60"></div>
-          {/* Title */}
-          <h3 className="text-3xl md:text-4xl font-bold font-raleway">Get Ready to Build</h3>
-
-          {/* Description */}
-          <p className="mt-4 text-lg text-white font-sans font-bold">
-            During the internship, you’ll work on projects like building a Natural Language Processing (NLP) chatbot for customer service or creating an AI-driven recommendation engine. Each project is designed to give you hands-on experience in AI problem-solving, preparing you for real-world scenarios.
-          </p>
-        </div>
-      </section>
     </section>
   );
 }

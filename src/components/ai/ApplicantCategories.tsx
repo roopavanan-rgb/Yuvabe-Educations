@@ -1,89 +1,156 @@
 "use client";
-import Image from "next/image";
+import React from "react";
+import { motion, Variants } from "framer-motion";
+
+const phases = [
+  {
+    phase: "PHASE 01",
+    title: "Helper",
+    description: "Writing snippets and explaining code blocks.",
+  },
+  {
+    phase: "PHASE 02",
+    title: "Guide",
+    description: "Suggesting architecture and debugging errors.",
+  },
+  {
+    phase: "PHASE 03",
+    title: "Collaborator",
+    description: "Pair programming on complex feature sets.",
+  },
+  {
+    phase: "PHASE 04",
+    title: "Builder",
+    description: "You direct the AI to execute your vision.",
+  },
+];
+
+// ✅ Properly typed variants
+const container: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemAnim: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    scale: 0.96,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.4, 0, 0.2, 1], // ✅ best practice easing
+    },
+  },
+};
 
 export function ApplicantCategories() {
   return (
-    <section className="py-24 px-4 bg-[#0C2F47] text-white">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-24 px-6 md:px-12 bg-[#001B44] text-white overflow-hidden">
+      <div className="container mx-auto max-w-[1200px]">
+        {/* Titles */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+          viewport={{ once: true }}
+          className="text-center mb-16 md:mb-24 flex flex-col gap-6"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-[46px] font-black tracking-tight">
+            Will <span className="text-[#FFC107]">AI</span> just do everything
+            for you?
+          </h2>
 
-        {/* Title and Subtitle */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-raleway mb-6">Who Should Apply?</h2>
-          <p className="text-[#FFFFFF] text-base md:text-lg font-sans font-bold w-full mx-auto">
-            This program is designed for individuals who are passionate about transforming their careers in the fast-growing fields of <br />Artificial Intelligence (AI) and Machine Learning. <br />
-            Here’s who we’re looking for
+          <p className="text-xl md:text-2xl text-slate-300 font-medium">
+            No. Here's how it actually works.
           </p>
-        </div>
 
+          <p className="text-lg md:text-[19px] text-[#A8C0DB]">
+            You'll work alongside an AI coding agent — but with structure, not
+            autopilot.
+          </p>
+        </motion.div>
 
-        {/* Grid Layout for Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 place-items-center">
+        {/* Phases */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col lg:flex-row justify-center items-stretch w-full mx-auto py-4"
+        >
+          {phases.map((item, idx) => (
+            <motion.div
+              key={idx}
+              variants={itemAnim}
+              whileHover={{
+                y: -10,
+                scale: 1.04,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 220,
+                damping: 18,
+              }}
+              className={`group flex-1 flex flex-col items-center text-center px-6 py-10 lg:py-0 relative transition-all
+                ${
+                  idx !== phases.length - 1
+                    ? "lg:border-r lg:border-[#233C62]"
+                    : ""
+                }
+                ${
+                  idx !== phases.length - 1
+                    ? "border-b border-[#233C62] lg:border-b-0"
+                    : ""
+                }`}
+            >
+              {/* Divider Glow */}
+              {idx !== phases.length - 1 && (
+                <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[2px] h-16 bg-[#233C62] group-hover:bg-[#58AEE9] transition-colors duration-300" />
+              )}
 
-          {/* Card 1 */}
-          <div className="relative bg-[#0F3956] p-6 md:p-8 rounded-2xl border border-[#58AEE9] shadow-lg max-w-md text-left flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <Image src="/icons/ai-professional.svg" alt="AI Professionals" width={40} height={40} />
-              <h3 className="text-xl font-raleway font-bold text-[#CE9EF9]">Aspiring AI & ML Professionals</h3>
-            </div>
-            <p className="text-[#FFFFFF] font-sans font-normal leading-[28px]">
-              If you’ve been curious about the potential of AI and ML and want to build a solid foundation, this internship
-              will give you hands-on experience, industry insights, and real-world projects to help you break into this exciting field.
-            </p>
-          </div>
+              {/* Phase */}
+              <span className="text-[13px] tracking-[0.15em] text-[#A8C0DB] uppercase mb-6 group-hover:text-[#FFC107] transition">
+                {item.phase}
+              </span>
 
-          {/* Card 2 */}
-          <div className="relative bg-[#0F3956] p-6 md:p-8 rounded-2xl border border-[#58AEE9] shadow-lg max-w-md text-left flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <Image src="/icons/engineering.svg" alt="Engineering Graduates" width={40} height={40} />
-              <h3 className="text-xl font-raleway font-bold text-[#CE9EF9]">Engineering or Computer Science Graduates</h3>
-            </div>
-            <p className="text-[#FFFFFF] font-sans font-normal leading-[28px]">
-              Whether you’re pursuing or have completed a degree in Engineering, Computer Science, or related fields,
-              this internship provides you with practical experience and portfolio-worthy projects to stand out in the competitive job market.
-            </p>
-          </div>
+              {/* Title */}
+              <h3 className="text-2xl md:text-[28px] font-bold mb-5 tracking-wide group-hover:text-[#58AEE9] transition">
+                {item.title}
+              </h3>
 
-          {/* Gradient Glow Circle */}
-          <div className="absolute center w-[300px] h-[300px] blur-2xl opacity-30 bg-gradient-to-r from-[#394BBD] to-[#A339BD] -translate-y-24" />
+              {/* Description */}
+              <p className="text-sm md:text-base text-[#829EBE] leading-relaxed max-w-[240px] group-hover:text-white transition">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
 
-          {/* Card 3 */}
-          <div className="relative bg-[#0F3956] p-6 md:p-8 rounded-2xl border border-[#58AEE9] shadow-lg max-w-md text-left flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <Image src="/icons/career-changers.svg" alt="Career Changers" width={40} height={40} />
-              <h3 className="text-xl font-raleway font-bold text-[#CE9EF9]">Career Changers</h3>
-            </div>
-            <p className="text-[#FFFFFF] font-sans font-normal leading-[28px]">
-              Are you looking to transition into the tech industry or shift from a traditional IT role into AI/ML?
-              This program is ideal for individuals eager to upskill and gain cutting-edge knowledge in AI and ML.
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="relative bg-[#0F3956] p-6 md:p-8 rounded-2xl border border-[#58AEE9] shadow-lg max-w-md text-left flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <Image src="/icons/tech-enthusiasts.svg" alt="Tech Enthusiasts" width={40} height={40} />
-              <h3 className="text-xl font-raleway font-bold text-[#CE9EF9]">Tech Enthusiasts & Innovators</h3>
-            </div>
-            <p className="text-[#FFFFFF] font-sans font-normal leading-[28px]">
-              If you have a passion for technology, love solving problems, and enjoy tinkering with data, coding,
-              and algorithms, this internship will help you sharpen your skills and apply them in innovative ways.
-            </p>
-          </div>
-
-          {/* Card 5 - Centered */}
-          <div className="relative bg-[#0F3956] p-6 md:p-8 rounded-2xl border border-[#58AEE9] shadow-lg max-w-md text-left flex flex-col gap-4 md:col-span-2">
-            <div className="flex items-center gap-3">
-              <Image src="/icons/self-learners.svg" alt="Self Learners" width={40} height={40} />
-              <h3 className="text-xl font-raleway font-bold text-[#CE9EF9]">Self-Learners & Beginners</h3>
-            </div>
-            <p className="text-[#FFFFFF] font-sans font-normal leading-[28px]">
-              If you’ve been learning AI or ML through online courses or self-study but want practical, real-world experience,
-              this internship provides a structured environment with the support of mentors to accelerate your learning.
-            </p>
-          </div>
-          <div className="absolute -left-60  top-[30%] w-96 h-96 rounded-half blur-3xl opacity-30 bg-gradient-to-r from-[#394BBD] to-[#A339BD] translate-y-15" />
-
-        </div>
+        {/* Bottom Statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.6,
+            ease: [0.4, 0, 0.2, 1],
+          }}
+          viewport={{ once: true }}
+          className="text-center mt-16 md:mt-28"
+        >
+          <p className="text-[22px] md:text-3xl text-[#E2E8F0] max-w-5xl mx-auto font-medium tracking-wide">
+            You don't become dependent on AI. You become effective with it.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,106 +1,159 @@
 "use client";
-import Image from "next/image";
+import React from "react";
+import { motion, Variants } from "framer-motion";
+
+const cards = [
+  { step: "01", text: "Run a real AI application immediately." },
+  { step: "02", text: "Modify it to see how it breaks and works." },
+  { step: "03", text: "Use AI as a partner to write better code." },
+  { step: "04", text: "Build again. Faster. Stronger. Real." },
+];
+
+// ✅ Typed variants
+const container: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardAnim: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    scale: 0.96,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.4, 0, 0.2, 1], // ✅ FIXED
+    },
+  },
+};
 
 export function WhatYouLearn() {
   return (
-    <section className="py-24 px-4 bg-[#0C2F47] text-[#FFFFFF]">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-raleway font-bold mb-20">What You’ll Learn</h2>
+    <section className="relative py-24 px-6 md:px-12 bg-[#001B44] text-white overflow-hidden">
+      <div className="container mx-auto relative z-10">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.7,
+            ease: [0.4, 0, 0.2, 1],
+          }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-snug max-w-6xl mx-auto">
+            What if you didn't start with theory... but with{" "}
+            <span className="text-[#FFC107]">building?</span>
+          </h2>
 
-        {/* Timeline Container */}
-        <div className="relative flex flex-col items-center">
-          {/* Month Titles (Centered Above Vertical Lines) */}
-          <div className="relative flex justify-between w-full max-w-5xl mx-auto mb-12">
-            <h3 className="text-lg font-raleway font-bold w-1/3 text-center">Month 1</h3>
-            <h3 className="text-lg font-raleway font-bold w-1/3 text-center">Month 2</h3>
-            <h3 className="text-lg font-raleway font-bold w-1/3 text-center">Month 3</h3>
-          </div>
+          <p className="text-lg md:text-xl text-gray-300 font-medium">
+            At Yuvabe, you don't prepare to code. You code. From Day 1.
+          </p>
+        </motion.div>
 
-          {/* Horizontal Line */}
-          <div className="relative w-full max-w-5xl mx-auto flex items-center">
-            <Image
-              src="/ai-images/Line 1.svg"
-              alt="Timeline"
-              width={900}
-              height={10}
-              className="absolute top-1/2 left-0 w-full opacity-90 z-0"
+        {/* Cards */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto"
+        >
+          {cards.map((card, idx) => (
+            <motion.div
+              key={idx}
+              variants={cardAnim}
+              whileHover={{
+                y: -12,
+                scale: 1.04,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 220,
+                damping: 18,
+              }}
+              className="group relative bg-[#15325C]/70 backdrop-blur-md border border-[#2D4A77] rounded-[28px] py-6 px-8 flex flex-col min-h-[220px] overflow-hidden"
+            >
+              {/* Glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-[#58AEE9]/20 to-transparent pointer-events-none"></div>
+
+              {/* Step */}
+              <motion.span
+                whileHover={{ scale: 1.12 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="text-2xl md:text-3xl font-bold mb-4 tracking-wider text-white group-hover:text-[#58AEE9] transition"
+              >
+                {card.step}
+              </motion.span>
+
+              {/* Text */}
+              <p className="text-base md:text-lg text-gray-200 leading-relaxed group-hover:text-white transition">
+                {card.text}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Flow Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.2,
+            duration: 0.6,
+            ease: [0.4, 0, 0.2, 1],
+          }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <p className="text-gray-300 tracking-wide text-lg md:text-xl">
+            Build <span className="mx-2 text-gray-500">→</span>
+            Learn <span className="mx-2 text-gray-500">→</span>
+            Build
+          </p>
+        </motion.div>
+
+        {/* Statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.6,
+            ease: [0.4, 0, 0.2, 1],
+          }}
+          viewport={{ once: true }}
+          className="flex justify-center max-w-4xl mx-auto"
+        >
+          <div className="flex items-center gap-4 px-6 md:px-0">
+            <motion.div
+              initial={{ height: 0 }}
+              whileInView={{ height: 40 }}
+              transition={{
+                duration: 0.6,
+                ease: [0.4, 0, 0.2, 1],
+              }}
+              className="w-1.5 bg-[#FFC107]"
             />
+            <p className="text-lg md:text-2xl font-medium text-[#E2E8F0]">
+              AI is not a crutch here. It's your collaborator.
+            </p>
           </div>
-
-          {/* Timeline with Vertical Lines, Balls, and Content */}
-          <div className="relative flex justify-between w-full max-w-5xl mx-auto mt-8">
-            <div className="absolute -right-90 bottom-12 blur-3xl w-96 h-96 rounded-full bg-[#3991BD] opacity-20"></div>
-
-            {/* Month 1 */}
-            <div className="relative flex items-center w-1/3 flex-col">
-              {/* Vertical Line (Extending from the Horizontal Line) */}
-              <Image
-                src="/ai-images/Line 2.svg"
-                alt="Vertical Line"
-                width={7}
-                height={100}
-                className="absolute top-[-50px] z-10"
-              />
-              {/* Ball (Exactly Below the Vertical Line) */}
-              <Image
-                src="/ai-images/Ellipse 5.svg"
-                alt="Month 1"
-                width={40}
-                height={40}
-                className="mt-[40px] z-20"
-              />
-              {/* Content (Aligned to Right Beside Ball) */}
-              <p className="text-[#FFFFFF] text-sm max-w-[220px] text-left mt-2 font-sans font-bold">
-                Creating a full-stack application and data engineering with Python.
-              </p>
-            </div>
-
-            {/* Month 2 */}
-            <div className="relative flex items-center w-1/3 flex-col">
-              <Image
-                src="/ai-images/Line 2 (1).svg"
-                alt="Vertical Line"
-                width={7}
-                height={100}
-                className="absolute top-[-50px] z-10"
-              />
-              <Image
-                src="/ai-images/Ellipse 5 (1).svg"
-                alt="Month 2"
-                width={40}
-                height={40}
-                className="mt-[40px] z-20"
-              />
-              <p className="text-[#FFFFFF] text-sm max-w-[220px] text-left mt-2 font-sans font-bold">
-                Fundamentals of Large Language Models (LLM) and NLP.
-              </p>
-            </div>
-            <div className="absolute left-1/2 top-4 -translate-x-1/2 -translate-y-1/2 blur-3xl w-96 h-96 rounded-full bg-gradient-to-r from-[#394BBD] to-[#A339BD] opacity-20 z-0"></div>
-
-
-            {/* Month 3 */}
-            <div className="relative flex items-center w-1/3 flex-col">
-              <Image
-                src="/ai-images/Line 2 (2).svg"
-                alt="Vertical Line"
-                width={7}
-                height={100}
-                className="absolute top-[-50px] z-10"
-              />
-              <Image
-                src="/ai-images/Ellipse 5 (2).svg"
-                alt="Month 3"
-                width={40}
-                height={40}
-                className="mt-[40px] z-20"
-              />
-              <p className="text-[#FFFFFF] text-sm max-w-[220px] text-left mt-2 font-sans font-bold">
-                Computer vision fundamentals: Prediction, classification & AI image generation modules.
-              </p>
-            </div>
-          </div>
-        </div>
+        </motion.div>
       </div>
+
+      {/* Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#3991BD] opacity-10 blur-[120px] rounded-full pointer-events-none"></div>
     </section>
   );
 }

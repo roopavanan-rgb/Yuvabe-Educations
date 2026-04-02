@@ -1,94 +1,160 @@
 "use client";
-import Image from "next/image";
+import React from "react";
+import { Check, X } from "lucide-react";
+import { motion } from "framer-motion";
+
+const forYouItems = [
+  "You're curious about AI but unsure where to start",
+  "You've tried coding online and got stuck",
+  "You prefer learning by doing, not watching",
+  "You want practical, portfolio-worthy skills",
+  "You're a final-year engineering student or recent grad",
+  "You have a junior dev job and feel left behind by AI",
+];
+
+const notForYouItems = [
+  "You only want theory and lectures",
+  "You're looking for shortcuts without effort",
+  "You aren't willing to build actual things",
+  "You want a guaranteed job promise (we don't make those)",
+];
 
 export function Outcomes() {
+  const container = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.12 },
+    },
+  };
+
+  const itemAnim = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.4 },
+    },
+  };
+
+  const cardAnim = {
+    hidden: { opacity: 0, y: 40, scale: 0.96 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6 },
+    },
+  };
+
   return (
-    <section className="py-16 px-4 bg-[#0C2F47] text-white overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-16 md:gap-32">
+    <section className="py-24 px-6 md:px-12 bg-[#F6F8F9]">
+      <div className="container mx-auto max-w-[1200px]">
+        {/* Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 md:mb-20"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold text-[#001B44]">
+            Is this program for you?
+          </h2>
+        </motion.div>
 
-        {/* Abstract Image (Left Side) */}
-        <div className="flex-shrink-0 w-[200px] sm:w-[250px] md:w-[300px] h-auto flex justify-center md:justify-start">
-          <Image
-            src="/ai-images/circle.svg"
-            alt="Abstract Design"
-            width={250}
-            height={250}
-            className="w-full h-auto object-contain"
-          />
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+          {/* FOR YOU */}
+          <motion.div
+            variants={cardAnim}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            className="group bg-[#EAEFF4] border border-[#A6C0DE] rounded-[28px] p-8 md:p-12 transition-all duration-300"
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                className="w-8 h-8 rounded-full bg-[#18A02F] flex items-center justify-center"
+              >
+                <Check className="w-5 h-5 text-white" strokeWidth={3} />
+              </motion.div>
+
+              <h3 className="text-lg md:text-xl text-[#001B44] tracking-wide">
+                THIS IS <span className="font-bold">FOR YOU</span> IF:
+              </h3>
+            </div>
+
+            <motion.ul
+              variants={container}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="space-y-5"
+            >
+              {forYouItems.map((item, idx) => (
+                <motion.li
+                  key={idx}
+                  variants={itemAnim}
+                  whileHover={{ x: 6 }}
+                  className="flex items-start gap-4 group/item"
+                >
+                  <div className="w-2 h-2 rounded-full bg-[#18A02F] mt-2.5 group-hover/item:scale-125 transition" />
+                  <span className="text-base md:text-[17px] text-[#2F4460] leading-relaxed font-medium">
+                    {item}
+                  </span>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
+
+          {/* NOT FOR YOU */}
+          <motion.div
+            variants={cardAnim}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            className="group bg-[#EAEFF4] border border-[#A6C0DE] rounded-[28px] p-8 md:p-12 transition-all duration-300"
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                className="w-8 h-8 rounded-full bg-[#F54242] flex items-center justify-center"
+              >
+                <X className="w-5 h-5 text-white" strokeWidth={3} />
+              </motion.div>
+
+              <h3 className="text-lg md:text-xl text-[#001B44] tracking-wide">
+                THIS IS <span className="font-bold">NOT FOR YOU</span> IF:
+              </h3>
+            </div>
+
+            <motion.ul
+              variants={container}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="space-y-5"
+            >
+              {notForYouItems.map((item, idx) => (
+                <motion.li
+                  key={idx}
+                  variants={itemAnim}
+                  whileHover={{ x: 6 }}
+                  className="flex items-start gap-4 group/item"
+                >
+                  <div className="w-2 h-2 rounded-full bg-[#F54242] mt-2.5 group-hover/item:scale-125 transition" />
+                  <span className="text-base md:text-[17px] text-[#2F4460] leading-relaxed font-medium">
+                    {item}
+                  </span>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
         </div>
-
-        {/* Content (Right Side) */}
-        <div className="flex flex-col gap-8 max-w-md">
-          {/* Title */}
-          <h2 className="text-2xl md:text-3xl font-raleway font-bold">Program Outcomes</h2>
-          <div className="absolute text-5xl -right-60 bottom-200  blur-3xl border-none w-96 h-96 border rounded-full bg-gradient-to-r bg-[#3991BD] opacity-60"></div>
-
-          {/* Outcomes List */}
-          <ul className="space-y-6 text-white font-sans font-bold">
-            <li className="flex items-center gap-3 justify-center md:justify-start">
-              <Image src="/icons/brown.svg" alt="Develop AI & ML skills" width={16} height={16} />
-              Develop in-demand AI and ML skills
-            </li>
-            <li className="flex items-center gap-3 justify-center md:justify-start">
-              <Image src="/icons/blue.svg" alt="Build portfolio" width={16} height={16} />
-              Build a professional portfolio
-            </li>
-            <li className="flex items-center gap-3 justify-center md:justify-start">
-              <Image src="/icons/yellow.svg" alt="Real-world projects" width={16} height={16} />
-              Gain experience with real-world projects
-            </li>
-            <li className="flex items-center gap-3 justify-center md:justify-start">
-              <Image src="/icons/green.svg" alt="Mentorship" width={16} height={16} />
-              Receive personalized mentorship from industry experts
-            </li>
-          </ul>
-        </div>
-
       </div>
     </section>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
