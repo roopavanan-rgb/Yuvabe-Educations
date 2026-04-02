@@ -12,7 +12,11 @@ const programDetails = [
     label: "Taught By",
     value: "Experienced AI/ML practitioners from industry",
   },
-  { label: "Intake", value: "Limited seats per cohort" },
+  {
+    label: "Intake",
+    value:
+      "Limited seats per cohort \n Full scholarships available for deserving candidates",
+  },
 ];
 
 // ✅ Typed Variants
@@ -97,10 +101,15 @@ export function CareerBoost() {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-white/5 to-transparent rounded-lg pointer-events-none" />
 
               {/* Content */}
-              <p className="text-[16px] md:text-[18px] text-[#E2E8F0] tracking-wide font-medium">
-                <span className="text-white font-semibold">{item.label}</span>{" "}
-                <span className="text-[#A8C0DB]">:</span> {item.value}
-              </p>
+              <div className="flex gap-2 text-[16px] md:text-[18px] tracking-wide font-medium">
+                <span className="text-white font-semibold shrink-0">
+                  {item.label} :
+                </span>
+
+                <span className="text-[#A8C0DB] whitespace-pre-line">
+                  {item.value}
+                </span>
+              </div>
             </motion.div>
           ))}
         </motion.div>

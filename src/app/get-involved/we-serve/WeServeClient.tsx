@@ -6,27 +6,29 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 
-const Player = dynamic(() => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player), { ssr: false });
-
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false },
+);
 
 const initiatives = [
   {
     image: "/images/class.webp",
     title: "Educational Programs",
     description:
-      "Bringing education to underprivileged communities through innovative learning methods."
+      "Bringing education to underprivileged communities through innovative learning methods.",
   },
   {
     image: "/images/outdoor.webp",
     title: "Beach Cleanups",
     description:
-      "Organizing cleanup drives to protect marine life and promote environmental sustainability."
+      "Organizing cleanup drives to protect marine life and promote environmental sustainability.",
   },
   {
     image: "/images/saracon.png",
     title: "Performing Arts",
     description:
-      "Empowering youth through cultural performances and artistic expression."
+      "Empowering youth through cultural performances and artistic expression.",
   },
 ];
 
@@ -36,22 +38,22 @@ const blogPosts = [
     image: "/images/journey.webp",
     title: "Navigating Transformation: My Yuvabe Journey",
     description:
-      "A heartfelt account of a Yuvabe alumni where he talks about discovering his passion, overcoming adversity..."
+      "A heartfelt account of a Yuvabe alumni where he talks about discovering his passion, overcoming adversity...",
   },
   {
     slug: "United-by-the-Joy-of-Running",
     image: "/images/running.webp",
     title: "United by the Joy of Running",
     description:
-      "Auroville Marathon reignites the spirit of teamwork, oneness and collaboration within the Yuvabe team..."
+      "Auroville Marathon reignites the spirit of teamwork, oneness and collaboration within the Yuvabe team...",
   },
   {
     slug: "How-Teachers-Shape-Lives",
     image: "/images/world.webp",
     title: "Shaping lives and the future of the world",
     description:
-      "Think back to your school days. Can you recall any teachers who left a lasting impression on you? Chances are, you..."
-  }
+      "Think back to your school days. Can you recall any teachers who left a lasting impression on you? Chances are, you...",
+  },
 ];
 
 const page = () => {
@@ -267,29 +269,33 @@ const page = () => {
         >
           {blogPosts.map((post, index) => (
             <Link key={post.slug} href={`/stories/blogs/${post.slug}`}>
-            <motion.div
-              key={index}
-              className="bg-white text-black rounded-[20px] h-[400px] shadow-lg  overflow-hidden p-4 transition-transform duration-300 hover:scale-105"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-            >
-              {/* Blog Image */}
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={400}
-                height={250}
-                className="w-full h-[200px] object-cover rounded-lg rounded-bl-[43px] rounded-tr-[43px] rounded-tl-[13px] rounded-br-[13px]"
-              />
+              <motion.div
+                key={index}
+                className="bg-white text-black rounded-[20px] h-[400px] shadow-lg  overflow-hidden p-4 transition-transform duration-300 hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                {/* Blog Image */}
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={400}
+                  height={250}
+                  className="w-full h-[200px] object-cover rounded-lg rounded-bl-[43px] rounded-tr-[43px] rounded-tl-[13px] rounded-br-[13px]"
+                />
 
-              {/* Blog Content */}
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold font-primary">{post.title}</h3>
-                <p className="text-md font-secondary mt-2">{post.description}</p>
-              </div>
-            </motion.div>
+                {/* Blog Content */}
+                <div className="mt-4">
+                  <h3 className="text-lg font-semibold font-primary">
+                    {post.title}
+                  </h3>
+                  <p className="text-md font-secondary mt-2">
+                    {post.description}
+                  </p>
+                </div>
+              </motion.div>
             </Link>
           ))}
         </motion.div>

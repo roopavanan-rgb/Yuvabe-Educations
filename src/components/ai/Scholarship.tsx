@@ -56,15 +56,15 @@ export default function Scholarship() {
 
         {/* Grid Box */}
         <div className="w-full pt-28 pb-20 px-6 md:px-16 relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-12 place-items-center max-w-[900px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-12 place-items-stretch max-w-[900px] mx-auto">
             {instructors.map((item, idx) => (
               <div
                 key={idx}
-                className="group relative w-full max-w-[360px] rounded-[28px] 
-        bg-white/5 backdrop-blur-xl border border-white/10
-        pt-[4rem] pb-8 px-6 flex flex-col items-center
-        transition-all duration-500 ease-out
-        hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
+                className="group relative w-full max-w-[360px] h-full rounded-[28px] 
+bg-white/5 backdrop-blur-xl border border-white/10
+pt-[4rem] pb-8 px-6 flex flex-col items-center
+transition-all duration-500 ease-out
+hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
               >
                 {/* Subtle Glow */}
                 <div className="absolute inset-0 rounded-[28px] opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-b from-[#61ACEE]/10 to-transparent pointer-events-none"></div>
@@ -88,7 +88,7 @@ export default function Scholarship() {
                 </div>
 
                 {/* Content */}
-                <div className="text-center mt-2 z-10">
+                <div className="text-center mt-2 z-10 flex flex-col h-full">
                   <h3 className="text-[20px] md:text-[22px] font-semibold text-white tracking-wide">
                     {item.name}
                   </h3>
@@ -97,7 +97,7 @@ export default function Scholarship() {
                     {item.role}
                   </p>
 
-                  <p className="text-[14px] leading-relaxed text-white/70 mt-4 px-2">
+                  <p className="text-[14px] leading-relaxed text-white/70 mt-4 px-2 flex-grow">
                     {item.description}
                   </p>
                 </div>
