@@ -83,7 +83,7 @@ export function WhatForYou() {
                   stiffness: 200,
                   damping: 18,
                 }}
-                className="group flex items-center gap-4 p-3 rounded-xl transition-all duration-300 hover:bg-white/70"
+                className="group flex items-center gap-4 p-3 rounded-xl transition-all duration-300 "
               >
                 {/* Icon */}
                 <div className="flex-shrink-0 w-[26px] h-[26px] rounded-full bg-[#001B44] flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-red-500">
