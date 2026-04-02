@@ -36,12 +36,9 @@ const faqs = [
   {
     question: "What is the program fee?",
     answer:
-      "Fee details and scholarship options are shared during the application process. Limited merit-based scholarships are available.",
+      "Full scholarships are available for deserving candidates. Contact us for further details.",
   },
-  {
-    question: "Will I receive a certificate?",
-    answer: "Yes! A certification will be provided upon successful completion.",
-  },
+
   {
     question: "How is this different from an online course?",
     answer:

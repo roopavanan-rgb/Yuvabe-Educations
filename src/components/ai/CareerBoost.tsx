@@ -57,7 +57,7 @@ export function CareerBoost() {
         />
       </div>
 
-      <div className="container mx-auto max-w-[1200px] relative z-10 w-full px-2 lg:px-10">
+      <div className="container mx-auto max-w-[1200px] relative z-10 w-full px-2 lg:px-6">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -101,7 +101,7 @@ export function CareerBoost() {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-white/5 to-transparent rounded-lg pointer-events-none" />
 
               {/* Content */}
-              <div className="flex gap-2 text-[16px] md:text-[18px] tracking-wide font-medium">
+              <div className="flex gap-2 text-[16px] md:text-[18px] font-medium">
                 <span className="text-white font-semibold shrink-0">
                   {item.label} :
                 </span>
