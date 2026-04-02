@@ -120,17 +120,6 @@ export function HeroSection() {
                 APPLY NOW
               </Button>
             </motion.div>
-
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.96 }}>
-              <Button
-                size="lg"
-                variant="outline"
-                className="gap-2 border-white bg-transparent text-white hover:bg-white/10 font-bold px-8 py-6 rounded-full text-sm tracking-wide transition-all"
-                onClick={() => window.open("/docs/AI Brochure_1.pdf", "_blank")}
-              >
-                BOOK A CALL
-              </Button>
-            </motion.div>
           </motion.div>
         </div>
       </motion.div>
