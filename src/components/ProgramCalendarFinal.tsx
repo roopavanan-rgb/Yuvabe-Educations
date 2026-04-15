@@ -388,7 +388,7 @@ export default function ProgramCalendar({ programs }: ProgramCalendarProps) {
           </div>
 
           {/* RIGHT SIDE - CALENDAR */}
-          <div className="lg:w-3/5 bg-gray-100 rounded-2xl shadow-lg max-h-100 md:max-h-[650px] overflow-y-auto">
+          <div className="lg:w-3/5 bg-gray-100 rounded-2xl shadow-lg max-h-100 md:max-h-162.5 overflow-y-auto">
             {activeProgram ? (
               <>
                 <h2 className="text-2xl font-bold text-[#592AC7] mb-6 bg-gray-100 sticky top-0 p-5">

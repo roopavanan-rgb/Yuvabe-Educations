@@ -4,9 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { newslettersData, NewsletterItem } from "@/data/newsletter";
+import { impactData, ImpactItem } from "@/data/impact-report";
 
-const NewsletterBlock = ({ newsletter }: { newsletter: NewsletterItem }) => (
+const ImpactBlock = ({ impact }: { impact: ImpactItem }) => (
   <motion.div
     layout
     initial={{ y: -50, opacity: 0 }}
@@ -16,9 +16,9 @@ const NewsletterBlock = ({ newsletter }: { newsletter: NewsletterItem }) => (
   >
     <div className="flex flex-row gap-x-[77px] justify-between min-h-[456px] flex-wrap lg:flex-nowrap w-full gap-y-8">
       {/* Left */}
-      <div className="flex flex-col rounded-[20px] w-full bg-white xl:w-[34%] box-shadow-news max-w-96 m-auto">
+      <div className="flex flex-col rounded-[20px] w-full max-w-96 m-auto bg-white xl:w-[34%] box-shadow-news">
         <Image
-          src={newsletter.imageUrl}
+          src={impact.imageUrl}
           alt=""
           width={532}
           height={500}
@@ -26,10 +26,10 @@ const NewsletterBlock = ({ newsletter }: { newsletter: NewsletterItem }) => (
         />
         <div className="flex flex-col py-6 px-3 items-center">
           <h2 className="uppercase font-primary font-semibold text-black text-[20px] text-center">
-            {newsletter.title}
+            {impact.title}
           </h2>
           <p className="font-secondary text-black text-[14px] text-center pb-6">
-            {newsletter.subtitle}
+            {impact.subtitle}
           </p>
         </div>
       </div>
@@ -37,14 +37,14 @@ const NewsletterBlock = ({ newsletter }: { newsletter: NewsletterItem }) => (
       {/* Right */}
       <div className="flex flex-col gap-y-6 justify-center w-full xl:w-[59%] px-3 items-center lg:items-baseline">
         <h3 className="font-primary font-semibold text-black text-2xl lg:text-4xl">
-          {newsletter.month} {newsletter.year}
+          {impact.month} {impact.year}
         </h3>
 
         <p className="font-secondary text-black text-[18px] leading-[30px] text-center lg:text-left">
-          {newsletter.description}
+          {impact.description}
         </p>
 
-        <Link href={newsletter.linkUrl} target="_blank">
+        <Link href={impact.linkUrl} target="_blank">
           <div className="bg-[#592AC7] py-[18px] px-8 rounded-[15px]">
             <p className="font-primary font-semibold text-white text-[14px]">
               Read More
@@ -56,30 +56,37 @@ const NewsletterBlock = ({ newsletter }: { newsletter: NewsletterItem }) => (
   </motion.div>
 );
 
-export default function Newsletters() {
+export default function Impacts() {
   const [activeFilter, setActiveFilter] = React.useState("All");
   const [visibleCount, setVisibleCount] = React.useState(6);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = React.useState(false);
 
-  const filters = ["All", "2026", "2025", "2024", "2023", "2022"];
+  const filters = React.useMemo(() => {
+    const years = impactData.map((item) => item.year.toString());
+    const uniqueYears = [...new Set(years)].sort((a, b) => {
+      // Convert strings back to numbers just for the subtraction
+      return Number(b) - Number(a);
+    });
+    return ["All", ...uniqueYears];
+  }, []);
 
-  const sorted = [...newslettersData].sort((a, b) => b.id - a.id);
+  const sorted = [...impactData].sort((a, b) => Number(b.id) - Number(a.id));
 
-  const filteredNewsletters =
+  const filteredImpacts =
     activeFilter === "All"
       ? sorted
       : sorted.filter((n) => n.year === activeFilter);
 
-  const visibleNewsletters =
+  const visibleImpacts =
     activeFilter === "All"
-      ? filteredNewsletters.slice(0, visibleCount)
-      : filteredNewsletters;
+      ? filteredImpacts.slice(0, visibleCount)
+      : filteredImpacts;
 
   return (
     <div className="bg-color pb-16 xl:pb-32 md:pb-24 xl:pt-32 pt-16 md:pt-24">
       <div className="max-w-[1028px] flex flex-col m-auto px-5">
         <h1 className="text-[#592AC7] text-2xl md:text-6xl font-semibold text-center font-primary">
-          Newsletters
+          Impact Reports
         </h1>
 
         {/* Filters */}
@@ -111,7 +118,7 @@ export default function Newsletters() {
               className="flex items-center justify-between w-full max-w-[340px] bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-sm font-primary"
             >
               <span className="font-primary text-sm">
-                {activeFilter === "All" ? "All Newsletters" : activeFilter}
+                {activeFilter === "All" ? "All Impact Reports" : activeFilter}
               </span>
 
               {/* Filter Icon */}
@@ -156,25 +163,24 @@ export default function Newsletters() {
           </div>
         </div>
 
-        {/* Newsletter List */}
+        {/* Impact List */}
         <motion.div layout className="flex flex-col gap-32 mt-16">
-          {visibleNewsletters.map((newsletter) => (
-            <NewsletterBlock key={newsletter.id} newsletter={newsletter} />
+          {visibleImpacts.map((impact) => (
+            <ImpactBlock key={impact.id} impact={impact} />
           ))}
         </motion.div>
 
         {/* Load More */}
-        {activeFilter === "All" &&
-          visibleCount < filteredNewsletters.length && (
-            <div className="flex justify-center mt-12">
-              <button
-                onClick={() => setVisibleCount((prev) => prev + 6)}
-                className="bg-[#592AC7] text-white px-10 py-4 rounded-[15px] font-primary font-semibold"
-              >
-                Load More
-              </button>
-            </div>
-          )}
+        {activeFilter === "All" && visibleCount < filteredImpacts.length && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setVisibleCount((prev) => prev + 6)}
+              className="bg-[#592AC7] text-white px-10 py-4 rounded-[15px] font-primary font-semibold"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

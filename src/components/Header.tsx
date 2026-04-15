@@ -141,7 +141,7 @@ const Header = () => {
         { name: "Newsletter", path: "/stories/newsletters" },
         {
           name: "Impact Report",
-          path: "https://heyzine.com/flip-book/a7ee0bc0d2.html",
+          path: "/stories/impact-report",
         },
       ],
     },

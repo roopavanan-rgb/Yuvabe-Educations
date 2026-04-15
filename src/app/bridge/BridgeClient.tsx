@@ -72,7 +72,7 @@ export default function Bridge() {
               <h1 className="text-[#592AC7] text-[32px] md:text-[48px] lg:text-[64px] leading-[120%] font-semibold text-center font-primary">
                 Bridge Program
               </h1>
-              <p className="font-secondary font-extrabold text-[#592AC7] text-[16px] md:text-[24px] lg:text-[32px] leading-[28px] md:leading-[30px] text-center">
+              <p className="font-secondary font-extrabold text-[#592AC7] text-[16px] md:text-[24px] lg:text-[32px] leading-7 md:leading-7.5 text-center">
                 A 3-month project-based learning experience
               </p>
             </motion.div>
@@ -86,11 +86,11 @@ export default function Bridge() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
               >
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] text-center lg:text-left">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5 text-center lg:text-left">
                   Yuvabe Bridge Program is designed for young adults who are
                   completing their undergraduate degrees and seeking employment.
                 </p>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] mt-3 text-center lg:text-left">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5 mt-3 text-center lg:text-left">
                   The program offers&nbsp;
                   <span className="text-[#592AC7] font-bold">
                     future-ready skills while nurturing self-growth and a
@@ -98,7 +98,7 @@ export default function Bridge() {
                   </span>
                   through our Work-Serve-Evolve philosophy.
                 </p>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] mt-3 text-center lg:text-left">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5 mt-3 text-center lg:text-left">
                   Through career-focused learning and personal growth, we
                   empower you to step confidently into the future!
                 </p>
@@ -126,10 +126,10 @@ export default function Bridge() {
             </div>
           </div>
         </div>
-        {/*  /~ Bridge Calendar ~/
+        {/* Bridge Calendar  */}
         <div className="space-y-4 container mx-auto py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
           <ProgramCalendar programs={BridgePrograms} />
-        </div>*/}
+        </div>
       </div>
 
       {/* Rural youth, Rising Potential */}
@@ -168,7 +168,7 @@ export default function Bridge() {
                 >
                   Rural Youth, Rising Potential
                 </motion.h2>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-4 md:mt-6 lg:mt-9">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left  mt-4 md:mt-6 lg:mt-9">
                   The Auroville Bioregion, covering 13 villages in Tamil Nadu’s
                   Villupuram district, is a rural area largely dependent on
                   agriculture. However, environmental changes have reduced
@@ -178,7 +178,7 @@ export default function Bridge() {
                     livelihoods.
                   </span>
                 </p>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-3">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left  mt-3">
                   <span className="text-[#592AC7] font-bold">
                     74% of the population in the region is aged 15–35.
                   </span>
@@ -217,12 +217,12 @@ export default function Bridge() {
                 >
                   Bridging the Skill Gap
                 </motion.h2>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-4 md:mt-6 lg:mt-9 lg:w-[82%]">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left  mt-4 md:mt-6 lg:mt-9 lg:w-[82%]">
                   Our conventional education systems’ focus on rote learning
                   often leaves young people without critical, creative, or
                   job-ready skills.
                 </p>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left mt-3 lg:w-[82%]">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left mt-3 lg:w-[82%]">
                   <span className="text-[#592AC7] font-bold">
                     Rapid technological shifts have also widened the skills gap
                     for rural youth, making it harder for them to find or create
@@ -232,7 +232,7 @@ export default function Bridge() {
                   a large portion of the population creates both economic and
                   social concerns.
                 </p>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left mt-3 lg:w-[82%]">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left mt-3 lg:w-[82%]">
                   Yuvabe Bridge Program was born out of this need. Through the
                   program we help youth build future-ready skills, receive
                   mentorship, and empower them to pursue meaningful careers.
@@ -310,7 +310,7 @@ export default function Bridge() {
                 viewport={{ once: true }}
               >
                 <div className="bg-[#91C644] p-3.5 md:pt-10 lg:pt-14 md:px-4 rounded-2xl lg:rounded-b-2xl lg:rounded-bl-2xl lg:rounded-tl-none lg:rounded-tr-none">
-                  <p className="font-primary font-extrabold text-white text-[16px] md:text-[24px] lg:text-[32px] leading-[28px] md:leading-[30px] text-center">
+                  <p className="font-primary font-extrabold text-white text-[16px] md:text-[24px] lg:text-[32px] leading-7 md:leading-7.5 text-center">
                     Women’s Scholarship Fund
                   </p>
                 </div>
@@ -323,12 +323,12 @@ export default function Bridge() {
                 >
                   Bridging The Gender Divide
                 </motion.h2>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-4 md:mt-6 lg:mt-9">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left  mt-4 md:mt-6 lg:mt-9">
                   Social norms in the region often restrict women's mobility,
                   further restricting their access to education and
                   opportunities.
                 </p>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-3">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left  mt-3">
                   Yuvabe’s Bridge Program tackles this challenge by offering{" "}
                   <span className="text-[#592AC7] font-bold">
                     100% scholarships to women, removing the “if” and “how” from
@@ -337,7 +337,7 @@ export default function Bridge() {
                   opening pathways to work, income, and leadership—without
                   leaving their communities.
                 </p>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-3">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left  mt-3">
                   When rural women gain digital literacy and begin to earn
                   independently, they don’t just improve their lives—they change
                   how entire communities perceive what’s possible.
@@ -369,17 +369,17 @@ export default function Bridge() {
                 >
                   Core Domains
                 </motion.h2>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-4 md:mt-6 lg:mt-9">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left  mt-4 md:mt-6 lg:mt-9">
                   The Yuvabe Bridge Program offers 3-month courses in four
                   future-forward fields:
                 </p>
-                <ul className="font-secondary font-bold text-[#592AC7] text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left  mt-4 md:mt-6 list-disc list-inside">
+                <ul className="font-secondary font-bold text-[#592AC7] text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left  mt-4 md:mt-6 list-disc list-inside">
                   <li className="mt-3">AI first Full Stack Development </li>
                   <li className="mt-3">UX Design </li>
                   <li className="mt-3"> Digital Marketing </li>
                   <li className="mt-3">Corporate Sustainability</li>
                 </ul>
-                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px]  text-center lg:text-left mt-3 lg:w-[82%]">
+                <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left mt-3 lg:w-[82%]">
                   Each track is led by mentors with over 10+ years of real-world
                   experience, offering hands-on learning, industry insights, and
                   guidance to help young adults confidently step into emerging
@@ -394,7 +394,7 @@ export default function Bridge() {
                 viewport={{ once: true }}
               >
                 {/* Programs */}
-                <div className="flex flex-row gap-x-[14px] md:gap-x-10 lg:gap-x-16 gap-y-8 z-10 flex-wrap">
+                <div className="flex flex-row gap-x-3.5 md:gap-x-10 lg:gap-x-16 gap-y-8 z-10 flex-wrap">
                   {[
                     {
                       href: "/bridge/ai",
@@ -436,11 +436,11 @@ export default function Bridge() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="w-full md:w-2/5 md:grow-1 lg:w-2/5"
+                        className="w-full md:w-2/5 md:grow lg:w-2/5"
                       >
                         <Link href={href}>
                           <div
-                            className={`flex flex-col ${border} ${bg} rounded-[15px] border-[1.5px] gap-y-[13px] justify-center items-center pt-8 pb-[22px] px-[28px] box-shadow-card min-h-[250px] h-full`}
+                            className={`flex flex-col ${border} ${bg} rounded-[15px] border-[1.5px] gap-y-[13px] justify-center items-center pt-8 pb-[22px] px-7 box-shadow-card min-h-[250px] h-full`}
                           >
                             <Image
                               src={imgSrc}
@@ -448,11 +448,11 @@ export default function Bridge() {
                               width={90}
                               height={90}
                             />
-                            <h3 className="font-primary text-[18px] lg:text-2xl leading-[30px] font-semibold text-black text-center">
+                            <h3 className="font-primary text-[18px] lg:text-2xl leading-7.5 font-semibold text-black text-center">
                               {title}
                             </h3>
                             <div
-                              className={`${iconBg} rounded-full p-[6px] w-[31.5px] self-end`}
+                              className={`${iconBg} rounded-full p-1.5 w-[31.5px] self-end`}
                             >
                               <svg
                                 width="20"
@@ -560,11 +560,11 @@ export default function Bridge() {
                         Graduates Speak
                       </motion.h2>
 
-                      <p className="font-secondary font-normal text-black text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] mt-4 md:mt-6 lg:mt-9 text-center lg:text-left">
+                      <p className="font-secondary font-normal text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5 mt-4 md:mt-6 lg:mt-9 text-center lg:text-left">
                         {testimonial.testimonial}
                       </p>
 
-                      <p className="font-secondary text-[#592AC7] font-semibold text-[18px] md:text-[18px] leading-[28px] md:leading-[30px] mt-4 lg:mt-8 text-center lg:text-left">
+                      <p className="font-secondary text-[#592AC7] font-semibold text-[18px] md:text-[18px] leading-7 md:leading-7.5 mt-4 lg:mt-8 text-center lg:text-left">
                         {testimonial.name}
                       </p>
                     </motion.div>
@@ -687,7 +687,7 @@ export default function Bridge() {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="flex lg:flex-row flex-col gap-x-4  md:gap-y-[65px] gap-y-8  items-center flex-wrap lg:flex-nowrap justify-center lg:w-[49%] w-full lg:max-w-[500px]"
+                className="flex lg:flex-row flex-col gap-x-4  md:gap-y-[65px] gap-y-8  items-center flex-wrap lg:flex-nowrap justify-center lg:w-[49%] w-full lg:max-w-125"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
@@ -698,7 +698,7 @@ export default function Bridge() {
                 viewport={{ once: true }}
               >
                 <Image src={item.img} alt="" width={104} height={104} />
-                <p className="font-secondary font-medium text-black text-[18px] leading-[30px] w-full md:w-[320px] lg:w-full text-center  lg:text-left mt-8 md:mt-0">
+                <p className="font-secondary font-medium text-black text-[18px] leading-7.5 w-full md:w-[320px] lg:w-full text-center  lg:text-left mt-8 md:mt-0">
                   {item.text}
                 </p>
               </motion.div>
@@ -721,7 +721,7 @@ export default function Bridge() {
             Your Support Matters!
           </motion.h2>
           {/* Donate From.... */}
-          <div className="flex flex-row gap-x-[72px] gap-y-8 flex-wrap lg:flex-nowrap py-0 ">
+          <div className="flex flex-row gap-x-18 gap-y-8 flex-wrap lg:flex-nowrap py-0 ">
             {/* Donate from India */}
             <motion.div
               className="flex flex-col gap-y-16 w-full lg:w-1/2"
@@ -732,7 +732,7 @@ export default function Bridge() {
             >
               {/* Text */}
               <div className="flex flex-col gap-y-6">
-                <p className="font-secondary font-bold text-[18px] md:text-2xl leading-[30px] text-white  text-center lg:text-left">
+                <p className="font-secondary font-bold text-[18px] md:text-2xl leading-7.5 text-white  text-center lg:text-left">
                   <span className="font-normal">
                     Sponsor a youth or set up a recurring monthly gift that will
                     ensure a steady and reliable source of funding for the
@@ -756,7 +756,7 @@ export default function Bridge() {
                 <h2 className="text-[32px] md:text-[40x] font-semibold text-[#592Ac7] text-center font-primary">
                   Donate from India
                 </h2>
-                <p className="font-secondary font-normal text-[18px] leading-[30px] text-black  text-center lg:text-left">
+                <p className="font-secondary font-normal text-[18px] leading-7.5 text-black  text-center lg:text-left">
                   To donate from India, kindly use this link:
                 </p>
                 <Link href={"https://donate.auroville.org/"}>
@@ -766,7 +766,7 @@ export default function Bridge() {
                     </p>
                   </div>
                 </Link>
-                <div className="font-secondary font-normal text-[18px] leading-[30px] text-black">
+                <div className="font-secondary font-normal text-[18px] leading-7.5 text-black">
                   <p>Please follow these steps on the donation page:</p>
                   <br />
                   <ul className="list-disc ml-5">
@@ -800,7 +800,7 @@ export default function Bridge() {
             </div>
           </div>
           <motion.p
-            className="font-secondary font-extrabold text-[#FFCA2D] text-[18px] md:text-[30px] lg:text-[36px] leading-[28px] md:leading-[30px] text-center"
+            className="font-secondary font-extrabold text-[#FFCA2D] text-[18px] md:text-[30px] lg:text-[36px] leading-7 md:leading-7.5 text-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

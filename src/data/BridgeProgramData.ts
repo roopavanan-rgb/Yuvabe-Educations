@@ -117,7 +117,7 @@ export const BridgePrograms: Program[] = [
 
    {
     id: "3d-design",
-    name: "3d Design",
+    name: "3D Design",
     description:
       "Beginner-friendly programming course for young innovators.",
     location: "Saracon Campus",
