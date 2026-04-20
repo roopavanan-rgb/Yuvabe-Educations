@@ -11,6 +11,18 @@ export interface NewsletterItem {
 
 export const newslettersData: NewsletterItem[] = [
   {
+    id: 21,
+    title: "YUVABEAT",
+    subtitle: "Reimagining Classrooms Through STEAM",
+    month: "April",
+    year: "2026",
+    description:
+      "This edition of YUVABeat offers a glimpse into how our STEAM Program brings this shift to life across classrooms and communities.",
+    imageUrl: "/images/newsletters/news21.jpg",
+    linkUrl:
+      "https://mailchi.mp/9c3d8ae4a4d1/steaming-possibilities-into-reality-6753295",
+  },
+  {
     id: 20,
     title: "YUVABEAT",
     subtitle: "Love and Women: Building Enduring Impact",

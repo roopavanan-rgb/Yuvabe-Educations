@@ -22,7 +22,7 @@ const NewsletterBlock = ({ newsletter }: { newsletter: NewsletterItem }) => (
           alt=""
           width={532}
           height={500}
-          className="h-full rounded-t-[20px] w-full object-cover"
+          className="h-full md:h-75 rounded-t-[20px] w-full object-cover"
         />
         <div className="flex flex-col py-6 px-3 items-center">
           <h2 className="uppercase font-primary font-semibold text-black text-[20px] text-center">
