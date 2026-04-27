@@ -5,87 +5,94 @@ import FaqItem from "./FaqItem";
 
 const faqs = [
   {
-    question: "Who is eligible to apply?",
+    question: "Do I need design experience to apply?",
     answer:
-      "Anyone passionate about UI/UX design! No prior experience is required, but basic familiarity with online platforms is helpful.",
+      "None at all. Curiosity and commitment are the only requirements. We'll teach you everything else.",
   },
   {
-    question: "Is this program in-person or online?",
+    question: "Do I need to know how to use AI tools already?",
     answer:
-      "This is an in-person classroom program designed for immersive learning and hands-on experience.",
+      "No. You'll learn how to use AI tools inside a real design process — not in isolation. That's the whole point.",
   },
   {
-    question: "Will I get a certificate?",
+    question: "Is there a tuition fee?",
     answer:
-      "Yes! Upon successful completion, you will receive a Yuvabe Education’s Digital Marketing Certification.",
+      "There is no tuition fee. You pay a ₹3,500 refundable deposit at enrolment — returned to you when you complete the programme.",
   },
   {
-    question: "What is the program fee?",
+    question: "Why in-person? Why not online?",
     answer:
-      "The fee structure is available in the brochure. You can download it from the link above.",
+      "Design is a craft you learn through feedback, not videos. The studio environment, peer critique sessions, and facilitator guidance don't translate to solo online learning. This is why the programme works.",
   },
   {
-    question: "Is there placement assistance?",
+    question: "What software will I use?",
     answer:
-      "Yes! We provide career guidance, resume reviews, and access to job opportunities through our network.",
+      "Design tools: Figma (with Figma AI), Adobe Illustrator, Photoshop, Canva, WordPress. AI tools for product design: Claude (Anthropic) for UX research and flow critique, ChatGPT for ideation and content, Lovable and v0 for AI-generated interactive prototypes, Napkin.ai for turning ideas into user flow diagrams, Midjourney and Adobe Firefly for visual concepts, Leonardo.ai for UI asset generation, and Gemini for multimodal research.Testing: Maze for usability testing on real prototypes. Bring your own laptop. All tools are provided or accessible at no cost.  ",
   },
   {
-    question: "How do I apply?",
+    question: "What happens after the programme?",
     answer:
-      "Click the ‘Apply Now’ button, fill in the form, and our team will reach out for the next steps.",
+      "Top 3 students are offered a 3-month paid internship at Yuvabe Studios. All graduates join the Yuvabe Alumni Network with access to future advanced programmes.",
   },
   {
-    question: "Is prior experience required?",
-    answer: "No.",
-  },
-  {
-    question: "What is the EVOLVE program?",
+    question: "Are there scholarships available?",
     answer:
-      "The Evolve Program is designed to be a transformative journey, empowering individuals to unlock their true potential and achieve personal growth. At its core, the program provides participants with tools and experiences that go beyond academic or professional skills, focusing instead on holistic development. <br /><br /> Through Evolve, you’ll discover how to communicate with clarity and present your ideas with confidence, enhancing your ability to make an impact in any setting. <br /><br /> In essence, the Evolve Program isn’t just about gaining skills—it’s about reshaping how you approach challenges, connect with others, and grow as an individual. It’s a journey of self-discovery and empowerment, designed to help you step into the best version of yourself.",
-  },
-  {
-    question: "Is this course suitable for beginners?",
-    answer:
-      "Yes, the course is made for beginners and starts with basic topics, slowly moving to more advanced ones",
-  },
-  {
-    question: "What is the time commitment required each week?",
-    answer:
-      "Participants are expected to commit an average of 35 - 40 hours per week, including lectures, assignments, and activities. Since the course is planned for in-person sessions, it will take a maximum of 6-8 hours per day from Monday to Friday.",
-  },
-  {
-    question: "Will there be live sessions, or is the course self-paced?",
-    answer: "In-person classroom sessions.",
+      "There is no tuition fee — you only pay a ₹3,500 refundable deposit. If you have specific financial constraints around the deposit, reach out to us directly at bridge@yuvabe.com.",
   },
 ];
 
 export default function FaqSection() {
   return (
-    <section className="bg-transparent text-center z-10">
-      {/* FAQ Items */}
-      <div className="max-w-4xl mx-auto space-y-4">
-        <AnimatePresence>
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-                delay: index * 0.1,
-              }}
-            >
-              <FaqItem
-                question={faq.question}
-                answer={faq.answer}
-                isLast={index === faqs.length - 1}
-              />
-            </motion.div>
-          ))}
-        </AnimatePresence>
+    <section className="bg-[#F9F5F4] py-16 md:py-24 xl:py-32">
+      <div className="max-w-[1240px] mx-auto px-5 md:px-8 xl:px-0 flex flex-col gap-y-10 md:gap-y-12">
+
+        {/* Label */}
+        <motion.div
+          className="flex items-center gap-x-4"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <span className="block h-px w-10 bg-[#F26622]" />
+          <span className="font-secondary text-[#F26622] text-xs tracking-[0.22em] uppercase font-semibold">
+            Common Questions
+          </span>
+        </motion.div>
+
+        {/* Heading */}
+        <motion.h2
+          className="font-primary font-bold text-3xl md:text-4xl xl:text-[48px] text-[#1C1B2E] leading-tight -mt-2"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
+          viewport={{ once: true }}
+        >
+          Got questions?{" "}
+          <span className="text-[#F26622]">We&apos;ve got answers.</span>
+        </motion.h2>
+
+        {/* FAQ Items */}
+        <div className="max-w-7xl border-t border-[#1C1B2E]/10">
+          <AnimatePresence>
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: index * 0.07 }}
+              >
+                <FaqItem
+                  question={faq.question}
+                  answer={faq.answer}
+                  isLast={index === faqs.length - 1}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+
       </div>
     </section>
   );

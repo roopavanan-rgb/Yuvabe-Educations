@@ -23,6 +23,35 @@
   font-family: var(--font-albert);
 }
 
+/* UI/UX week-by-week timeline */
+.timeline-line {
+  background-color: rgba(242, 102, 34, 0.22);
+}
+
+/* UI/UX is-this-for-you card border */
+.for-you-card {
+  border: 1px solid rgba(242, 102, 34, 0.2);
+}
+
+/* UI/UX campus image card border */
+.campus-card {
+  border: 1.5px solid rgba(242, 102, 34, 0.35);
+}
+
+/* UI/UX honest answer section */
+.honest-answer-bg {
+  background: linear-gradient(135deg, #14151f 0%, #1e1244 100%);
+}
+
+.honest-divider {
+  border-color: rgba(248, 243, 235, 0.15);
+}
+
+/* UI/UX hero section */
+.uiux-hero-glow {
+  background: radial-gradient(circle at top right, rgba(201, 75, 36, 0.32) 0%, transparent 65%);
+}
+
 @layer utilities {
   .calendar-grid {
     display: grid;

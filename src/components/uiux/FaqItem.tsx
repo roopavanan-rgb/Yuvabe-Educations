@@ -18,41 +18,36 @@ export default function FaqItem({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-[#F3802F] rounded-lg overflow-hidden">
-      {/* Question */}
+    <div className={`border-b ${isLast ? "border-transparent" : "border-[#1C1B2E]/10"}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left px-6 py-4 flex justify-between items-center 
-                   bg-[#ffffff66] hover:bg-[#f3802f8c] transition-all duration-[350ms] ease-in cursor-pointer"
+        className="w-full text-left py-5 flex justify-between items-center gap-x-6 cursor-pointer group"
+        suppressHydrationWarning
       >
-        <span className="text-[16px] md:text-lg font-bold text-black font-albert-sans">
+        <span className="font-secondary text-base md:text-[17px] text-[#1C1B2E] leading-snug">
           {question}
         </span>
         <motion.span
+          className="shrink-0 w-8 h-8 rounded-full bg-[rgba(242,102,34,0.12)] flex items-center justify-center"
           animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0, ease: "easeInOut" }}
+          transition={{ duration: 0.22, ease: "easeInOut" }}
         >
-          <Plus className="text-black w-3.5 h-7 stroke-[3.5px]" />
+          <Plus className="text-[#F26622] w-4 h-4 stroke-2" />
         </motion.span>
       </button>
 
-      {/* Answer - Animated Slide Down */}
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0, ease: "easeInOut" }}
-            className={`px-6 py-4 bg-[#ffffff66] font-secondary text-black text-left ${
-              isLast ? "whitespace-pre-line" : ""
-            }`}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden"
           >
-            <div
-              dangerouslySetInnerHTML={{
-                __html: answer,
-              }}
-            />
+            <div className="pb-5 font-secondary text-[#1C1B2E]/60 text-sm md:text-[15px] leading-relaxed">
+              <div dangerouslySetInnerHTML={{ __html: answer }} />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
