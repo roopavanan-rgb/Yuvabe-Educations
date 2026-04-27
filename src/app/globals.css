@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -5,6 +6,7 @@
   --font-secondary: Nunito Sans, sans-serif;
   --font-open-sans: Open Sans, sans-serif;
   --font-albert: Albert Sans, sans-serif;
+  --font-ancizar: 'Ancizar Serif', Georgia, 'Times New Roman', serif;
 }
 
 .font-primary {
@@ -21,6 +23,10 @@
 
 .font-albert-sans {
   font-family: var(--font-albert);
+}
+
+.font-ancizar {
+  font-family: var(--font-ancizar);
 }
 
 /* UI/UX week-by-week timeline */

@@ -6,7 +6,6 @@ import Image from "next/image";
 import { CheckCircle2, XCircle } from "lucide-react";
 import FaqSection from "@/components/uiux/FaqSection";
 import GsapSplitText from "@/components/uiux/GsapSplitText";
-import GsapScramble from "@/components/uiux/GsapScramble";
 import GsapHeroIllustration from "@/components/uiux/GsapHeroIllustration";
 import GsapParallaxSvg from "@/components/uiux/GsapParallaxSvg";
 import HighlightHover from "@/components/uiux/HighlightHover";
@@ -117,7 +116,7 @@ export default function uiux() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#1A2225] overflow-hidden min-h-145 md:min-h-160 lg:min-h-180">
+      <section className="relative honest-answer-bg overflow-hidden min-h-145 md:min-h-160 lg:min-h-180">
         {/* Top-right gradient glow */}
         <div className="uiux-hero-glow absolute top-0 right-0 w-[560px] h-[560px] pointer-events-none" />
 
@@ -143,15 +142,15 @@ export default function uiux() {
 
             {/* Headline */}
             <motion.div variants={heroFadeUp}>
-              <h1 className="font-primary text-white font-bold leading-[1.1]  text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.75rem]">
-                <GsapScramble delay={0.4} chars="upperAndLowerCase">
+              <h1 className="font-ancizar text-white font-bold leading-[1.1] text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.75rem]">
+                <GsapSplitText type="words" stagger={0.1} duration={0.75} delay={0.2}>
                   Good design hasn&apos;t changed.
-                </GsapScramble>
+                </GsapSplitText>
               </h1>
-              <h2 className="font-primary font-bold leading-[1.1] tracking-wide text-xl md:text-2xl lg:text-[4xl] mt-1 text-[#C94B24]">
-                <GsapScramble delay={0.9} chars="lowerCase" speed={0.5}>
+              <h2 className="font-ancizar font-bold leading-[1.1] tracking-wide text-xl md:text-2xl lg:text-[4xl] mt-1 text-[#C94B24]">
+                <GsapSplitText type="words" stagger={0.1} duration={0.75} delay={0.55}>
                   How you get there has.
-                </GsapScramble>
+                </GsapSplitText>
               </h2>
             </motion.div>
 
@@ -266,7 +265,7 @@ export default function uiux() {
             viewport={{ once: true }}
             className="flex flex-col gap-y-4"
           >
-            <h2 className="font-primary text-[#1a1a1a] font-bold text-2xl md:text-3xl lg:text-[4xl] leading-[1.15]">
+            <h2 className="font-ancizar text-[#1a1a1a] font-bold text-2xl md:text-3xl lg:text-[4xl] leading-[1.15]">
               <GsapSplitText type="words">
                 Does this sound{" "}
                 <HighlightHover className="text-[#F26622]">
@@ -363,7 +362,7 @@ export default function uiux() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-albert-sans font-bold text-3xl md:text-3xl lg:text-4xl  leading-[1.2]">
+            <h2 className="font-ancizar font-bold text-3xl md:text-3xl lg:text-4xl leading-[1.2]">
               <span className="text-white">
                 What if you didn&rsquo;t start with theory…
               </span>
@@ -420,13 +419,13 @@ export default function uiux() {
                   transition={{ type: "spring", stiffness: 280, damping: 22 }}
                 >
                   {/* Number */}
-                  <span className="font-albert-sans text-[#F26622] text-4xl font-bold leading-none shrink-0">
+                  <span className="font-ancizar text-[#F26622] text-4xl font-bold leading-none shrink-0">
                     {num}
                   </span>
 
                   {/* Text Content */}
                   <div className="flex flex-col gap-y-2">
-                    <h3 className="font-albert-sans text-[#1C1B2E] font-bold text-lg md:text-xl leading-snug">
+                    <h3 className="font-ancizar text-[#1C1B2E] font-bold text-lg md:text-xl leading-snug">
                       {title}
                     </h3>
                     <p className="font-secondary text-[#5a5a6a] text-sm md:text-[14.5px] leading-relaxed max-w-[520px]">
@@ -498,7 +497,7 @@ export default function uiux() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-primary text-[#1a1a1a] font-bold text-3xl md:text-3xl lg:text-4xl leading-[1.15]">
+            <h2 className="font-ancizar text-[#1a1a1a] font-bold text-3xl md:text-3xl lg:text-4xl leading-[1.15]">
               <GsapSplitText type="chars" stagger={0.022} duration={0.55}>
                 {"This is not a course of "}
                 <span className="text-[#F26622]">exercises.</span>
@@ -561,9 +560,10 @@ export default function uiux() {
                     {row.map(({ num, title, body }, ci) => (
                       <motion.div
                         key={num}
-                        className="flex flex-col gap-y-3 py-8 md:px-8 first:md:pl-0 last:md:pr-0"
+                        className="flex flex-col gap-y-3 py-8 md:px-8 first:md:pl-0 last:md:pr-0 cursor-default rounded-lg"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        whileHover={{ backgroundColor: "rgba(242,102,34,0.05)" }}
                         transition={{
                           duration: 0.55,
                           ease: "easeOut",
@@ -571,10 +571,10 @@ export default function uiux() {
                         }}
                         viewport={{ once: true }}
                       >
-                        <span className="font-albert-sans text-[#F26622] text-4xl font-bold leading-none">
+                        <span className="font-ancizar text-[#F26622] text-4xl font-bold leading-none">
                           {num}
                         </span>
-                        <h3 className="font-albert-sans text-[#1a1a1a] font-bold text-base md:text-[20px] leading-snug">
+                        <h3 className="font-ancizar text-[#1a1a1a] font-bold text-base md:text-[20px] leading-snug">
                           {title}
                         </h3>
                         <p className="font-secondary text-[#666] text-sm md:text-[16px] leading-relaxed">
@@ -609,7 +609,7 @@ export default function uiux() {
 
           {/* Heading */}
           <motion.h2
-            className="font-primary font-bold text-3xl md:text-3xl lg:text-4xl leading-[1.15]"
+            className="font-ancizar font-bold text-3xl md:text-3xl lg:text-4xl leading-[1.15]"
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
@@ -658,7 +658,7 @@ export default function uiux() {
                 <span className="font-secondary text-[12px] tracking-[0.18em] text-[#F26622] uppercase">
                   {phase}
                 </span>
-                <h3 className="font-albert-sans text-white font-bold text-lg md:text-xl leading-snug">
+                <h3 className="font-ancizar text-white font-bold text-lg md:text-xl leading-snug">
                   {title}
                 </h3>
                 <p className="font-secondary text-white/55 text-sm md:text-[16px] leading-relaxed max-w-[900px]">
@@ -706,7 +706,7 @@ export default function uiux() {
 
           {/* Heading */}
           <motion.h2
-            className="font-primary text-[#1a1a1a] font-bold text-3xl md:text-3xl lg:text-4xl  leading-[1.15]"
+            className="font-ancizar text-[#1a1a1a] font-bold text-3xl md:text-3xl lg:text-4xl leading-[1.15]"
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
@@ -827,7 +827,7 @@ export default function uiux() {
 
           {/* Heading */}
           <motion.h2
-            className="font-primary font-bold text-3xl md:text-3xl lg:text-4xl leading-[1.15]"
+            className="font-ancizar font-bold text-3xl md:text-3xl lg:text-4xl leading-[1.15]"
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
@@ -1016,13 +1016,13 @@ export default function uiux() {
 
           {/* Heading + subtitle */}
           <motion.div
-            className="flex flex-col gap-y-4 max-w-[680px]"
+            className="flex flex-col gap-y-4 max-w-full"
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-primary text-[#1a1a1a] font-bold text-3xl md:text-4xl lg:text-[2.75rem] xl:text-[3rem] leading-[1.15]">
+            <h2 className="font-ancizar text-[#1a1a1a] font-bold text-3xl md:text-4xl lg:text-[2.75rem] xl:text-[3rem] leading-[1.15]">
               <GsapSplitText type="words">
                 12 weeks. One project.{" "}
                 <span className="text-[#F26622]">Real depth.</span>
@@ -1112,13 +1112,13 @@ export default function uiux() {
 
                 {/* Content */}
                 <div className="pb-10 last:pb-0 flex flex-col gap-y-2">
-                  <span className="font-secondary text-[11px] tracking-[0.18em] text-[#F26622] uppercase font-semibold">
+                  <span className="font-secondary text-[12px] tracking-[0.18em] text-[#F26622] uppercase font-semibold">
                     {week}
                   </span>
-                  <h3 className="font-albert-sans text-[#1a1a1a] font-bold text-lg md:text-xl leading-snug">
+                  <h3 className="font-ancizar text-[#1a1a1a] font-bold text-lg md:text-xl leading-snug">
                     {title}
                   </h3>
-                  <p className="font-secondary text-[#666] text-sm md:text-[14.5px] leading-relaxed">
+                  <p className="font-secondary text-[#666] text-sm md:text-[14.5px] leading-relaxed mb-4">
                     {body}
                   </p>
                 </div>
@@ -1131,7 +1131,7 @@ export default function uiux() {
       {/* Who You'll Learn From */}
       <section className="honest-answer-bg overflow-hidden">
         {/* Header */}
-        <div className="max-w-[1240px] mx-auto px-5 md:px-8 xl:px-0 pt-16 md:pt-24 xl:pt-32 pb-14 md:pb-20 flex flex-col gap-y-6 max-w-[640px]">
+        <div className="max-w-[1240px] mx-auto px-5 md:px-8 xl:px-0 pt-16 md:pt-24 xl:pt-32 pb-14 md:pb-2 flex flex-col gap-y-6 max-w-[640px]">
           <motion.div
             className="flex items-center gap-3"
             initial={{ opacity: 0, y: 18 }}
@@ -1144,7 +1144,7 @@ export default function uiux() {
               Who You&rsquo;ll Learn From
             </span>
           </motion.div>
-          <h2 className="font-albert-sans font-bold text-3xl md:text-4xl lg:text-[2.75rem] xl:text-[3rem] leading-[1.15]">
+          <h2 className="font-ancizar font-bold text-3xl md:text-4xl lg:text-[2.75rem] xl:text-[3rem] leading-[1.15]">
             <GsapSplitText type="words" stagger={0.1} duration={0.65}>
               <span className="text-white">Learn from practitioners, </span>
               <span className="text-[#F26622]">not lecturers.</span>
@@ -1196,8 +1196,8 @@ export default function uiux() {
             svgSize: "lg" as const,
           },
         ].map(
-          ({ name, role, bio, image, decoration, flip, svgSide, svgSize }) => (
-            <div key={name} className="w-full border-t honest-divider">
+          ({ name, role, bio, image, decoration, flip, svgSide, svgSize }, idx) => (
+            <div key={name} className={`w-full${idx > 0 ? " border-t honest-divider" : ""}`}>
               <div className="max-w-[1240px] mx-auto px-5 md:px-8 xl:px-0 grid grid-cols-1 md:grid-cols-2 items-end">
                 {/* Text side */}
                 <motion.div
@@ -1210,7 +1210,7 @@ export default function uiux() {
                   viewport={{ once: true }}
                 >
                   <div>
-                    <h3 className="font-albert-sans text-[#F26622] font-bold text-2xl md:text-[1.85rem] leading-tight">
+                    <h3 className="font-ancizar text-[#F26622] font-bold text-2xl md:text-[1.85rem] leading-tight">
                       {name}
                     </h3>
                     <p className="font-secondary text-white/40 text-[11px] tracking-[0.18em] uppercase mt-1">
@@ -1224,7 +1224,7 @@ export default function uiux() {
 
                 {/* Image side — fixed height, photos absolutely grounded to bottom */}
                 <motion.div
-                  className={`relative h-115 md:h-140${
+                  className={`relative h-140 md:h-180${
                     flip ? " order-2 md:order-1" : ""
                   }`}
                   initial={{ opacity: 0, x: flip ? -40 : 40 }}
@@ -1237,7 +1237,7 @@ export default function uiux() {
                     src={decoration}
                     className={`absolute bottom-0 z-0 ${
                       svgSide === "left" ? "left-0" : "right-0"
-                    } ${svgSize === "lg" ? "w-56 md:w-100" : "w-44 md:w-60"}`}
+                    } ${svgSize === "lg" ? "w-64 md:w-112" : "w-52 md:w-72"}`}
                     imageClassName="w-full h-auto"
                     width={300}
                     height={300}
@@ -1248,9 +1248,9 @@ export default function uiux() {
                   <Image
                     src={image}
                     alt={name}
-                    width={400}
-                    height={540}
-                    className={`absolute bottom-0 z-10 max-h-115 md:max-h-140 w-auto object-contain object-bottom ${
+                    width={520}
+                    height={700}
+                    className={`absolute bottom-0 z-10 max-h-140 md:max-h-120 w-full md:max-w-xl object-contain object-bottom ${
                       flip ? "left-0" : "right-0"
                     }`}
                   />
@@ -1281,7 +1281,7 @@ export default function uiux() {
 
           {/* Heading */}
           <motion.h2
-            className="font-primary font-bold text-3xl md:text-4xl  text-center text-[#1C1B2E] leading-tight -mt-4"
+            className="font-ancizar font-bold text-3xl md:text-4xl text-center text-[#1C1B2E] leading-tight -mt-4"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
@@ -1333,7 +1333,7 @@ export default function uiux() {
                   }}
                   viewport={{ once: true }}
                 >
-                  <h3 className="font-primary font-semibold text-[#1C1B2E] text-lg md:text-xl leading-snug whitespace-pre-line">
+                  <h3 className="font-ancizar font-semibold text-[#1C1B2E] text-lg md:text-xl leading-snug whitespace-pre-line">
                     {title}
                   </h3>
                   <p className="font-secondary text-[#1C1B2E]/55 text-sm md:text-[15px] leading-relaxed">
@@ -1382,7 +1382,7 @@ export default function uiux() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-primary font-bold text-white leading-[1.5] text-3xl md:text-5xl lg:text-[64px]"
+            className="font-ancizar font-bold text-white leading-[1.5] text-3xl md:text-5xl lg:text-[64px]"
           >
             The next generation of apps will be designed by{" "}
             <span className="text-[#F26622]">people like you.</span>
