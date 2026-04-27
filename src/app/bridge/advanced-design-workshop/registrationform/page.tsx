@@ -1,6 +1,3 @@
-
-
-
 import HeroSection from "@/components/HeroSection";
 import FormWrapper from "@/components/FormWrapper";
 

@@ -30,20 +30,21 @@ export function Instructors() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Only register ScrollTrigger on the client side
     if (typeof window !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
 
       const ctx = gsap.context(() => {
+        const isMobile = window.innerWidth < 768;
+
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 75%", // Trigger when top of section hits 75% viewport depth
+            start: "top 75%",
             toggleActions: "play none none none",
           },
         });
 
-        // 1. Reveal Title
+        // Title animation
         tl.from(".timeline-title", {
           y: 40,
           opacity: 0,
@@ -51,15 +52,19 @@ export function Instructors() {
           ease: "power3.out",
         });
 
-        // 2. Animate the horizontal dashed line expanding from left to right
+        // Line animation (horizontal vs vertical)
         tl.fromTo(
           ".timeline-line",
-          { scaleX: 0, transformOrigin: "left center" },
-          { scaleX: 1, duration: 1.2, ease: "power2.inOut" },
+          isMobile
+            ? { scaleY: 0, transformOrigin: "top center" }
+            : { scaleX: 0, transformOrigin: "left center" },
+          isMobile
+            ? { scaleY: 1, duration: 1.2, ease: "power2.inOut" }
+            : { scaleX: 1, duration: 1.2, ease: "power2.inOut" },
           "-=0.4",
         );
 
-        // 3. Pop in the nodes sequentially
+        // Nodes
         tl.from(
           ".node-circle",
           {
@@ -72,7 +77,7 @@ export function Instructors() {
           "-=1.0",
         );
 
-        // 4. Fade in the text elements fading up
+        // Text
         tl.from(
           ".timeline-text-content",
           {
@@ -93,7 +98,7 @@ export function Instructors() {
   return (
     <section
       ref={containerRef}
-      className="py-24  bg-[#F6F8F9] min-h-[60vh] flex flex-col items-center justify-center overflow-hidden"
+      className="py-24 bg-[#F6F8F9] min-h-[60vh] flex flex-col items-center justify-center overflow-hidden"
     >
       <div className="container mx-auto max-w-[1400px]">
         {/* Title */}
@@ -103,23 +108,55 @@ export function Instructors() {
 
         {/* Timeline Container */}
         <div className="relative">
-          {/* Dashed background line connecting nodes (Desktop Only) */}
-          <div className="hidden md:block absolute top-[14px] left-[10%] right-[10%] h-0 border-t-[2.5px] border-dashed border-[#0A2540] z-0 timeline-line"></div>
+          {/* Responsive Line */}
+          <div
+            className="
+              absolute z-0 timeline-line border-[#0A2540]
+
+              /* Desktop (horizontal) */
+              md:top-[14px] md:left-[10%] md:right-[10%] md:h-0
+              md:border-t-[2.5px] md:border-dashed
+
+              /* Mobile (vertical) */
+              top-0 bottom-0 left-1/2 -translate-x-1/2 w-0
+              border-l-[2.5px] border-dashed
+            "
+          ></div>
 
           {/* Timeline Items */}
           <div className="flex flex-col md:flex-row justify-between relative z-10 gap-16 md:gap-0">
             {timelineData.map((item, idx) => (
               <div
                 key={idx}
-                className="flex-1 flex flex-col items-center text-center px-4"
+                className="flex-1 flex flex-col items-center text-center px-4 relative"
               >
-                {/* Visual Node */}
-                <div className="w-[30px] h-[30px] rounded-full border-[2.5px] border-[#0A2540] bg-[#F6F8F9] flex items-center justify-center mb-8 md:mb-10 relative z-10 node-circle">
+                {/* Node */}
+                <div
+                  className="
+                    w-[30px] h-[30px] rounded-full border-[2.5px] border-[#0A2540]
+                    bg-[#F6F8F9] flex items-center justify-center
+                    mb-8 md:mb-10 relative z-10 node-circle
+
+                    /* Mobile center alignment */
+                    absolute left-1/2 -translate-x-1/2 md:static
+                  "
+                >
                   <div className="w-[12px] h-[12px] rounded-full bg-[#0A2540]"></div>
                 </div>
 
-                {/* Text Content */}
-                <div className="timeline-text-content flex flex-col items-center">
+                {/* Text */}
+                <div
+                  className={`
+                    timeline-text-content flex flex-col items-center
+                    mt-10 md:mt-0
+
+                    ${
+                      idx % 2 === 0
+                        ? "md:items-start md:text-left"
+                        : "md:items-end md:text-right"
+                    }
+                  `}
+                >
                   <p className="text-[17px] text-[#4A627B] font-secondary mb-5 tracking-wide">
                     {item.week}
                   </p>
