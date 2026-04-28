@@ -117,10 +117,8 @@ const Header = () => {
           name: "Bridge",
           path: "/bridge",
           sublinks: [
-            {
-              name: "Advanced Design Workshop",
-              path: "/bridge/advanced-design-workshop",
-            },
+            { name: "UI-UX", path: "/bridge/ui-ux" },
+
             { name: "Digital Marketing", path: "/bridge/digital-marketing" },
             { name: "AI", path: "/bridge/ai" },
             {
@@ -128,7 +126,10 @@ const Header = () => {
               path: "/bridge/sustainability",
             },
             { name: "3D Product Design", path: "/bridge/3d-design" },
-            { name: "UI-UX", path: "/bridge/ui-ux" },
+            {
+              name: "Advanced Design Workshop",
+              path: "/bridge/advanced-design-workshop",
+            },
           ],
         },
         { name: "Yuvabe Studios", path: "https://yuvabestudios.com/" },
