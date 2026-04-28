@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import FaqItem from "./FaqItem";
+import HighlightHover from "./HighlightHover";
 
 const faqs = [
   {
@@ -69,7 +70,9 @@ export default function FaqSection() {
           viewport={{ once: true }}
         >
           Got questions?{" "}
-          <span className="text-[#F26622]">We&apos;ve got answers.</span>
+          <HighlightHover>
+            <span className="text-[#F26622]">We&apos;ve got answers.</span>
+          </HighlightHover>
         </motion.h2>
 
         {/* FAQ Items */}
