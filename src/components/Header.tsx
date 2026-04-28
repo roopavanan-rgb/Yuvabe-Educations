@@ -118,9 +118,8 @@ const Header = () => {
           path: "/bridge",
           sublinks: [
             { name: "UI-UX", path: "/bridge/ui-ux" },
-
-            { name: "Digital Marketing", path: "/bridge/digital-marketing" },
             { name: "AI", path: "/bridge/ai" },
+            { name: "Digital Marketing", path: "/bridge/digital-marketing" },
             {
               name: "Corporate Sustainability",
               path: "/bridge/sustainability",
