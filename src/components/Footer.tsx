@@ -185,7 +185,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/get-involved/support-us"
+                  href="/get-involved/donate"
                   className="font-regular font-primary hover:underline"
                 >
                   Support Us
@@ -193,10 +193,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/get-involved/talk-to-us"
+                  href="/get-involved/connect-with-us"
                   className="font-regular font-primary hover:underline"
                 >
-                  Talk to Us
+                  Connect with Us
                 </Link>
               </li>
             </ul>
