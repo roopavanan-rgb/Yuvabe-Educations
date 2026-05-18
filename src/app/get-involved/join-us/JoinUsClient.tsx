@@ -41,9 +41,9 @@ export default function Join_Us() {
                 <br />
                 <br />
                 Based in Auroville, an experimental, international community in
-                southern India, we’re on a mission to blend purpose, innovation,
-                and impact. Join us in shaping a world where work npmisn’t just
-                a job, it’s a journey.
+                southern India, we&apos;re on a mission to blend purpose, innovation,
+                and impact. Join us in shaping a world where work isn&apos;t just
+                a job, it&apos;s a journey.
               </p>
             </div>
             {/* Right */}

@@ -219,16 +219,14 @@ export default function Steam() {
                   &nbsp;and lack of application-based curricula in subjects like
                   science and mathematics has been known to&nbsp;
                   <span className="text-[#592AC7] font-bold">
-                    stifle creativity
-                  </span>
-                  and confidence in students.
+                    stifle creativity{''}
+                  </span> and confidence in students.
                 </p>
                 <p className="font-secondary font-medium text-black text-[18px] leading-[30px] text-center lg:text-left">
                   This has further led to a lack of inspiration and&nbsp;
                   <span className="text-[#592AC7] font-bold">
                     lack of skills in the youth
-                  </span>
-                  to think out of the box and turn their ideas into
+                  </span> to think out of the box and turn their ideas into
                   reality.&nbsp;
                   <span className="text-[#592AC7] font-bold">
                     Growing underemployment
@@ -445,14 +443,14 @@ export default function Steam() {
                   },
                   {
                     title: "Auroville Program",
-                    href: "/auroville-program",
+                    href: "#",
                     imgSrc: "/images/bridge/matrimandir-oultine.svg",
                     borderColor: "#F8A91E",
                     bgColor: "#FEF6E8",
                   },
                   {
                     title: "Visitor Program",
-                    href: "/visitor-program",
+                    href: "#",
                     imgSrc: "/images/bridge/laptop.svg",
                     borderColor: "#91C644",
                     bgColor: "#F4F9EC",

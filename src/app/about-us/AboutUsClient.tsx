@@ -79,7 +79,7 @@ const AboutUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Who we are ?
+            Who We Are ?
           </motion.h1>
 
           <motion.p
@@ -443,7 +443,7 @@ const AboutUs = () => {
                 <h3 className="text-[36px] font-semibold font-primary">
                   Evolve{" "}
                   <span className="font-light italic text-xl md:text-2xl">
-                    Continously
+                    Continuously
                   </span>
                 </h3>
                 <p className="text-[#000000] font-secondary font-normal text-[18px] mb-6">

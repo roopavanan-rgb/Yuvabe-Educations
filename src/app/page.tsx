@@ -51,7 +51,7 @@ const settings = {
 const courses = [
   {
     title: "AI",
-    status: "Up Coming",
+    status: "Upcoming",
     image: "/images/home/ai.svg",
     description:
       "Our AI First Full Stack Program is designed to provide hands-on experience. You won’t just learn the theory—you’ll apply it to real-world problems, gaining the kind of practical skills that make you stand out to employers.",
@@ -63,7 +63,7 @@ const courses = [
   },
   {
     title: "Sustainability",
-    status: "Up Coming",
+    status: "Upcoming",
     image: "/images/home/sus.svg",
     description:
       "Unlock a comprehensive understanding of sustainability with our 3- month, in-person ‘Corporate Sustainability’ course at Auroville, Tamil Nadu.",

@@ -78,7 +78,7 @@ export default function Donate() {
   return (
     <main className="overflow-x-hidden">
       {/* Hero Section */}
-       <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
+      <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white  overflow-hidden">
         {/* Left Side - Centered Text  */}
         <motion.div
           className="flex flex-col lg:justify-start lg:items-start lg:text-left justify-center items-center text-center lg:pl-20 pl-0 "
@@ -87,7 +87,7 @@ export default function Donate() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-primary text-[#592Ac7] leading-snug">
-            Donate
+            Donate to <br/> Yuvabe Education
           </h1>
           <p className="mt-4 text-[#000000] font-secondary text-base sm:text-lg max-w-md sm:max-w-lg lg:max-w-xl">
             You have the power to fuel a program that’s more than just
@@ -104,7 +104,7 @@ export default function Donate() {
           transition={{ duration: 0.8 }}
         >
           <div className="relative w-full ">
-             {/* Floating Shape  */}
+            {/* Floating Shape  */}
             <motion.div
               className="absolute top-12 right-10 w-10 h-10 md:w-20 md:h-20 bg-[#33BED4]  z-10"
               animate={{ y: [0, -10, 0] }}

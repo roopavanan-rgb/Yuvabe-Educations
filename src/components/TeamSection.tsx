@@ -5,7 +5,7 @@ import Image from "next/image";
 const teamMembers = [
   {
     id: 1,
-    name: "Shalini kumar",
+    name: "Shalini Kumar",
     role: "Sustainability Lead Facilitator",
     image: "/images/team/shalini.jpg",
   },

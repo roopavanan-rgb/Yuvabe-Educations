@@ -380,7 +380,7 @@ export default function Bridge() {
                   <li className="mt-3">Corporate Sustainability</li>
                 </ul>
                 <p className="font-secondary font-medium text-black text-[18px] md:text-[18px] leading-7 md:leading-7.5  text-center lg:text-left mt-3 lg:w-[82%]">
-                  Each track is led by mentors with over 10+ years of real-world
+                  Each track is led by mentors with 10+ years of real-world
                   experience, offering hands-on learning, industry insights, and
                   guidance to help young adults confidently step into emerging
                   careers.

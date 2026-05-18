@@ -614,8 +614,8 @@ export default function Home() {
             </p>
             <p>
               <strong>Contact:</strong> Email at{" "}
-              <a href="mailto:bridge@yuabe.com" className="text-[#A1D06E]">
-                bridge@yuabe.com
+              <a href="mailto:bridge@yuvabe.com" className="text-[#A1D06E]">
+                bridge@yuvabe.com
               </a>{" "}
               or call{" "}
               <a href="tel:+919677604467" className="text-[#A1D06E]">
@@ -694,16 +694,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Seats Info */}
-        <motion.p
-          className="mt-8 text-lg font-semibold text-black"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 1.2 }}
-        >
-          Only <span className="text-[#79A441]">15 Seats</span> left, Enroll now
-        </motion.p>
-
+       
         {/* Apply Now Button */}
         <Link href={"https://forms.gle/kXTTjSCYvBMRNa7z9"} target="_blank">
           <motion.button

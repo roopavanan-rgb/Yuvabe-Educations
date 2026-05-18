@@ -17,13 +17,19 @@ const FooterSus = () => {
       <div className="mt-6">
         <h3 className="text-lg font-semibold">Follow us on Social Media</h3>
         <div className="flex justify-center gap-6 mt-3 text-[#90c645] text-2xl">
-          <a href="#" aria-label="Twitter">
+          <a href="https://x.com/yuvabeauroville" aria-label="Twitter">
             <FaXTwitter />
           </a>
-          <a href="#" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/yuvabe.education/"
+            aria-label="Instagram"
+          >
             <FaInstagram />
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/company/yuvabeeducation/"
+            aria-label="LinkedIn"
+          >
             <FaLinkedin />
           </a>
         </div>
@@ -32,7 +38,12 @@ const FooterSus = () => {
       {/* Logos */}
       <div className="flex justify-center gap-6 mt-8">
         <Image src="/images/yb.png" alt="Yuvabe Logo" width={100} height={40} />
-        <Image src="/images/ye.png" alt="Yuvabe Education" width={120} height={40} />
+        <Image
+          src="/images/ye.png"
+          alt="Yuvabe Education"
+          width={120}
+          height={40}
+        />
       </div>
     </footer>
   );

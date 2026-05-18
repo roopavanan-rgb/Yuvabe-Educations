@@ -84,11 +84,6 @@ const faqs = [
     answer: "Top 5 candidates get paid 3-6 months internship with Yuvabe.",
   },
   {
-    question: "What qualifications or experience do the instructors have?",
-    answer:
-      "The instructors have backgrounds in environmental engineering and management, sustainability, climate change, and carbon markets.",
-  },
-  {
     question: "Will I gain access to a network of professionals or alumni?",
     answer: "You will be part of the Yuvabe Alumni group.",
   },
