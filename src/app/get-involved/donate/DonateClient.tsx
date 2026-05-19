@@ -87,7 +87,7 @@ export default function Donate() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-primary text-[#592Ac7] leading-snug">
-            Donate to <br/> Yuvabe Education
+            Donate to <br /> Yuvabe Education
           </h1>
           <p className="mt-4 text-[#000000] font-secondary text-base sm:text-lg max-w-md sm:max-w-lg lg:max-w-xl">
             You have the power to fuel a program that’s more than just
@@ -218,10 +218,13 @@ export default function Donate() {
             </Link>
           ))}
         </div>
-        <p className="mt-8 md:mt-12 lg:mt-24 text-[#000000] font-secondary text-base sm:text-lg  m-auto lg:max-w-6xl px-4 md:px-8 lg:px-12">
-          Yuvabe Education is a registered trust under the Societies
-          Registration Act 1950 (Rule-),The Foreign Contribution Regulation Act
-          (FCRA) 2001,12A and 80G section of Income Tax Act,1961.
+        <p className="mt-8 md:mt-12 lg:mt-24 text-[#000000] font-secondary text-base sm:text-lg  m-auto lg:max-w-5xl px-4 md:px-8 lg:px-12">
+          Yuvabe is a unit of Swagatam Trust, operating under the Auroville
+          Foundation. Donations and contributions are received through the
+          Auroville Foundation, which holds FCRA registration under the Foreign
+          Contribution (Regulation) Act, 2010, and registrations/approvals under
+          Sections 12A/12AB and 80G of the Income-tax Act, 1961, subject to
+          applicable validity and compliance requirements.
           <br />
           <br />
           Yuvabe Education also has CSR1 Certification to accept CSR funds from
