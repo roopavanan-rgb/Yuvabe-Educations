@@ -21,6 +21,33 @@ export default function JDS() {
                 {/* Job Listings */}
                 <div className="flex flex-col gap-y-8 md:gap-y-16 lg:gap-y-32">
                   {/* Individual Listings */}
+                  {/* Steam Co-ordinator */}
+                  <motion.div
+                    className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                  >
+                    <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
+                      STEAM Co-ordinator |<span> 1-2 years exp</span>
+                    </h3>
+                    <p className="font-secondary font-normal text-black text-[18px] leading-[30px]  text-center line-clamp-2">
+                      Looking for a STEAM (Science, Technology, Engineering, Art
+                      and Math) Program Coordinator to join the expanding team
+                      at Yuvabe Education, dedicated to providing STEAM Programs
+                      to schools in Auroville and the Bio-region.
+                    </p>
+                    {/* Read More Button */}
+                    <Link href="join-us/steam-co-ordinator">
+                      <div className="bg-[#592AC7] py-[18px] px-8 w-[142px] rounded-[15px] mt-2">
+                        <p className="font-primary font-semibold text-white text-[14px] leading-[150%]">
+                          Read More
+                        </p>
+                      </div>
+                    </Link>
+                  </motion.div>
+
                   {/* Lead Facilitator – 3D Design & Printing */}
                   <motion.div
                     className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
@@ -92,33 +119,7 @@ export default function JDS() {
                     </Link>
                   </motion.div>
 
-                  {/* Job 1 */}
-                  <motion.div
-                    className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
-                    initial={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                  >
-                    <h3 className="text-black text-2xl md:text-[40px] leading-[120%] font-semibold text-center font-primary">
-                      STEAM Co-ordinator |<span> 1-2 years exp</span>
-                    </h3>
-                    <p className="font-secondary font-normal text-black text-[18px] leading-[30px]  text-center line-clamp-2">
-                      Looking for a STEAM (Science, Technology, Engineering, Art
-                      and Math) Program Coordinator to join the expanding team
-                      at Yuvabe Education, dedicated to providing STEAM Programs
-                      to schools in Auroville and the Bio-region.
-                    </p>
-                    {/* Read More Button */}
-                    <Link href="join-us/steam-co-ordinator">
-                      <div className="bg-[#592AC7] py-[18px] px-8 w-[142px] rounded-[15px] mt-2">
-                        <p className="font-primary font-semibold text-white text-[14px] leading-[150%]">
-                          Read More
-                        </p>
-                      </div>
-                    </Link>
-                  </motion.div>
-                  {/* Job 5 */}
+                  {/* Lead UI/UX Design Educator */}
                   <motion.div
                     className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
                     initial={{ y: 50, opacity: 0 }}
@@ -144,7 +145,7 @@ export default function JDS() {
                       </div>
                     </Link>
                   </motion.div>
-                  {/* Job 4 */}
+                  {/* Lead Sustainability Educator */}
                   <motion.div
                     className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
                     initial={{ y: 50, opacity: 0 }}
@@ -175,7 +176,7 @@ export default function JDS() {
                       </div>
                     </Link>
                   </motion.div>
-                  {/* Job 3 */}
+                  {/* Sustainability Analyst */}
                   <motion.div
                     className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
                     initial={{ y: 50, opacity: 0 }}
@@ -204,7 +205,7 @@ export default function JDS() {
                       </div>
                     </Link>
                   </motion.div>
-                  {/* Job 2 */}
+                  {/* Marketing Analyst*/}
                   <motion.div
                     className="flex flex-col py-6 px-5 md:py-16 md:px-[74px] max-w-[1028px] bg-white rounded-[50px] gap-y-6 items-center z-10"
                     initial={{ y: 50, opacity: 0 }}
