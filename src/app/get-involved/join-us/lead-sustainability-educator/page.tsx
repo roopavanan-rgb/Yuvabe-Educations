@@ -179,7 +179,7 @@ export default function lead_sustainability_educator() {
               <h2>What We Offer</h2>
 
               <ul>
-                <li>Competitive Salary [Stipend]</li>
+                <li>Competitive Salary</li>
                 <li>eBike&nbsp;</li>
                 <li>Free lunch&nbsp;</li>
                 <li>Access to a world-class mentor network</li>

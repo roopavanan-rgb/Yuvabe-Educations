@@ -105,7 +105,7 @@ export default function STEAM_Co_ordinator() {
               <h2>What we offer</h2>
 
               <ul>
-                <li>Competitive Salary [Stipend]</li>
+                <li>Competitive Salary</li>
                 <li>eBike&nbsp;</li>
                 <li>Free lunch&nbsp;</li>
                 <li>Access to world-class mentor network&nbsp;</li>
