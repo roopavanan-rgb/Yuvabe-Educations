@@ -1301,7 +1301,7 @@ export default function uiux() {
             href="https://forms.gle/WPxZN8R8sgTA2cWB9"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#F26622] text-white font-primary font-semibold text-base px-9 py-4 rounded-full hover:bg-[#d9551a] transition-colors"
+            className="bg-[#F26622] text-white font-primary font-semibold text-base px-9 py-4 rounded-full hover:bg-[#d9551a] transition-colors cursor-pointer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
@@ -1357,7 +1357,7 @@ export default function uiux() {
             <Link
               href="https://forms.gle/WPxZN8R8sgTA2cWB9"
               target="_blank"
-              className="bg-[#F26622] text-white px-7 py-3 rounded-full font-semibold hover:bg-[#d9551c] transition text-center"
+              className="bg-[#F26622] text-white px-7 py-3 rounded-full font-semibold hover:bg-[#d9551c] transition text-center cursor-pointer"
             >
               Apply Now →
             </Link>
