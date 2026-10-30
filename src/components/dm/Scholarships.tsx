@@ -5,7 +5,7 @@ const courseFeesAndScholarships = [
   {
     title: "Course Fee",
     points: [
-      "Course Fee: ₹15,000 /-",
+      "Course Fee: Free",
       "Early Bird Discount, Easy EMI & scholarships available.",
     ],
   },
