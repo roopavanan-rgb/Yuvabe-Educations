@@ -151,10 +151,10 @@ export default function Hero() {
             className="font-secondary text-[12px] md:text-[13px] tracking-widest text-[#5B4A25] font-semibold uppercase mt-1"
           >
             Lunch Provided &middot; Limited to 20 Seats &middot; Starts{" "}
-            <span className="text-[#B8790A] font-bold">10 October 2026</span>{" "}
-            <br />
+            <span className="text-[#B8790A] font-bold">This November 2026</span>{" "}
+            {/* <br />
             &middot; Last Date to Apply:{" "}
-            <span className="text-[#B8790A] font-bold">5 October 2026</span>
+            <span className="text-[#B8790A] font-bold">5 October 2026</span> */}
           </motion.p>
         </motion.div>
 

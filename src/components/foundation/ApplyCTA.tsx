@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 
 const info = [
-  { icon: CalendarDays, label: "Starts 10 October 2026", isDate: true },
-  { icon: CalendarDays, label: "Last Date to Apply 5 October 2026", isDate: true },
+  { icon: CalendarDays, label: "This November 2026", isDate: true },
+  // { icon: CalendarDays, label: "Last Date to Apply 5 October 2026", isDate: true },
   { icon: MapPin, label: "SaraCon, Auroville", isDate: false },
   { icon: Sparkles, label: "Free Tuition", isDate: false },
   {
