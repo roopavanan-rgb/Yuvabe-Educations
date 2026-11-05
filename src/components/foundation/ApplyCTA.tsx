@@ -95,7 +95,7 @@ export default function ApplyCTA() {
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <Link href="https://forms.gle/viL33Gq1kCyfNtaN6" target="_blank">
+          <Link href="https://forms.gle/UQ3FRbqpk6Xqby5u9" target="_blank">
             <motion.span
               className="inline-flex items-center gap-2 font-secondary text-sm md:text-base text-[#1C1710] font-semibold px-8 py-3.5 rounded-full cursor-pointer bg-[#F2B705] shadow-[0_8px_24px_rgba(242,183,5,0.25)]"
               whileHover={{ scale: 1.05, backgroundColor: "#E2711D" }}

@@ -132,7 +132,7 @@ export default function Hero() {
                 View Curriculum
               </motion.span>
             </Link>
-            <Link href="https://forms.gle/viL33Gq1kCyfNtaN6" target="_blank">
+            <Link href="https://forms.gle/UQ3FRbqpk6Xqby5u9" target="_blank">
               <motion.span
                 className="inline-flex items-center gap-2 font-secondary text-sm md:text-base text-[#1C1710] font-semibold px-7 py-3 rounded-full cursor-pointer bg-[#F2B705] shadow-[0_8px_24px_rgba(217,164,4,0.35)]"
                 whileHover={{ scale: 1.05, backgroundColor: "#E2711D" }}
