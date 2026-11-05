@@ -7,11 +7,8 @@ const teamMembers = [
   { name: "Sriman", role: "Mentor", image: "/dm/images/sriman.png" },
   { name: "Priya", role: "Mentor & Lead Facilitator", image: "/dm/images/priya.png" },
   { name: "Logasundari", role: "Facilitator", image: "/dm/images/logs.png" },
-  { name: "Anjali", role: "Facilitator", image: "/dm/images/anjali.png" },
   { name: "Poovendiran", role: "Facilitator", image: "/dm/images/poove.png" },
-  { name: "Vigneshwaran", role: "Facilitator", image: "/dm/images/vicky.png" },
   { name: "Sagar", role: "Facilitator", image: "/dm/images/sagar.png" },
-  { name: "Vanchinath", role: "Facilitator", image: "/dm/images/vanchi.png" },
   { name: "Ashwini Bakshi", role: "Inner Growth Facilitator", image: "/dm/images/mentor.png" },
 ];
 
@@ -22,13 +19,13 @@ export function OurTeam() {
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-raleway font-semibold text-center text-[#FFCA2D] mb-4">
         Our Team
       </h2>
-      <p className="text-center text-[#FFFFFF] font-sans font-medium text-sm sm:text-base max-w-3xl mx-auto mb-10">
+      <p data-gsap="lines" className="text-center text-[#FFFFFF] font-sans font-medium text-sm sm:text-base max-w-3xl mx-auto mb-10">
         Our team of mentors includes seasoned digital marketers, growth strategists, and industry experts 
         who have worked with global brands and startups.
       </p>
 
       {/* Responsive Team Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 sm:gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 l gap-5 sm:gap-6 max-w-4xl mx-auto">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}

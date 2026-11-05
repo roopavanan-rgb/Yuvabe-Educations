@@ -1,97 +1,206 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  BadgeIndianRupee,
+  Briefcase,
+  FolderOpen,
+  GraduationCap,
+  Mic,
+  Sparkles,
+  Sprout,
+  Sun,
+  Trees,
+  Users,
+  Workflow,
+  type LucideIcon,
+} from "lucide-react";
 
-const benefits = [
+type Benefit = {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  // Grid placement on large screens (4-column bento grid)
+  span?: string;
+  variant?: "featured" | "accent";
+};
+
+const benefits: Benefit[] = [
   {
-    number: "01",
-    title: "Hands-On Learning",
+    title: "Completely free",
     description:
-      "Work on live projects, case studies, and interactive assignments.",
+      "You only pay a refundable deposit, and you get it back when you finish.",
+    icon: BadgeIndianRupee,
+    span: "sm:col-span-2 lg:row-span-2",
+    variant: "featured",
   },
   {
-    number: "02",
-    title: "Expert-Led Training",
+    title: "AI in every module",
     description:
-      "Learn from top marketing professionals with real-world experience.",
+      "You won’t get a single class on AI tools. You’ll use them throughout, for research, writing, design, video, ads, automation and reporting.",
+    icon: Sparkles,
+    span: "sm:col-span-2",
+    variant: "accent",
   },
   {
-    number: "03",
-    title: "Comprehensive Curriculum",
+    title: "Project-based learning",
     description:
-      "Cover the entire digital marketing landscape in 12 structured weeks.",
+      "You pick one real brand in week one and build on it through every module.",
+    icon: Briefcase,
   },
   {
-    number: "04",
-    title: "Career-Focused Approach",
+    title: "Half-day format",
     description:
-      "Develop job-ready skills with mentorship and industry exposure.",
+      "Mornings only, so you can study, work or run your business alongside.",
+    icon: Sun,
   },
   {
-    number: "05",
-    title: "In-Person Classroom Learning",
+    title: "Learn from practitioners",
     description:
-      "Benefit from engaging discussions, peer collaboration, and hands-on workshops.",
+      "Sessions are led by people who do this work every day at Yuvabe Studios.",
+    icon: Users,
   },
   {
-    number: "06",
-    title: "Certification & Placement Support",
+    title: "Vibe marketing and automation",
     description:
-      "Receive a Yuvabe certificate and access to career opportunities.",
+      "Learn to build working marketing systems by describing what you want in plain language.",
+    icon: Workflow,
+  },
+  {
+    title: "A real portfolio",
+    description:
+      "You leave with a brand kit, a live landing page, campaigns, a working automation and a capstone case study.",
+    icon: FolderOpen,
+  },
+  {
+    title: "Yuvabe’s Evolve Program",
+    description:
+      "Build communication, teamwork and confidence alongside your technical skills.",
+    icon: Sprout,
+  },
+  {
+    title: "English and presentation skills",
+    description: "Practise speaking, writing and presenting your work.",
+    icon: Mic,
+  },
+  {
+    title: "Career support",
+    description:
+      "Get help with your resume, portfolio and interviews, and access to job opportunities through our network.",
+    icon: GraduationCap,
+  },
+  {
+    title: "Learning in Auroville",
+    description:
+      "Study in a community built around sustainability and experimentation.",
+    icon: Trees,
+    span: "sm:col-span-2",
   },
 ];
 
+const variantStyles = {
+  featured: {
+    card: "bg-[#F8C12C] border-[#F8C12C] text-[#140F20]",
+    iconWrap: "bg-[#140F20] text-[#FFCA2D] w-16 h-16 rounded-2xl",
+    number: "text-[#140F20]",
+    watermark: "text-[#140F20]/10",
+    title: "text-3xl sm:text-4xl text-[#140F20]",
+    description: "text-base sm:text-lg text-[#140F20]/80",
+  },
+  accent: {
+    card: "bg-[#2A2050] border-[#3A2F66] text-white",
+    iconWrap: "bg-[#FFCA2D1A] text-[#FFCA2D] w-12 h-12 rounded-xl",
+    number: "text-[#FFCA2D]",
+    watermark: "text-white/5",
+    title: "text-xl text-white",
+    description: "text-sm sm:text-base text-white/80",
+  },
+  default: {
+    card: "bg-[#1C1730] border-[#2A2340] text-white",
+    iconWrap: "bg-[#FFCA2D1A] text-[#FFCA2D] w-12 h-12 rounded-xl",
+    number: "text-[#FFCA2D]",
+    watermark: "text-white/5",
+    title: "text-xl text-white",
+    description: "text-sm sm:text-base text-white/80",
+  },
+};
+
 export function WhyChoose() {
   return (
-    <section className="relative w-full py-16 bg-[#140F20] text-white overflow-hidden">
-      <h2 className="text-3xl font-bold text-center text-[#FFCA2D] mb-20">
-        Why Choose This Course?
+    <section className="relative w-full py-16 px-4 sm:px-6 bg-[#140F20] text-white overflow-hidden">
+      <div className="absolute right-0 bottom-0 blur-3xl w-[420px] h-[420px] rounded-full bg-[#976346] opacity-10 z-0"></div>
+
+      <h2 className="relative z-10 text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#FFCA2D] mb-12 sm:mb-16">
+        Why Choose the Bridge Digital Marketing Program?
       </h2>
 
-      {/* Timeline container */}
-      <div className="relative max-w-6xl mx-auto px-4">
-        {/* Vertical line (visible only on md and up) */}
-        <div className="hidden md:block absolute left-1/2 top-0 w-0.5 bg-[#E8AC35] h-full transform -translate-x-1/2 z-0" />
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+        {benefits.map((item, index) => {
+          const styles = variantStyles[item.variant ?? "default"];
+          const number = String(index + 1).padStart(2, "0");
+          const Icon = item.icon;
 
-        {/* Items */}
-        <div className="flex flex-col gap-16 relative z-10">
-          <div className="absolute right-10 -bottom-10 blur-3xl w-90 h-90 rounded-full bg-[#976346] opacity-15"></div>
-
-          {benefits.map((item, index) => {
-            const isLeft = index % 2 === 0;
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="relative w-full flex flex-col md:flex-row items-center"
+          return (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: (index % 4) * 0.08 }}
+              viewport={{ once: true }}
+              className={`flex ${item.span ?? ""}`}
+            >
+              <div
+                data-gsap="tilt"
+                className={`relative w-full overflow-hidden rounded-3xl border p-6 sm:p-8 flex flex-col justify-between gap-10 min-h-[260px] will-change-transform ${styles.card}`}
               >
-                {/* Text box */}
+                {/* Cursor spotlight (driven by DmGsapEffects) */}
                 <div
-                  className={`w-full md:w-1/2 px-4 flex items-start gap-4
-                    ${isLeft ? "md:justify-end md:pr-10 text-left" : "md:pl-10"} 
-                    ${!isLeft && "md:ml-auto"}
-                  `}
+                  data-gsap-spotlight
+                  aria-hidden="true"
+                  className={`pointer-events-none absolute inset-0 opacity-0 invisible ${
+                    item.variant === "featured"
+                      ? "bg-[radial-gradient(320px_circle_at_var(--x,50%)_var(--y,50%),rgba(255,255,255,0.35),transparent_60%)]"
+                      : "bg-[radial-gradient(320px_circle_at_var(--x,50%)_var(--y,50%),rgba(255,202,45,0.14),transparent_60%)]"
+                  }`}
+                />
+
+                {/* Large watermark number */}
+                <span
+                  aria-hidden="true"
+                  className={`pointer-events-none absolute -bottom-6 -right-2 font-black leading-none select-none ${
+                    item.variant === "featured"
+                      ? "text-[10rem] sm:text-[14rem]"
+                      : "text-[7rem] sm:text-[8rem]"
+                  } ${styles.watermark}`}
                 >
-                  <span className="text-4xl font-raleway font-semibold text-[#FFCA2D] whitespace-nowrap">
-                    {item.number}
-                  </span>
-                  <div className="flex flex-col">
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="text-base text-white mt-1">
-                      {item.description}
-                    </p>
+                  {number}
+                </span>
+
+                <div className="relative flex items-start justify-between">
+                  <div className={`flex items-center justify-center ${styles.iconWrap}`}>
+                    <Icon
+                      aria-hidden="true"
+                      className={item.variant === "featured" ? "w-9 h-9" : "w-6 h-6"}
+                      strokeWidth={1.75}
+                    />
                   </div>
+                  <span className={`font-mono text-sm font-semibold ${styles.number}`}>
+                    {number}
+                  </span>
                 </div>
 
-                {/* Dot - Only visible on md and up */}
-                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#FFCA2D] rounded-full animate-bounce shadow-lg" />
-              </motion.div>
-            );
-          })}
-        </div>
+                <div className="relative">
+                  <h3 className={`font-bold leading-tight ${styles.title}`}>
+                    {item.title}
+                  </h3>
+                  <p className={`mt-3 leading-relaxed ${styles.description}`}>
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

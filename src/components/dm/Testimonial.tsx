@@ -42,43 +42,6 @@ export function StudentTestimonial() {
           <p className="text-[#FFCA2D] font-semibold mt-3">- Karthi</p>
         </motion.div>
       </div>
-
-      {/* Call-to-Action Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="max-w-4xl mx-auto mt-24 px-12 py-6 bg-[#FFCA2D40] rounded-3xl text-center border border-[#FFCA2D]"
-      >
-        <h3 className="text-lg sm:text-xl font-raleway font-semibold text-[#FFCA2D]">
-          Get Started
-        </h3>
-        <p className="text-[#DFDFDF] font-sans font-semibold text-sm sm:text-base leading-[26px] sm:leading-[30px] mt-2">
-          Take the first step toward your career in Digital Marketing. <br />
-          Register today and secure your spot!
-        </p>
-        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 justify-center mt-6 hidden">
-          <button
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLSfJDp1CsV4wBiD0MJ6oOiJqjZgyNzITEwFiRhxPDRl3m5ghtQ/viewform",
-                "_blank",
-              )
-            }
-            className="bg-[#FFCA2D] text-black text-sm px-5 md:px-6 py-2 rounded-2xl font-semibold hover:bg-yellow-500 transition cursor-pointer"
-          >
-            Apply Now
-          </button>
-
-          <button
-            onClick={() => window.open("/docs/DM Brochure.pdf", "_blank")}
-            className="border border-[#E8AC35] text-[#FFCA2D] text-sm px-5 md:px-6 py-2 rounded-2xl font-semibold hover:bg-yellow-400 hover:text-black transition cursor-pointer"
-          >
-            Download Brochure
-          </button>
-        </div>
-      </motion.div>
     </section>
   );
 }

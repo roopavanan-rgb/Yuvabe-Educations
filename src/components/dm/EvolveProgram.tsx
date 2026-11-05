@@ -2,12 +2,18 @@
 
 import { motion } from "framer-motion";
 
+const evolveLearnings = [
+  "How to communicate clearly and present your ideas with confidence",
+  "How to work in teams, manage your time and approach problems calmly",
+  "Reflective practices like journaling and meditation",
+];
+
 export function EvolveProgram() {
   return (
     <section className="w-full py-12 bg-[#140F20] text-white text-center overflow-hidden">
       {/* Title */}
-      <h2 className="text-3xl font-bold text-[#FFCA2D] mb-8">
-        What Is The EVOLVE Program?
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FFCA2D] mb-8">
+        What is the Evolve Program?
       </h2>
 
       {/* Content Section */}
@@ -16,21 +22,25 @@ export function EvolveProgram() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="max-w-3xl mx-auto px-6"
+        className="max-w-3xl mx-auto px-6 text-left"
       >
-        <ul className="space-y-6 text-[#FFFFFF] text-lg leading-relaxed text-left">
-          <li className="flex items-start gap-3">
-          <span className="text-[#FFCA2D] text-xl">●</span>
-            <span>The Evolve Program is designed to be a transformative journey, empowering individuals to unlock their true potential and achieve personal growth. At its core, the program provides participants with tools and experiences beyond academic or professional skills, focusing instead on holistic development.</span>
-          </li>
-          <li className="flex items-start gap-3">
-          <span className="text-[#FFCA2D] text-xl">●</span>
-            <span>Through Evolve, you&apos;ll discover how to communicate clearly and present your ideas confidently, enhancing your ability to make an impact in any setting.</span>
-          </li>
-          <li className="flex items-start gap-3">
-          <span className="text-[#FFCA2D] text-xl">●</span>
-            <span>In essence, the Evolve Program isn&apos;t just about gaining skills—it&apos;s about reshaping how you approach challenges, connect with others, and grow as an individual. It&apos;s a journey of self-discovery and empowerment designed to help you become the best version of yourself.</span>
-          </li>
+        <p data-gsap="lines" className="text-[#FFFFFF] text-base sm:text-lg leading-relaxed">
+          Evolve is Yuvabe&apos;s personal growth program and runs alongside the
+          course. It helps you build the skills that sit beside technical
+          ability.
+        </p>
+
+        <p className="mt-6 text-[#FFFFFF] text-base sm:text-lg font-semibold">
+          Through Evolve, you&apos;ll learn:
+        </p>
+
+        <ul className="mt-4 space-y-4 text-[#FFFFFF] text-base sm:text-lg leading-relaxed">
+          {evolveLearnings.map((point) => (
+            <li key={point} className="flex items-start gap-3">
+              <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#FFCA2D]" />
+              <span>{point}</span>
+            </li>
+          ))}
         </ul>
       </motion.div>
     </section>

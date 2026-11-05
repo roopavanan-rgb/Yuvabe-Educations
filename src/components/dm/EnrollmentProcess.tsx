@@ -2,29 +2,25 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { DM_APPLY_URL, DM_SEATS } from "./programDetails";
 
 const steps = [
   {
     number: "01",
-    title: "Online Application:",
-    description: ["Complete the application form."],
+    title: "Online Application",
+    description: ["Fill in the application form"],
   },
   {
     number: "02",
-    title: "Screening Process:",
+    title: "Screening",
     description: [
-      "Shortlisted candidates will be",
-      "notified and will have to come in",
-      "for an interview and aptitude test.",
+      "Shortlisted candidates are invited for an interview and aptitude test",
     ],
   },
   {
     number: "03",
-    title: "Confirmation:",
-    description: [
-      "Secure your spot with the payment",
-      "after you clear your screening.",
-    ],
+    title: "Confirmation",
+    description: ["Pay the refundable deposit to secure your seat"],
   },
 ];
 
@@ -50,7 +46,7 @@ export function EnrollmentProcess() {
             viewport={{ once: true }}
             className="w-full max-w-sm text-center md:text-left"
           >
-            <h3 className="text-6xl sm:text-7xl md:text-8xl font-bold bg-[linear-gradient(0deg,_rgba(20,15,32,1)_0%,_rgba(255,202,45,1)_100%)] bg-clip-text text-transparent">
+            <h3 data-gsap="scramble" className="text-6xl sm:text-7xl md:text-8xl font-bold text-[#6B5320]">
               {step.number}
             </h3>
             <h4 className="text-lg sm:text-xl font-semibold mt-2">
@@ -67,37 +63,32 @@ export function EnrollmentProcess() {
         ))}
       </div>
 
+      <p className="mt-14 relative z-10 px-4 text-[#FFCA2D] font-semibold text-base sm:text-lg">
+        Limited seats: only {DM_SEATS} participants.
+      </p>
+
       {/* CTA Section */}
-      <div className="mt-20 relative z-10 px-4 text-center">
+      <div className="mt-28 relative z-10 px-4 text-center">
         {/* CTA Background Glow */}
         <div className="absolute right-0 top-10 translate-x-[50%] opacity-20 blur-3xl w-[300px] h-[200px] rounded-3xl bg-[linear-gradient(90deg,_rgba(151,99,70,1)_50%,_rgba(151,99,70,0.85)_100%)] -z-10" />
 
-        <h3 className="text-2xl sm:text-3xl font-raleway font-semibold text-[#FFCA2D]">
-          Join the Digital Marketing program today!
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-raleway font-semibold text-[#FFCA2D]">
+          Get Started!
         </h3>
-        <p className="text-[#E8AC35] font-sans font-semibold mt-4 text-sm sm:text-base">
-          Take the first step toward your career in Digital Marketing. Register
-          today and secure your spot!
+        <p className="text-[#FFCA2D] font-sans font-semibold mt-4 text-sm sm:text-base">
+          Take the first step toward a career in digital marketing. Apply today
+          and secure your spot.
         </p>
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
           <Link
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfJDp1CsV4wBiD0MJ6oOiJqjZgyNzITEwFiRhxPDRl3m5ghtQ/viewform"
+            href={DM_APPLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden bg-[#FFCA2D] text-black px-6 md:px-8 py-2 rounded-2xl font-semibold hover:bg-yellow-500 transition text-center"
+            className="hidden bg-[#FFCA2D] text-black px-8 md:px-10 py-3 rounded-full font-semibold hover:bg-yellow-500 transition text-center"
           >
             Apply Now
-          </Link>
-
-          <Link
-            href="/docs/DM Brochure.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden border border-[#E8AC35] text-[#FFCA2D] px-6 md:px-8 py-2 rounded-2xl font-semibold hover:bg-yellow-400 hover:text-black transition text-center"
-          >
-            Download Brochure
           </Link>
         </div>
       </div>

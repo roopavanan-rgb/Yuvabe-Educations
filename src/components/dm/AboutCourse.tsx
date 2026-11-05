@@ -20,12 +20,11 @@ export function AboutCourse() {
         <h2 className="text-2xl sm:text-3xl font-raleway font-semibold text-[#140F20] mb-4">
           About the Course
         </h2>
-        <p className="text-sm sm:text-base md:text-lg text-[#140F20] font-sans font-normal leading-relaxed">
-          Yuvabe Education&apos;s Digital Marketing Bridge Program is designed to
-          provide an in-depth understanding of the digital marketing landscape.
-          This 12-week, in-person classroom experience will help you build
-          essential skills through practical training, real-world case studies,
-          and industry mentorship.
+        <p data-gsap="lines" className="text-sm sm:text-base md:text-lg text-[#140F20] font-sans font-normal leading-relaxed">
+          The course is project-based. You learn a concept, then use it
+          straight away: building pages, running campaigns, making content and
+          setting up automations. In the final month you plan and run a live
+          campaign as your capstone project.
         </p>
       </motion.div>
     </section>

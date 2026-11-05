@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 const opportunities = [
   {
-    text: "Paid internships (3 months) for the top 3 students at Yuvabe.",
+    text: "A portfolio of real work to show employers",
   },
   {
-    text: "Access to an alumni network for ongoing learning and collaboration.",
+    text: "Access to the alumni network for ongoing learning and opportunities",
   },
   {
-    text: "Opportunities for advanced courses and certifications at Yuvabe.",
+    text: "Pathways to advanced courses and certifications",
   },
 ];
 
@@ -18,7 +18,7 @@ export function PostCourseOpportunities() {
   return (
     <section className="w-full py-12 bg-[#140F20] text-[#FFFFFF] text-center overflow-hidden">
       {/* Title */}
-      <h2 className="text-3xl  font-raleway font-semibold text-[#FFCA2D] mb-8">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-raleway font-semibold text-[#FFCA2D] mb-8">
         Post-Course Opportunities
       </h2>
 
@@ -31,7 +31,7 @@ export function PostCourseOpportunities() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="p-8 bg-[#FFCA2D66] opacity-40 border-2 border-[#E8AC35] text-[#FFFFFF] font-sans font-semibold rounded-3xl"
+            className="p-8 bg-[#6B5320] border border-[#E8AC35] text-[#FFFFFF] font-sans font-semibold rounded-3xl flex items-center justify-center min-h-[150px]"
           >
             {opportunity.text}
           </motion.div>

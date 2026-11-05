@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 
 const joinCategories = [
   {
-    description: "Students and recent graduates eager to build skills in Digital Marketing.",
+    description: "Students and recent graduates who want job-ready digital marketing skills",
   },
   {
-    description: "Entrepreneurs and business owners who want to scale their ventures online.",
+    description: "Aspiring marketers looking for a strong, current foundation",
   },
   {
-    description: "Aspiring marketers looking to build a strong foundation in Digital Marketing.",
+    description: "Entrepreneurs and business owners who want to grow their business online",
   },
   {
-    description: "Professionals aiming to transition into a Digital Marketing role.",
+    description: "Working professionals moving into a digital marketing role",
   },
 ];
 
@@ -26,7 +26,7 @@ export function WhoShouldJoin() {
       {/* Title */}
       <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-10 relative z-10">
         <div className="text-[#FFCA2D] font-raleway font-semibold">
-          Who Should Join?
+          Who Should Apply?
         </div>
         <div className="text-white font-sans font-semibold mt-2 text-base sm:text-lg">
           This course is designed for:
@@ -42,9 +42,9 @@ export function WhoShouldJoin() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="p-6 sm:p-7 bg-[#FFCA2D33] border border-[#E8AC35] rounded-3xl text-center"
+            className="p-6 sm:p-8 bg-[#2B2319] border border-[#5A4626] rounded-3xl text-center flex items-center justify-center"
           >
-            <p className="text-[#DFDFDF] text-sm sm:text-base font-sans font-semibold leading-relaxed">
+            <p className="text-[#DFDFDF] text-sm sm:text-base font-sans font-medium leading-relaxed">
               {item.description}
             </p>
           </motion.div>

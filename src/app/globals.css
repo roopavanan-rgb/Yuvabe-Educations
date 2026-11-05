@@ -384,3 +384,10 @@ img[src$="#lg-center"] {
   /* Top border with color */
   border-radius: 30px;
 }
+
+/* AI Video Production page: like-button pop */
+@keyframes ve-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}

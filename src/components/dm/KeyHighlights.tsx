@@ -1,37 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { DM_DEPOSIT, DM_START_DATE } from "./programDetails";
 
 const highlights = [
   {
-    title: "Expert-Led In-Person Training -",
-    description:
-      "Gain mentorship from seasoned digital marketing professionals in an immersive classroom setting.",
+    title: "Duration",
+    description: "16 weeks (12 weeks of modules + 4-week capstone)",
   },
   {
-    title: "Immersive Learning in Auroville's Sustainable Ecosystem -",
-    description:
-      "Experience a transformative educational environment with a focus on sustainability.",
+    title: "Start Date",
+    description: DM_START_DATE,
   },
   {
-    title: "Hands-On Projects & Case Studies -",
-    description:
-      "Apply your learning through real-world assignments, live campaigns, and data-driven strategies.",
+    title: "Timing",
+    description: "Half day, Monday to Friday, 9:30 AM – 12:45 PM",
   },
   {
-    title: "Career Development with the Evolve Program -",
-    description:
-      "Develop a growth mindset, industry-relevant skills, and build a strong professional network.",
+    title: "Learning Mode",
+    description: "In-person, classroom and lab sessions",
   },
   {
-    title: "Internship & Certification Opportunities -",
-    description:
-      "Top 5 students secure paid (3-6 months) internships; receive an industry-recognized certification valued by employers.",
+    title: "Location",
+    description: "Saracon Campus, Yuvabe, Auroville, Tamil Nadu, India",
   },
   {
-    title: "Affordable & Inclusive Learning -",
-    description:
-      "Scholarships available to ensure accessibility for all aspiring marketers, making career growth more attainable.",
+    title: "Fee",
+    description: `Free. A refundable deposit of ${DM_DEPOSIT} is returned when you complete the course.`,
+  },
+  {
+    title: "Certification",
+    description: "Yuvabe Education Digital Marketing Certification",
   },
 ];
 
@@ -57,8 +56,8 @@ export function KeyHighlights() {
             className="relative p-6 bg-transparent rounded-lg"
           >
             <div className="absolute top-0 left-6 w-16 h-[3px] rounded-2xl bg-white mt-2"></div>
-            <h3 className="text-lg font-semibold text-[#FFCA2D] max-w-[250px] break-words">{item.title}</h3>
-            <p className="text-[#FFFFFF]">{item.description}</p>
+            <h3 className="text-lg font-semibold text-[#FFCA2D] mt-3">{item.title}</h3>
+            <p className="text-[#FFFFFF] mt-2 leading-relaxed">{item.description}</p>
           </motion.div>
         ))}
       </div>

@@ -3,28 +3,35 @@ import { motion } from "framer-motion";
 
 const learnTopics = [
   {
-    title: "Digital Marketing Foundations",
+    title: "Month 1: Foundations",
     description: [
-      "SEO & website optimization techniques.",
-      "Content marketing, blogging, and copywriting.",
-      "Social media marketing & advertising strategies.",
+      "Introduction to Digital Marketing",
+      "Digital Marketing Landscape",
+      "Behavioral Marketing",
+      "Brand Design & Strategy",
     ],
   },
   {
-    title: "Data-Driven Marketing & Growth",
+    title: "Month 2: Channels",
     description: [
-      "Google Ads, paid campaigns, and performance tracking.",
-      "Email marketing, automation, and customer engagement.",
-      "Growth hacking and conversion optimization.",
+      "Website & Landing Page Creation",
+      "Search Engine Optimization (SEO)",
+      "Search Engine Marketing (SEM)",
+      "Social Media & Content Strategy",
     ],
   },
   {
-    title: "Brand Building & Storytelling",
+    title: "Month 3: Growth & Measurement",
     description: [
-      "Crafting a compelling brand identity.",
-      "Engaging storytelling for content marketing.",
-      "Capstone project: Create and launch a real-world campaign.",
+      "Email & CRM Marketing",
+      "Mobile & Messaging Marketing",
+      "Automation & Vibe Marketing",
+      "Analytics & ROI Optimization",
     ],
+  },
+  {
+    title: "Month 4: Capstone Project",
+    description: ["Capstone Project"],
   },
 ];
 
@@ -38,7 +45,7 @@ export default function WhatYouLearn() {
         What You&apos;ll Learn:
       </h2>
 
-      <div className="relative z-10 mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl w-full">
+      <div className="relative z-10 mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl w-full">
         {learnTopics.map((topic, index) => (
           <motion.div
             key={index}
@@ -46,7 +53,7 @@ export default function WhatYouLearn() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="relative bg-[#FFCA2D] p-6 rounded-3xl text-left shadow-md"
+            className="relative bg-[#8A6D24] p-6 sm:p-8 rounded-3xl text-left shadow-md min-h-[320px]"
           >
             {/* Decorative Bar */}
             <div className="absolute top-8 left-0 w-2 h-14 bg-[#D85151] rounded-3xl"></div>

@@ -121,6 +121,7 @@ const Header = () => {
             { name: "UI-UX", path: "/bridge/ui-ux" },
             { name: "AI", path: "/bridge/ai" },
             { name: "Digital Marketing", path: "/bridge/digital-marketing" },
+            { name: "AI Video Production", path: "/bridge/video-editing" },
             {
               name: "Corporate Sustainability",
               path: "/bridge/sustainability",
