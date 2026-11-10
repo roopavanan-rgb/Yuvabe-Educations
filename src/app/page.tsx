@@ -1,8 +1,5 @@
 "use client";
 import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import ImpactReport from "@/components/ImpactReport";
@@ -15,6 +12,7 @@ import "swiper/css/pagination";
 import { ImArrowUpRight2 } from "react-icons/im";
 import Link from "next/link";
 import MottoSection from "@/components/MottoSection";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 const logos = [
   "/images/clientlogo/deep.webp",
@@ -23,30 +21,6 @@ const logos = [
   "/images/clientlogo/ness.webp",
   "/images/clientlogo/c3stream.webp",
 ];
-
-const settings = {
-  infinite: true,
-  speed: 800,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 3 },
-    },
-    {
-      breakpoint: 768,
-      settings: { slidesToShow: 2 },
-    },
-    {
-      breakpoint: 480,
-      settings: { slidesToShow: 2 },
-    },
-  ],
-};
 
 const courses = [
   {
@@ -167,45 +141,35 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Client Logo Slider */}
-      <section className="bg-white pt-12 shadow-lg backdrop-blur-lg flex justify-center items-center overflow-hidden">
-        <div className="w-full  px-6 sm:px-8 md:px-10">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2 },
-              },
-            }}
-          >
-            <Slider {...settings}>
-              {logos.map((logo, index) => (
-                <motion.div
-                  key={index}
-                  className="flex justify-center px-2"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeOut",
-                    delay: index * 0.1,
-                  }}
-                >
-                  <Image
-                    src={logo}
-                    alt={`Client logo ${index + 1}`}
-                    width={150}
-                    height={150}
-                    priority
-                    className="w-[100px] sm:w-[140px] md:w-[130px] lg:w-[150px] object-contain transition duration-300"
-                  />
-                </motion.div>
-              ))}
-            </Slider>
-          </motion.div>
+      {/* Client Logo Slider: continuous marquee */}
+      <section
+        aria-label="Our partners"
+        className="bg-white py-8 shadow-lg overflow-hidden"
+      >
+        <div className="logo-marquee group relative">
+          <div className="logo-marquee-track flex w-max items-center group-hover:[animation-play-state:paused]">
+            {/* Four copies (two identical halves) so the loop is seamless even on wide screens; only the first is read by screen readers */}
+            {[0, 1, 2, 3].map((copy) => (
+              <ul
+                key={copy}
+                aria-hidden={copy > 0}
+                className="flex shrink-0 items-center"
+              >
+                {logos.map((logo, index) => (
+                  <li key={logo} className="flex shrink-0 justify-center px-8 sm:px-12 lg:px-16">
+                    <Image
+                      src={logo}
+                      alt={copy === 0 ? `Partner logo ${index + 1}` : ""}
+                      width={150}
+                      height={150}
+                      priority={copy === 0}
+                      className="h-16 w-[110px] object-contain transition duration-300 hover:scale-110 sm:w-[140px] lg:h-20 lg:w-[150px]"
+                    />
+                  </li>
+                ))}
+              </ul>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -609,7 +573,7 @@ export default function Home() {
       {/* Call to Action section */}
       <section className="flex justify-center items-center py-24 px-6">
         <motion.div
-          className="bg-[#592AC7] text-white rounded-[30px] shadow-lg w-[960px] h-[340px] max-w-full p-8 text-center 
+          className="bg-[#592AC7] text-white rounded-[30px] shadow-lg w-[960px] min-h-[340px] max-w-full p-8 text-center 
                    flex flex-col justify-center items-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -622,34 +586,7 @@ export default function Home() {
             Sign Up for Newsletter
           </p>
 
-          <div className="mt-6 flex justify-center items-center gap-6 ">
-            <form
-              action="https://api.web3forms.com/submit"
-              method="POST"
-              name="newsletter"
-              className="mt-6 flex justify-center items-center gap-6"
-            >
-              <input
-                type="hidden"
-                name="access_key"
-                value="b46383fd-39fb-4a3c-80a3-eae125be6ead"
-              />
-
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Enter Your email"
-                className="w-2/3 px-4 py-3 rounded-lg border border-gray-300 bg-[#FFFFFF] text-black focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-[#FFCA2D] hover:bg-yellow-600 text-black font-medium px-6 py-3 rounded-lg"
-              >
-                Send
-              </button>
-            </form>
-          </div>
+          <NewsletterSignup />
         </motion.div>
       </section>
     </main>
