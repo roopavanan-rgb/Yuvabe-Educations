@@ -5,50 +5,123 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
-export default function ConnectWithUsPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+// Defined once at module level so it isn't re-created (and the animation
+// restarted) on every keystroke.
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false }
+);
 
-  const Player = dynamic(
-    () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
-    { ssr: false }
+type Field = "name" | "email" | "message";
+type Errors = Partial<Record<Field, string>>;
+type Status = "idle" | "sending" | "sent" | "error";
+
+const LIMITS = { name: 100, message: 5000 } as const;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const EMPTY = { name: "", email: "", message: "", _gotcha: "" };
+
+/** Mirrors the checks in /api/contact so people get instant feedback. */
+function validate(data: typeof EMPTY): Errors {
+  const errors: Errors = {};
+  const name = data.name.trim();
+  const email = data.email.trim();
+  const message = data.message.trim();
+
+  if (name.length < 2) errors.name = "Please enter your name.";
+  else if (name.length > LIMITS.name) errors.name = `Name must be under ${LIMITS.name} characters.`;
+
+  if (!email) errors.email = "Please enter your email.";
+  else if (!EMAIL_RE.test(email)) errors.email = "Please enter a valid email address.";
+
+  if (message.length < 10) errors.message = "Please write a message of at least 10 characters.";
+  else if (message.length > LIMITS.message)
+    errors.message = `Message must be under ${LIMITS.message} characters.`;
+
+  return errors;
+}
+
+function FieldError({ id, message }: { id: string; message?: string }) {
+  if (!message) return null;
+  return (
+    <p id={id} role="alert" className="mt-1 text-sm text-red-600">
+      {message}
+    </p>
   );
+}
+
+export default function ConnectWithUsPage() {
+  const [formData, setFormData] = useState(EMPTY);
+  const [errors, setErrors] = useState<Errors>({});
+  const [touched, setTouched] = useState<Partial<Record<Field, boolean>>>({});
+  const [status, setStatus] = useState<Status>("idle");
+  const [serverMessage, setServerMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const next = { ...formData, [e.target.name]: e.target.value };
+    setFormData(next);
+    // Re-check live once the visitor has left a field at least once
+    if (touched[e.target.name as Field]) setErrors(validate(next));
+    if (status === "error") setStatus("idle");
   };
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   alert("Form submitted!");
-  // };
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setTouched((t) => ({ ...t, [e.target.name]: true }));
+    setErrors(validate(formData));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (status === "sending") return;
 
+    const found = validate(formData);
+    setErrors(found);
+    setTouched({ name: true, email: true, message: true });
+    if (Object.keys(found).length) {
+      const first = (["name", "email", "message"] as Field[]).find((f) => found[f]);
+      if (first) document.getElementById(`contact-${first}`)?.focus();
+      return;
+    }
+
+    setStatus("sending");
+    setServerMessage("");
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      const result = await response.json().catch(() => ({}));
 
-      const result = await response.json();
       if (response.ok) {
-        alert("Message sent successfully!");
+        setStatus("sent");
+        setFormData(EMPTY);
+        setTouched({});
+        setErrors({});
       } else {
-        alert(`Error: ${result.message}`);
+        if (result.errors) setErrors(result.errors);
+        setServerMessage(result.message ?? "Something went wrong. Please try again.");
+        setStatus("error");
       }
     } catch (error) {
       console.error("Submission error:", error);
-      alert("Something went wrong. Please try again later.");
+      setServerMessage("Something went wrong. Please check your connection and try again.");
+      setStatus("error");
     }
   };
+
+  const showError = (f: Field) => (touched[f] ? errors[f] : undefined);
+  const fieldClass = (f: Field) =>
+    `w-full p-3 border rounded-lg focus:outline-none focus:ring-2 transition-colors ${
+      showError(f)
+        ? "border-red-500 focus:ring-red-400 bg-red-50/40"
+        : "border-gray-300 focus:ring-[#592AC7]"
+    }`;
+  const a11y = (f: Field) => ({
+    "aria-invalid": !!showError(f),
+    "aria-describedby": showError(f) ? `contact-${f}-error` : undefined,
+  });
 
   return (
     <>
@@ -77,7 +150,7 @@ export default function ConnectWithUsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
             >
-              Let’s team up and make things happen! Whether you're looking to
+              Let’s team up and make things happen! Whether you&apos;re looking to
               scale, innovate, or create impact, we’re here to help you turn
               goals into results. Reach out, and let’s explore how we can grow
               together!
@@ -126,7 +199,7 @@ export default function ConnectWithUsPage() {
 
           {/* Contact Form */}
           <motion.div
-            className="w-full md:w-[60%] bg-white shadow-lg rounded-lg p-6 md:p-8"
+            className="relative w-full md:w-[60%] bg-white shadow-lg rounded-lg p-6 md:p-8"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -135,60 +208,132 @@ export default function ConnectWithUsPage() {
               Get in Touch
             </h2>
             <p className="text-gray-600 mb-6">
-              We'd love to hear from you! Fill out the form below:
+              We&apos;d love to hear from you! Fill out the form below:
             </p>
 
-            <form
-              action="https://api.web3forms.com/submit"
-              method="POST"
-              className="flex flex-col gap-4"
-            >
-              <input
-                type="hidden"
-                name="access_key"
-                value="b46383fd-39fb-4a3c-80a3-eae125be6ead"
-              />
-
-              <motion.input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#592AC7]"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                whileFocus={{ scale: 1.05 }}
-              />
-              <motion.input
-                type="email"
-                name="email"
-                placeholder="Email id"
-                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#592AC7]"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                whileFocus={{ scale: 1.05 }}
-              />
-              <motion.textarea
-                name="message"
-                placeholder="Your message"
-                className="p-3 border border-gray-300 rounded-lg h-24 overflow-hidden resize-none focus:outline-none focus:ring-2 focus:ring-[#592AC7]"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                whileFocus={{ scale: 1.05 }}
-              ></motion.textarea>
-
-              <motion.div className="flex justify-end">
-                <motion.button
-                  type="submit"
-                  className="w-[142px] h-[56px] bg-[#ffcc00] text-black font-semibold rounded-lg shadow-md hover:bg-[#e6b800] transition duration-300"
-                  whileHover={{ scale: 1.05 }}
+            {status === "sent" ? (
+              <motion.div
+                role="status"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex flex-col items-center gap-3 rounded-lg bg-[#F7F3FF] p-8 text-center"
+              >
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#592AC7] text-2xl text-white">
+                  ✓
+                </span>
+                <p className="font-primary text-xl font-semibold text-[#592AC7]">
+                  Thank you! Your message has been sent.
+                </p>
+                <p className="text-gray-600">We&apos;ll get back to you soon.</p>
+                <button
+                  type="button"
+                  onClick={() => setStatus("idle")}
+                  className="mt-2 text-[#592AC7] underline underline-offset-2"
                 >
-                  Send
-                </motion.button>
+                  Send another message
+                </button>
               </motion.div>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
+                {/* Honeypot: hidden from people; bots tend to fill it */}
+                <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+                  <label>
+                    Leave this field empty
+                    <input
+                      type="text"
+                      name="_gotcha"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={formData._gotcha}
+                      onChange={handleChange}
+                    />
+                  </label>
+                </div>
+
+                <div>
+                  <label htmlFor="contact-name" className="sr-only">
+                    Name
+                  </label>
+                  <motion.input
+                    id="contact-name"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    autoComplete="name"
+                    maxLength={LIMITS.name}
+                    className={fieldClass("name")}
+                    value={formData.name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    {...a11y("name")}
+                    whileFocus={{ scale: 1.02 }}
+                  />
+                  <FieldError id="contact-name-error" message={showError("name")} />
+                </div>
+                <div>
+                  <label htmlFor="contact-email" className="sr-only">
+                    Email
+                  </label>
+                  <motion.input
+                    id="contact-email"
+                    type="email"
+                    name="email"
+                    placeholder="Email id"
+                    autoComplete="email"
+                    className={fieldClass("email")}
+                    value={formData.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    {...a11y("email")}
+                    whileFocus={{ scale: 1.02 }}
+                  />
+                  <FieldError id="contact-email-error" message={showError("email")} />
+                </div>
+                <div>
+                  <label htmlFor="contact-message" className="sr-only">
+                    Message
+                  </label>
+                  <motion.textarea
+                    id="contact-message"
+                    name="message"
+                    placeholder="Your message"
+                    maxLength={LIMITS.message}
+                    className={`${fieldClass("message")} h-24 resize-none`}
+                    value={formData.message}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    {...a11y("message")}
+                    whileFocus={{ scale: 1.02 }}
+                  ></motion.textarea>
+                  <FieldError id="contact-message-error" message={showError("message")} />
+                </div>
+
+                {status === "error" && serverMessage && (
+                  <p role="alert" className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
+                    {serverMessage}
+                  </p>
+                )}
+
+                <motion.div className="flex justify-end">
+                  <motion.button
+                    type="submit"
+                    disabled={status === "sending"}
+                    aria-busy={status === "sending"}
+                    className="flex w-[142px] h-[56px] items-center justify-center gap-2 bg-[#ffcc00] text-black font-semibold rounded-lg shadow-md hover:bg-[#e6b800] transition duration-300 disabled:cursor-not-allowed disabled:opacity-70"
+                    whileHover={status === "sending" ? undefined : { scale: 1.05 }}
+                  >
+                    {status === "sending" ? (
+                      <>
+                        <span className="h-4 w-4 animate-spin rounded-full border-2 border-black/30 border-t-black" />
+                        Sending…
+                      </>
+                    ) : (
+                      "Send"
+                    )}
+                  </motion.button>
+                </motion.div>
+              </form>
+            )}
           </motion.div>
         </div>
         <p className="mt-8 md:mt-12 lg:mt-24 text-white font-secondary text-base sm:text-lg  m-auto lg:max-w-8xl  px-4 md:px-8 lg:px-12 text-center">

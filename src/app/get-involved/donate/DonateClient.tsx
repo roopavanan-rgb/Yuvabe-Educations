@@ -71,7 +71,7 @@ export default function Donate() {
       description:
         "Your gift for our unique educational offering will help cover expenses for a dedicated space for STEAM Lab, teacher support, and project materials.",
       bgShape: "bg-[#33BED4]",
-      link: "https://aviusa.org/aviusapartners/yuvabe-steam-program/",
+      link: "https://aviusa.org/aviusapartners/yuvabe-bridge-program/",
     },
   ];
 
@@ -185,8 +185,7 @@ export default function Donate() {
         id="contribute-program"
       >
         <h2 className="text-xl md:text-[40px] font-semibold font-primary text-black mb-12">
-          Please choose where you’d like your <br /> contribution to create an
-          impact
+          Contribute to Yuvabe Education and make a meaningful impact.
         </h2>
         <div className="flex flex-row flex-wrap md:flex-row justify-center gap-6 py-4 px-4 md:px-8 lg:px-12">
           {cards.map((card, index) => (

@@ -24,25 +24,25 @@ export default function DonationForm() {
   return (
     <div
       id="donation-form"
-      className="flex flex-col md:flex-row justify-center items-center  bg-[#fdf6ec] px-4 py-24 gap-8 scroll-mt-12 lg:scroll-mt-18"
+      className="flex flex-col md:flex-row justify-center items-center md:items-stretch bg-[#fdf6ec] px-4 py-24 gap-8 scroll-mt-12 lg:scroll-mt-18"
     >
       {/* Donate from India */}
       <motion.div
-        className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg w-full max-w-[584px] md:max-w-[400px] lg:max-w-[584px]  border border-gray-200 flex flex-col justify-center h-fit"
+        className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg w-full max-w-[584px] md:max-w-[400px] lg:max-w-[560px] border border-gray-200 flex flex-col justify-between gap-8"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         <div>
-          <h2 className="text-[28px] lg:text-[40px] font-semibold font-primary text-[#592Ac7] text-center">
+          <h2 className="text-[24px] lg:text-[40px] font-semibold font-primary text-[#592Ac7] text-center mb-4">
             Donate from India
           </h2>
-          <p className="text-gray-600 text-center mt-3 text-[15px] lg:text-[17px] leading-relaxed font-secondary">
+          <p className="text-gray-600 text-center text-[15px] lg:text-[17px] leading-relaxed font-secondary">
             Donations made from this channel are processed through the Auroville
             Unity Fund account.
           </p>
 
-          <div className="mt-6 mx-6">
+          <div className="mt-8 mx-2 lg:mx-6 rounded-2xl bg-[#F7F3FF] p-5 lg:p-6">
             <h3 className="text-[16px] lg:text-[18px] font-semibold font-secondary text-[#592Ac7] text-center lg:text-start">
               On the donation page, kindly follow these steps:
             </h3>
@@ -59,7 +59,7 @@ export default function DonationForm() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-4 mt-6">
+        <div className="flex flex-col items-center gap-4">
           <a
             href="https://donate.auroville.org/"
             className="bg-[#592AC7] text-white font-primary font-semibold py-3 px-6 w-2/3 lg:w-1/2 text-center rounded-lg shadow-md transition-all hover:bg-[#4a22a5]"
@@ -81,7 +81,7 @@ export default function DonationForm() {
 
       {/* Donate from Anywhere */}
       <motion.div
-        className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] md:max-w-[400px] lg:max-w-[550px]  flex flex-col justify-start"
+        className="bg-white p-6 lg:p-8 rounded-[30px] lg:rounded-[50px] shadow-lg border border-gray-200 w-full max-w-[584px] md:max-w-[400px] lg:max-w-[560px] flex flex-col justify-start"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

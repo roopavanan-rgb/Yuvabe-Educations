@@ -2,14 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiSearch } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { useRouter, usePathname } from "next/navigation";
-import { pageData } from "../data/pageData";
 import path from "path";
 
 const Header = () => {
@@ -17,11 +15,6 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-  const [showSearch, setShowSearch] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredResults, setFilteredResults] = useState<
-    { title: string; path: string }[]
-  >([]);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -51,10 +44,6 @@ const Header = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    // Close search when opening menu on mobile
-    if (!menuOpen && isMobile) {
-      setShowSearch(false);
-    }
   };
 
   const toggleMobileSubmenu = (label: string) => {
@@ -62,37 +51,6 @@ const Header = () => {
       ...prev,
       [label]: !prev[label],
     }));
-  };
-
-  const toggleSearch = () => {
-    setShowSearch(!showSearch);
-    // Close menu when opening search on mobile
-    if (!showSearch && isMobile) {
-      setMenuOpen(false);
-    }
-  };
-
-  // Handle search input changes
-  useEffect(() => {
-    if (searchQuery.trim() === "") {
-      setFilteredResults([]);
-    } else {
-      const results = pageData.filter(
-        (page) =>
-          page.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          page.keywords.some((keyword) =>
-            keyword.toLowerCase().includes(searchQuery.toLowerCase()),
-          ),
-      );
-      setFilteredResults(results);
-    }
-  }, [searchQuery]);
-
-  // Handle search result click
-  const handleResultClick = (path: string) => {
-    setSearchQuery("");
-    setShowSearch(false);
-    router.push(path);
   };
 
   const handleDropdownOpen = (menu: string | null) => {
@@ -213,18 +171,6 @@ const Header = () => {
 
         {/* Mobile Menu Controls */}
         <div className="flex items-center space-x-2 xl:hidden">
-          {/* Mobile Search Toggle */}
-          <button
-            onClick={toggleSearch}
-            className="p-2 rounded-full hover:bg-gray-100 transition duration-300"
-            aria-label="Toggle search"
-          >
-            <FiSearch
-              size={24}
-              className="text-gray-700 hover:text-[#592AC7]"
-            />
-          </button>
-
           {/* Mobile Menu Toggle */}
           <button
             className="p-2 rounded-full hover:bg-gray-100 transition duration-300"
@@ -369,77 +315,16 @@ const Header = () => {
           ))}
         </ul>
 
-        {/* Desktop Search & Donate */}
-        <div className="hidden xl:flex items-center space-x-4">
-          <div className="relative flex bg-gray-100 p-3 rounded-[15px] items-center hover:shadow-md transition duration-300">
-            <FiSearch className="text-gray-500" />
-            <input
-              type="text"
-              placeholder="Search"
-              className="bg-transparent outline-none pl-2 w-32 md:w-40 lg:w-48 xl:w-full"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            {/* Display Search Results */}
-            {filteredResults.length > 0 && (
-              <ul className="absolute top-12 left-0 w-full bg-white shadow-md rounded-md max-h-60 overflow-auto z-10">
-                {filteredResults.map((result, index) => (
-                  <li
-                    key={index}
-                    className="p-2 hover:bg-[#592AC7]/10 hover:text-[#592AC7] cursor-pointer transition duration-300"
-                    onClick={() => handleResultClick(result.path)}
-                  >
-                    {result.title}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+        {/* Desktop Donate */}
+        <div className="hidden xl:flex items-center">
           <Button
             href="/get-involved/donate"
-            className="hover:bg-[#592AC7]/90 transition duration-300"
+            className="!px-9 !py-3.5 text-[17px] font-semibold shadow-md hover:bg-[#592AC7]/90 hover:shadow-lg hover:-translate-y-0.5 transition duration-300"
           >
             Donate
           </Button>
         </div>
       </nav>
-
-      {/* Mobile Search Bar - Conditionally Displayed */}
-      <AnimatePresence>
-        {showSearch && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="xl:hidden flex py-3 bg-white"
-          >
-            <div className="relative flex-1 flex bg-gray-100 p-2 rounded-[15px] items-center shadow-sm">
-              <FiSearch className="text-gray-500" />
-              <input
-                type="text"
-                placeholder="Search"
-                className="bg-transparent outline-none pl-2 w-full"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              {/* Display Search Results */}
-              {filteredResults.length > 0 && (
-                <ul className="absolute top-12 left-0 w-full bg-white shadow-md rounded-md max-h-60 overflow-auto z-10">
-                  {filteredResults.map((result, index) => (
-                    <li
-                      key={index}
-                      className="p-2 hover:bg-[#592AC7]/10 hover:text-[#592AC7] cursor-pointer transition duration-300"
-                      onClick={() => handleResultClick(result.path)}
-                    >
-                      {result.title}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -570,7 +455,7 @@ const Header = () => {
             <div className="px-4 pt-2">
               <Button
                 href="https://yuvabeeducation.com/get-involved/donate"
-                className="w-full hover:bg-[#592AC7]/90 transition duration-300"
+                className="block w-full text-center !py-3.5 text-[17px] font-semibold hover:bg-[#592AC7]/90 transition duration-300"
               >
                 Donate
               </Button>

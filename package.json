@@ -39,6 +39,7 @@
     "react-markdown": "^10.1.0",
     "react-slick": "^0.30.3",
     "react-swipeable": "^7.0.2",
+    "resend": "^6.37.0",
     "slate": "^0.124.0",
     "slate-dom": "^0.124.0",
     "slick-carousel": "^1.8.1",
