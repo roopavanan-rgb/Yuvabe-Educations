@@ -48,6 +48,14 @@ export default function Donate() {
     }
   };
 
+  // Sponsor logos in their original colours on white tiles.
+  const sponsors = [
+    { name: "InfoVision", src: "/images/clientlogo/logo.svg", width: 192, height: 72, className: "max-w-[170px]" },
+    { name: "UL Solutions", src: "/assets/ul-solutions-original.webp", width: 350, height: 144, className: "max-w-[160px]" },
+    { name: "Rotary", src: "/assets/RotaryLogo.png", width: 593, height: 223, className: "max-w-[160px]" },
+    { name: "MCKS Trust Fund", src: "/assets/mcks-Logo-White.png", width: 303, height: 167, className: "max-w-[140px]" },
+  ];
+
   const cards = [
     {
       title: "Bridge Program",
@@ -428,21 +436,26 @@ export default function Donate() {
           A big thank you to all our donors and sponsors who have been
           generously supporting us in our journey.
         </motion.p>
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="my-8"
-        >
-          <Image
-            src="/images/clientlogo/logo.svg"
-            alt="AVI-USA Logo"
-            width={240}
-            height={240}
-            className="rounded-lg"
-          />
-        </motion.div>
+        <ul className="my-10 grid w-full max-w-5xl grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          {sponsors.map((s, i) => (
+            <motion.li
+              key={s.name}
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 * i, ease: "easeOut" }}
+              className="flex h-28 items-center justify-center rounded-2xl border border-gray-200 bg-white px-6 py-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:h-32"
+            >
+              <Image
+                src={s.src}
+                alt={s.name}
+                width={s.width}
+                height={s.height}
+                className={`h-auto max-h-full w-auto object-contain ${s.className ?? ""}`}
+              />
+            </motion.li>
+          ))}
+        </ul>
       </section>
     </main>
   );
